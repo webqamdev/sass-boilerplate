@@ -1,0 +1,23 @@
+{
+  "name": "sass-boilerplate",
+  "version": "0.1.0",
+  "description": "An opinionated Sass boilerplate",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Gondy",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "fibers": "^4.0.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.22.10",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
