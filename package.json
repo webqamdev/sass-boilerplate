@@ -9,6 +9,7 @@
     "prettier": "prettier \"src/**/*.js\" \"src/**/*.scss\" \"src/**/*.css\" \"src/**/*.json\" \"src/**/*.html\" \"src/**/*.htm\" \"**/*.md\"",
     "prettier:check": "npm run prettier -- --check",
     "prettier:fix": "npm run prettier -- --write",
+    "stylelint": "stylelint 'src/scss/*.scss'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Benjamin Gondy",
@@ -22,6 +23,13 @@
     "sass": "^1.22.10",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "stylelint-no-indistinguishable-colors": "^1.2.1",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-scss": "^3.10.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   }
