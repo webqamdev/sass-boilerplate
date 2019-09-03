@@ -1,0 +1,12 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["*.scss", "*.css"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
