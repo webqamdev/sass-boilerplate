@@ -1,4 +1,4 @@
-// Colors
+// # Colors
 //
 // Color variables SHOULD be prefixed with 'color-' to identify them easier and to be able to
 // filter them in your favorite IDE/editor's auto-completion when typing
@@ -6,14 +6,14 @@
 $color-white: white;
 $color-black: black;
 
-// Defaults
+// ## Defaults
 $color-default: $color-black;
 $color-default-selection: null;
 $color-default-background: $color-white;
 $color-default-link: null;
 
-// Theme
+// ## Theme
 $color-primary: null;
 $color-secondary: null;
 
-// Misc
+// ## Misc

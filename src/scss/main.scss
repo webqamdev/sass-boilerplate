@@ -1,5 +1,6 @@
+// # Main entry point
 //
-// Variables, mixins, functions, …
+// ## Variables, mixins, functions, …
 // - This file should be automatically imported before every scss file when using Webpack
 //   See https://github.com/webpack-contrib/sass-loader#prependdata
 // - You can do the same in Vue Single File Components with Vue CLI
@@ -7,8 +8,8 @@
 // - If you can't import it automatically in every file, uncomment the following line
 //@import "lib/lib";
 //
-// Font-faces
+// ## Font-faces
 @import "font-faces";
 //
-// Icon classes
+// ## Icon classes
 @import "lib/icons/classes";

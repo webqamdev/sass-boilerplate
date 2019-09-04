@@ -1,17 +1,17 @@
-// Lib entry point
+// # Lib entry point
 //
 // This file (and its dependencies) is loaded in every Scss file/Vue Component.
 // Therefore, it MUST not generate any CSS. Doing so would lead to a massive
 // code duplication.
 // Only SCSS variables, functions, placeholders or mixins are allowed.
 //
-// Variables
+// ## Variables
 @import "variables/colors";
 @import "variables/breakpoints";
 @import "variables/fonts";
 @import "variables/base";
 //
-// Functions
+// ## Functions
 @import "functions/parse-int";
 @import "functions/px2rem";
 @import "functions/px2em";
@@ -20,19 +20,21 @@
 @import "functions/headings";
 @import "functions/sqrt";
 //
-// Computed variables
+// ## Computed variables
 @import "variables/misc";
 //
-// Icons
+// ## Icons
 @import "icons/placeholders";
 // DO NOT import `icons/classes` here as it would lead to code duplication (see comment at the
 // beginning of this file for more details)
 // `icons/classes` is imported once in `main.scss`
 //
-// Mixins
+// ## Mixins
 @import "mixins/sr-only";
 //
-// Vendors
+// ## Vendors
 // A vendor lib of Sass mixins to write media queries
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
 @import "~breakpoint-sass/stylesheets/breakpoint";
+//
+// ## Global Placeholders

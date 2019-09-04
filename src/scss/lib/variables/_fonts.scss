@@ -1,4 +1,4 @@
-// Font variables
+// # Font variables
 //
 // Font variables SHOULD be prefixed with 'font-' to identify them easier
 // and to be able to filter them when typing in your favorite IDE/editor's
@@ -7,10 +7,10 @@ $font-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helveti
   Arial, sans-serif;
 $font-icons: null;
 
-// Defaults
+// ## Defaults
 $font-default: $font-system;
 
-// Font weights
+// ## Font weights
 //$font-weight-example: (
 //  normal: normal,
 //  medium: 500,
