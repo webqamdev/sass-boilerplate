@@ -17,6 +17,8 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "fibers": "^4.0.1",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "mini-css-extract-plugin": "^0.8.0",
     "normalize.css": "^8.0.1",
     "prettier": "^1.18.2",
@@ -32,5 +34,20 @@
     "stylelint-scss": "^3.10.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{js,scss,css,json,html,htm,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
