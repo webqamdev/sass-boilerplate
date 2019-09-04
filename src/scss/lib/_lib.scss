@@ -28,3 +28,6 @@
 // DO NOT import `icons/classes` here as it would lead to code duplication (see comment at the
 // beginning of this file for more details)
 // `icons/classes` is imported once in `main.scss`
+//
+// Mixins
+@import "mixins/sr-only";
