@@ -9,7 +9,7 @@
     "prettier": "prettier \"src/**/*.js\" \"src/**/*.scss\" \"src/**/*.css\" \"src/**/*.json\" \"src/**/*.html\" \"src/**/*.htm\" \"**/*.md\"",
     "prettier:check": "npm run prettier -- --check",
     "prettier:fix": "npm run prettier -- --write",
-    "stylelint": "stylelint 'src/scss/*.scss'",
+    "stylelint": "stylelint 'src/scss/**/*.scss'",
     "test": "npm run prettier:check && npm run stylelint"
   },
   "author": "Benjamin Gondy",
