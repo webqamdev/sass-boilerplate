@@ -55,9 +55,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              sassOptions: {
-                data: '@import "@/scss/lib/_lib.scss";',
-              },
+              prependData: '@import "@/scss/lib/_lib.scss";',
             },
           },
         ],

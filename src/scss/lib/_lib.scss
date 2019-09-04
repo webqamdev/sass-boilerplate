@@ -1,0 +1,6 @@
+// Lib entry point
+//
+// This file (and its imported children) is loaded in every Vue component.
+// Therefore, it MUST not generate any CSS. It would lead to a massive code duplication
+// They can only contain SCSS variables, functions, placeholders or mixins
+//
