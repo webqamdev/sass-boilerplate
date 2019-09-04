@@ -1,3 +1,11 @@
-body {
-  background: red;
-}
+//
+// Variables, mixins, functions, …
+// - This file should be automatically imported before every scss file when using Webpack
+//   See https://github.com/webpack-contrib/sass-loader#prependdata
+// - You can do the same in Vue Single File Components with Vue CLI
+//   See https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+// - If you can't import it automatically in every file, uncomment the following line
+//@import "lib/lib";
+//
+// Font-faces
+@import "font-faces";
