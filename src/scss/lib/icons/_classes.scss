@@ -20,6 +20,9 @@
 // Replacement RegEx when importing from `_placeholders.scss` (works with PhpStorm):
 // Regex: `(%(icon--[\w-]+))\s+\{\n\s+content:\s"\\[\d\w]+";`
 // Replacement: `.$2::before {\n  @extend $1;`
+//
+// Pro tip: Please keep unused icon classes commented to keep the
+// CSS output as light as possible.
 
 //.icon--example::before {
 //  @extend %icon--example;
