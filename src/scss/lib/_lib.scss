@@ -5,3 +5,26 @@
 // code duplication.
 // Only SCSS variables, functions, placeholders or mixins are allowed.
 //
+// Variables
+@import "variables/colors";
+@import "variables/breakpoints";
+@import "variables/fonts";
+@import "variables/base";
+//
+// Functions
+@import "functions/parse-int";
+@import "functions/px2rem";
+@import "functions/px2em";
+@import "functions/em2rem";
+@import "functions/em2px";
+@import "functions/headings";
+@import "functions/sqrt";
+//
+// Computed variables
+@import "variables/misc";
+//
+// Icons
+@import "icons/placeholders";
+// DO NOT import `icons/classes` here as it would lead to code duplication (see comment at the
+// beginning of this file for more details)
+// `icons/classes` is imported once in `main.scss`

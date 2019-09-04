@@ -1,0 +1,29 @@
+// Breakpoint variables
+//
+// Breakpoint variables
+// - SHOULD be prefixed with 'breakpoint-' to identify them easier
+//   and to filter them when typing in your favorite IDE/editor's
+//   auto-completion.
+// - SHOULD be device agnostic: prefer names such as `s`, `m`, `l` instead of
+//   `mobile`, `tablet`, `desktop`.
+// - SHOULD be in relative units. use ems only for a better compatibility
+//   (`em` === `rem` at viewport level and media queries depend on viewport).
+// - SHOULD be a multiple of 1, 2, 3, 4, 6.
+
+// Avoid using them directly (via the breakpoint() mixin for example).
+// These should be used for generic code, like layouts and typography.
+$breakpoint-xxxs: 20em; // 320px
+$breakpoint-xxs: 23em; // 360px
+$breakpoint-xs: 35em; // 560px
+$breakpoint-s: 48em; // 768px
+$breakpoint-m: 50em; // 800px
+$breakpoint-l: 62em; // 992px
+$breakpoint-xl: 75em; // 1200px
+$breakpoint-xxl: 84em; // 1344px
+$breakpoint-xxxl: 96em; // 1536px
+
+// Screen resolutions
+$breakpoint-full-hd: 120em; // 1920px
+$breakpoint-full-hd-height: 67.5em; // 1080px
+$breakpoint-4k: 240em; // 3840px
+$breakpoint-4k-height: 135em; // 2160px

@@ -1,0 +1,10 @@
+$base-font-size: 16px !default;
+
+//  Converts px value to rem
+//
+//  @param $pxValue
+//  @param $context
+//
+@function px2rem($pxValue, $context: $base-font-size) {
+  @return ((parse-int($pxValue) * 1px) / $context) * 1rem;
+}

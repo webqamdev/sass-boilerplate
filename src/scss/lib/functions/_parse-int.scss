@@ -1,0 +1,6 @@
+//
+//  Remove units
+//
+@function parse-int($n) {
+  @return $n / ($n * 0 + 1);
+}
