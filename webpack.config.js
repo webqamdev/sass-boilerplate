@@ -1,30 +1,30 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-process.env.NODE_ENV = "production";
+process.env.NODE_ENV = 'production';
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: "./src/main.js",
+  entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, 'dist'),
   },
-  target: "web",
+  target: 'web',
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src")
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ],
   module: {
     rules: [
@@ -33,35 +33,35 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           // Compiles Sass to CSS
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: true,
               sassOptions: {
-                data: '@import "@/scss/lib/_lib.scss";'
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                data: '@import "@/scss/lib/_lib.scss";',
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
