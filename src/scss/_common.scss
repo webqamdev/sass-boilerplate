@@ -1,0 +1,103 @@
+html {
+  color: $color-default;
+  font-family: $font-default;
+  font-size: 1em;
+  line-height: $base-line-height;
+  box-sizing: border-box;
+}
+
+::selection {
+  @if ($color-default-selection) {
+    background-color: $color-default-selection;
+    text-shadow: none;
+  }
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    // Inherit from parent (set to `border-box` in `html`, see below)
+    // This allow easy override and may avoid conflicts with external content
+    box-sizing: inherit;
+  }
+}
+
+body {
+  background-color: $color-default-background;
+}
+
+// Vertical rhythm: Remove top margin of common elements
+// @see https://csswizardry.com/2012/06/single-direction-margin-declarations/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+
+  // Stylize default links (those who have no CSS class)
+  // Avoids to override default styles every time you need to customize a specific link
+  &:not([class]) {
+    @extend %default-link;
+  }
+}
+
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+// Add offset to anchors when header is sticky
+// See https://stackoverflow.com/a/28824157/1224564
+// Caveat: It assumes the header has a fixed height
+//@include breakpoint($breakpoint-l) {
+//  :target {
+//    $header-height: null;
+//
+//    &::before {
+//      content: "";
+//      display: block;
+//      height: $header-height;
+//      margin-top: -$header-height;
+//    }
+//  }
+//}
+
+option,
+optgroup {
+  color: initial;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}

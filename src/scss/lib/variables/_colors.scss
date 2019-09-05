@@ -5,12 +5,13 @@
 
 $color-white: white;
 $color-black: black;
+$color-blue: blue;
 
 // ## Defaults
 $color-default: $color-black;
 $color-default-selection: null;
-$color-default-background: $color-white;
-$color-default-link: null;
+$color-default-background: null;
+$color-default-link: $color-blue;
 
 // ## Theme
 $color-primary: null;
