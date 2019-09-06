@@ -10,6 +10,7 @@
 $color-white: white;
 $color-black: black;
 $color-blue: blue;
+$color-yellow: yellow;
 
 // ## Defaults
 $color-default: $color-black;
@@ -20,5 +21,6 @@ $color-default-link: $color-blue;
 // ## Theme
 $color-primary: null;
 $color-secondary: null;
+$color-warning: $color-yellow;
 
 // ## Misc

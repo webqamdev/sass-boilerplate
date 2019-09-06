@@ -1,0 +1,11 @@
+.browser-upgrade {
+  background: $color-warning;
+  padding: 1em;
+  margin-bottom: 0;
+
+  // Consider browsers that don't support `@support` rule as outdated outdated (ie. IE11)
+  @supports (display: flex) {
+    // Hide message for decent browsers
+    display: none;
+  }
+}
