@@ -6,7 +6,16 @@
 
 Using [normalize.css](https://necolas.github.io/normalize.css/) using npm is strongly recommended. Normalize.css must be included before your own styles. If you're using [Webpack](https://webpack.js.org/), you can check (see [`main.js`](src/main.js)).
 
-Copy the [`scss`](src/scss) folder in your project and you're ready to go.
+This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
+
+1. Install required dependencies
+
+```sh
+npm install normalize.css --save-dev
+npm install breakpoint-sass --save-dev
+```
+
+2. Copy the [`scss`](src/scss) folder in your project and you're ready to go. The main entry point is located at [`src/scss/main.scss`](src/scss/main.scss).
 
 ## Development
 
