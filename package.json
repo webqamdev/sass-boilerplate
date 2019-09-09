@@ -1,8 +1,21 @@
 {
-  "name": "sass-boilerplate",
+  "name": "@bgondy/sass-boilerplate",
   "version": "0.1.0",
   "description": "An opinionated Sass boilerplate",
-  "private": true,
+  "keywords": [
+    "sass",
+    "scss",
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/bgondy/sass-boilerplate",
+  "bugs": {
+    "url": "https://github.com/bgondy/sass-boilerplate/issues"
+  },
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bgondy/sass-boilerplate"
+  },
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "watch": "npm run build -- --watch --progress",
