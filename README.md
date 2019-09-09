@@ -2,6 +2,8 @@
 
 > An opinionated Sass boilerplate.
 
+[![build status](https://gitlab.com/bgondy/sass-boilerplate/badges/master/pipeline.svg)](https://gitlab.com/bgondy/sass-boilerplate/pipelines)
+
 ## Usage
 
 Using [normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included before your own styles.
