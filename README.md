@@ -4,7 +4,7 @@
 
 ## Usage
 
-Using [normalize.css](https://necolas.github.io/normalize.css/) using npm is strongly recommended. Normalize.css must be included before your own styles. If you're using [Webpack](https://webpack.js.org/), you can check (see [`main.js`](src/main.js)).
+Using [normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included before your own styles.
 
 This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
 
