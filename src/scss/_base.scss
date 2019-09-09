@@ -104,3 +104,10 @@ optgroup {
 textarea {
   resize: vertical;
 }
+
+// Prevent using line breaks and blank paragraphs for spacing
+// See https://twitter.com/csswizardry/status/1170835532584235008?s=20
+//br + br,
+//p:empty {
+//  display: none;
+//}
