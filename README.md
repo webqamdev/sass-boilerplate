@@ -36,3 +36,11 @@ Available commands :
 - `npm run stylelint` Lint SCSS files
 
 Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) are automatically executed on pre-commit. Please check [`package.json`](package.json) for implementation details.
+
+## Contributing
+
+Please see [contributing guide](CONTRIBUTING.md).
+
+## License
+
+[MIT](LICENSE)
