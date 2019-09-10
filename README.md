@@ -17,7 +17,7 @@ npm install normalize.css --save-dev
 npm install breakpoint-sass --save-dev
 ```
 
-2. Copy the [`src/scss`](src/scss) folder in your project and you're ready to go. The main entry point is located at [`src/scss/main.scss`](src/scss/main.scss).
+2. Copy the [`src/scss`](src/scss) directory in your project and you're ready to go. The main entry point is located at [`src/scss/main.scss`](src/scss/main.scss).
 
 ## Development
 
