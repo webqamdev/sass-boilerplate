@@ -6,18 +6,18 @@
 
 ## Usage
 
-Using [normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included before your own styles.
+Using [Normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included before your own styles.
 
 This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
 
 1. Install required dependencies
-
-```sh
-npm install normalize.css --save-dev
-npm install breakpoint-sass --save-dev
-```
-
-2. Copy the [`src/scss`](src/scss) directory in your project and you're ready to go. The main entry point is located at [`src/scss/main.scss`](src/scss/main.scss).
+   ```sh
+   npm install normalize.css --save-dev
+   npm install breakpoint-sass --save-dev
+   ```
+2. Copy the [`src/scss`](src/scss) directory in your project.
+3. Include Normalize.css (optional)
+4. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
 
 ## Development
 
