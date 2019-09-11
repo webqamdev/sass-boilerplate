@@ -10,6 +10,12 @@ Using [Normalize.css](https://necolas.github.io/normalize.css/) is strongly reco
 
 This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
 
+### Vue projects (using Vue CLI)
+
+You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cli-plugin-sass-boilerplate) to automatically install this boilerplate and configure your project.
+
+### Manual install
+
 1. Install required dependencies
    ```sh
    npm install normalize.css --save-dev
