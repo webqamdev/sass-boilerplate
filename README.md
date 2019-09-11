@@ -35,7 +35,7 @@ Available commands :
 - `npm run prettier:fix` Reformat files with Prettier
 - `npm run stylelint` Lint SCSS files
 
-Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) are automatically executed on pre-commit. Please check [`package.json`](package.json) for implementation details.
+Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) run automatically on pre-commit. Please check [`package.json`](package.json) for implementation details.
 
 ## Contributing
 
