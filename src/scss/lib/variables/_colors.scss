@@ -18,7 +18,15 @@ $color-default-link: $color-blue;
 
 // ## Theme
 $color-primary: null;
+$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
+
 $color-secondary: null;
+$color-secondary-invert: if(
+  $color-secondary,
+  text-contrast($color-secondary),
+  null
+);
+
 $color-warning: $color-yellow;
 
 // ## Misc

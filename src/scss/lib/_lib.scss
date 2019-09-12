@@ -32,6 +32,7 @@
 //
 // ## Mixins
 @import "mixins/sr-only";
+@import "mixins/btn-style";
 //
 // ## Vendors
 // A vendor lib of Sass mixins to write media queries
@@ -40,3 +41,4 @@
 //
 // ## Global Placeholders
 @import "placeholders/default-link";
+@import "placeholders/base-btn";

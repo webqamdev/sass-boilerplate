@@ -1,0 +1,27 @@
+/// @param {color} $color
+/// @param {color} $background-color
+/// @param {string} $block-selector
+@mixin btn-style(
+  $color,
+  $background-color,
+  $block-selector: $base-btn-block-selector
+) {
+  // Add your custom styles here
+  background-color: $background-color;
+  color: $color;
+
+  &:hover,
+  &#{$block-selector}--hovered {
+    // Add your custom styles here
+  }
+
+  &:focus,
+  &#{$block-selector}--focused {
+    // Add your custom styles here
+  }
+
+  &[disabled],
+  &#{$block-selector}--disabled {
+    // Add your custom styles here
+  }
+}

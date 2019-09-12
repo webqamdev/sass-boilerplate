@@ -1,0 +1,73 @@
+#{$base-btn-block-selector} {
+  $block-selector: &;
+
+  @extend %base-btn;
+
+  &--default {
+    @extend %base-btn--default;
+  }
+
+  &--primary {
+    @extend %base-btn--primary;
+  }
+
+  &--secondary {
+    @extend %base-btn--secondary;
+  }
+
+  &--block {
+    @extend %base-btn--block;
+  }
+
+  &--link {
+    @extend %base-btn--link;
+  }
+
+  &[disabled],
+  &#{$block-selector + "--disabled"} {
+    @extend %base-btn--disabled;
+  }
+
+  &--icon {
+    @extend %base-btn--icon;
+  }
+}
+
+button {
+  // Stylize default buttons (those who don't have any CSS class)
+  // Avoids to override default styles every time you need to customize a specific button
+  &:not([class]) {
+    @extend %base-btn;
+    @extend %base-btn--default;
+  }
+
+  &:disabled,
+  &[disabled],
+  &.base-btn--disabled {
+    &:not([class]) {
+      @extend %base-btn--disabled;
+    }
+  }
+
+  &[type="submit"] {
+    &:not([class]) {
+      @extend %base-btn--primary;
+    }
+  }
+}
+
+input {
+  &[type="submit"] {
+    &:not([class]) {
+      @extend %base-btn;
+      @extend %base-btn--primary;
+    }
+  }
+
+  &[type="reset"] {
+    &:not([class]) {
+      @extend %base-btn;
+      @extend %base-btn--default;
+    }
+  }
+}
