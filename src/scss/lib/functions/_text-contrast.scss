@@ -26,7 +26,7 @@
     (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000
   );
   $light: round(
-    (red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000
+    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) / 1000
   );
 
   @if abs($brightness) < ($light/2) {
