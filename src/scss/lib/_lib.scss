@@ -5,10 +5,7 @@
 // code duplication.
 // Only SCSS variables, functions, placeholders or mixins are allowed.
 //
-// ## Variables
-@import "variables/colors";
-@import "variables/breakpoints";
-@import "variables/fonts";
+// ## Base variables
 @import "variables/base";
 //
 // ## Functions
@@ -21,7 +18,10 @@
 @import "functions/sqrt";
 @import "functions/text-contrast";
 //
-// ## Computed variables
+// ## Variables
+@import "variables/colors";
+@import "variables/breakpoints";
+@import "variables/fonts";
 @import "variables/misc";
 //
 // ## Icons
