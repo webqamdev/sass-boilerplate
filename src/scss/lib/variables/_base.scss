@@ -4,6 +4,10 @@
 // Other variables SHOULD be declared in `_colors.scss`, `_breakpoints.scss`,
 // `_fonts.scss` and `_misc.scss` depending on their type.
 //
+// ## Color list
+$color-white: white;
+$color-black: black;
+
 // ## Base typography
 $base-font-size: 16px;
 $base-line-height: 1.5; // See https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Accessibility_concerns
