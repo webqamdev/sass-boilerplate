@@ -1,0 +1,76 @@
+%base-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $base-btn-vertical-padding $base-btn-horizontal-padding;
+  border: 0;
+  color: inherit;
+  line-height: inherit;
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+%base-btn--default {
+  @include btn-style(
+    $color: $color-default,
+    $background-color: $color-default-background
+  );
+}
+
+%base-btn--primary {
+  @include btn-style(
+    $background-color: $color-primary,
+    $color: $color-primary-invert
+  );
+}
+
+%base-btn--secondary {
+  @include btn-style(
+    $background-color: $color-secondary,
+    $color: $color-secondary-invert
+  );
+}
+
+%base-btn--block {
+  display: flex;
+}
+
+%base-btn--link {
+  padding-left: 0;
+  padding-right: 0;
+  background: none;
+  font-weight: inherit;
+  min-height: auto;
+  // Add your custom styles here
+
+  &#{$base-btn-block-selector}--hovered,
+  &:hover {
+    // Add your custom styles here
+  }
+
+  &:disabled,
+  &[disabled],
+  &#{$base-btn-block-selector}--disabled {
+    // Add your custom styles here
+  }
+}
+
+%base-btn--disabled {
+  cursor: not-allowed;
+}
+
+%base-btn--icon {
+  &::before {
+    @extend %icon;
+    display: block;
+    color: currentColor;
+    flex: none;
+    margin-right: 1em;
+  }
+}

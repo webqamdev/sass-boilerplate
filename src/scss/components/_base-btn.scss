@@ -1,0 +1,34 @@
+#{$base-btn-block-selector} {
+  $block-selector: &;
+
+  @extend %base-btn;
+
+  &--default {
+    @extend %base-btn--default;
+  }
+
+  &--primary {
+    @extend %base-btn--primary;
+  }
+
+  &--secondary {
+    @extend %base-btn--secondary;
+  }
+
+  &--block {
+    @extend %base-btn--block;
+  }
+
+  &--link {
+    @extend %base-btn--link;
+  }
+
+  &[disabled],
+  &#{$block-selector + "--disabled"} {
+    @extend %base-btn--disabled;
+  }
+
+  &--icon {
+    @extend %base-btn--icon;
+  }
+}

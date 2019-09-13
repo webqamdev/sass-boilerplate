@@ -1,14 +1,12 @@
 // # Colors
 //
 // Color variables SHOULD be prefixed with 'color-' to identify them easier and to be able to
-// filter them in your favorite IDE/editor's auto-completion when typing
+// filter them in your favorite IDE/editor's auto-completion when typing.
 //
 // You can use tools like [Name that color](http://chir.ag/projects/name-that-color) to create
-// color names
+// color names.
 
 // ## Color list
-$color-white: white;
-$color-black: black;
 $color-blue: blue;
 $color-yellow: yellow;
 
@@ -20,7 +18,15 @@ $color-default-link: $color-blue;
 
 // ## Theme
 $color-primary: null;
+$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
+
 $color-secondary: null;
+$color-secondary-invert: if(
+  $color-secondary,
+  text-contrast($color-secondary),
+  null
+);
+
 $color-warning: $color-yellow;
 
 // ## Misc

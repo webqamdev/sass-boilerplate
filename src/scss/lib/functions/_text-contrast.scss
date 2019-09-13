@@ -1,0 +1,40 @@
+$color-white: white !default;
+$color-black: black !default;
+
+// Function that calculates if text needs to be light or dark
+// depending on the background color passed.
+//
+// From this W3C document: http://www.w3.org/TR/AERT#color-contrast
+//
+// Color brightness is determined by the following formula:
+// ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+//
+// Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
+//
+// @param {color} $color       Color to test
+// @param {color} $color-light Light color to replace with
+// @param {color} $color-dark  Dark color to replace with
+@function text-contrast(
+  $color,
+  $color-light: $color-white,
+  $color-dark: $color-black
+) {
+  @if (type-of($color) != "color") {
+    @warn "The provided color is invalid.";
+
+    @return null;
+  }
+
+  $brightness: round(
+    (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000
+  );
+  $light: round(
+    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) / 1000
+  );
+
+  @if abs($brightness) < ($light/2) {
+    @return $color-light;
+  } @else {
+    @return $color-dark;
+  }
+}
