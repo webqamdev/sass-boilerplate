@@ -1,0 +1,97 @@
+.btn-toolbar {
+  $block-selector: &;
+  $btn-toolbar-gutter: 1em;
+  // Enable breakpoints when you need them
+  // (they are commented out to avoid dead code in the bundle)
+  $btn-toolbar-vertical-breakpoints: (
+    //xxs: $breakpoint-xxs,
+      //xs: $breakpoint-xs,
+      //s: $breakpoint-s,
+      //m: $breakpoint-m,
+      //l: $breakpoint-l,
+  );
+  $btn-toolbar-centered-breakpoints: $btn-toolbar-vertical-breakpoints;
+
+  @function getNotSelector($block, $modifier) {
+    $output: $block + ":not(" + $block + "--" + $modifier + ")";
+
+    @each $size, $bp in $btn-toolbar-vertical-breakpoints {
+      $output: $output +
+        ":not(" +
+        $block +
+        "--" +
+        $modifier +
+        "-" +
+        $size +
+        ")";
+    }
+
+    @return $output;
+  }
+
+  margin-top: -$btn-toolbar-gutter;
+  margin-left: -$btn-toolbar-gutter;
+  margin-bottom: 1em;
+  display: flex;
+  flex-flow: column wrap;
+
+  &--centered {
+    justify-content: center;
+  }
+
+  // Generate selectors for each breakpoint
+  @each $size, $bp in $btn-toolbar-centered-breakpoints {
+    &--centered-#{$size} {
+      justify-content: center;
+
+      @include breakpoint($bp) {
+        justify-content: unset;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+
+    @at-root #{selector-unify(&, $block-selector + '--centered')} {
+      align-items: center;
+    }
+  }
+
+  @at-root #{getNotSelector($block-selector, 'vertical')} {
+    flex-direction: unset;
+  }
+
+  // Generate selectors for each breakpoint
+  @each $size, $bp in $btn-toolbar-vertical-breakpoints {
+    @include breakpoint($bp) {
+      &--vertical-#{$size} {
+        flex-direction: unset;
+      }
+    }
+  }
+
+  &--no-wrap {
+    flex-wrap: unset;
+  }
+
+  &--full-width,
+  &--full-width-equal {
+    // Nothing to do here, just keeping these empty selectors so class are available
+    // in PhpStorm's autocomplete
+  }
+
+  &__item {
+    margin-top: $btn-toolbar-gutter;
+    margin-left: $btn-toolbar-gutter;
+
+    #{$block-selector}--full-width & {
+      flex: auto;
+    }
+
+    #{$block-selector}--full-width-equal & {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+}
