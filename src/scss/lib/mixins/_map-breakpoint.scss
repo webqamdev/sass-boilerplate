@@ -3,17 +3,18 @@
 /// Usage
 ///   ```scss
 ///   .element {
-///      @include map-breakpoint(
-///        (
-///          default: 1em,
-///          $breakpoint-s: 2em,
-///          $breakpoint-m: auto,
-///        )
-///      )
-///      using($breakpoint, $value) {
-///      margin-left: $value;
-///      margin-right: $value;
-///    }
+///     @include map-breakpoint(
+///         (
+///           default: 1em,
+///           $breakpoint-s: 2em,
+///           $breakpoint-m: auto,
+///         )
+///       )
+///       using($breakpoint, $value) {
+///       margin-left: $value;
+///       margin-right: $value;
+///     }
+///   }
 ///   ```
 ///
 /// // output
