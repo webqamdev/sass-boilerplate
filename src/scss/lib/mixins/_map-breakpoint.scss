@@ -1,0 +1,56 @@
+/// Loop through a map of breakpoints
+///
+/// Usage
+///   ```scss
+///   .element {
+///     @include map-breakpoint(
+///         (
+///           default: 1em,
+///           $breakpoint-s: 2em,
+///           $breakpoint-m: auto,
+///         )
+///       )
+///       using($breakpoint, $value) {
+///       margin-left: $value;
+///       margin-right: $value;
+///     }
+///   }
+///   ```
+///
+/// // output
+///   ```css
+///   .element {
+///     margin-left: 1em;
+///     margin-right: 1em;
+///   }
+///
+///   @media screen and (min-width: 48em) {
+///     .element {
+///       margin-left: 2em;
+///       margin-right: 2em;
+///     }
+///   }
+///
+///   @media screen and (min-width: 50em) {
+///     .element {
+///       margin-left: auto;
+///       margin-right: auto;
+///     }
+///   }
+///   ```
+///
+@mixin map-breakpoint($breakpoint-map, $default-key: "default") {
+  @if not(mixin-exists(breakpoint)) {
+    @error "Mixin breakpoint() not found. Ensure breakpoint-sass is installed.";
+  }
+
+  @each $breakpoint, $value in $breakpoint-map {
+    @if ($breakpoint == $default-key) {
+      @content ($breakpoint, $value);
+    } @else {
+      @include breakpoint($breakpoint) {
+        @content ($breakpoint, $value);
+      }
+    }
+  }
+}
