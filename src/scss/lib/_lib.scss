@@ -10,10 +10,10 @@
 //
 // ## Functions
 @import "functions/parse-int";
-@import "functions/px2rem";
-@import "functions/px2em";
-@import "functions/em2rem";
-@import "functions/em2px";
+@import "functions/px-to-rem";
+@import "functions/px-to-em";
+@import "functions/em-to-rem";
+@import "functions/em-to-px";
 @import "functions/headings";
 @import "functions/sqrt";
 @import "functions/text-contrast";
