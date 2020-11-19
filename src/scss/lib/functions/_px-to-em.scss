@@ -6,6 +6,6 @@ $base-font-size: 16px !default;
 //  @param $pxValue
 //  @param $context
 //
-@function px2em($pxValue, $context: $base-font-size) {
+@function px-to-em($pxValue, $context: $base-font-size) {
   @return ($pxValue / $context) * 1em;
 }
