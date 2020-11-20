@@ -1,0 +1,12 @@
+// The mixin hover-focus-within() avoid this type of selector (which is sot supported by IE 11) :
+// :hover,
+// :focus-within { ... }
+@mixin hover-focus-within() {
+  &:hover {
+    @content;
+  }
+
+  &:focus-within {
+    @content;
+  }
+}
