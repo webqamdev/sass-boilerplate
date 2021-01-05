@@ -25,6 +25,12 @@ You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cl
 3. Include Normalize.css (optional)
 4. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
 
+## Documentation
+
+In order to keep documentation up to date and to have it in your project, it is written in Sass comments directly in the code (Sass comments are skipped during compilation).
+
+You can start with the main entry point in [`src/scss/main.scss`](src/scss/main.scss).
+
 ## Development
 
 Clone the project locally and install node dependencies :
