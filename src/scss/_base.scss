@@ -80,6 +80,18 @@ img {
 }
 
 // Add offset to anchors when header is sticky
+// See https://stackoverflow.com/a/56467997/1224564
+// See https://caniuse.com/?search=scroll-padding-top (not working with IE11)
+//@include breakpoint($breakpoint-l) {
+//  html {
+//    $header-height: null !default;
+//    scroll-padding-top: $header-height;
+//  }
+//}
+//
+// OR
+//
+// If you need to support IE11
 // See https://stackoverflow.com/a/28824157/1224564
 // Caveat: It assumes the header has a fixed height
 //@include breakpoint($breakpoint-l) {
