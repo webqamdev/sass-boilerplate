@@ -51,8 +51,10 @@ automatically install this boilerplate and configure your project.
                  sourceMap: true,
                  // Depending on the version of sass-loader, the option property may vary
                  // (data <8.0.0, prependData >8.0.0, additionalData >9.0.0)
-                 // See sass-loader's documentation and CHANGELOG for details (https://github.com/webpack-contrib/sass-loader)
-                 additionalData: '@import "@/scss/lib/_lib.scss";', // Update path to fit your needs
+                 // See sass-loader's documentation and CHANGELOG for details
+                 // (https://github.com/webpack-contrib/sass-loader)
+                 // Update path to fit your needs
+                 additionalData: '@import "@/scss/lib/_lib.scss";',
                },
              },
            ],
