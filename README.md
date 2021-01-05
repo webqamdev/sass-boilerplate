@@ -68,10 +68,17 @@ Please see [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config
 
 ## Documentation
 
-In order to keep documentation up to date and to have it in your project, it is written in Sass comments directly in the
-code (Sass comments are skipped during compilation).
+In order to keep documentation up to date and to have it to hand once in your project, most of the documentation is
+directly written in the code (don't worry, Sass comments are skipped during compilation).
 
-You can start with the main entry point in [`src/scss/main.scss`](src/scss/main.scss).
+Once installation is complete, feel free to browse files and toggle commented sections or tweak code to fit your needs,
+especially in the following files:
+
+1. [`scss/lib/_lib.scss`](src/scss/lib/_lib.scss): please keep in mind this file (and its dependencies) is loaded in
+   every Scss file/Vue Component. Therefore, it **MUST NOT** generate any CSS once compiled. Doing so would lead to a
+   massive code duplication.
+2. [`scss/lib/variables/`](src/scss/lib/variables)
+3. [`scss/main.scss`](src/scss/main.scss)
 
 ## Development
 
