@@ -6,13 +6,15 @@
 
 ## Usage
 
-Using [Normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included before your own styles.
+Using [Normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included
+before your own styles.
 
 This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
 
 ### Vue projects (using Vue CLI)
 
-You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cli-plugin-sass-boilerplate) to automatically install this boilerplate and configure your project.
+You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cli-plugin-sass-boilerplate) to
+automatically install this boilerplate and configure your project.
 
 ### Manual install
 
@@ -65,19 +67,20 @@ Please see [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config
 
 ## Documentation
 
-In order to keep documentation up to date and to have it in your project, it is written in Sass comments directly in the code (Sass comments are skipped during compilation).
+In order to keep documentation up to date and to have it in your project, it is written in Sass comments directly in the
+code (Sass comments are skipped during compilation).
 
 You can start with the main entry point in [`src/scss/main.scss`](src/scss/main.scss).
 
 ## Development
 
-Clone the project locally and install node dependencies :
+Clone the project locally and install node dependencies:
 
 ```bash
 npm install
 ```
 
-Available commands :
+Available commands:
 
 - `npm run build` Build the CSS using Webpack to ensure there is no error
 - `npm run watch` Same as `build` but with change detection
@@ -85,7 +88,8 @@ Available commands :
 - `npm run prettier:fix` Reformat files with Prettier
 - `npm run stylelint` Lint SCSS files
 
-Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) run automatically on pre-commit. Please check [`package.json`](package.json) for implementation details.
+Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) run automatically on
+pre-commit. Please check [`package.json`](package.json) for implementation details.
 
 ## Contributing
 
