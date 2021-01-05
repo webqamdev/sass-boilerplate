@@ -47,6 +47,7 @@ automatically install this boilerplate and configure your project.
              {
                loader: 'sass-loader',
                options: {
+                 // Enabling sourcemaps is strongly advised
                  sourceMap: true,
                  // Depending on the version of sass-loader, the option property may vary
                  // (data <8.0.0, prependData >8.0.0, additionalData >9.0.0)
