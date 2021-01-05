@@ -81,6 +81,7 @@ especially in the following files:
    massive code duplication.
 2. [`scss/lib/variables/`](src/scss/lib/variables)
 3. [`scss/main.scss`](src/scss/main.scss)
+4. [`scss/_base.scss`](src/scss/_base.scss)
 
 ## Development
 
