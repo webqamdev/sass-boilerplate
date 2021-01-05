@@ -22,8 +22,46 @@ You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cl
    npm install breakpoint-sass --save-dev
    ```
 2. Copy the [`src/scss`](src/scss) directory in your project.
-3. Include Normalize.css (optional)
-4. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
+3. Import Normalize.css to your bundle (optional)
+4. Configure your bundler to import [`_lib.scss`](src/scss/lib/_lib.scss) in every file (optional)
+
+   For Webpack:
+
+   ```js
+   // webpack.config.js
+   module.exports = {
+     // ...
+     resolve: {
+       alias: {
+         '@': path.resolve(__dirname, 'src'),
+       },
+     },
+     module: {
+       rules: [
+         {
+           test: /\.scss$/,
+           use: [
+             // ...
+             {
+               loader: 'sass-loader',
+               options: {
+                 sourceMap: true,
+                 // Depending on the version of sass-loader, the option property may vary
+                 // (data <8.0.0, prependData >8.0.0, additionalData >9.0.0)
+                 // See sass-loader's documentation and CHANGELOG for details (https://github.com/webpack-contrib/sass-loader)
+                 additionalData: '@import "@/scss/lib/_lib.scss";', // Update path to fit your needs
+               },
+             },
+           ],
+         },
+       ],
+     },
+   };
+   ```
+
+5. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
+
+Please see [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config.js) for a light implementation example.
 
 ## Documentation
 
