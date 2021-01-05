@@ -64,7 +64,7 @@ automatically install this boilerplate and configure your project.
 
 5. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
 
-Please see [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config.js) for a light implementation example.
+You can take a look at [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config.js) for a light implementation example.
 
 ## Documentation
 
