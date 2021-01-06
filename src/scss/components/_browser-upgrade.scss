@@ -1,9 +1,22 @@
+/// Outdated browser alert component
+///
+/// The following code is intentionally minimalistic. Feel free to tweak it.
+/// The point here is to hide the component when the browser has a decent CSS support
+/// and to keep it visible otherwise (using `@supports`)
+///
+/// Usage:
+/// ```html
+/// <p class="browser-upgrade">
+///   You're using an outdated browser
+/// </p>
+/// ```
 .browser-upgrade {
   background: $color-warning;
   padding: 1em;
   margin-bottom: 0;
 
-  // Consider browsers that don't support `@support` rule as outdated (ie. IE11)
+  // Consider browsers without support of `@support` rule as outdated (ie. IE11)
+  // See https://caniuse.com/css-featurequeries
   @supports (display: flex) {
     // Hide message for decent browsers
     display: none;
