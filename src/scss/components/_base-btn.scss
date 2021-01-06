@@ -1,3 +1,20 @@
+/// Base btn component
+///
+/// Usage:
+///
+/// ```html
+/// <button class="base-btn base-btn--default" type="button">
+///   Lorem ipsum
+/// </button>
+///
+/// <a href="#" class="base-btn base-btn--default base-btn--block">
+///   Lorem ipsum
+/// </a>
+///
+/// <a href="#" class="base-btn base-btn--primary">
+///   Lorem ipsum
+/// </a>
+/// ```
 #{$base-btn-block-selector} {
   $block-selector: &;
 
