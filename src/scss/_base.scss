@@ -7,6 +7,14 @@ html {
   font-size: 1em;
   line-height: $base-line-height;
   box-sizing: border-box;
+  @if ($default-scroll-behavior != auto) {
+    scroll-behavior: $default-scroll-behavior;
+
+    // See https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior#Accessibilit%C3%A9
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 ::selection {
