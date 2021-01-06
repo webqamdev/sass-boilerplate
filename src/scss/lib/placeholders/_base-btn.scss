@@ -42,6 +42,19 @@
   width: 100%;
 }
 
+%base-btn--discreet {
+  // You should also reset properties you've used in %base-btn to avoid side-effects
+  font: inherit;
+  background: none;
+  padding: 0;
+  display: inline;
+  border: 0;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  border-radius: 0;
+}
+
 %base-btn--link {
   padding-left: 0;
   padding-right: 0;

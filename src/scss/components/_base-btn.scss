@@ -48,4 +48,8 @@
   &--icon {
     @extend %base-btn--icon;
   }
+
+  &--discreet {
+    @extend %base-btn--discreet;
+  }
 }
