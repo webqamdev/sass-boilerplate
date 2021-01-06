@@ -12,6 +12,8 @@
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   background: none;
+  // Reset border-radius to have a consistent rendering amongst browsers (especially on iOS devices)
+  border-radius: 0;
 }
 
 %base-btn--default {
