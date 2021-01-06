@@ -2,7 +2,7 @@
 ///
 /// The following code is intentionally minimalistic. Feel free to tweak it.
 /// The point here is to hide the component when the browser has a decent CSS support
-/// and to keep it visible otherwise.
+/// and to keep it visible otherwise (using `@supports`)
 ///
 /// Usage:
 /// ```html
