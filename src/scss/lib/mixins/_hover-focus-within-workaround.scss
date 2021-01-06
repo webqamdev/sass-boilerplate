@@ -1,0 +1,58 @@
+/// Workaround for IE11 when using `:hover` and `:focus-within` in the same selector.
+/// `:focus-within` is not compatible with IE11. When you use the following selector:
+///
+/// ```scss
+///    .block-selector {
+///      &:hover,
+///      &:focus-within {
+///        color: red;
+///      }
+///    }
+/// ```
+///
+/// Which compiles to:
+///
+/// ```css
+///      /* Works in every browser but IE11 */
+///    .block-selector:hover,
+///    .block-selector:focus-within {
+///      color: red;
+///    }
+/// ```
+///
+/// IE11 which doesn't know this pseudo-class skips it and ignores the whole selector, including the `:hover` part. This
+/// mixin aims to address this case by avoid code duplication but split code in distinct selectors so the `:hover` part
+/// still works.
+///
+/// Example:
+///
+/// ```scss
+/// .block-selector {
+///   @include hover-focus-within-workaround() {
+///     color: green;
+///   }
+/// }
+/// ```
+///
+/// compiles to:
+///
+/// ```css
+/// /* Works in every browser */
+/// .block-selector:hover {
+///   color: green;
+/// }
+///
+/// /* Skipped by IE11 */
+/// .block-selector:focus-within {
+///   color: green;
+/// }
+/// ```
+@mixin hover-focus-within-workaround() {
+  &:hover {
+    @content;
+  }
+
+  &:focus-within {
+    @content;
+  }
+}
