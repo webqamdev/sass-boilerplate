@@ -1,0 +1,20 @@
+/// Set element's z-index
+///
+/// Usage
+///   ```scss
+///   .element {
+///     @include z-index(modal);
+///   }
+///   ```
+///
+/// // output
+///   ```css
+///   .element {
+///     z-index: 300;
+///   }
+///   ```
+///
+/// @param $key
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

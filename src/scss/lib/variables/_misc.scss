@@ -13,3 +13,13 @@ $default-transition-duration: 150ms;
 $base-btn-block-selector: ".base-btn";
 $base-btn-vertical-padding: 0.25em;
 $base-btn-horizontal-padding: 1em;
+
+// Z-indexes
+// Example values
+$z-index: (
+  tooltip: 400,
+  modal: 300,
+  navigation: 200,
+  toolbar: 100,
+  dropdown: 50,
+);

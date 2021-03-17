@@ -1,0 +1,7 @@
+//  Return `z-index` value based on key
+//
+//  @param $key
+//
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}

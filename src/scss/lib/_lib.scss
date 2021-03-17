@@ -17,6 +17,7 @@
 @import "functions/headings";
 @import "functions/sqrt";
 @import "functions/text-contrast";
+@import "functions/z-index";
 //
 // ## Variables
 @import "variables/colors";
@@ -35,6 +36,7 @@
 @import "mixins/btn-style";
 @import "mixins/map-breakpoint";
 @import "mixins/hover-focus-within-workaround";
+@import "mixins/z-index";
 //
 // ## Vendors
 // A vendor lib of Sass mixins to write media queries
