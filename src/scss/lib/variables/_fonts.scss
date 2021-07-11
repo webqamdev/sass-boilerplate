@@ -3,16 +3,47 @@
 // Font variables SHOULD be prefixed with 'font-' to identify them easier
 // and to be able to filter them when typing in your favorite IDE/editor's
 // auto-completion.
-$font-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
-  Arial, sans-serif;
-$font-icons: null;
+
+// ## Font names
+$font-name-example: "example";
+
+// ## Fonts
+$font-family-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto,
+  Helvetica, Arial, sans-serif;
+$font-family-example: $font-name-example, Arial, sans-serif;
+$font-family-icons: null;
 
 // ## Defaults
-$font-default: $font-system;
+$font-family-default: $font-family-system;
 
 // ## Font weights
-//$font-weight-example: (
-//  normal: normal,
-//  medium: 500,
-//  black: 900,
-//);
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-book: 400;
+$font-weight-medium: 500;
+$font-weight-middle: 500;
+$font-weight-semi-bold: 600;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+$font-weights: (
+  lighter: lighter,
+  normal: normal,
+  bolder: bolder,
+  thin: $font-weight-thin,
+  extra-light: $font-weight-extra-light,
+  light: $font-weight-light,
+  regular: $font-weight-regular,
+  book: $font-weight-book,
+  medium: $font-weight-medium,
+  semi-bold: $font-weight-semi-bold,
+  bold: $font-weight-bold,
+  heavy: $font-weight-heavy,
+  extra-bold: $font-weight-extra-bold,
+  black: $font-weight-black,
+);

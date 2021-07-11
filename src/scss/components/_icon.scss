@@ -24,6 +24,16 @@
 // Pro tip: Please keep unused icon classes commented to keep the
 // CSS output as light as possible.
 
-//.icon--example::before {
-//  @extend %icon--example;
-//}
+@use "../lib/placeholders/icon" as *;
+
+.icon {
+  &::before {
+    @extend %icon;
+  }
+
+  &--example {
+    &::before {
+      @extend %icon--example;
+    }
+  }
+}

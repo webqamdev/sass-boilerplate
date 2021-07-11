@@ -1,0 +1,13 @@
+@use "../lib/placeholders/base-button" as *;
+
+.base-button {
+  @extend %base-button;
+
+  &--no-outline {
+    @extend %base-button--no-outline;
+  }
+
+  &--disabled {
+    @extend %base-button--disabled;
+  }
+}

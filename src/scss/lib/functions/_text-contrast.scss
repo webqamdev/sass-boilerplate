@@ -1,6 +1,3 @@
-$color-white: white !default;
-$color-black: black !default;
-
 // Function that calculates if text needs to be light or dark
 // depending on the background color passed.
 //
@@ -10,14 +7,13 @@ $color-black: black !default;
 // ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
 //
 // Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
-//
-// @param {color} $color       Color to test
-// @param {color} $color-light Light color to replace with
-// @param {color} $color-dark  Dark color to replace with
+
+@use "../variables/colors";
+
 @function text-contrast(
   $color,
-  $color-light: $color-white,
-  $color-dark: $color-black
+  $color-light: colors.$color-white,
+  $color-dark: colors.$color-black
 ) {
   @if (type-of($color) != "color") {
     @warn "The provided color is invalid.";

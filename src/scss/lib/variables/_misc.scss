@@ -1,15 +1,27 @@
 // # Miscellaneous & Computed global variables
-//
+
+@use "../variables/base";
+@use "../variables/breakpoints";
+@use "../variables/colors";
+@use "../variables/durations";
+@use "../variables/fonts";
+@use "../variables/sizes";
+@use "../functions";
+@use "../mixins";
+
 // Colors, breakpoints, fonts, base variables and functions are available at
 // this point and can be used to create "computed" variables.
-//
+
 // Related variables
 // - SHOULD be grouped
 // - SHOULD be prefixed
 $default-scroll-behavior: smooth; // initial value is 'auto'
-$default-transition-duration: 150ms;
 
-// Buttons
-$base-btn-block-selector: ".base-btn";
-$base-btn-vertical-padding: 0.25em;
-$base-btn-horizontal-padding: 1em;
+// ## Interactive
+$interactive-outline: none;
+$interactive-box-shadow-size-focus: 2px;
+$interactive-box-shadow-size-active: 4px;
+$interactive-box-shadow-focus: 0 0 0 $interactive-box-shadow-size-focus
+  colors.$color-default-interactive-outline;
+$interactive-box-shadow-active: 0 0 0 $interactive-box-shadow-size-active
+  colors.$color-default-interactive-outline;

@@ -54,7 +54,7 @@ automatically install this boilerplate and configure your project.
                  // See sass-loader's documentation and CHANGELOG for details
                  // (https://github.com/webpack-contrib/sass-loader)
                  // Update path to fit your needs
-                 additionalData: '@import "@/scss/lib/_lib.scss";',
+                 additionalData: '@import "@/scss/_lib.scss";',
                },
              },
            ],

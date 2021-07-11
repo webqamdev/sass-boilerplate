@@ -17,10 +17,13 @@
 // ```
 
 // ## Color list
+$color-white: white;
+$color-black: black;
 $color-blue: blue;
 $color-yellow: yellow;
 
 // ## Defaults
+$color-default-interactive-outline: $color-blue;
 $color-default: $color-black;
 $color-default-selection: null;
 $color-default-background: null;

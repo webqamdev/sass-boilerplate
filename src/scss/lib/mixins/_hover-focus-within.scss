@@ -28,7 +28,7 @@
 ///
 /// ```scss
 /// .block-selector {
-///   @include hover-focus-within-workaround() {
+///   @include hover-focus-within() {
 ///     color: green;
 ///   }
 /// }
@@ -47,7 +47,7 @@
 ///   color: green;
 /// }
 /// ```
-@mixin hover-focus-within-workaround() {
+@mixin hover-focus-within() {
   &:hover {
     @content;
   }

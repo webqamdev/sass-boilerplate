@@ -26,8 +26,10 @@
 // `\.icon-([\w-]+):before\s?\{`
 // `%icon--$1 {`
 
+@use "../variables/fonts";
+
 %icon {
-  font-family: $font-icons;
+  font-family: fonts.$font-family-icons;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -38,6 +40,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-//%icon--example {
-//  content: "\73";
-//}
+%icon--example {
+  content: "\73";
+}

@@ -1,10 +1,9 @@
-$base-font-size: 16px !default;
-
 //  Converts em value to rem
-//
-//  @param $emValue
-//  @param $context
-//
-@function em-to-rem($emValue, $context: $base-font-size) {
-  @return px-to-rem(em-to-px($emValue, $context), $base-font-size);
+
+@use "../variables/base";
+@use "em-to-px" as *;
+@use "px-to-rem" as *;
+
+@function em-to-rem($emValue, $context: base.$base-font-size) {
+  @return px-to-rem(em-to-px($emValue, $context), base.$base-font-size);
 }

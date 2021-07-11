@@ -10,20 +10,34 @@
 //   (`em` === `rem` at viewport level and media queries depend on viewport).
 // - SHOULD be a multiple of 1, 2, 3, 4, 6.
 
+@use "../functions/px-to-em" as *;
+
 // Avoid using them directly (via the breakpoint() mixin for example).
 // These should be used for generic code, like layouts and typography.
-$breakpoint-xxxs: 20em; // 320px
-$breakpoint-xxs: 23em; // 360px
-$breakpoint-xs: 35em; // 560px
-$breakpoint-s: 48em; // 768px
-$breakpoint-m: 50em; // 800px
-$breakpoint-l: 62em; // 992px
-$breakpoint-xl: 75em; // 1200px
-$breakpoint-xxl: 84em; // 1344px
-$breakpoint-xxxl: 96em; // 1536px
+// Inspired from https://fr.screenresolution.org/
+// And from the Chrome Inspection Tool
+$breakpoint-xxxs: px-to-em(320px);
+$breakpoint-xxs: px-to-em(360px);
+$breakpoint-xs: px-to-em(416px);
+$breakpoint-s: px-to-em(768px);
+$breakpoint-m: px-to-em(864px);
+$breakpoint-l: px-to-em(1024px);
+$breakpoint-xl: px-to-em(1200px);
+$breakpoint-xxl: px-to-em(1330px);
+$breakpoint-xxxl: px-to-em(1440px);
 
 // ## Screen resolutions
-$breakpoint-full-hd: 120em; // 1920px
-$breakpoint-full-hd-height: 67.5em; // 1080px
-$breakpoint-4k: 240em; // 3840px
-$breakpoint-4k-height: 135em; // 2160px
+$breakpoint-full-hd: px-to-em(1920px);
+$breakpoint-full-hd-height: px-to-em(1080px);
+$breakpoint-4k: px-to-em(3840px);
+$breakpoint-4k-height: px-to-em(2160px);
+
+// ## Context breakpoints
+$breakpoint-tablet: $breakpoint-s;
+$breakpoint-laptop: $breakpoint-l;
+$breakpoint-desktop: $breakpoint-xxxl;
+$breakpoint-large-desktop: $breakpoint-full-hd;
+
+// ## Custom breakpoints
+// For example :
+// $breakpoint-footer-second-state: $breakpoint-l;

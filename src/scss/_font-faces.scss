@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@use "lib/variables/fonts";
+
 // # Font-faces
 //
 // This file only contains font faces and is included once at the beginning
@@ -7,14 +9,14 @@
 //
 // ```
 // @font-face {
-//   font-family: $font-name-example;
+//   font-family: fonts.$font-name-example;
 //   src: url("../fonts/example-font.eot");
 //   src: url("../fonts/example-font.eot?#iefix") format("embedded-opentype"),
 //     url("../fonts/example-font.woff2") format("woff2"),
 //     url("../fonts/example-font.woff") format("woff"),
 //     url("../fonts/example-font.ttf") format("truetype"),
 //     url("../fonts/example-font.svg#example-font") format("svg");
-//   font-weight: map-get($font-weight-example, medium);
+//   font-weight: map-get(fonts.$font-weights, medium);
 //   font-style: normal;
 // }
 // ```

@@ -10,8 +10,11 @@
 ///   You're using an outdated browser
 /// </p>
 /// ```
+
+@use "../lib/variables/colors";
+
 .browser-upgrade {
-  background: $color-warning;
+  background: colors.$color-warning;
   padding: 1em;
   margin-bottom: 0;
 

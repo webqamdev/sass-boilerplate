@@ -1,0 +1,36 @@
+@use "../variables/durations";
+@use "../variables/misc";
+
+%interactive {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: color, background, background-color, background-image,
+    background-size, background-position, border-color, text-shadow, box-shadow,
+    opacity, transform, text-indent, filter;
+  transition-duration: durations.$default-transition-duration;
+
+  &:focus {
+    outline: misc.$interactive-outline;
+    box-shadow: misc.$interactive-box-shadow-focus;
+  }
+
+  &:active {
+    box-shadow: misc.$interactive-box-shadow-active;
+  }
+
+  &.inactive,
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+
+%interactive--no-outline {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
