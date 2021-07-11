@@ -1,0 +1,10 @@
+// ## Box Shadows
+// Set all element box-shawdow here
+
+@use "color";
+@use "misc";
+
+$interactive-focus: 0 0 0 misc.$interactive-box-shadow-size-focus
+  color.$default-interactive-outline;
+$interactive-active: 0 0 0 misc.$interactive-box-shadow-size-active
+  color.$default-interactive-outline;

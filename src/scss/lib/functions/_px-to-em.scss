@@ -1,7 +1,7 @@
 //  Converts px value to em
 
-@use "../variables/base";
+@use "../variables/font";
 
-@function px-to-em($pxValue, $context: base.$base-font-size) {
+@function px-to-em($pxValue, $context: font.$size-base) {
   @return ($pxValue / $context) * 1em;
 }

@@ -11,10 +11,10 @@
 /// </p>
 /// ```
 
-@use "../lib/variables/colors";
+@use "../lib/variables/theme";
 
 .browser-upgrade {
-  background: colors.$color-warning;
+  background: theme.$color-warning;
   padding: 1em;
   margin-bottom: 0;
 

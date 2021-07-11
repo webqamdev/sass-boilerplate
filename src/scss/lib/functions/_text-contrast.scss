@@ -8,12 +8,12 @@
 //
 // Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
 
-@use "../variables/colors";
+@use "../variables/color";
 
 @function text-contrast(
   $color,
-  $color-light: colors.$color-white,
-  $color-dark: colors.$color-black
+  $color-light: color.$white,
+  $color-dark: color.$black
 ) {
   @if (type-of($color) != "color") {
     @warn "The provided color is invalid.";

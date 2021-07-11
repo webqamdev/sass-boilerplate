@@ -26,10 +26,10 @@
 // `\.icon-([\w-]+):before\s?\{`
 // `%icon--$1 {`
 
-@use "../variables/fonts";
+@use "../variables/font";
 
 %icon {
-  font-family: fonts.$font-family-icons;
+  font-family: font.$family-icons;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

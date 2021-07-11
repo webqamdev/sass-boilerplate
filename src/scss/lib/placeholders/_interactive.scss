@@ -1,5 +1,7 @@
-@use "../variables/durations";
+@use "../variables/duration";
 @use "../variables/misc";
+@use "../variables/box-shadow";
+@use "../variables/outline";
 
 %interactive {
   cursor: pointer;
@@ -7,15 +9,15 @@
   transition-property: color, background, background-color, background-image,
     background-size, background-position, border-color, text-shadow, box-shadow,
     opacity, transform, text-indent, filter;
-  transition-duration: durations.$default-transition-duration;
+  transition-duration: duration.$default-transition;
 
   &:focus {
-    outline: misc.$interactive-outline;
-    box-shadow: misc.$interactive-box-shadow-focus;
+    outline: outline.$interactive;
+    box-shadow: box-shadow.$interactive-focus;
   }
 
   &:active {
-    box-shadow: misc.$interactive-box-shadow-active;
+    box-shadow: box-shadow.$interactive-active;
   }
 
   &.inactive,

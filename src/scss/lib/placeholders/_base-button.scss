@@ -1,4 +1,6 @@
-@use "../variables/sizes";
+@use "../variables/padding";
+@use "../variables/font";
+@use "../functions/px-to-em" as *;
 @use "interactive" as *;
 
 %base-button {
@@ -7,11 +9,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: sizes.$base-button-vertical-padding
-    sizes.$base-button-horizontal-padding;
+  font-size: px-to-em(font.$size-button);
+  padding: px-to-em(padding.$button-vertical, font.$size-button)
+    px-to-em(padding.$button-horizontal, font.$size-button);
   border: 0;
   color: inherit;
-  font: inherit;
   text-align: center;
   text-decoration: none;
   cursor: pointer;

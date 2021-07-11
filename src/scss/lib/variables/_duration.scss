@@ -1,0 +1,12 @@
+// # Durations
+// Used to provide duration type variables
+$short: 150ms;
+$medium: 300ms;
+$long: 500ms;
+
+// ## Default variables
+$default-transition: $short;
+
+// ## Custom duration variables
+// For example :
+// $card-hover: $long;

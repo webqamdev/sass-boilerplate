@@ -1,9 +1,9 @@
 //  Converts em value to rem
 
-@use "../variables/base";
+@use "../variables/font";
 @use "em-to-px" as *;
 @use "px-to-rem" as *;
 
-@function em-to-rem($emValue, $context: base.$base-font-size) {
-  @return px-to-rem(em-to-px($emValue, $context), base.$base-font-size);
+@function em-to-rem($emValue, $context: font.$size-base) {
+  @return px-to-rem(em-to-px($emValue, $context), font.$size-base);
 }

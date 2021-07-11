@@ -1,8 +1,8 @@
 //  Converts px value to rem
 
-@use "../variables/base";
+@use "../variables/font";
 @use "parse-int" as *;
 
-@function px-to-rem($pxValue, $context: base.$base-font-size) {
+@function px-to-rem($pxValue, $context: font.$size-base) {
   @return ((parse-int($pxValue) * 1px) / $context) * 1rem;
 }

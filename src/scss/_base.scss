@@ -1,23 +1,21 @@
-@use "lib/variables/colors";
-@use "lib/variables/fonts";
-@use "lib/variables/sizes";
+@use "lib/variables/color";
+@use "lib/variables/font";
 @use "lib/variables/misc";
-@use "lib/variables/base";
 @use "lib/placeholders/base-link" as *;
 @use "lib/placeholders/base-button" as *;
 // # Base styles : opinionated defaults
 //
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
-  color: colors.$color-default;
-  font-family: fonts.$font-family-default;
-  font-size: base.$base-font-size;
-  line-height: base.$base-line-height;
+  color: color.$default;
+  font-family: font.$family-default;
+  font-size: font.$size-base;
+  line-height: 1.5;
   box-sizing: border-box;
 
-  @if (sizes.$device-pixel-ratio-font-size) {
+  @if (font.$size-device-pixel-ratio) {
     @media (-webkit-device-pixel-ratio: 1.25) {
-      font-size: sizes.$device-pixel-ratio-font-size;
+      font-size: font.$size-device-pixel-ratio;
     }
   }
 
@@ -32,8 +30,8 @@ html {
 }
 
 ::selection {
-  @if (colors.$color-default-selection) {
-    background-color: colors.$color-default-selection;
+  @if (color.$default-selection) {
+    background-color: color.$default-selection;
     text-shadow: none;
   }
 }
@@ -49,7 +47,7 @@ html {
 }
 
 body {
-  background-color: colors.$color-default-background;
+  background-color: color.$default-background;
 }
 
 // Vertical rhythm: Remove top margin of common elements

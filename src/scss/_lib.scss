@@ -6,18 +6,18 @@
 // Only SCSS variables, functions, placeholders or mixins are allowed.
 
 // ## Functions
-@import "lib/functions";
+@use "lib/functions";
 
 // ## Variables
-@import "lib/variables";
+@use "lib/variables";
 
 // ## Mixins
-@import "lib/mixins";
+@use "lib/mixins";
 
 // ## Vendors
 // A vendor lib of Sass mixins to write media queries
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@import "~breakpoint-sass/stylesheets/breakpoint";
+@use "~breakpoint-sass/stylesheets/breakpoint";
 
 // ## Placeholders
-@import "lib/placeholders";
+@use "lib/placeholders";

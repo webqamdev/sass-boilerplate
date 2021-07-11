@@ -1,0 +1,26 @@
+// # Colors
+// You can use tools like [Name that color](http://chir.ag/projects/name-that-color) to create
+// color names.
+// When doing so, you can add a second prefix to group colors and order them from lightest to darkest:
+
+// ```scss
+// $red: #f00;
+// $red-monza: #D20434;
+//
+// $gray-gallery: #efefef;
+// $gray: #808080;
+// $gray-mine-shaft: #333;
+// ```
+
+// ## Color list
+$white: white;
+$black: black;
+$blue: blue;
+$yellow: yellow;
+
+// ## Defaults
+$default-interactive-outline: $blue;
+$default: $black;
+$default-selection: null;
+$default-background: null;
+$default-link: $blue;

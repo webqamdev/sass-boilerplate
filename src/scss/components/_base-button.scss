@@ -1,7 +1,10 @@
 @use "../lib/placeholders/base-button" as *;
+@use "../lib/functions/px-to-em" as *;
 
 .base-button {
   @extend %base-button;
+
+  font-size: px-to-em(10px);
 
   &--no-outline {
     @extend %base-button--no-outline;

@@ -1,15 +1,9 @@
 // # Miscellaneous & Computed global variables
 
-@use "../variables/base";
-@use "../variables/breakpoints";
-@use "../variables/colors";
-@use "../variables/durations";
-@use "../variables/fonts";
-@use "../variables/sizes";
-@use "../functions";
-@use "../mixins";
+// Uncomment or add needed modules
+// @use "gap";
 
-// Colors, breakpoints, fonts, base variables and functions are available at
+// Colors, breakpoints, fonts, base variables and functions should be available at
 // this point and can be used to create "computed" variables.
 
 // Related variables
@@ -21,7 +15,3 @@ $default-scroll-behavior: smooth; // initial value is 'auto'
 $interactive-outline: none;
 $interactive-box-shadow-size-focus: 2px;
 $interactive-box-shadow-size-active: 4px;
-$interactive-box-shadow-focus: 0 0 0 $interactive-box-shadow-size-focus
-  colors.$color-default-interactive-outline;
-$interactive-box-shadow-active: 0 0 0 $interactive-box-shadow-size-active
-  colors.$color-default-interactive-outline;
