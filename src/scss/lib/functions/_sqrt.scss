@@ -1,4 +1,18 @@
+// # sqrt
+
+@use "parse-int" as *;
+
+// Return the square root of a number
+// Usage:
+// ```scss
+// @use "functions/sqrt" as *;
+//
+// .text {
+//   font-size: sqrt(9) * 1em; // Output `3 * 1em` => `3em`
+// }
+
 @function sqrt($r) {
+  $r: parse-int($r);
   $x0: 1;
   $x1: $x0;
 

@@ -1,3 +1,7 @@
+// # arrow-shape-polygon
+
+// Create arrow shape with the polygon function
+
 @function arrow-shape-polygon($arrow-width, $arrow-height) {
   // Add `1px` to fix rendering issues in several browsers
   $bottom-offset-y: unquote("calc(100% - #{$arrow-height} + 1px)");

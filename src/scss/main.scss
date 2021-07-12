@@ -10,17 +10,17 @@
 //
 // ## Font-faces
 @import "font-faces";
-//
+
 // Base styles
 @import "base";
-//
+
 // ## Vendors
 //@import "vendors/example-vendor-styles";
-//
+
 // ## Components
 // - If you're not using one or any of those components, feel free to remove them (import statement + file)
 // - If you're using VueJS, consider to use SFCs instead (and remove the following imports to avoid code duplicates)
 @import "components";
-//
+
 // ## Print
 @import "print";

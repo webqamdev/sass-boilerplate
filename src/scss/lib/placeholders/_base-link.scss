@@ -1,5 +1,23 @@
+// # Base link
+
 @use "../variables/color";
 @use "interactive" as *;
+
+// Should be used as a base to selector that looks or behave like links (even buttons or submit buttons, etc.)
+
+// Add modifiers like below.
+// ````css
+// a,
+// button {
+//   @extends %base-link;
+//   @extends %base-link--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// ```
+
+// Please update the styles below to match the project needs.
 
 %base-link {
   @extend %interactive;

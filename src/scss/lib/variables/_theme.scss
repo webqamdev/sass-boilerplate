@@ -3,14 +3,31 @@
 @use "color";
 @use "../functions/text-contrast" as *;
 
-$color-primary: null;
-$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
+// If you have multiple themes (like dark and light theme for example the create specific variables here.
+// You should prefix theme by the theme name like below.
 
-$color-secondary: null;
-$color-secondary-invert: if(
-  $color-secondary,
-  text-contrast($color-secondary),
+// If you see that this document os too long, maybe you have to create a variable theme folder and split your code.
+// For example :
+// scss/lib/variables/themes/primary/color
+
+// ````scss
+// @use "variables/themes/primary/color" as primary-color;
+// body {
+//   color: primary-color.$default-text;
+// }
+// ```
+
+// ## Primary theme
+$primary-color: null;
+$primary-color-invert: if($primary-color, text-contrast($primary-color), null);
+
+// ## Secondary theme
+$secondary-color: null;
+$secondary-color-invert: if(
+  $secondary-color,
+  text-contrast($secondary-color),
   null
 );
 
-$color-warning: color.$yellow;
+// ## Common theme
+$warning-color: color.$yellow;

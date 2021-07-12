@@ -1,5 +1,19 @@
-// # Durations
-// Used to provide duration type variables
+// # Duration  variables
+
+// Used to provide duration type variables for transitions.
+
+// Some tips:
+// - The smaller the element is, the shorter the duration should be.
+//   This way, buttons and simple elements seems more fluid and reactive.
+//   For bigger elements like cards or forms, they should reflects a greater interaction meaningful for the user.
+// - The more important interaction, the longer the duration should be.
+//   The form submit, loading a page should be accompanied by slower animation.
+// - Before production, you have to identify with the designers the user journey, the different
+//   interactive elements, etc.
+// - Keep values as milliseconds (ms) and not seconds (s) to match Javascript timing unit.
+// - Make the animation look cool. If some animation seems good but it does not respect the previous comments,
+//   then keep it.
+
 $short: 150ms;
 $medium: 300ms;
 $long: 500ms;

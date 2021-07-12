@@ -1,8 +1,19 @@
-//  Converts em value to rem
+// # em-to-rem
 
 @use "../variables/font";
 @use "em-to-px" as *;
 @use "px-to-rem" as *;
+
+// Converts em value to rem
+// Usage:
+// ```scss
+// @use "functions/em-to-rem" as *;
+//
+// .text {
+//   font-size: em-to-rem(1.5em); // Output `1.5rem`
+//   margin-bottom: em-to-rem(1.5em, 24px); // Output `2.25rem`
+// }
+// ```
 
 @function em-to-rem($emValue, $context: font.$size-base) {
   @return px-to-rem(em-to-px($emValue, $context), font.$size-base);

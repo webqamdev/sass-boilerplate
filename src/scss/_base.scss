@@ -1,10 +1,11 @@
+// # Base styles : opinionated defaults
+
 @use "lib/variables/color";
 @use "lib/variables/font";
 @use "lib/variables/misc";
 @use "lib/placeholders/base-link" as *;
 @use "lib/placeholders/base-button" as *;
-// # Base styles : opinionated defaults
-//
+
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
   color: color.$default;

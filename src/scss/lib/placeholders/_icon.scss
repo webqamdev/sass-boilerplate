@@ -1,15 +1,17 @@
 // # Icon placeholders
-//
+
+@use "../variables/font";
+
 // Icon placeholder benefits:
 // - No extra markup nor CSS classes required
 // - Better separation of concerns: HTML for content, CSS for styles
 // - The computed CSS only contains icon selectors that you really use.
-//
+
 // When to use icon placeholders over icon classes?
 // Icon placeholders are the default way to go. Icon classes should only
 // be used for dynamic use cases (ie. when the used icon is defined
 // programmatically)
-//
+
 // Usage:
 // ```scss
 // .example-selector {
@@ -17,16 +19,14 @@
 //     @extend %icon;
 //     @extend %icon--example;
 //     // Do not take line-height into account (optionnal)
-//     //display: block;
+//     // display: block;
 //   }
 // }
 // ```
-//
+
 // Replacement RegEx when importing from regular CSS (works with PhpStorm):
 // `\.icon-([\w-]+):before\s?\{`
 // `%icon--$1 {`
-
-@use "../variables/font";
 
 %icon {
   font-family: font.$family-icons;

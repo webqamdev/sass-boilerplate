@@ -1,10 +1,13 @@
 // # Fonts
 
 // ## Font names
-
+// Should be prefixed by `$name-`
+// Like so, the font is called as `font-family: font.$name-{name};`
 $name-example: "example";
 
 // ## Font families
+// Should be prefixed by `$family-`
+// Like so, the font is called as `font-family: font.$family-{name};`
 $family-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
   Arial, sans-serif;
 $family-example: $name-example, Arial, sans-serif;
@@ -14,6 +17,8 @@ $family-default: $family-system;
 
 // ## Font sizes
 // Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
+// Should be prefixed by `$size-`
+// Like so, the font is called as `font-size: font.$size-{name};`
 $size-xxs: 10px;
 $size-xs: 12px;
 $size-s: 14px;
@@ -23,13 +28,19 @@ $size-xl: 20px;
 $size-xxl: 25px;
 $size-xxxl: 30px;
 
-$size-base: 16px; // Used for functions font-size based and html root element
+// Used for functions font-size based and html root element
+$size-base: 16px;
 
-$size-device-pixel-ratio: null;
+// Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
+// If you don't want to support this feature, set the value to null
+$size-device-pixel-ratio: ($size-base / 0.75);
 
 $size-button: 16px;
 
 // ## Font weights
+// Should be named as in the mockups (Adobe XD for example)
+// Should be prefixed by `$weight-`
+// Like so, the font is called as `font-weight: font.$weight-{name};`
 $weight-thin: 100;
 $weight-extra-light: 200;
 $weight-light: 300;

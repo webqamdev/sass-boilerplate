@@ -1,4 +1,13 @@
-//  Remove units
+// # parse-int
+
+// Remove units
+// Usage example :
+// ```scss
+// @use "functions/parse-int" as *;
+//
+// @debug(parse-int(24px)); // Output `24`
+// ```
+// Other example in `./_px-to-rem.scss`.
 
 @function parse-int($n) {
   @return $n / ($n * 0 + 1);

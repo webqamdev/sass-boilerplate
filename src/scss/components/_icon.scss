@@ -1,13 +1,13 @@
 // # Icon classes
-//
+
 // Icon placeholder benefits:
 // - No extra markup nor CSS classes required
 // - Better separation of concerns: HTML for content, CSS for styles
 // - The computed CSS only contains icon selectors that you really use.
-//
+
 // When to use icon classes over icon placeholders?
 // See `_placeholders.scss`
-//
+
 // Usage:
 // ```html
 // <!-- A link prefixed with an icon -->
@@ -16,11 +16,11 @@
 // <!-- A standalone icon -->
 // <span class="icon--example" aria-hidden="true"></span>
 // ```
-//
+
 // Replacement RegEx when importing from `_placeholders.scss` (works with PhpStorm):
 // Regex: `(%(icon--[\w-]+))\s+\{\n\s+content:\s"\\[\d\w]+";`
 // Replacement: `.$2::before {\n  @extend $1;`
-//
+
 // Pro tip: Please keep unused icon classes commented to keep the
 // CSS output as light as possible.
 
@@ -31,9 +31,7 @@
     @extend %icon;
   }
 
-  &--example {
-    &::before {
-      @extend %icon--example;
-    }
+  &--example::before {
+    @extend %icon--example;
   }
 }

@@ -1,7 +1,19 @@
-//  Converts em values to px
+// # em-to-px
 
 @use "../variables/font";
+@use "parse-int" as *;
+
+// Converts em values to px
+// Usage:
+// ```scss
+// @use "functions/em-to-px" as *;
+//
+// .text {
+//   font-size: em-to-px(1.5em); // Output `24px`
+//   margin-bottom: em-to-px(1.5em, 24px); // Output `36px`
+// }
+// ```
 
 @function em-to-px($emValue, $context: font.$size-base) {
-  @return $emValue * $context * 1px;
+  @return parse-int($emValue) * parse-int($context) * 1px;
 }

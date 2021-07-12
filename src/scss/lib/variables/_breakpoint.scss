@@ -1,14 +1,7 @@
 // # Breakpoint variables
-// - SHOULD be device agnostic: prefer names such as `s`, `m`, `l` instead of
-//   `mobile`, `tablet`, `desktop`.
-// - SHOULD be in relative units. use ems only for a better compatibility
-//   (`em` === `rem` at viewport level and media queries depend on viewport).
-// - SHOULD be a multiple of 1, 2, 3, 4, 6.
 
 @use "../functions/px-to-em" as *;
 
-// Avoid using them directly (via the breakpoint() mixin for example).
-// These should be used for generic code, like layouts and typography.
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool
 $xxxs: px-to-em(320px);

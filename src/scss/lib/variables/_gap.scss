@@ -1,5 +1,7 @@
 // ## List or Grid gaps
+
 // Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
+
 $xxxs: 5px;
 $xxs: 10px;
 $xs: 15px;
@@ -9,3 +11,7 @@ $l: 40px;
 $xl: 50px;
 $xxl: 60px;
 $xxxl: 100px;
+
+// ## Custom gap variables
+// For example :
+// $section-vertical-space: $xl;

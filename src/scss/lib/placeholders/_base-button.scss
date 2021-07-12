@@ -1,7 +1,21 @@
+// # Base button
+
 @use "../variables/padding";
 @use "../variables/font";
 @use "../functions/px-to-em" as *;
 @use "interactive" as *;
+
+// Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
+// Add modifiers like below.
+// a,
+// button {
+//   @extends %base-button;
+//   @extends %base-button--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// Please update the styles below to match the project needs.
 
 %base-button {
   @extend %interactive;
