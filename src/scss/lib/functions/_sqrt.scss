@@ -1,6 +1,7 @@
 // # sqrt
 
 @use "parse-int" as *;
+@use "sass:math";
 
 // Return the square root of a number
 // Usage:
@@ -17,7 +18,7 @@
   $x1: $x0;
 
   @for $i from 1 through 10 {
-    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x1: $x0 - math.div($x0 * $x0 - abs($r), 2 * $x0);
     $x0: $x1;
   }
 

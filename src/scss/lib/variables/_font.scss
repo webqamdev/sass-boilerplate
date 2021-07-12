@@ -1,8 +1,11 @@
 // # Fonts
 
+@use "sass:math";
+
 // ## Font names
 // Should be prefixed by `$name-`
 // Like so, the font is called as `font-family: font.$name-{name};`
+
 $name-example: "example";
 
 // ## Font families
@@ -33,7 +36,7 @@ $size-base: 16px;
 
 // Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
 // If you don't want to support this feature, set the value to null
-$size-device-pixel-ratio: ($size-base / 0.75);
+$size-device-pixel-ratio: math.div($size-base, 0.75);
 
 $size-button: 16px;
 

@@ -2,6 +2,7 @@
 
 @use "../variables/font";
 @use "parse-int" as *;
+@use "sass:math";
 
 // Converts px value to rem
 // Usage:
@@ -15,5 +16,5 @@
 // ```
 
 @function px-to-rem($pxValue, $context: font.$size-base) {
-  @return parse-int($pxValue) / parse-int($context) * 1rem;
+  @return math.div(parse-int($pxValue), parse-int($context)) * 1rem;
 }

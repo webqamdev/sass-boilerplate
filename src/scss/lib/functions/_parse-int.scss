@@ -1,5 +1,7 @@
 // # parse-int
 
+@use "sass:math";
+
 // Remove units
 // Usage example :
 // ```scss
@@ -10,5 +12,5 @@
 // Other example in `./_px-to-rem.scss`.
 
 @function parse-int($n) {
-  @return $n / ($n * 0 + 1);
+  @return math.div($n, $n * 0 + 1);
 }

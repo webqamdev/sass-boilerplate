@@ -31,13 +31,13 @@
   }
 
   $brightness: round(
-    (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000
+    (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) * 0.001
   );
   $light: round(
-    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) / 1000
+    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) * 0.001
   );
 
-  @if abs($brightness) < ($light/2) {
+  @if abs($brightness) < ($light * 0.5) {
     @return $color-light;
   } @else {
     @return $color-dark;
