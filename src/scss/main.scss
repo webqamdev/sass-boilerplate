@@ -6,8 +6,8 @@
 // - You can do the same in Vue Single File Components (SFC) with Vue CLI
 //   See https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
 // - If you can't import it automatically in every file, uncomment the following line
-//@import "lib/lib";
-//
+// @import "lib";
+
 // ## Font-faces
 @import "font-faces";
 
@@ -15,7 +15,7 @@
 @import "base";
 
 // ## Vendors
-//@import "vendors/example-vendor-styles";
+// @import "vendors/example-vendor-styles";
 
 // ## Components
 // - If you're not using one or any of those components, feel free to remove them (import statement + file)
