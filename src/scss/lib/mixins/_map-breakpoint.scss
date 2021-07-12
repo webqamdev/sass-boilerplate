@@ -3,7 +3,7 @@
 
 // Breakpoint is a vendor lib of Sass mixins to write media queries
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@import "~breakpoint-sass/stylesheets/breakpoint";
+@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
 
 // Usage :
 // ```scss
@@ -53,7 +53,7 @@
     @if ($breakpoint == $default-key) {
       @content ($breakpoint, $value);
     } @else {
-      @include breakpoint($breakpoint) {
+      @include bs.breakpoint($breakpoint) {
         @content ($breakpoint, $value);
       }
     }

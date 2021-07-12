@@ -1,0 +1,34 @@
+// # Base container
+
+@use "../mixins/container/container-styles" as *;
+@use "../variables/misc";
+
+// Usage
+// .container {
+//   @extends %base-container;
+//
+//   &--s {
+//     @extends %base-container--s;
+//   }
+//
+//   //...
+// }
+// Please update the styles below to match the project needs.
+
+%base-container {
+  @include container-styles(misc.$container-content-max-width-default);
+
+  &--s {
+    @include container-styles(misc.$container-content-max-width-s);
+  }
+
+  &--m {
+    @include container-styles(misc.$container-content-max-width-m);
+  }
+
+  &--l {
+    @include container-styles(misc.$container-content-max-width-l);
+  }
+
+  // Add more variants depending to the need of the project.
+}

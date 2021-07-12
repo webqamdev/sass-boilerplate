@@ -1,0 +1,50 @@
+// # container-max-width
+
+@use "../../variables/font";
+@use "../../variables/padding";
+@use "../../functions/px-to-em" as *;
+@use "../responsive-property" as *;
+
+// Update the max-width of the element along with the context breakpoints like a container
+// Usage :
+// ```scss
+// @use "mixins/container/container-max-width" as *;
+//
+// .container {
+//   @include container-max-width(500px);
+// }
+// ```
+@mixin container-max-width(
+  $max-width,
+  $multiplier: 1,
+  $base-font-size: font.$size-base
+) {
+  @include responsive-property(
+    "max-width",
+    px-to-em(
+      $max-width + padding.$container-left-mobile * $multiplier +
+        padding.$container-right-mobile * $multiplier,
+      $base-font-size
+    ),
+    px-to-em(
+      $max-width + padding.$container-left-tablet * $multiplier +
+        padding.$container-right-tablet * $multiplier,
+      $base-font-size
+    ),
+    px-to-em(
+      $max-width + padding.$container-left-laptop * $multiplier +
+        padding.$container-right-laptop * $multiplier,
+      $base-font-size
+    ),
+    px-to-em(
+      $max-width + padding.$container-left-desktop * $multiplier +
+        padding.$container-right-desktop * $multiplier,
+      $base-font-size
+    ),
+    px-to-em(
+      $max-width + padding.$container-left-large-desktop * $multiplier +
+        padding.$container-right-large-desktop * $multiplier,
+      $base-font-size
+    )
+  );
+}

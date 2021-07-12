@@ -11,6 +11,13 @@
 // - Should be prefixed
 $default-scroll-behavior: smooth; // initial value is 'auto'
 
+// ## Container content max-width
+$container-content-max-width-s: 880px;
+$container-content-max-width-m: 1080px;
+$container-content-max-width-l: 1280px;
+
+$container-content-max-width-default: $container-content-max-width-m;
+
 // ## Interactive
 $interactive-outline: none;
 $interactive-box-shadow-size-focus: 2px;

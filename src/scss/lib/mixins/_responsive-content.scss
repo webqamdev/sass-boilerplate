@@ -1,0 +1,55 @@
+// # responsive-content
+
+@use "../variables/breakpoint";
+// A vendor lib of Sass mixins to write media queries
+// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
+@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+
+// Update one or multiple properties along with the context breakpoints
+// Useful for massive override of vendors selectors.
+// Usage :
+// ```scss
+// @use "mixins/responsive-content" as *;
+//
+// .element {
+//   @include responsive-content() {
+//     margin-bottom: 0;
+//   }
+// }
+// ```
+
+@mixin responsive-content(
+  $update-mobile: true,
+  $update-tablet: true,
+  $update-laptop: true,
+  $update-desktop: true,
+  $update-large-desktop: true
+) {
+  @if ($update-mobile) {
+    @content;
+  }
+
+  @if ($update-tablet) {
+    @include bs.breakpoint(breakpoint.$tablet) {
+      @content;
+    }
+  }
+
+  @if ($update-laptop != null) {
+    @include bs.breakpoint(breakpoint.$laptop) {
+      @content;
+    }
+  }
+
+  @if ($update-desktop != null) {
+    @include bs.breakpoint(breakpoint.$desktop) {
+      @content;
+    }
+  }
+
+  @if ($update-large-desktop != null) {
+    @include bs.breakpoint(breakpoint.$large-desktop) {
+      @content;
+    }
+  }
+}

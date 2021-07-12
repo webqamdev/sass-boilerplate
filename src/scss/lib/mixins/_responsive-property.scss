@@ -1,0 +1,59 @@
+// # responsive-property
+
+@use "../variables/breakpoint";
+// A vendor lib of Sass mixins to write media queries
+// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
+@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+
+// Update a property along with the context breakpoints
+// Usage :
+// ```scss
+// @use "mixins/responsive-property" as *;
+// @use "functions/px-to-em as *;
+//
+// .element {
+//   @include responsive-property(
+//     "margin-bottom",
+//     px-to-em(20px),
+//     px-to-em(30px),
+//     px-to-em(40px),
+//     px-to-em(50px),
+//     px-to-em(60px),
+//   );
+// }
+// ```
+
+@mixin responsive-property(
+  $property-name,
+  $mobile-value,
+  $tablet-value: null,
+  $laptop-value: null,
+  $desktop-value: null,
+  $large-desktop-value: null
+) {
+  #{$property-name}: $mobile-value;
+
+  @if ($tablet-value != null) {
+    @include bs.breakpoint(breakpoint.$tablet) {
+      #{$property-name}: $tablet-value;
+    }
+  }
+
+  @if ($laptop-value != null) {
+    @include bs.breakpoint(breakpoint.$laptop) {
+      #{$property-name}: $laptop-value;
+    }
+  }
+
+  @if ($desktop-value != null) {
+    @include bs.breakpoint(breakpoint.$desktop) {
+      #{$property-name}: $desktop-value;
+    }
+  }
+
+  @if ($large-desktop-value != null) {
+    @include bs.breakpoint(breakpoint.$large-desktop) {
+      #{$property-name}: $large-desktop-value;
+    }
+  }
+}

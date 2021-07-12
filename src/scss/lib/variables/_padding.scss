@@ -5,6 +5,33 @@
 $button-vertical: 4px;
 $button-horizontal: 16px;
 
+// ## Container
+// ### Horizontal paddings
+$container-left-mobile: 10px;
+$container-left-tablet: 20px;
+$container-left-laptop: 30px;
+$container-left-desktop: 40px;
+$container-left-large-desktop: 50px;
+
+$container-right-mobile: $container-left-mobile;
+$container-right-tablet: $container-left-tablet;
+$container-right-laptop: $container-left-laptop;
+$container-right-desktop: $container-left-desktop;
+$container-right-large-desktop: $container-left-large-desktop;
+
+// ### Vertical paddings
+$container-top-mobile: 0;
+$container-top-tablet: 0;
+$container-top-laptop: 0;
+$container-top-desktop: 0;
+$container-top-large-desktop: 0;
+
+$container-bottom-mobile: 0;
+$container-bottom-tablet: 0;
+$container-bottom-laptop: 0;
+$container-bottom-desktop: 0;
+$container-bottom-large-desktop: 0;
+
 // ## Custom padding variables
 // For example :
 // $container-horizontal: 40px;

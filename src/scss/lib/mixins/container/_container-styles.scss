@@ -1,0 +1,32 @@
+// # container-styles
+
+@use "../../variables/font";
+@use "../../variables/padding";
+@use "../../functions/px-to-em" as *;
+@use "container-horizontal-padding" as *;
+@use "container-max-width" as *;
+
+// Apply to the current element all the style to support centered container visual
+// A container max-width is calculated from the max-width of the content and the horizontal spacing
+// Usage :
+// ```scss
+// @use "mixins/container/container-styles" as *;
+//
+// .container {
+//   @include container-styles(500px);
+// }
+// ```
+
+@mixin container-styles(
+  $max-width,
+  $multiplier: 1,
+  $base-font-size: font.$size-base
+) {
+  @include container-max-width($max-width, $multiplier, $base-font-size);
+  @include container-horizontal-padding($max-width, $multiplier);
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}

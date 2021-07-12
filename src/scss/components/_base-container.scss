@@ -1,0 +1,17 @@
+@use "../lib/placeholders/base-container" as *;
+
+.base-container {
+  @extend %base-container;
+
+  &--s {
+    @extend %base-container--s;
+  }
+
+  &--m {
+    @extend %base-container--s;
+  }
+
+  &--l {
+    @extend %base-container--s;
+  }
+}
