@@ -31,7 +31,7 @@
     @extend %icon;
   }
 
-  &--example::before {
-    @extend %icon--example;
-  }
+  // &--example::before {
+  //   @extend %icon--example;
+  // }
 }
