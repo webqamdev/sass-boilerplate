@@ -12,10 +12,13 @@
 
 // ````scss
 // @use "variables/themes/primary/color" as primary-color;
+//
 // body {
 //   color: primary-color.$default-text;
 // }
 // ```
+
+// Please update, add or remove the variables below to match the project needs.
 
 // ## Primary theme
 $primary-color: null;
@@ -31,3 +34,5 @@ $secondary-color-invert: if(
 
 // ## Common theme
 $warning-color: color.$yellow;
+
+$default-scroll-behavior: smooth; // initial value is 'auto'

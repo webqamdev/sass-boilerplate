@@ -2,6 +2,19 @@
 
 // Used to provide duration type variables for transitions.
 
+// Usage example :
+// ````scss
+// @use "variables/duration";
+//
+// button {
+//   transition-property: color, transform;
+//   transition-duration: duration.$short;
+//   transition-delay: duration.$medium;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
 // Some tips:
 // - The smaller the element is, the shorter the duration should be.
 //   This way, buttons and simple elements seems more fluid and reactive.

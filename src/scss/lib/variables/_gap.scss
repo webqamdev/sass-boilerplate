@@ -1,6 +1,26 @@
-// ## List or Grid gaps
+// # Gaps
 
+// Can be used as margin, padding, or list/grid gap.
+// You can/should use those variables in `_padding.scss` or `_margin.scss`
 // Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
+
+// Usage example :
+// ````scss
+// @use "variables/gap";
+// @use "functions/px-to-em" as *;
+//
+// .row {
+//   margin-top: px-to-em(-gap.$s);
+//   margin-left: px-to-em(-gap.$s);
+// }
+//
+// .column {
+//   margin-top: px-to-em(gap.$s);
+//   margin-left: px-to-em(gap.$s);
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
 
 $xxxs: 5px;
 $xxs: 10px;

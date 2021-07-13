@@ -1,4 +1,16 @@
 // # Outlines
 
 // Add here custom outlines if needed.
+
+// Usage example :
+// ````scss
+// @use "variables/outline";
+//
+// button {
+//   outline: outline.$interactive;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
 $interactive: none;

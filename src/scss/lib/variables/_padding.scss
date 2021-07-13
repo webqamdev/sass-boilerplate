@@ -2,6 +2,24 @@
 
 // Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
 
+// Usage example :
+// ```scss
+// @use "variables/padding";
+// @use "functions/px-to-em" as *;
+//
+// .container {
+//   padding-left: px-to-em(padding.$container-horizontal);
+//   padding-right: px-to-em(padding.$container-horizontal);
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom padding variables
+// For example :
+// $container-horizontal: 40px;
+
+// ## Buttons
 $button-vertical: 4px;
 $button-horizontal: 16px;
 
@@ -31,18 +49,3 @@ $container-bottom-tablet: 0;
 $container-bottom-laptop: 0;
 $container-bottom-desktop: 0;
 $container-bottom-large-desktop: 0;
-
-// ## Custom padding variables
-// For example :
-// $container-horizontal: 40px;
-
-// Usage :
-// ```scss
-// @use "variables/padding";
-// @use "functions/px-to-em" as *;
-//
-// .container {
-//   padding-left: px-to-em(padding.$container-horizontal);
-//   padding-right: px-to-em(padding.$container-horizontal);
-// }
-// ```

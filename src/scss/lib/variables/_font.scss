@@ -2,6 +2,18 @@
 
 @use "sass:math";
 
+// Usage example :
+// ````scss
+// @use "variables/font";
+// @use "functions/px-to-em" as *;
+//
+// .text {
+//   font-size: px-to-em(font.$size-s);
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
 // ## Font names
 // Should be prefixed by `$name-`
 // Like so, the font is called as `font-family: font.$name-{name};`
@@ -36,7 +48,7 @@ $size-base: 16px;
 
 // Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
 // If you don't want to support this feature, set the value to null
-$size-device-pixel-ratio: math.div($size-base, 0.75);
+$size-device-pixel-ratio: $size-base * 0.75;
 
 $size-button: 16px;
 

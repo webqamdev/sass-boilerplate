@@ -2,7 +2,7 @@
 
 @use "lib/variables/color";
 @use "lib/variables/font";
-@use "lib/variables/misc";
+@use "lib/variables/theme";
 @use "lib/placeholders/base-link" as *;
 @use "lib/placeholders/base-button" as *;
 
@@ -20,8 +20,8 @@ html {
     }
   }
 
-  @if (misc.$default-scroll-behavior != auto) {
-    scroll-behavior: misc.$default-scroll-behavior;
+  @if (theme.$default-scroll-behavior != auto) {
+    scroll-behavior: theme.$default-scroll-behavior;
 
     // See https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior#Accessibilit%C3%A9
     @media (prefers-reduced-motion: reduce) {

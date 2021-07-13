@@ -2,6 +2,26 @@
 
 @use "../functions/px-to-em" as *;
 
+// Usage example :
+// ````scss
+// @use "variables/breakpoint";
+// @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+//
+// .text {
+//   @include bs.breakpoint(breakpoint.$xl) {
+//     line-height: 1.2;
+//   }
+//
+//   @include bs.breakpoint(breakpoint.$desktop) {
+//     line-height: 1;
+//   }
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// Should be `em` values and not `px`.
+
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool
 $xxxs: px-to-em(320px);
