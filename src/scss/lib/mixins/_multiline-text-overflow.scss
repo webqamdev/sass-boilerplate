@@ -1,0 +1,33 @@
+// # Multiline text overflow
+
+@use "../functions/parse-int" as *;
+
+// Give the ability to create text-overflow on multiple lines.
+// Usage example :
+// ```scss
+// @use "mixins/multiline-text-overflow" as *;
+//
+// .ellipsis-on-3-lines {
+//   @include multiline-text-overflow(3, ellipsis);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin multiline-text-overflow($line-count: 2, $text-overflow: ellipsis) {
+  $line-count: parse-int($line-count);
+
+  overflow: hidden;
+  text-overflow: $text-overflow;
+
+  @if ($line-count > 1) {
+    display: flex;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    /* stylelint-disable-next-line property-no-unknown */
+    box-orient: horizontal;
+    -webkit-line-clamp: $line-count;
+  } @else {
+    white-space: nowrap;
+  }
+}
