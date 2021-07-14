@@ -1,0 +1,52 @@
+// # Base column styles
+
+@use "../lib/placeholders/base-column" as *;
+
+// Usage example :
+// ```html
+// <div class="base-row">
+//   <div class="base-column">
+//     <!-- Base column content -->
+//   </div>
+//   <div class="base-column">
+//     <!-- Base column content -->
+//   </div>
+//   <div class="base-column">
+//     <!-- Base column content -->
+//   </div>
+// </div>
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+.base-column {
+  @extend %base-column;
+
+  // &--responsive {
+  //   @extend %base-column--responsive;
+  // }
+
+  // &--s {
+  //   @extend %base-column--s;
+  // }
+
+  // &--responsive-s {
+  //   @extend %base-column--responsive-s;
+  // }
+
+  // &--m {
+  //   @extend %base-column--m;
+  // }
+
+  // &--responsive-m {
+  //   @extend %base-column--responsive-m;
+  // }
+
+  // &--l {
+  //   @extend %base-column--l;
+  // }
+
+  // &--responsive-l {
+  //   @extend %base-column--responsive-l;
+  // }
+}

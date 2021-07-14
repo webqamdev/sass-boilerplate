@@ -1,0 +1,26 @@
+@use "../variables/gap";
+@use "../variables/font";
+@use "../functions/px-to-em" as *;
+@use "responsive-property" as *;
+
+@mixin row-column-margin-left(
+  $multiplier: 1,
+  $left-gap-mobile: px-to-em(gap.$column-left-default-mobile),
+  $left-gap-tablet: null,
+  $left-gap-laptop: null,
+  $left-gap-desktop: null,
+  $left-gap-large-desktop: null
+) {
+  @include responsive-property(
+    "margin-left",
+    if($left-gap-mobile != null, $left-gap-mobile * $multiplier, null),
+    if($left-gap-tablet != null, $left-gap-tablet * $multiplier, null),
+    if($left-gap-laptop != null, $left-gap-laptop * $multiplier, null),
+    if($left-gap-desktop != null, $left-gap-desktop * $multiplier, null),
+    if(
+      $left-gap-large-desktop != null,
+      $left-gap-large-desktop * $multiplier,
+      null
+    )
+  );
+}

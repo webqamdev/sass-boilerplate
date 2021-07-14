@@ -1,0 +1,22 @@
+@use "../variables/gap";
+@use "../variables/font";
+@use "../functions/px-to-em" as *;
+@use "responsive-property" as *;
+
+@mixin row-column-margin-top(
+  $multiplier: 1,
+  $top-gap-mobile: px-to-em(gap.$column-top-default-mobile),
+  $top-gap-tablet: null,
+  $top-gap-laptop: null,
+  $top-gap-desktop: null,
+  $top-gap-large-desktop: null
+) {
+  @include responsive-property(
+    "margin-top",
+    if($top-gap-mobile != null, $top-gap-mobile * $multiplier, null),
+    if($top-gap-tablet != null, $top-gap-mobile * $multiplier, null),
+    if($top-gap-laptop != null, $top-gap-mobile * $multiplier, null),
+    if($top-gap-desktop != null, $top-gap-mobile * $multiplier, null),
+    if($top-gap-large-desktop != null, $top-gap-mobile * $multiplier, null)
+  );
+}

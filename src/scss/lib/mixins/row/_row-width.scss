@@ -1,0 +1,56 @@
+// # Row width
+
+@use "../../variables/gap";
+@use "../../variables/font";
+@use "../responsive-property" as *;
+@use "../../functions/px-to-em" as *;
+
+// Add the width to look and behave like a row along with the context breakpoints
+// Usage example :
+// ```scss
+// @use "mixins/row/row-width" as *;
+//
+// .column {
+//   @include row-width();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin row-width(
+  $left-gap-mobile: px-to-em(gap.$column-left-default-mobile),
+  $left-gap-tablet: null,
+  $left-gap-laptop: null,
+  $left-gap-desktop: null,
+  $left-gap-large-desktop: null,
+  $base-width: 100%
+) {
+  @include responsive-property(
+    "width",
+    if(
+      $left-gap-mobile != null,
+      calc(#{$base-width} + #{$left-gap-mobile}),
+      null
+    ),
+    if(
+      $left-gap-tablet != null,
+      calc(#{$base-width} + #{$left-gap-tablet}),
+      null
+    ),
+    if(
+      $left-gap-laptop != null,
+      calc(#{$base-width} + #{$left-gap-laptop}),
+      null
+    ),
+    if(
+      $left-gap-desktop != null,
+      calc(#{$base-width} + #{$left-gap-desktop}),
+      null
+    ),
+    if(
+      $left-gap-large-desktop != null,
+      calc(#{$base-width} + #{$left-gap-large-desktop}),
+      null
+    )
+  );
+}

@@ -32,6 +32,75 @@ $xl: 50px;
 $xxl: 60px;
 $xxxl: 100px;
 
+// ## Rows and columns
+// Top
+$column-top-s: $s;
+$column-top-m: $m;
+$column-top-l: $l;
+// Left
+$column-left-s: $s;
+$column-left-m: $m;
+$column-left-l: $l;
+
+// ### Small responsive row and column gaps
+// Top
+$column-top-s-mobile: $s;
+$column-top-s-tablet: $s;
+$column-top-s-laptop: $s;
+$column-top-s-desktop: $s;
+$column-top-s-large-desktop: $s;
+// Left
+$column-left-s-mobile: $s;
+$column-left-s-tablet: $s;
+$column-left-s-laptop: $s;
+$column-left-s-desktop: $s;
+$column-left-s-large-desktop: $s;
+
+// ### Medium responsive row and column gaps
+// Top
+$column-top-m-mobile: $m;
+$column-top-m-tablet: $m;
+$column-top-m-laptop: $m;
+$column-top-m-desktop: $m;
+$column-top-m-large-desktop: $m;
+// Left
+$column-left-m-mobile: $m;
+$column-left-m-tablet: $m;
+$column-left-m-laptop: $m;
+$column-left-m-desktop: $m;
+$column-left-m-large-desktop: $m;
+
+// ### Large responsive row and column gaps
+// Top
+$column-top-l-mobile: $l;
+$column-top-l-tablet: $l;
+$column-top-l-laptop: $l;
+$column-top-l-desktop: $l;
+$column-top-l-large-desktop: $l;
+// Left
+$column-left-l-mobile: $l;
+$column-left-l-tablet: $l;
+$column-left-l-laptop: $l;
+$column-left-l-desktop: $l;
+$column-left-l-large-desktop: $l;
+
+// ### Default responsive gap values
+// Those values are used as default in `mixins/row/_row-styles.scss` and `mixins/row/_row-responsive-styles.scss`
+$column-top-default: $s;
+$column-left-default: $s;
+// Top
+$column-top-default-mobile: $column-top-s-mobile;
+$column-top-default-tablet: $column-top-s-tablet;
+$column-top-default-laptop: $column-top-s-laptop;
+$column-top-default-desktop: $column-top-s-desktop;
+$column-top-default-large-desktop: $column-top-s-large-desktop;
+// Left
+$column-left-default-mobile: $column-left-s-mobile;
+$column-left-default-tablet: $column-left-s-tablet;
+$column-left-default-laptop: $column-left-s-laptop;
+$column-left-default-desktop: $column-left-s-desktop;
+$column-left-default-large-desktop: $column-left-s-large-desktop;
+
 // ## Custom gap variables
 // For example :
 // $section-vertical-space: $xl;
