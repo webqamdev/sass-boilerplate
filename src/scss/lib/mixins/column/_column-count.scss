@@ -1,0 +1,27 @@
+// # Column count
+
+@use "../../variables/gap";
+@use "../responsive-property" as *;
+@use "../../functions/px-to-em" as *;
+
+// Set the column width based on the number of element by row and depending to the side gap between each elements.
+// Usage example :
+// ```scss
+// @use "mixins/column/column-count" as *;
+//
+// .column {
+//   &--2-by-row {
+//     @include column-count(2);
+//   }
+//
+//   &--3-by-row {
+//     @include column-count(3, 50px);
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin column-count($count: 1, $left-gap: px-to-em(gap.$column-left-default)) {
+  width: calc(100% / #{$count} - #{$left-gap});
+}

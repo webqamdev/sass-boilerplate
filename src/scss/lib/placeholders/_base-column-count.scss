@@ -1,0 +1,107 @@
+// # Base column count
+
+@use "../mixins/column/column-count" as *;
+@use "../mixins/column/column-responsive-count" as *;
+@use "../variables/gap";
+@use "../functions/px-to-em" as *;
+
+// Should be used as a base to selector (with %base-column) to setup the number of column by rows.
+// Usage example :
+// ```scss
+// @use "placeholders/base-row" as *;
+// @use "placeholders/base-column" as *;
+// @use "placeholders/base-column-count" as *;
+//
+// .row {
+//   @extends %base-row--responsive-s;
+//
+//   .column {
+//     @extends %base-column--s;
+//     @extends %base-column-count--s-3;
+//   }
+//
+//   .column-responsive {
+//     @extends %base-column--responsive-s;
+//     @extends %base-column-count--responsive-s-3;
+//   }
+// }
+// ```
+
+// -------------------------------------------------------------------- /!\
+// To avoid having a very and unreadable file, the example
+// with the mixins `column-styles()` and `column-responsive-styles()`
+// are not visible here. Pleas read the `./_base-column.scss` file.
+// -------------------------------------------------------------------- /!\
+
+// Look the end of the document to see and example of column-responsive-count() usage in a placeholder.
+// Please update, add or remove the styles below to match the project needs.
+
+%base-column-count {
+  @include column-count(1);
+}
+
+%base-column-count--2 {
+  @include column-count(2);
+}
+
+%base-column-count--3 {
+  @include column-count(3);
+}
+
+// ## Small gap columns
+%base-column--s {
+  @include column-count(1, gap.$column-left-s);
+}
+
+%base-column--s-2 {
+  @include column-count(2, gap.$column-left-s);
+}
+
+%base-column--s-3 {
+  @include column-count(3, gap.$column-left-s);
+}
+
+// ## Medium gap columns
+%base-column--m {
+  @include column-count(1, gap.$column-left-m);
+}
+
+%base-column--m-2 {
+  @include column-count(2, gap.$column-left-m);
+}
+
+%base-column--m-3 {
+  @include column-count(3, gap.$column-left-m);
+}
+
+// ## Large gap columns
+%base-column--l {
+  @include column-count(1, gap.$column-left-l);
+}
+
+%base-column--l-2 {
+  @include column-count(2, gap.$column-left-l);
+}
+
+%base-column--l-3 {
+  @include column-count(3, gap.$column-left-l);
+}
+
+// ## Custom responsive column count
+// %form-responsive-column {
+//   // Output :
+//   // In mobile -> 1 column seperated by 1.25em each.
+//   // In tablet -> 2 columns seperated by 1.25em each.
+//   // In laptop -> 3 columns seperated by 1.25em each.
+//   // In desktop -> 4 columns seperated by 1.25em each.
+//   @include column-responsive-count(
+//     1,
+//     px-to-em(gap.$column-left-s-mobile),
+//     2,
+//     px-to-em(gap.$column-left-s-tablet),
+//     3,
+//     px-to-em(gap.$column-left-s-laptop),
+//     4,
+//     px-to-em(gap.$column-left-s-desktop),
+//   );
+// }
