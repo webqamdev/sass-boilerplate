@@ -4,7 +4,7 @@
 @use "parse-int" as *;
 @use "sass:math";
 
-// Converts px value to rem
+// Converts px value to rem.
 // Usage example :
 // ```scss
 // @use "functions/px-to-rem" as *;

@@ -4,7 +4,7 @@
 
 // Calculates if text needs to be light or dark depending on the background color passed.
 // Inspired from this W3C document: http://www.w3.org/TR/AERT#color-contrast
-// Color brightness is determined by the following formula:
+// Color brightness is determined by the following formula :
 // ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
 // Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
 

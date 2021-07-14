@@ -5,7 +5,7 @@
 @use "../../functions/px-to-em" as *;
 @use "../responsive-property" as *;
 
-// Update a padding property along with the context breakpoints
+// Update a padding property along with the context breakpoints.
 // Usage example :
 // ```scss
 // @use "mixins/container/container-padding" as *;

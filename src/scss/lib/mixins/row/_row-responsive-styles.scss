@@ -6,7 +6,7 @@
 @use "../row-column-margin-top" as *;
 @use "../row-column-margin-left" as *;
 
-// Add the width and margin properties to behave like a row along with the context breakpoints
+// Add the width and margin properties to behave like a row along with the context breakpoints.
 // Usage example :
 // ```scss
 // @use "mixins/row/row-responsive-styles" as *;

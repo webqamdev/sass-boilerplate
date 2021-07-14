@@ -3,7 +3,7 @@
 @use "../variables/font";
 @use "parse-int" as *;
 
-// Converts em values to px
+// Converts em values to px.
 // Usage example :
 // ```scss
 // @use "functions/em-to-px" as *;

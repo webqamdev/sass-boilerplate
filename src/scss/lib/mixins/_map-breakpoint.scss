@@ -1,10 +1,10 @@
 // # Map breakpoint
-// Loop through a map of breakpoints
 
-// Breakpoint is a vendor lib of Sass mixins to write media queries
+// Breakpoint is a vendor lib of Sass mixins to write media queries.
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
 @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
 
+// Loop through a map of breakpoints.
 // Usage example :
 // ```scss
 // .element {

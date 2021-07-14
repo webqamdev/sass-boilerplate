@@ -5,7 +5,7 @@
 @use "../../functions/px-to-em" as *;
 @use "container-padding" as *;
 
-// Update the horizontal padding of the element along with the context breakpoints like a container
+// Update the horizontal padding of the element along with the context breakpoints like a container.
 // Usage example :
 // ```scss
 // @use "mixins/container/container-horizontal-padding" as *;

@@ -6,7 +6,7 @@
 @use "responsive-property" as *;
 
 // Update the margin-top property based on the multiplier to create positive or negative margin for columns or rows
-// Along with the context breakpoints
+// along with the context breakpoints.
 // Usage example :
 // ```scss
 // @use "mixins/row-column-margin-top" as *;

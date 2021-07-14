@@ -5,7 +5,7 @@
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
 @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
 
-// Update a property along with the context breakpoints
+// Update a property along with the context breakpoints.
 // Usage example :
 // ```scss
 // @use "mixins/responsive-property" as *;

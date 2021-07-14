@@ -2,6 +2,9 @@
 
 @use "../functions/px-to-em" as *;
 
+// Set all generic or custom breakpoints here.
+// All values should be calculated as `em` not `px`.
+// Prefer using the px-to-em() function for a better readability.
 // Usage example :
 // ````scss
 // @use "variables/breakpoint";
@@ -19,8 +22,6 @@
 // ```
 
 // Please update, add or remove the variables below to match the project needs.
-
-// Should be `em` values and not `px`.
 
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool

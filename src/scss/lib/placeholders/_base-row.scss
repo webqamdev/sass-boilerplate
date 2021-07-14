@@ -5,6 +5,23 @@
 @use "../variables/gap";
 @use "../functions/px-to-em" as *;
 
+// Should be used as a base to selector that looks or behave like rows (containing one or more columns).
+// Usage example :
+// ```scss
+// @use "placeholders/base-row" as *;
+// @use "placeholders/base-column" as *;
+//
+// .row {
+//   @extends %base-row--l;
+//
+//   .column {
+//     @extends %base-column--l;
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
 %base-row {
   @include row-styles();
 }

@@ -4,7 +4,7 @@
 @use "parse-int" as *;
 @use "sass:math";
 
-// Converts px value to em
+// Converts px value to em.
 // Usage example :
 // ```scss
 // @use "functions/px-to-em" as *;

@@ -1,11 +1,11 @@
 // # Responsive content
 
 @use "../variables/breakpoint";
-// A vendor lib of Sass mixins to write media queries
+// A vendor lib of Sass mixins to write media queries.
 // (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
 @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
 
-// Update one or multiple properties along with the context breakpoints
+// Update one or multiple properties along with the context breakpoints.
 // Useful for massive override of vendors selectors.
 // Usage example :
 // ```scss

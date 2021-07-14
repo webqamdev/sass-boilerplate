@@ -2,13 +2,10 @@
 
 @use "../lib/placeholders/icon" as *;
 
-// Icon placeholder benefits:
-// - No extra markup nor CSS classes required
-// - Better separation of concerns: HTML for content, CSS for styles
+// Icon placeholder benefits :
+// - No extra markup nor CSS classes required.
+// - Better separation of concerns: HTML for content, CSS for styles.
 // - The computed CSS only contains icon selectors that you really use.
-
-// When to use icon classes over icon placeholders?
-// See `_placeholders.scss`
 
 // Usage example :
 // ```html

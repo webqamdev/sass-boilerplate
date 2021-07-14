@@ -1,11 +1,10 @@
 // # Row width
 
 @use "../../variables/gap";
-@use "../../variables/font";
 @use "../responsive-property" as *;
 @use "../../functions/px-to-em" as *;
 
-// Add the width to look and behave like a row along with the context breakpoints
+// Add the width to look and behave like a row along with the context breakpoints.
 // Usage example :
 // ```scss
 // @use "mixins/row/row-width" as *;

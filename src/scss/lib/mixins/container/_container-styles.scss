@@ -6,8 +6,8 @@
 @use "container-horizontal-padding" as *;
 @use "container-max-width" as *;
 
-// Apply to the current element all the style to support centered container visual
-// A container max-width is calculated from the max-width of the content and the horizontal spacing
+// Apply to the current element all the style to support centered container visual.
+// A container max-width is calculated from the max-width of the content and the horizontal spacing.
 // Usage example :
 // ```scss
 // @use "mixins/container/container-styles" as *;

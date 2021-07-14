@@ -1,7 +1,7 @@
 // # Hover focus within
 
 // Workaround for IE11 when using `:hover` and `:focus-within` in the same selector.
-// `:focus-within` is not compatible with IE11. When you use the following selector:
+// `:focus-within` is not compatible with IE11. When you use the following selector :
 // ```scss
 // .block-selector {
 //   &:hover,
