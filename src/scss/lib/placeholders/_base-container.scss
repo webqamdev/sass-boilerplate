@@ -3,33 +3,32 @@
 @use "../mixins/container/container-styles" as *;
 @use "../variables/misc";
 
-// Usage
+// Should be used as a base to selector that looks or behave like content containers
+// Usage example :
+// ```scss
 // .container {
 //   @extends %base-container;
-//
-//   &--s {
-//     @extends %base-container--s;
-//   }
-//
-//   //...
 // }
+//
+// .small-container {
+//   @extends %base-container--s;
+// }
+// ```
 
 // Please update, add or remove the styles below to match the project needs.
 
 %base-container {
   @include container-styles(misc.$container-content-max-width-default);
+}
 
-  &--s {
-    @include container-styles(misc.$container-content-max-width-s);
-  }
+%base-container--s {
+  @include container-styles(misc.$container-content-max-width-s);
+}
 
-  &--m {
-    @include container-styles(misc.$container-content-max-width-m);
-  }
+%base-container--m {
+  @include container-styles(misc.$container-content-max-width-m);
+}
 
-  &--l {
-    @include container-styles(misc.$container-content-max-width-l);
-  }
-
-  // Add more variants depending to the need of the project.
+%base-container--l {
+  @include container-styles(misc.$container-content-max-width-l);
 }

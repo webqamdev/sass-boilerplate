@@ -1,11 +1,11 @@
-// # px-to-em
+// # Px to em
 
 @use "../variables/font";
 @use "parse-int" as *;
 @use "sass:math";
 
 // Converts px value to em
-// Usage:
+// Usage example :
 // ```scss
 // @use "functions/px-to-em" as *;
 //

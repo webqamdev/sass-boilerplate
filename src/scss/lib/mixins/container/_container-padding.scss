@@ -1,4 +1,4 @@
-// # container-padding
+// # Container padding
 
 @use "../../variables/font";
 @use "../../variables/padding";
@@ -6,7 +6,7 @@
 @use "../responsive-property" as *;
 
 // Update a padding property along with the context breakpoints
-// Usage :
+// Usage example :
 // ```scss
 // @use "mixins/container/container-padding" as *;
 // @use "functions/px-to-em as *;

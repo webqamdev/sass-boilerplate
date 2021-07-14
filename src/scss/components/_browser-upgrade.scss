@@ -1,17 +1,19 @@
 // # Outdated browser alert component
 
+@use "../lib/variables/theme";
+
 // The following code is intentionally minimalistic. Feel free to tweak it.
 // The point here is to hide the component when the browser has a decent CSS support
 // and to keep it visible otherwise (using `@supports`)
 
-// Usage:
+// Usage example :
 // ```html
 // <p class="browser-upgrade">
 //   You're using an outdated browser
 // </p>
 // ```
 
-@use "../lib/variables/theme";
+// Please update, add or remove the styles below to match the project needs.
 
 .browser-upgrade {
   background: theme.$warning-color;

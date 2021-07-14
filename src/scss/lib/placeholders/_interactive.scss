@@ -7,8 +7,20 @@
 
 // Should be used on every element which the user can interact with :
 // buttons, links, inputs  selects, textareas, etc.
+// For inputs, maybe you have to override the cursor property.
 
 // The idea here is to have a consistent and a more interactive/dynamic UI/UX.
+// Usage example :
+// ```scss
+// @use "placeholders/interactive" as *;
+//
+// a {
+//   @extends %interactive;
+//
+//   // Other styles
+// }
+// ```
+
 // Please update, add or remove the styles below to match the project needs.
 
 %interactive {
@@ -28,7 +40,7 @@
     box-shadow: box-shadow.$interactive-active;
   }
 
-  &.inactive,
+  &.disabled,
   &[disabled] {
     pointer-events: none;
   }

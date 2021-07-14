@@ -24,7 +24,7 @@
 // mixin aims to address this case by avoid code duplication but split code in distinct selectors so the `:hover` part
 // still works.
 
-// Example :
+// Usage example :
 // ```scss
 // .block-selector {
 //   @include hover-focus-within() {

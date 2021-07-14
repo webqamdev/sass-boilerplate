@@ -1,10 +1,10 @@
-// # em-to-px
+// # Em to px
 
 @use "../variables/font";
 @use "parse-int" as *;
 
 // Converts em values to px
-// Usage:
+// Usage example :
 // ```scss
 // @use "functions/em-to-px" as *;
 //

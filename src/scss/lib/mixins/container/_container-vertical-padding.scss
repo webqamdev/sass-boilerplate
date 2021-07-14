@@ -1,4 +1,4 @@
-// # container-vertical-padding
+// # Container vertical padding
 
 @use "../../variables/font";
 @use "../../variables/padding";
@@ -6,7 +6,7 @@
 @use "container-padding" as *;
 
 // Update the vertical padding of the element along with the context breakpoints like a container
-// Usage :
+// Usage example :
 // ```scss
 // @use "mixins/container/container-vertical-padding" as *;
 //

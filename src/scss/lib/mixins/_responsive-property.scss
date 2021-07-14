@@ -1,4 +1,4 @@
-// # responsive-property
+// # Responsive property
 
 @use "../variables/breakpoint";
 // A vendor lib of Sass mixins to write media queries
@@ -6,7 +6,7 @@
 @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
 
 // Update a property along with the context breakpoints
-// Usage :
+// Usage example :
 // ```scss
 // @use "mixins/responsive-property" as *;
 // @use "functions/px-to-em as *;

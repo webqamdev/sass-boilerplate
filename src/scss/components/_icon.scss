@@ -1,5 +1,7 @@
 // # Icon classes
 
+@use "../lib/placeholders/icon" as *;
+
 // Icon placeholder benefits:
 // - No extra markup nor CSS classes required
 // - Better separation of concerns: HTML for content, CSS for styles
@@ -8,7 +10,7 @@
 // When to use icon classes over icon placeholders?
 // See `_placeholders.scss`
 
-// Usage:
+// Usage example :
 // ```html
 // <!-- A link prefixed with an icon -->
 // <a href="http://example.com" class="icon--example">Go to example.com</a>
@@ -24,7 +26,7 @@
 // Pro tip: Please keep unused icon classes commented to keep the
 // CSS output as light as possible.
 
-@use "../lib/placeholders/icon" as *;
+// Please update, add or remove the styles below to match the project needs.
 
 .icon {
   &::before {

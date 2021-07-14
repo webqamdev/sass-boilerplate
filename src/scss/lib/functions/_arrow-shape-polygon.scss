@@ -1,8 +1,29 @@
-// # arrow-shape-polygon
+// # Arrow shape polygon
+
+@use "parse-int" as *;
 
 // Create arrow shape with the polygon function
+// Usage example :
+// ```scss
+// @use "functions/arrow-shape-polygon" as *;
+//
+// .element {
+//   clip-path: arrow-shape-polygon(10px, 10px);
+// }
+// ```
 
-@function arrow-shape-polygon($arrow-width, $arrow-height) {
+@function arrow-shape-polygon($arrow-width, $arrow-height, $useEm: false) {
+  $arrow-width: parse-int($arrow-width);
+  $arrow-height: parse-int($arrow-height);
+
+  @if ($useEm) {
+    $arrow-width: $arrow-width * 1em;
+    $arrow-height: $arrow-height * 1em;
+  } @else {
+    $arrow-width: $arrow-width * 1px;
+    $arrow-height: $arrow-height * 1px;
+  }
+
   // Add `1px` to fix rendering issues in several browsers
   $bottom-offset-y: unquote("calc(100% - #{$arrow-height} + 1px)");
 
@@ -10,9 +31,9 @@
     0 0,
     100% 0,
     100% $bottom-offset-y,
-    unquote("calc(50% - #{$arrow-width/2})") $bottom-offset-y,
+    unquote("calc(50% - #{$arrow-width * 0.5})") $bottom-offset-y,
     50% 100%,
-    unquote("calc(50% + #{$arrow-width/2})") $bottom-offset-y,
+    unquote("calc(50% + #{$arrow-width * 0.5})") $bottom-offset-y,
     0 $bottom-offset-y
   );
 }

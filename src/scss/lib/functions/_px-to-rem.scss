@@ -1,11 +1,11 @@
-// # px-to-rem
+// # Px to rem
 
 @use "../variables/font";
 @use "parse-int" as *;
 @use "sass:math";
 
 // Converts px value to rem
-// Usage:
+// Usage example :
 // ```scss
 // @use "functions/px-to-rem" as *;
 //

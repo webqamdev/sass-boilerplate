@@ -1,4 +1,4 @@
-// # container-max-width
+// # Container max width
 
 @use "../../variables/font";
 @use "../../variables/padding";
@@ -6,7 +6,7 @@
 @use "../responsive-property" as *;
 
 // Update the max-width of the element along with the context breakpoints like a container
-// Usage :
+// Usage example :
 // ```scss
 // @use "mixins/container/container-max-width" as *;
 //

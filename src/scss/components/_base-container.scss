@@ -1,4 +1,19 @@
+// # Base container styles
+
 @use "../lib/placeholders/base-container" as *;
+
+// Usage example :
+// ```html
+// <div class="base-container--s">
+//   Small container content
+// </div>
+//
+// <div class="base-container">
+//   Container content
+// </div>
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
 
 .base-container {
   @extend %base-container;

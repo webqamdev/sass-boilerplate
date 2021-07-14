@@ -1,4 +1,4 @@
-// # text-contrast
+// # Text contrast
 
 @use "../variables/color";
 
@@ -8,7 +8,7 @@
 // ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
 // Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
 
-// Usage:
+// Usage example :
 // ```scss
 // @use "functions/text-contrast" as *;
 // @use "variables/color";

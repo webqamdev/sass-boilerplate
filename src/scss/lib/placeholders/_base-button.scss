@@ -7,6 +7,8 @@
 
 // Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
 // Add modifiers like below.
+// Usage example :
+// ```scss
 // a,
 // button {
 //   @extends %base-button;
@@ -15,6 +17,7 @@
 //   // Custom styles goes after :
 //   margin: 0 auto;
 // }
+// ```
 
 // Please update, add or remove the styles below to match the project needs.
 
@@ -31,11 +34,8 @@
   color: inherit;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
   vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
   background: none;
-  // Reset border-radius to have a consistent rendering amongst browsers (especially on iOS devices)
   border-radius: 0;
 }
 

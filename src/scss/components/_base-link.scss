@@ -1,4 +1,15 @@
+// # Base link styles
+
 @use "../lib/placeholders/base-link" as *;
+
+// Usage example :
+// ```html
+// <a class="base-link base-link--no-outline">
+//   Link content
+// </a>
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
 
 .base-link {
   @extend %base-link;

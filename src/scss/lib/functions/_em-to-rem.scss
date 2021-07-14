@@ -1,11 +1,11 @@
-// # em-to-rem
+// # Em to rem
 
 @use "../variables/font";
 @use "em-to-px" as *;
 @use "px-to-rem" as *;
 
 // Converts em value to rem
-// Usage:
+// Usage example :
 // ```scss
 // @use "functions/em-to-rem" as *;
 //
