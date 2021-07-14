@@ -18,15 +18,15 @@
 .base-container {
   @extend %base-container;
 
-  &--s {
-    @extend %base-container--s;
-  }
+  // &--s {
+  //   @extend %base-container--s;
+  // }
 
-  &--m {
-    @extend %base-container--s;
-  }
+  // &--m {
+  //   @extend %base-container--s;
+  // }
 
-  &--l {
-    @extend %base-container--s;
-  }
+  // &--l {
+  //   @extend %base-container--s;
+  // }
 }

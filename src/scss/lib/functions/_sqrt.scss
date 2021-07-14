@@ -12,6 +12,8 @@
 //   font-size: sqrt(9) * 1em; // Output `3 * 1em` => `3em`
 // }
 
+// Please update, add or remove the styles below to match the project needs.
+
 @function sqrt($r) {
   $r: parse-int($r);
   $x0: 1;

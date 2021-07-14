@@ -1,6 +1,8 @@
 // # Outdated browser alert component
 
 @use "../lib/variables/theme";
+@use "../lib/variables/gap";
+@use "../lib/functions/px-to-em" as *;
 
 // The following code is intentionally minimalistic. Feel free to tweak it.
 // The point here is to hide the component when the browser has a decent CSS support
@@ -17,7 +19,7 @@
 
 .browser-upgrade {
   background: theme.$warning-color;
-  padding: 1em;
+  padding: px-to-em(gap.$xs);
   margin-bottom: 0;
 
   // Consider browsers without support of `@support` rule as outdated (ie. IE11)

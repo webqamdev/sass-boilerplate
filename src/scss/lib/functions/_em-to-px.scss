@@ -14,6 +14,8 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @function em-to-px($emValue, $context: font.$size-base) {
   @return parse-int($emValue) * parse-int($context) * 1px;
 }

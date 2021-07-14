@@ -12,6 +12,8 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @function arrow-shape-polygon($arrow-width, $arrow-height, $useEm: false) {
   $arrow-width: parse-int($arrow-width);
   $arrow-height: parse-int($arrow-height);

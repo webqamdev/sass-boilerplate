@@ -15,6 +15,8 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @function px-to-rem($pxValue, $context: font.$size-base) {
   @return math.div(parse-int($pxValue), parse-int($context)) * 1rem;
 }

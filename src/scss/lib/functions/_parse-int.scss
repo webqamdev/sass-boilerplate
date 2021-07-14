@@ -11,6 +11,8 @@
 // ```
 // Other example in `./_px-to-rem.scss`.
 
+// Please update, add or remove the styles below to match the project needs.
+
 @function parse-int($n) {
   @return math.div($n, $n * 0 + 1);
 }

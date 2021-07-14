@@ -46,6 +46,8 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @mixin hover-focus-within() {
   &:hover {
     @content;

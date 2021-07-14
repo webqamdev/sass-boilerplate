@@ -14,11 +14,11 @@
 .base-link {
   @extend %base-link;
 
-  &--no-outline {
-    @extend %base-link--no-outline;
-  }
+  // &--no-outline {
+  //   @extend %base-link--no-outline;
+  // }
 
-  &--disabled {
-    @extend %base-link--disabled;
-  }
+  // &--disabled {
+  //   @extend %base-link--disabled;
+  // }
 }

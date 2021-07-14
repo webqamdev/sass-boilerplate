@@ -19,11 +19,11 @@
 .base-button {
   @extend %base-button;
 
-  &--no-outline {
-    @extend %base-button--no-outline;
-  }
+  // &--no-outline {
+  //   @extend %base-button--no-outline;
+  // }
 
-  &--disabled {
-    @extend %base-button--disabled;
-  }
+  // &--disabled {
+  //   @extend %base-button--disabled;
+  // }
 }

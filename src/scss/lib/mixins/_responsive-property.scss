@@ -23,15 +23,19 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @mixin responsive-property(
   $property-name,
-  $mobile-value,
+  $mobile-value: null,
   $tablet-value: null,
   $laptop-value: null,
   $desktop-value: null,
   $large-desktop-value: null
 ) {
-  #{$property-name}: $mobile-value;
+  @if ($mobile-value != null) {
+    #{$property-name}: $mobile-value;
+  }
 
   @if ($tablet-value != null) {
     @include bs.breakpoint(breakpoint.$tablet) {

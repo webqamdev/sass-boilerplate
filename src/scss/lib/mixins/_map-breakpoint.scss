@@ -44,6 +44,8 @@
 // }
 // ```
 
+// Please update, add or remove the styles below to match the project needs.
+
 @mixin map-breakpoint($breakpoint-map, $default-key: "default") {
   @if not(mixin-exists(breakpoint)) {
     @error "Mixin breakpoint() not found. Ensure breakpoint-sass is installed.";
