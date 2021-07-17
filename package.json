@@ -24,8 +24,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "stylelint": "stylelint 'src/scss/**/*.scss'",
     "test": "npm run prettier:check && npm run stylelint",
-    "prepare": "husky install",
-    "preinstall": "npx npm-force-resolutions"
+    "prepare": "husky install"
   },
   "author": "Webqam",
   "devDependencies": {
@@ -61,8 +60,5 @@
     "*.{js,scss,css,json,html,htm,md}": [
       "prettier --write"
     ]
-  },
-  "resolutions": {
-    "css-what": "^5.0.1"
   }
 }
