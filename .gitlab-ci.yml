@@ -4,8 +4,9 @@ stages:
 build:
   image: node:14-alpine
   stage: build
+  before_script:
+    - npm ci --cache .npm --prefer-offline
   script:
-    - npm ci
     - npm run test
     - npm run build
   artifacts:
@@ -13,3 +14,9 @@ build:
     name: '${CI_JOB_NAME}_${CI_COMMIT_REF_NAME}'
     paths:
       - dist
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
