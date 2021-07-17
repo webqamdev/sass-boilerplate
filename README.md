@@ -13,7 +13,7 @@ This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media q
 
 ### Vue projects (using Vue CLI)
 
-You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cli-plugin-sass-boilerplate) to
+You can use the dedicated [Vue CLI 3 plugin](https://github.com/bgondy/vue-cli-plugin-sass-boilerplate) to
 automatically install this boilerplate and configure your project.
 
 ### Manual install
