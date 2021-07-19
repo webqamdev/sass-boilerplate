@@ -1,8 +1,6 @@
 // # Map breakpoint
 
-// Breakpoint is a vendor lib of Sass mixins to write media queries.
-// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+@use "breakpoint" as *;
 
 // Loop through a map of breakpoints.
 // Usage example :
@@ -47,15 +45,11 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @mixin map-breakpoint($breakpoint-map, $default-key: "default") {
-  @if not(mixin-exists(breakpoint)) {
-    @error "Mixin breakpoint() not found. Ensure breakpoint-sass is installed.";
-  }
-
   @each $breakpoint, $value in $breakpoint-map {
     @if ($breakpoint == $default-key) {
       @content ($breakpoint, $value);
     } @else {
-      @include bs.breakpoint($breakpoint) {
+      @include breakpoint($breakpoint) {
         @content ($breakpoint, $value);
       }
     }

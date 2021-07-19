@@ -8,7 +8,7 @@
 // Usage example :
 // ````scss
 // @use "variables/breakpoint";
-// @use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+// @use "mixins/breakpoint" as *;
 //
 // .text {
 //   @include bs.breakpoint(breakpoint.$xl) {

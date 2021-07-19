@@ -14,10 +14,5 @@
 // ## Mixins
 @import "lib/mixins";
 
-// ## Vendors
-// A vendor lib of Sass mixins to write media queries
-// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@import "~breakpoint-sass/stylesheets/breakpoint";
-
 // ## Placeholders
 @import "lib/placeholders";

@@ -1,9 +1,7 @@
 // # Responsive property
 
 @use "../variables/breakpoint";
-// A vendor lib of Sass mixins to write media queries
-// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+@use "breakpoint" as *;
 
 // Update a property along with the context breakpoints.
 // Usage example :
@@ -38,25 +36,25 @@
   }
 
   @if ($tablet-value != null) {
-    @include bs.breakpoint(breakpoint.$tablet) {
+    @include breakpoint(breakpoint.$tablet) {
       #{$property-name}: $tablet-value;
     }
   }
 
   @if ($laptop-value != null) {
-    @include bs.breakpoint(breakpoint.$laptop) {
+    @include breakpoint(breakpoint.$laptop) {
       #{$property-name}: $laptop-value;
     }
   }
 
   @if ($desktop-value != null) {
-    @include bs.breakpoint(breakpoint.$desktop) {
+    @include breakpoint(breakpoint.$desktop) {
       #{$property-name}: $desktop-value;
     }
   }
 
   @if ($large-desktop-value != null) {
-    @include bs.breakpoint(breakpoint.$large-desktop) {
+    @include breakpoint(breakpoint.$large-desktop) {
       #{$property-name}: $large-desktop-value;
     }
   }

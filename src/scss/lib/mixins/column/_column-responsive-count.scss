@@ -5,9 +5,7 @@
 @use "column-count" as *;
 @use "../responsive-property" as *;
 @use "../../functions/px-to-em" as *;
-// A vendor lib of Sass mixins to write media queries
-// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
-@use "~breakpoint-sass/stylesheets/breakpoint" as bs;
+@use "../breakpoint" as *;
 
 // Set the column width based on the number of element by row and depending to the side gap between each elements.
 // The width is updated along with the context breakpoints.
@@ -54,25 +52,25 @@
   }
 
   @if ($count-tablet != null and $left-gap-tablet != null) {
-    @include bs.breakpoint(breakpoint.$tablet) {
+    @include breakpoint(breakpoint.$tablet) {
       @include column-count($count-tablet, $left-gap-tablet);
     }
   }
 
   @if ($count-laptop != null and $left-gap-laptop != null) {
-    @include bs.breakpoint(breakpoint.$tablet) {
+    @include breakpoint(breakpoint.$tablet) {
       @include column-count($count-laptop, $left-gap-laptop);
     }
   }
 
   @if ($count-desktop != null and $left-gap-desktop != null) {
-    @include bs.breakpoint(breakpoint.$tablet) {
+    @include breakpoint(breakpoint.$tablet) {
       @include column-count($count-desktop, $left-gap-desktop);
     }
   }
 
   @if ($count-large-desktop != null and $left-gap-large-desktop != null) {
-    @include bs.breakpoint(breakpoint.$tablet) {
+    @include breakpoint(breakpoint.$tablet) {
       @include column-count($count-large-desktop, $left-gap-large-desktop);
     }
   }
