@@ -3,11 +3,11 @@
 // Import all function files.
 // Update this list when a new file is created or deleted.
 
-@import "functions/parse-int";
-@import "functions/px-to-rem";
-@import "functions/px-to-em";
-@import "functions/em-to-rem";
-@import "functions/em-to-px";
-@import "functions/sqrt";
-@import "functions/text-contrast";
-@import "functions/arrow-shape-polygon";
+@forward "functions/parse-int";
+@forward "functions/px-to-rem";
+@forward "functions/px-to-em";
+@forward "functions/em-to-rem";
+@forward "functions/em-to-px";
+@forward "functions/sqrt";
+@forward "functions/text-contrast";
+@forward "functions/arrow-shape-polygon";

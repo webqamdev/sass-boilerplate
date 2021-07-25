@@ -3,10 +3,10 @@
 // Import all placeholder files.
 // Update this list when a new file is created or deleted.
 
-@import "placeholders/icon";
-@import "placeholders/interactive";
-@import "placeholders/base-button";
-@import "placeholders/base-link";
-@import "placeholders/base-container";
-@import "placeholders/base-column";
-@import "placeholders/base-row";
+@forward "placeholders/icon";
+@forward "placeholders/interactive";
+@forward "placeholders/base-button";
+@forward "placeholders/base-link";
+@forward "placeholders/base-container";
+@forward "placeholders/base-column";
+@forward "placeholders/base-row";
