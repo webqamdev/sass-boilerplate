@@ -2,6 +2,8 @@
 
 @use "../mixins/column/column-styles" as *;
 @use "../mixins/column/column-responsive-styles" as *;
+@use "../mixins/column/column-width" as *;
+@use "../mixins/column/column-responsive-width" as *;
 @use "../variables/gap";
 @use "../functions/px-to-em" as *;
 
@@ -10,28 +12,21 @@
 // ```scss
 // @use "placeholders/base-row" as *;
 // @use "placeholders/base-column" as *;
-// @use "placeholders/base-column-count" as *;
 //
 // .row {
 //   @extends %base-row--responsive-s;
 //
 //   .column {
 //     @extends %base-column--s;
-//     @extends %base-column-count--s-3;
+//     @extends %base-column--s-3;
 //   }
 //
 //   .column-responsive {
 //     @extends %base-column--responsive-s;
-//     @extends %base-column-count--responsive-s-3;
+//     @extends %base-column--responsive-s-3;
 //   }
 // }
 // ```
-
-// -------------------------------------------------------------------- /!\
-// To avoid having a very and unreadable file, the example
-// with the mixins `column-count()` and `column-responsive-count()`
-// are not visible here. Pleas read the `./_base-column-count.scss` file.
-// -------------------------------------------------------------------- /!\
 
 // Please update, add or remove the styles below to match the project needs.
 
@@ -39,9 +34,38 @@
   @include column-styles();
 }
 
+%base-column--1 {
+  @include column-width(1);
+}
+
+%base-column--2 {
+  @include column-width(2);
+}
+
+%base-column--3 {
+  @include column-width(3);
+}
+
 %base-column--responsive {
   @include column-responsive-styles();
 }
+
+// ## Custom responsive column width
+// %base-column--responsive-5 {
+//   // Output :
+//   // In mobile -> 1 column seperated by gap.$column-left-default-mobile each.
+//   // In tablet -> 2 columns seperated by gap.$column-left-default-tablet each.
+//   // In laptop -> 3 columns seperated by gap.$column-left-default-laptop each.
+//   // In desktop -> 4 columns seperated by gap.$column-left-default-desktop each.
+//   // In large-desktop -> 5 columns seperated by gap.$column-left-default-large-desktop each.
+//   @include column-responsive-width(
+//     $column-count-mobile: 1,
+//     $column-count-tablet: 2,
+//     $column-count-laptop: 3,
+//     $column-count-desktop: 4,
+//     $column-count-large-desktop: 5,
+//   );
+// }
 
 // ## Small gap columns
 %base-column--s {
@@ -49,6 +73,18 @@
     px-to-em(gap.$column-top-s),
     px-to-em(gap.$column-left-s)
   );
+}
+
+%base-column--s-1 {
+  @include column-width(1, px-to-em(gap.$column-left-s));
+}
+
+%base-column--s-2 {
+  @include column-width(2, px-to-em(gap.$column-left-s));
+}
+
+%base-column--s-3 {
+  @include column-width(3, px-to-em(gap.$column-left-s));
 }
 
 %base-column--responsive-s {
@@ -66,12 +102,46 @@
   );
 }
 
+// ## Custom responsive small column width
+// %base-column--responsive-s-5 {
+//   // Output :
+//   // In mobile -> 1 column seperated by 1.25em each.
+//   // In tablet -> 2 columns seperated by 1.25em each.
+//   // In laptop -> 3 columns seperated by 1.25em each.
+//   // In desktop -> 4 columns seperated by 1.25em each.
+//   // In large-desktop -> 5 columns seperated by 1.25em each.
+//   @include column-responsive-width(
+//     1,
+//     px-to-em(gap.$column-left-s-mobile),
+//     2,
+//     px-to-em(gap.$column-left-s-tablet),
+//     3,
+//     px-to-em(gap.$column-left-s-laptop),
+//     4,
+//     px-to-em(gap.$column-left-s-desktop),
+//     5,
+//     px-to-em(gap.$column-left-s-large-desktop),
+//   );
+// }
+
 // ## Medium gap columns
 %base-column--m {
   @include column-styles(
     px-to-em(gap.$column-top-m),
     px-to-em(gap.$column-left-m)
   );
+}
+
+%base-column--m-1 {
+  @include column-width(1, px-to-em(gap.$column-left-m));
+}
+
+%base-column--m-2 {
+  @include column-width(2, px-to-em(gap.$column-left-m));
+}
+
+%base-column--m-3 {
+  @include column-width(3, px-to-em(gap.$column-left-m));
 }
 
 %base-column--responsive-m {
@@ -89,12 +159,46 @@
   );
 }
 
+// ## Custom responsive medium column width
+// %base-column--responsive-m-5 {
+//   // Output :
+//   // In mobile -> 1 column seperated by 1.875em each.
+//   // In tablet -> 2 columns seperated by 1.875em each.
+//   // In laptop -> 3 columns seperated by 1.875em each.
+//   // In desktop -> 4 columns seperated by 1.875em each.
+//   // In large-desktop -> 5 columns seperated by 1.875em each.
+//   @include column-responsive-width(
+//     1,
+//     px-to-em(gap.$column-left-m-mobile),
+//     2,
+//     px-to-em(gap.$column-left-m-tablet),
+//     3,
+//     px-to-em(gap.$column-left-m-laptop),
+//     4,
+//     px-to-em(gap.$column-left-m-desktop),
+//     5,
+//     px-to-em(gap.$column-left-m-large-desktop),
+//   );
+// }
+
 // ## Large gap columns
 %base-column--l {
   @include column-styles(
     px-to-em(gap.$column-top-l),
     px-to-em(gap.$column-left-l)
   );
+}
+
+%base-column--l-1 {
+  @include column-width(1, px-to-em(gap.$column-left-l));
+}
+
+%base-column--l-2 {
+  @include column-width(2, px-to-em(gap.$column-left-l));
+}
+
+%base-column--l-3 {
+  @include column-width(3, px-to-em(gap.$column-left-l));
 }
 
 %base-column--responsive-l {
@@ -111,3 +215,25 @@
     px-to-em(gap.$column-left-l-large-desktop)
   );
 }
+
+// ## Custom responsive large column width
+// %base-column--responsive-l-5 {
+//   // Output :
+//   // In mobile -> 1 column seperated by 2.5em each.
+//   // In tablet -> 2 columns seperated by 2.5em each.
+//   // In laptop -> 3 columns seperated by 2.5em each.
+//   // In desktop -> 4 columns seperated by 2.5em each.
+//   // In large-desktop -> 5 columns seperated by 2.5em each.
+//   @include column-responsive-width(
+//     1,
+//     px-to-em(gap.$column-left-l-mobile),
+//     2,
+//     px-to-em(gap.$column-left-l-tablet),
+//     3,
+//     px-to-em(gap.$column-left-l-laptop),
+//     4,
+//     px-to-em(gap.$column-left-l-desktop),
+//     5,
+//     px-to-em(gap.$column-left-l-large-desktop),
+//   );
+// }

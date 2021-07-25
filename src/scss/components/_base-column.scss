@@ -1,7 +1,6 @@
 // # Base column styles
 
 @use "../lib/placeholders/base-column" as *;
-@use "../lib/placeholders/base-column-count" as *;
 
 // Usage example :
 // ```html
@@ -22,7 +21,7 @@
 
 .base-column {
   @extend %base-column;
-  @extend %base-column-count;
+  @extend %base-column--1;
 
   // &--responsive {
   //   @extend %base-column--responsive;
