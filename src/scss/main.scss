@@ -20,7 +20,13 @@
 // ## Components
 // - If you're not using one or any of those components, feel free to remove them (import statement + file)
 // - If you're using VueJS, consider to use SFCs instead (and remove the following imports to avoid code duplicates)
-@import "components";
+@import "components/base-button";
+@import "components/base-link";
+@import "components/base-container";
+@import "components/browser-upgrade";
+@import "components/icon";
+@import "components/base-row";
+@import "components/base-column";
 
 // ## Print
 @import "print";
