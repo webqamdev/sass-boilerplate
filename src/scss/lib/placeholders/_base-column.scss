@@ -32,21 +32,21 @@
 
 %base-column {
   @include column-styles();
-}
-
-%base-column--1 {
   @include column-width(1);
 }
 
 %base-column--2 {
+  @extend %base-column;
   @include column-width(2);
 }
 
 %base-column--3 {
+  @extend %base-column;
   @include column-width(3);
 }
 
 %base-column--responsive {
+  @extend %base-column;
   @include column-responsive-styles();
 }
 
@@ -58,6 +58,7 @@
 //   // In laptop -> 3 columns seperated by gap.$column-left-default-laptop each.
 //   // In desktop -> 4 columns seperated by gap.$column-left-default-desktop each.
 //   // In large-desktop -> 5 columns seperated by gap.$column-left-default-large-desktop each.
+//   @extend %base-column;
 //   @include column-responsive-width(
 //     $column-count-mobile: 1,
 //     $column-count-tablet: 2,
@@ -73,21 +74,21 @@
     px-to-em(gap.$column-top-s),
     px-to-em(gap.$column-left-s)
   );
-}
-
-%base-column--s-1 {
   @include column-width(1, px-to-em(gap.$column-left-s));
 }
 
 %base-column--s-2 {
+  @extend %base-column--s;
   @include column-width(2, px-to-em(gap.$column-left-s));
 }
 
 %base-column--s-3 {
+  @extend %base-column--s;
   @include column-width(3, px-to-em(gap.$column-left-s));
 }
 
 %base-column--responsive-s {
+  @extend %base-column--s;
   @include column-responsive-styles(
     px-to-em(gap.$column-top-s-mobile),
     px-to-em(gap.$column-left-s-mobile),
@@ -110,6 +111,7 @@
 //   // In laptop -> 3 columns seperated by 1.25em each.
 //   // In desktop -> 4 columns seperated by 1.25em each.
 //   // In large-desktop -> 5 columns seperated by 1.25em each.
+//   @extend %base-column--s;
 //   @include column-responsive-width(
 //     1,
 //     px-to-em(gap.$column-left-s-mobile),
@@ -130,21 +132,21 @@
     px-to-em(gap.$column-top-m),
     px-to-em(gap.$column-left-m)
   );
-}
-
-%base-column--m-1 {
   @include column-width(1, px-to-em(gap.$column-left-m));
 }
 
 %base-column--m-2 {
+  @extend %base-column--m;
   @include column-width(2, px-to-em(gap.$column-left-m));
 }
 
 %base-column--m-3 {
+  @extend %base-column--m;
   @include column-width(3, px-to-em(gap.$column-left-m));
 }
 
 %base-column--responsive-m {
+  @extend %base-column--m;
   @include column-responsive-styles(
     px-to-em(gap.$column-top-m-mobile),
     px-to-em(gap.$column-left-m-mobile),
@@ -167,6 +169,7 @@
 //   // In laptop -> 3 columns seperated by 1.875em each.
 //   // In desktop -> 4 columns seperated by 1.875em each.
 //   // In large-desktop -> 5 columns seperated by 1.875em each.
+//   @extend %base-column--m;
 //   @include column-responsive-width(
 //     1,
 //     px-to-em(gap.$column-left-m-mobile),
@@ -187,21 +190,21 @@
     px-to-em(gap.$column-top-l),
     px-to-em(gap.$column-left-l)
   );
-}
-
-%base-column--l-1 {
   @include column-width(1, px-to-em(gap.$column-left-l));
 }
 
 %base-column--l-2 {
+  @extend %base-column--l;
   @include column-width(2, px-to-em(gap.$column-left-l));
 }
 
 %base-column--l-3 {
+  @extend %base-column--l;
   @include column-width(3, px-to-em(gap.$column-left-l));
 }
 
 %base-column--responsive-l {
+  @extend %base-column--l;
   @include column-responsive-styles(
     px-to-em(gap.$column-top-l-mobile),
     px-to-em(gap.$column-left-l-mobile),
@@ -224,6 +227,7 @@
 //   // In laptop -> 3 columns seperated by 2.5em each.
 //   // In desktop -> 4 columns seperated by 2.5em each.
 //   // In large-desktop -> 5 columns seperated by 2.5em each.
+//   @extend %base-column--l;
 //   @include column-responsive-width(
 //     1,
 //     px-to-em(gap.$column-left-l-mobile),

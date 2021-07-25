@@ -14,6 +14,9 @@
 // Base styles
 @import "base";
 
+// Normalize.css is a proper alternative to css style reset https://necolas.github.io/normalize.css/
+@import "~normalize.css/normalize";
+
 // ## Vendors
 // @import "vendors/example-vendor-styles";
 
