@@ -6,30 +6,30 @@
 // - You can do the same in Vue Single File Components (SFC) with Vue CLI
 //   See https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
 // - If you can't import it automatically in every file, uncomment the following line
-// @import "lib";
+// @use "lib";
 
 // ## Font-faces
-@import "font-faces";
+@use "font-faces";
 
 // Base styles
-@import "base";
+@use "base";
 
 // Normalize.css is a proper alternative to css style reset https://necolas.github.io/normalize.css/
-@import "~normalize.css/normalize";
+@use "~normalize.css/normalize";
 
 // ## Vendors
-// @import "vendors/example-vendor-styles";
+// @use "vendors/example-vendor-styles";
 
 // ## Components
 // - If you're not using one or any of those components, feel free to remove them (import statement + file)
 // - If you're using VueJS, consider to use SFCs instead (and remove the following imports to avoid code duplicates)
-@import "components/base-button";
-@import "components/base-link";
-@import "components/base-container";
-@import "components/browser-upgrade";
-@import "components/icon";
-@import "components/base-row";
-@import "components/base-column";
+@use "components/base-button";
+@use "components/base-link";
+@use "components/base-container";
+@use "components/browser-upgrade";
+@use "components/icon";
+@use "components/base-row";
+@use "components/base-column";
 
 // ## Print
-@import "print";
+@use "print";

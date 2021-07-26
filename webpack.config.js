@@ -56,7 +56,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              additionalData: '@import "@/scss/_lib.scss";',
+              additionalData: '@use "@/scss/_lib.scss";',
             },
           },
         ],
