@@ -49,7 +49,7 @@ $size-base: 16px;
 
 // Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
 // If you don't want to support this feature, set the value to null
-$size-device-pixel-ratio: $size-base * 0.75;
+$size-device-pixel-ratio: null; // or "$size-base * 0.75;" to invert 125% zoom
 
 $size-button: 16px;
 
