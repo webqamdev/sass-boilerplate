@@ -1,6 +1,6 @@
 // # Arrow shape polygon
 
-@use "parse-int" as *;
+@use "strip-unit" as *;
 
 // Create arrow shape with the polygon function.
 // Usage example :
@@ -15,8 +15,8 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @function arrow-shape-polygon($arrow-width, $arrow-height, $useEm: false) {
-  $arrow-width: parse-int($arrow-width);
-  $arrow-height: parse-int($arrow-height);
+  $arrow-width: strip-unit($arrow-width);
+  $arrow-height: strip-unit($arrow-height);
 
   @if ($useEm) {
     $arrow-width: $arrow-width * 1em;

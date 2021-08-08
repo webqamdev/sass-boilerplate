@@ -1,6 +1,6 @@
 // # Sqrt
 
-@use "parse-int" as *;
+@use "strip-unit" as *;
 @use "sass:math";
 
 // Return the square root of a number.
@@ -11,11 +11,12 @@
 // .text {
 //   font-size: sqrt(9) * 1em; // Output `3 * 1em` => `3em`
 // }
+// ```
 
 // Please update, add or remove the styles below to match the project needs.
 
 @function sqrt($r) {
-  $r: parse-int($r);
+  $r: strip-unit($r);
   $x0: 1;
   $x1: $x0;
 

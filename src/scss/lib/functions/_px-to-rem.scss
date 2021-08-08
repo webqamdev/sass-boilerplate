@@ -1,7 +1,7 @@
 // # Px to rem
 
 @use "../variables/font";
-@use "parse-int" as *;
+@use "strip-unit" as *;
 @use "sass:math";
 
 // Converts px value to rem.
@@ -18,5 +18,5 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @function px-to-rem($pxValue, $context: font.$size-base) {
-  @return math.div(parse-int($pxValue), parse-int($context)) * 1rem;
+  @return math.div(strip-unit($pxValue), strip-unit($context)) * 1rem;
 }

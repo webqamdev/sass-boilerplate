@@ -1,7 +1,7 @@
 // # Em to px
 
 @use "../variables/font";
-@use "parse-int" as *;
+@use "strip-unit" as *;
 
 // Converts em values to px.
 // Usage example :
@@ -17,5 +17,5 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @function em-to-px($emValue, $context: font.$size-base) {
-  @return parse-int($emValue) * parse-int($context) * 1px;
+  @return strip-unit($emValue) * strip-unit($context) * 1px;
 }
