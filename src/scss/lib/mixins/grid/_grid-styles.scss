@@ -1,0 +1,19 @@
+// # Grid styles
+
+// @use "../../variables/gap";
+
+// Add the styles properties to behave like a grid.
+// Usage example :
+// ```scss
+// @use "mixins/grid/grid-styles" as *;
+//
+// .grid {
+//   @include grid-styles();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin grid-styles() {
+  display: grid;
+}

@@ -5,7 +5,7 @@
 @use "../row-column-margin-top" as *;
 @use "../row-column-margin-left" as *;
 
-// Add the margin properties to behave like a column in a row.
+// Add the margin properties to behave like a column in a row context.
 // Usage example :
 // ```scss
 // @use "mixins/column/column-styles" as *;

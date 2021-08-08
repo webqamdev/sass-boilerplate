@@ -1,6 +1,7 @@
 // # Multiline text overflow
 
-@use "../functions/parse-int" as *;
+@use "../functions/strip-unit" as *;
+@use "../mixins/prefixed-property" as *;
 
 // Give the ability to create text-overflow on multiple lines.
 // Usage example :
@@ -15,18 +16,16 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @mixin multiline-text-overflow($line-count: 2, $text-overflow: ellipsis) {
-  $line-count: parse-int($line-count);
+  $line-count: strip-unit($line-count);
 
   overflow: hidden;
   text-overflow: $text-overflow;
 
   @if ($line-count > 1) {
+    @include prefixed-property("box-orient", horizontal);
+    @include prefixed-property("line-clamp", $line-count);
+
     display: flex;
-    -moz-box-orient: horizontal;
-    -webkit-box-orient: horizontal;
-    /* stylelint-disable-next-line property-no-unknown */
-    box-orient: horizontal;
-    -webkit-line-clamp: $line-count;
   } @else {
     white-space: nowrap;
   }

@@ -1,0 +1,38 @@
+// # Prefixed property
+
+// Add most common browser prefix on property
+// $property must be a string
+// ---------------------------------------------------------------
+// webkit => Chromium (Chrome, Edge, Opera GX, etc.), Android, iOS, Safari
+// 		moz => Firefox
+// 		 ms => Internet Explorer
+// 			o	=> Opera
+// ---------------------------------------------------------------
+// Usage example :
+// ```scss
+// @use "mixins/prefixed-property" as *;
+//
+// .element {
+//   @include prefixed-property(box-sizing, border-box, moz webkit);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin prefixed-property(
+  $property: null,
+  $value: null,
+  $vendors: webkit moz ms o,
+  $default: true
+) {
+  @if $property and $value {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: $value;
+      }
+    }
+    @if $default {
+      #{$property}: $value;
+    }
+  }
+}

@@ -3,6 +3,15 @@
 // Import all mixin files.
 // Update this list when a new file is created or deleted.
 
+@forward "mixins/position/position";
+@forward "mixins/position/absolute";
+@forward "mixins/position/fixed";
+@forward "mixins/position/relative";
+@forward "mixins/position/sticky";
+@forward "mixins/aspect-ratio";
+@forward "mixins/clearfix";
+@forward "mixins/hardware-acceleration";
+@forward "mixins/prefixed-property";
 @forward "mixins/hover-focus-within";
 @forward "mixins/breakpoint";
 @forward "mixins/map-breakpoint";
@@ -24,3 +33,5 @@
 @forward "mixins/row/row-width";
 @forward "mixins/row/row-responsive-styles";
 @forward "mixins/row/row-styles";
+@forward "mixins/cell/cell-styles";
+@forward "mixins/grid/grid-styles";
