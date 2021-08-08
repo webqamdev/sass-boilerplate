@@ -28,3 +28,6 @@ $container-content-max-width-default: $container-content-max-width-m;
 // ## Interactive element
 $interactive-box-shadow-size-focus: 2px;
 $interactive-box-shadow-size-active: 4px;
+
+// ## Aspect ratio
+$default-aspect-ratio-inner-element-selector: ".default-inner-selector";

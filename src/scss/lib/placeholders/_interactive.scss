@@ -4,6 +4,8 @@
 @use "../variables/misc";
 @use "../variables/box-shadow";
 @use "../variables/outline";
+@use "../mixins/hardware-acceleration" as *;
+@use "../mixins/prefixed-property" as *;
 
 // Should be used on every element which the user can interact with :
 // buttons, links, inputs  selects, textareas, etc.
@@ -24,8 +26,10 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %interactive {
+  @include hardware-acceleration();
+  @include prefixed-property("tap-highlight-color", transparent);
+
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   transition-property: color, background, background-color, background-image,
     background-size, background-position, border-color, text-shadow, box-shadow,
     opacity, transform, text-indent, filter;
