@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $base-font-size: 16px !default;
 
 //
@@ -7,5 +9,5 @@ $base-font-size: 16px !default;
 //  @param $context
 //
 @function px-to-em($pxValue, $context: $base-font-size) {
-  @return ($pxValue / $context) * 1em;
+  @return (math.div($pxValue, $context)) * 1em;
 }
