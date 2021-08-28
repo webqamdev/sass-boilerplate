@@ -151,41 +151,13 @@ button {
   &:not([class]) {
     @extend %base-button;
   }
-
-  &:disabled,
-  &[disabled] {
-    &:not([class]) {
-      @extend %base-button--disabled;
-    }
-  }
-
-  &[type="submit"] {
-    &:not([class]) {
-      @extend %base-button;
-    }
-  }
 }
 
 input {
-  &[type="submit"] {
-    &:not([class]) {
+  &:not([class]) {
+    &[type="submit"],
+    &[type="reset"] {
       @extend %base-button;
-
-      &:disabled,
-      &[disabled] {
-        @extend %base-button--disabled;
-      }
-    }
-  }
-
-  &[type="reset"] {
-    &:not([class]) {
-      @extend %base-button;
-
-      &:disabled,
-      &[disabled] {
-        @extend %base-button--disabled;
-      }
     }
   }
 }

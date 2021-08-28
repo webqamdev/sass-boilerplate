@@ -35,44 +35,50 @@
     opacity, transform, text-indent, filter;
   transition-duration: duration.$default-transition;
 
-  &:hover {
-    @extend %interactive--hover;
+  @at-root %interactive--no-outline {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
   }
 
-  &:focus {
-    @extend %interactive--focus;
+  @at-root %interactive--hovered {
+    // Add custom interactive element styles when it is hovered
   }
 
-  &:active {
-    @extend %interactive--active;
+  @at-root %interactive--focused {
+    outline: outline.$interactive;
+    box-shadow: box-shadow.$interactive-focus;
   }
 
-  &.disabled,
-  &[disabled] {
+  @at-root %interactive--activated {
+    box-shadow: box-shadow.$interactive-active;
+  }
+
+  @at-root %interactive--disabled {
     pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
-}
 
-%interactive--hover {
-  // Add custom styles here
-}
+  &:hover {
+    @extend %interactive--hovered;
+  }
 
-%interactive--focus {
-  outline: outline.$interactive;
-  box-shadow: box-shadow.$interactive-focus;
-}
-
-%interactive--active {
-  box-shadow: box-shadow.$interactive-active;
-}
-
-%interactive--no-outline {
   &:focus {
-    outline: none;
-    box-shadow: none;
+    @extend %interactive--focused;
   }
 
   &:active {
-    box-shadow: none;
+    @extend %interactive--activated;
+  }
+
+  &:disabled,
+  &[disabled] {
+    @extend %interactive--disabled;
   }
 }
