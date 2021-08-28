@@ -1,6 +1,6 @@
 // # Base button styles
 
-@use "../lib/placeholders/base-button" as *;
+@use "../lib/placeholders/button" as *;
 @use "../lib/functions/px-to-em" as *;
 
 // Usage example :
@@ -17,13 +17,13 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .base-button {
-  @extend %base-button;
+  @extend %button;
 
   // &--no-outline {
-  //   @extend %base-button--no-outline;
+  //   @extend %button--no-outline;
   // }
 
   // &--disabled {
-  //   @extend %base-button--disabled;
+  //   @extend %button--disabled;
   // }
 }

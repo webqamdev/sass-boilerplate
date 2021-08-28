@@ -1,4 +1,4 @@
-// # Base row
+// # Row placeholders
 
 @use "../mixins/row/row-styles" as *;
 @use "../mixins/row/row-responsive-styles" as *;
@@ -8,36 +8,36 @@
 // Should be used as a base to selector that looks or behave like rows (containing one or more columns).
 // Usage example :
 // ```scss
-// @use "placeholders/base-row" as *;
-// @use "placeholders/base-column" as *;
+// @use "placeholders/row" as *;
+// @use "placeholders/column" as *;
 //
 // .row {
-//   @extends %base-row--l;
+//   @extends %row--l;
 //
 //   .column {
-//     @extends %base-column--l;
+//     @extends %column--l;
 //   }
 // }
 // ```
 
 // Please update, add or remove the styles below to match the project needs.
 
-%base-row {
+%row {
   @include row-styles();
 }
 
-%base-row--responsive {
+%row--responsive {
   @include row-responsive-styles();
 }
 
-%base-row--s {
+%row--s {
   @include row-styles(
     px-to-em(gap.$column-top-s),
     px-to-em(gap.$column-left-s)
   );
 }
 
-%base-row--responsive-s {
+%row--responsive-s {
   @include row-responsive-styles(
     px-to-em(gap.$column-top-s-mobile),
     px-to-em(gap.$column-left-s-mobile),
@@ -52,14 +52,14 @@
   );
 }
 
-%base-row--m {
+%row--m {
   @include row-styles(
     px-to-em(gap.$column-top-m),
     px-to-em(gap.$column-left-m)
   );
 }
 
-%base-row--responsive-m {
+%row--responsive-m {
   @include row-responsive-styles(
     px-to-em(gap.$column-top-m-mobile),
     px-to-em(gap.$column-left-m-mobile),
@@ -74,14 +74,14 @@
   );
 }
 
-%base-row--l {
+%row--l {
   @include row-styles(
     px-to-em(gap.$column-top-l),
     px-to-em(gap.$column-left-l)
   );
 }
 
-%base-row--responsive-l {
+%row--responsive-l {
   @include row-responsive-styles(
     px-to-em(gap.$column-top-l-mobile),
     px-to-em(gap.$column-left-l-mobile),

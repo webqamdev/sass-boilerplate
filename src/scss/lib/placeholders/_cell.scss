@@ -1,24 +1,24 @@
-// # Base cell
+// # Cell placeholders
 
 @use "../mixins/cell/cell-styles" as *;
 
 // Should be used as a base to selector that looks or behave like cells in a grid context.
 // Usage example :
 // ```scss
-// @use "placeholders/base-grid" as *;
-// @use "placeholders/base-cell" as *;
+// @use "placeholders/grid" as *;
+// @use "placeholders/cell" as *;
 //
 // .grid {
-//   @extends %base-grid;
+//   @extends %grid;
 //
 //   .cell {
-//     @extends %base-cell;
+//     @extends %cell;
 //   }
 // }
 // ```
 
 // Please update, add or remove the styles below to match the project needs.
 
-%base-column {
+%cell {
   @include cell-styles();
 }

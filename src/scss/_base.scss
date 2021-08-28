@@ -3,8 +3,8 @@
 @use "lib/variables/color";
 @use "lib/variables/font";
 @use "lib/variables/theme";
-@use "lib/placeholders/base-link" as *;
-@use "lib/placeholders/base-button" as *;
+@use "lib/placeholders/link" as *;
+@use "lib/placeholders/button" as *;
 
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
@@ -79,7 +79,7 @@ a {
   // Stylize default links (those who have no CSS class)
   // Avoids to override default styles every time you need to customize a specific link
   &:not([class]) {
-    @extend %base-link;
+    @extend %link;
   }
 }
 
@@ -149,7 +149,7 @@ button {
   // Stylize default buttons (those who don't have any CSS class)
   // Avoids to override default styles every time you need to customize a specific button
   &:not([class]) {
-    @extend %base-button;
+    @extend %button;
   }
 }
 
@@ -157,7 +157,7 @@ input {
   &:not([class]) {
     &[type="submit"],
     &[type="reset"] {
-      @extend %base-button;
+      @extend %button;
     }
   }
 }

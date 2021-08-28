@@ -1,6 +1,6 @@
 // # Base container styles
 
-@use "../lib/placeholders/base-container" as *;
+@use "../lib/placeholders/container" as *;
 
 // Usage example :
 // ```html
@@ -16,17 +16,17 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .base-container {
-  @extend %base-container;
+  @extend %container;
 
   // &--s {
-  //   @extend %base-container--s;
+  //   @extend %container--s;
   // }
 
   // &--m {
-  //   @extend %base-container--s;
+  //   @extend %container--s;
   // }
 
   // &--l {
-  //   @extend %base-container--s;
+  //   @extend %container--s;
   // }
 }

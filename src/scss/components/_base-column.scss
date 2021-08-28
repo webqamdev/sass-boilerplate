@@ -1,6 +1,6 @@
 // # Base column styles
 
-@use "../lib/placeholders/base-column" as *;
+@use "../lib/placeholders/column" as *;
 
 // Usage example :
 // ```html
@@ -20,33 +20,33 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .base-column {
-  @extend %base-column;
+  @extend %column;
 
   // &--responsive {
-  //   @extend %base-column--responsive;
+  //   @extend %column--responsive;
   // }
 
   // &--s {
-  //   @extend %base-column--s;
+  //   @extend %column--s;
   // }
 
   // &--responsive-s {
-  //   @extend %base-column--responsive-s;
+  //   @extend %column--responsive-s;
   // }
 
   // &--m {
-  //   @extend %base-column--m;
+  //   @extend %column--m;
   // }
 
   // &--responsive-m {
-  //   @extend %base-column--responsive-m;
+  //   @extend %column--responsive-m;
   // }
 
   // &--l {
-  //   @extend %base-column--l;
+  //   @extend %column--l;
   // }
 
   // &--responsive-l {
-  //   @extend %base-column--responsive-l;
+  //   @extend %column--responsive-l;
   // }
 }

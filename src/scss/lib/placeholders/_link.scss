@@ -1,4 +1,4 @@
-// # Base link
+// # Link placeholders
 
 @use "../variables/color";
 @use "interactive" as *;
@@ -8,8 +8,8 @@
 // ```scss
 // a,
 // button {
-//   @extends %base-link;
-//   @extends %base-link--no-outline;
+//   @extends %link;
+//   @extends %link--no-outline;
 //
 //   // Custom styles goes after :
 //   margin: 0 auto;
@@ -18,7 +18,7 @@
 
 // Please update, add or remove the styles below to match the project needs.
 
-%base-link {
+%link {
   @extend %interactive;
 
   color: color.$default-link;
@@ -27,40 +27,40 @@
   font-family: inherit;
   line-height: inherit;
 
-  @at-root %base-link--no-interactive-outline {
+  @at-root %link--no-interactive-outline {
     @extend %interactive--no-outline;
   }
 
-  @at-root %base-link--hovered {
-    // Add custom base-link element styles when it is hovered
+  @at-root %link--hovered {
+    // Add custom link element styles when it is hovered
   }
 
-  @at-root %base-link--focused {
-    // Add custom base-link element styles when it is focused
+  @at-root %link--focused {
+    // Add custom link element styles when it is focused
   }
 
-  @at-root %base-link--activated {
-    // Add custom base-link element styles when it is activated
+  @at-root %link--activated {
+    // Add custom link element styles when it is activated
   }
 
-  @at-root %base-link--disabled {
+  @at-root %link--disabled {
     // @extend %interactive--disabled;
   }
 
   &:hover {
-    @extend %base-link--hovered;
+    @extend %link--hovered;
   }
 
   &:focus {
-    @extend %base-link--focused;
+    @extend %link--focused;
   }
 
   &:active {
-    @extend %base-link--activated;
+    @extend %link--activated;
   }
 
   &:disabled,
   &[disabled] {
-    @extend %base-link--disabled;
+    @extend %link--disabled;
   }
 }

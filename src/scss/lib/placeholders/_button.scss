@@ -1,4 +1,4 @@
-// # Base button
+// # Button placeholders
 
 @use "../variables/padding";
 @use "../variables/font";
@@ -10,8 +10,8 @@
 // ```scss
 // a,
 // button {
-//   @extends %base-button;
-//   @extends %base-button--no-outline;
+//   @extends %button;
+//   @extends %button--no-outline;
 //
 //   // Custom styles goes after :
 //   margin: 0 auto;
@@ -20,7 +20,7 @@
 
 // Please update, add or remove the styles below to match the project needs.
 
-%base-button {
+%button {
   @extend %interactive;
 
   display: inline-flex;
@@ -39,40 +39,40 @@
   user-select: none;
   appearance: none;
 
-  @at-root %base-button--no-interactive-outline {
+  @at-root %button--no-interactive-outline {
     @extend %interactive--no-outline;
   }
 
-  @at-root %base-button--hovered {
-    // Add custom base-button element styles when it is hovered
+  @at-root %button--hovered {
+    // Add custom button element styles when it is hovered
   }
 
-  @at-root %base-button--focused {
-    // Add custom base-button element styles when it is focused
+  @at-root %button--focused {
+    // Add custom button element styles when it is focused
   }
 
-  @at-root %base-button--activated {
-    // Add custom base-button element styles when it is activated
+  @at-root %button--activated {
+    // Add custom button element styles when it is activated
   }
 
-  @at-root %base-button--disabled {
+  @at-root %button--disabled {
     // @extend %interactive--disabled;
   }
 
   &:hover {
-    @extend %base-button--hovered;
+    @extend %button--hovered;
   }
 
   &:focus {
-    @extend %base-button--focused;
+    @extend %button--focused;
   }
 
   &:active {
-    @extend %base-button--activated;
+    @extend %button--activated;
   }
 
   &:disabled,
   &[disabled] {
-    @extend %base-button--disabled;
+    @extend %button--disabled;
   }
 }

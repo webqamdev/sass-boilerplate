@@ -1,6 +1,6 @@
 // # Base link styles
 
-@use "../lib/placeholders/base-link" as *;
+@use "../lib/placeholders/link" as *;
 
 // Usage example :
 // ```html
@@ -12,13 +12,13 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .base-link {
-  @extend %base-link;
+  @extend %link;
 
   // &--no-outline {
-  //   @extend %base-link--no-outline;
+  //   @extend %link--no-outline;
   // }
 
   // &--disabled {
-  //   @extend %base-link--disabled;
+  //   @extend %link--disabled;
   // }
 }

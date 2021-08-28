@@ -1,4 +1,4 @@
-// # Base container
+// # Container placeholders
 
 @use "../mixins/container/container-styles" as *;
 @use "../variables/misc";
@@ -7,28 +7,28 @@
 // Usage example :
 // ```scss
 // .container {
-//   @extends %base-container;
+//   @extends %container;
 // }
 //
 // .small-container {
-//   @extends %base-container--s;
+//   @extends %container--s;
 // }
 // ```
 
 // Please update, add or remove the styles below to match the project needs.
 
-%base-container {
+%container {
   @include container-styles(misc.$container-content-max-width-default);
 }
 
-%base-container--s {
+%container--s {
   @include container-styles(misc.$container-content-max-width-s);
 }
 
-%base-container--m {
+%container--m {
   @include container-styles(misc.$container-content-max-width-m);
 }
 
-%base-container--l {
+%container--l {
   @include container-styles(misc.$container-content-max-width-l);
 }

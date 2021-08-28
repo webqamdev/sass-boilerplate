@@ -1,6 +1,6 @@
 // # Base row styles
 
-@use "../lib/placeholders/base-row" as *;
+@use "../lib/placeholders/row" as *;
 
 // Usage example :
 // ```html
@@ -20,33 +20,33 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .base-row {
-  @extend %base-row;
+  @extend %row;
 
   // &--responsive {
-  //   @extend %base-row--responsive;
+  //   @extend %row--responsive;
   // }
 
   // &--s {
-  //   @extend %base-row--s;
+  //   @extend %row--s;
   // }
 
   // &--responsive-s {
-  //   @extend %base-row--responsive-s;
+  //   @extend %row--responsive-s;
   // }
 
   // &--m {
-  //   @extend %base-row--m;
+  //   @extend %row--m;
   // }
 
   // &--responsive-m {
-  //   @extend %base-row--responsive-m;
+  //   @extend %row--responsive-m;
   // }
 
   // &--l {
-  //   @extend %base-row--l;
+  //   @extend %row--l;
   // }
 
   // &--responsive-l {
-  //   @extend %base-row--responsive-l;
+  //   @extend %row--responsive-l;
   // }
 }
