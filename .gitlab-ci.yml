@@ -5,7 +5,7 @@ build:
   image: node:14-alpine
   stage: build
   script:
-    - npm ci --no-optional
+    - npm ci
     - npm run test
     - npm run build
   artifacts:
