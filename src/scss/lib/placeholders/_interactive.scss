@@ -26,7 +26,7 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %interactive {
-  @include hardware-acceleration();
+  @include hardware-acceleration($transform: null);
   @include prefixed-property("tap-highlight-color", transparent);
 
   cursor: pointer;
@@ -35,19 +35,35 @@
     opacity, transform, text-indent, filter;
   transition-duration: duration.$default-transition;
 
+  &:hover {
+    @extend %interactive--hover;
+  }
+
   &:focus {
-    outline: outline.$interactive;
-    box-shadow: box-shadow.$interactive-focus;
+    @extend %interactive--focus;
   }
 
   &:active {
-    box-shadow: box-shadow.$interactive-active;
+    @extend %interactive--active;
   }
 
   &.disabled,
   &[disabled] {
     pointer-events: none;
   }
+}
+
+%interactive--hover {
+  // Add custom styles here
+}
+
+%interactive--focus {
+  outline: outline.$interactive;
+  box-shadow: box-shadow.$interactive-focus;
+}
+
+%interactive--active {
+  box-shadow: box-shadow.$interactive-active;
 }
 
 %interactive--no-outline {
