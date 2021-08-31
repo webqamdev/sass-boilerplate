@@ -1,6 +1,8 @@
+@use "sass:math";
+
 //
 //  Remove units
 //
 @function parse-int($n) {
-  @return $n / ($n * 0 + 1);
+  @return math.div($n, $n * 0 + 1);
 }
