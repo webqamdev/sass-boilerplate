@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $color-white: white !default;
 $color-black: black !default;
 
@@ -26,13 +28,19 @@ $color-black: black !default;
   }
 
   $brightness: round(
-    (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) / 1000
+    math.div(
+      (red($color) * 299) + (green($color) * 587) + (blue($color) * 114),
+      1000
+    )
   );
   $light: round(
-    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) / 1000
+    math.div(
+      (red(white) * 299) + (green(white) * 587) + (blue(white) * 114),
+      1000
+    )
   );
 
-  @if abs($brightness) < ($light/2) {
+  @if abs($brightness) < math.div($light, 2) {
     @return $color-light;
   } @else {
     @return $color-dark;
