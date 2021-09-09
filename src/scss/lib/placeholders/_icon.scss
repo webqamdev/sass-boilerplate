@@ -1,6 +1,7 @@
 // # Icon placeholders
 
 @use "../variables/font";
+@use "../variables/line-height";
 
 // Icon placeholder benefits:
 // - No extra markup nor CSS classes required.
@@ -35,7 +36,7 @@
   font-variant: normal;
   text-transform: none;
   speak: never; // See https://css-tricks.com/almanac/properties/s/speak/
-  line-height: 1;
+  line-height: line-height.$icon;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

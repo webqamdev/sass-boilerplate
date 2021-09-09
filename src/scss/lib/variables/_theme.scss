@@ -21,18 +21,23 @@
 // Please update, add or remove the variables below to match the project needs.
 
 // ## Primary theme
-$primary-color: null;
-$primary-color-invert: if($primary-color, text-contrast($primary-color), null);
+// ### Primary colors
+$color-primary: null;
+$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
 
 // ## Secondary theme
-$secondary-color: null;
-$secondary-color-invert: if(
-  $secondary-color,
-  text-contrast($secondary-color),
+// ### Secondary colors
+$color-secondary: null;
+$color-secondary-invert: if(
+  $color-secondary,
+  text-contrast($color-secondary),
   null
 );
 
 // ## Common theme
-$warning-color: color.$yellow;
+// ## Common colors
+$color-common-body-text: inherit;
+$color-common-body-background: color.$default;
+$color-warning: color.$yellow;
 
 $default-scroll-behavior: smooth; // initial value is 'auto'

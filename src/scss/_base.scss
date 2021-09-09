@@ -2,6 +2,7 @@
 
 @use "lib/variables/color";
 @use "lib/variables/font";
+@use "lib/variables/line-height";
 @use "lib/variables/theme";
 @use "lib/placeholders/link" as *;
 @use "lib/placeholders/button" as *;
@@ -11,7 +12,7 @@ html {
   color: color.$default;
   font-family: font.$family-default;
   font-size: font.$size-base;
-  line-height: 1.5;
+  line-height: line-height.$default;
   box-sizing: border-box;
 
   @if (font.$size-device-pixel-ratio) {
@@ -48,7 +49,8 @@ html {
 }
 
 body {
-  background-color: color.$default-background;
+  color: theme.$color-common-body-text;
+  background-color: theme.$color-common-body-background;
 }
 
 // Vertical rhythm: Remove top margin of common elements
