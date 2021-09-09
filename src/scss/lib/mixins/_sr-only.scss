@@ -1,10 +1,23 @@
-// Hide only visually, but have it available for screen readers:
+// # Sr only mixin
+
+// Hide only visually, but have it available for screen readers :
 // https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+// For long content, line feeds are not interpreted as spaces and small width
+// causes content to wrap 1 word per line:
+// https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+
+// Usage example :
+// ```scss
+// @use "mixins/sr-only" as *;
 //
-// 1. For long content, line feeds are not interpreted as spaces and small width
-//    causes content to wrap 1 word per line:
-//    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-//
+// .sr-only-text {
+//   @include sr-only();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
 @mixin sr-only($focusable: false) {
   border: 0;
   clip: rect(0, 0, 0, 0);

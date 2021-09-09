@@ -1,0 +1,44 @@
+// # Container vertical padding mixin
+
+@use "../../variables/font";
+@use "../../variables/padding";
+@use "../../functions/px-to-em" as *;
+@use "container-padding" as *;
+
+// Update the vertical padding of the element along with the context breakpoints like a container.
+// Usage example :
+// ```scss
+// @use "mixins/container/container-vertical-padding" as *;
+//
+// .container {
+//   @include container-vertical-padding();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin container-vertical-padding(
+  $multiplier: 1,
+  $base-font-size: font.$size-base
+) {
+  @include container-padding(
+    "padding-top",
+    padding.$container-top-mobile,
+    padding.$container-top-tablet,
+    padding.$container-top-laptop,
+    padding.$container-top-desktop,
+    padding.$container-top-large-desktop,
+    $multiplier,
+    $base-font-size
+  );
+  @include container-padding(
+    "padding-bottom",
+    padding.$container-bottom-mobile,
+    padding.$container-bottom-tablet,
+    padding.$container-bottom-laptop,
+    padding.$container-bottom-desktop,
+    padding.$container-bottom-large-desktop,
+    $multiplier,
+    $base-font-size
+  );
+}

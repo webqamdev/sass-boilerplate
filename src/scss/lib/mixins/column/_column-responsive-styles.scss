@@ -1,0 +1,59 @@
+// # Column responsive styles mixin
+
+@use "../../variables/gap";
+@use "../../functions/px-to-em" as *;
+@use "../row-column-margin-top" as *;
+@use "../row-column-margin-left" as *;
+
+// Add the margin properties to behave like a column in a row along with the context breakpoints.
+// Usage example :
+// ```scss
+// @use "mixins/column/column-responsive-styles" as *;
+//
+// .column {
+//   @include column-responsive-styles();
+// }
+//
+// .column-tablet-only {
+//   @include column-responsive-styles(
+//     null,
+//     null,
+//     40px,
+//     40px,
+//   );
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin column-responsive-styles(
+  $top-gap-mobile: px-to-em(gap.$column-top-default-mobile),
+  $left-gap-mobile: px-to-em(gap.$column-left-default-mobile),
+  $top-gap-tablet: px-to-em(gap.$column-top-default-tablet),
+  $left-gap-tablet: px-to-em(gap.$column-left-default-tablet),
+  $top-gap-laptop: px-to-em(gap.$column-top-default-laptop),
+  $left-gap-laptop: px-to-em(gap.$column-left-default-laptop),
+  $top-gap-desktop: px-to-em(gap.$column-top-default-desktop),
+  $left-gap-desktop: px-to-em(gap.$column-left-default-desktop),
+  $top-gap-large-desktop: px-to-em(gap.$column-top-default-large-desktop),
+  $left-gap-large-desktop: px-to-em(gap.$column-left-default-large-desktop),
+  // 1 is used to have a positive margin, cancelling the default row negative margin
+  $multiplier: 1
+) {
+  @include row-column-margin-top(
+    $multiplier,
+    $top-gap-mobile,
+    $top-gap-tablet,
+    $top-gap-laptop,
+    $top-gap-desktop,
+    $top-gap-large-desktop
+  );
+  @include row-column-margin-left(
+    $multiplier,
+    $left-gap-mobile,
+    $left-gap-tablet,
+    $left-gap-laptop,
+    $left-gap-desktop,
+    $left-gap-large-desktop
+  );
+}

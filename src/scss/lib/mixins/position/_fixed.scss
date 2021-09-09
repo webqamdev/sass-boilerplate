@@ -1,0 +1,19 @@
+// # Position fixed mixin
+
+@use "position" as *;
+
+// Setting the position of the element as fixed, taking edge properties as argument
+// Usage example :
+// ```scss
+// @use "mixins/position/fixed" as *;
+//
+// .element {
+//   @include fixed(bottom 15px right 60%);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin fixed($args: "") {
+  @include position(fixed, $args);
+}

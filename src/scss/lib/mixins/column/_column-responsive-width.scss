@@ -1,0 +1,82 @@
+// # Column responsive width mixin
+
+@use "../../variables/gap";
+@use "../../variables/breakpoint";
+@use "column-width" as *;
+@use "../responsive-property" as *;
+@use "../../functions/px-to-em" as *;
+@use "../breakpoint" as *;
+
+// Set the column width based on the number of element by row and depending to the side gap between each elements.
+// The width is updated along with the context breakpoints.
+// Usage example :
+// ```scss
+// @use "mixins/column/column-responsive-width" as *;
+//
+// .column-responsive {
+//   // In mobile -> 2 columns seperated by 20px each.
+//   // In tablet -> 4 columns seperated by 30px each.
+//   // In laptop -> 6 columns seperated by 40px each.
+//   // In desktop -> 6 columns seperated by 40px each. (inherited from the previous breakpoint)
+//   // In large-desktop -> 12 columns seperated by 10px each.
+//   @include column-responsive-width(2, 20px, 4, 30px, 6, 40px, null, null, 12, 10px);
+// }
+//
+// .dynamic-column-width-only {
+//   // With scss [keyword arguments](https://sass-lang.com/documentation/at-rules/mixin#keyword-arguments)
+//   // You can choose to set only the column count if you want. Leaving the default values as let gap :
+//   @include column-responsive-width(
+//     $column-count-mobile: 1,
+//     $column-count-tablet: 2,
+//     $column-count-laptop: 3
+//   );
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin column-responsive-width(
+  $column-count-mobile: 1,
+  $left-gap-mobile: px-to-em(gap.$column-left-default-mobile),
+  $column-count-tablet: null,
+  $left-gap-tablet: px-to-em(gap.$column-left-default-tablet),
+  $column-count-laptop: null,
+  $left-gap-laptop: px-to-em(gap.$column-left-default-laptop),
+  $column-count-desktop: null,
+  $left-gap-desktop: px-to-em(gap.$column-left-default-desktop),
+  $column-count-large-desktop: null,
+  $left-gap-large-desktop: px-to-em(gap.$column-left-default-large-desktop)
+) {
+  @if ($column-count-mobile != null and $left-gap-mobile != null) {
+    @include column-width($column-count-mobile, $left-gap-mobile);
+  }
+
+  @if ($column-count-tablet != null and $left-gap-tablet != null) {
+    @include breakpoint(breakpoint.$tablet) {
+      @include column-width($column-count-tablet, $left-gap-tablet);
+    }
+  }
+
+  @if ($column-count-laptop != null and $left-gap-laptop != null) {
+    @include breakpoint(breakpoint.$tablet) {
+      @include column-width($column-count-laptop, $left-gap-laptop);
+    }
+  }
+
+  @if ($column-count-desktop != null and $left-gap-desktop != null) {
+    @include breakpoint(breakpoint.$tablet) {
+      @include column-width($column-count-desktop, $left-gap-desktop);
+    }
+  }
+
+  @if (
+    $column-count-large-desktop != null and $left-gap-large-desktop != null
+  ) {
+    @include breakpoint(breakpoint.$tablet) {
+      @include column-width(
+        $column-count-large-desktop,
+        $left-gap-large-desktop
+      );
+    }
+  }
+}

@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CSSMQPackerPlugin = require('css-mqpacker-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
 
@@ -56,7 +57,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              additionalData: '@import "@/scss/lib/_lib.scss";',
+              additionalData: '@use "@/scss/_lib.scss";',
             },
           },
         ],
@@ -64,9 +65,13 @@ module.exports = {
     ],
   },
   optimization: {
+    minimize: true,
     minimizer: [
       `...`, // Extend existing minimizers
       new CssMinimizerPlugin(),
+      new CSSMQPackerPlugin({
+        sort: true,
+      }),
     ],
   },
 };

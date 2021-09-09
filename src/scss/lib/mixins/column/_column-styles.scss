@@ -1,0 +1,35 @@
+// # Column styles mixin
+
+@use "../../variables/gap";
+@use "../../functions/px-to-em" as *;
+@use "../row-column-margin-top" as *;
+@use "../row-column-margin-left" as *;
+
+// Add the margin properties to behave like a column in a row context.
+// Usage example :
+// ```scss
+// @use "mixins/column/column-styles" as *;
+//
+// .column {
+//   @include column-styles();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin column-styles(
+  $top-gap: px-to-em(gap.$column-top-default),
+  $left-gap: px-to-em(gap.$column-left-default),
+  // 1 is used to have a positive margin, cancelling the default row negative margin
+  $multiplier: 1
+) {
+  @include row-column-margin-top($multiplier, $top-gap, null, null, null, null);
+  @include row-column-margin-left(
+    $multiplier,
+    $left-gap,
+    null,
+    null,
+    null,
+    null
+  );
+}

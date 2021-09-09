@@ -1,30 +1,35 @@
 // # Main entry point
-//
+
 // ## Variables, mixins, functions, …
 // - This file should be automatically imported before every scss file when using Webpack
 //   See https://github.com/webpack-contrib/sass-loader#prependdata
 // - You can do the same in Vue Single File Components (SFC) with Vue CLI
 //   See https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
 // - If you can't import it automatically in every file, uncomment the following line
-//@import "lib/lib";
-//
+// @use "lib";
+
 // ## Font-faces
-@import "font-faces";
-//
+@use "font-faces";
+
 // Base styles
-@import "base";
-//
-// ## Icon classes
-@import "lib/icons/classes";
-//
+@use "base";
+
+// Normalize.css is a proper alternative to css style reset https://necolas.github.io/normalize.css/
+@use "~normalize.css/normalize";
+
 // ## Vendors
-//@import "vendors/example-vendor-styles";
-//
+// @use "vendors/example-vendor-styles";
+
 // ## Components
 // - If you're not using one or any of those components, feel free to remove them (import statement + file)
 // - If you're using VueJS, consider to use SFCs instead (and remove the following imports to avoid code duplicates)
-@import "components/browser-upgrade";
-@import "components/base-btn";
-//
+@use "components/base-button";
+@use "components/base-link";
+@use "components/base-container";
+@use "components/browser-upgrade";
+@use "components/icon";
+@use "components/base-row";
+@use "components/base-column";
+
 // ## Print
-@import "print";
+@use "print";

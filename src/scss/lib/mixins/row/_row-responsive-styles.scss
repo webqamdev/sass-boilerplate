@@ -1,0 +1,72 @@
+// # Row responsive styles mixin
+
+@use "../../variables/gap";
+@use "../../functions/px-to-em" as *;
+@use "row-width" as *;
+@use "../row-column-margin-top" as *;
+@use "../row-column-margin-left" as *;
+
+// Add the width and margin properties to behave like a row along with the context breakpoints.
+// Usage example :
+// ```scss
+// @use "mixins/row/row-responsive-styles" as *;
+//
+// .row {
+//   @include row-responsive-styles();
+// }
+//
+// .row-tablet-only {
+//   @include row-responsive-styles(
+//     null,
+//     null,
+//     40px,
+//     40px,
+//   );
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin row-responsive-styles(
+  $top-gap-mobile: px-to-em(gap.$column-top-default-mobile),
+  $left-gap-mobile: px-to-em(gap.$column-left-default-mobile),
+  $top-gap-tablet: px-to-em(gap.$column-top-default-tablet),
+  $left-gap-tablet: px-to-em(gap.$column-left-default-tablet),
+  $top-gap-laptop: px-to-em(gap.$column-top-default-laptop),
+  $left-gap-laptop: px-to-em(gap.$column-left-default-laptop),
+  $top-gap-desktop: px-to-em(gap.$column-top-default-desktop),
+  $left-gap-desktop: px-to-em(gap.$column-left-default-desktop),
+  $top-gap-large-desktop: px-to-em(gap.$column-top-default-large-desktop),
+  $left-gap-large-desktop: px-to-em(gap.$column-left-default-large-desktop),
+  // -1 is used to have a negative margin, cancelling the default column margin
+  $multiplier: -1,
+  $base-width: 100%
+) {
+  @include row-column-margin-top(
+    $multiplier,
+    $top-gap-mobile,
+    $top-gap-tablet,
+    $top-gap-laptop,
+    $top-gap-desktop,
+    $top-gap-large-desktop
+  );
+  @include row-column-margin-left(
+    $multiplier,
+    $left-gap-mobile,
+    $left-gap-tablet,
+    $left-gap-laptop,
+    $left-gap-desktop,
+    $left-gap-large-desktop
+  );
+  @include row-width(
+    $left-gap-mobile,
+    $left-gap-tablet,
+    $left-gap-laptop,
+    $left-gap-desktop,
+    $left-gap-large-desktop,
+    $base-width
+  );
+
+  display: flex;
+  flex-wrap: wrap;
+}

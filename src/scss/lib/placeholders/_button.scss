@@ -1,0 +1,78 @@
+// # Button placeholders
+
+@use "../variables/padding";
+@use "../variables/font";
+@use "../functions/px-to-em" as *;
+@use "interactive" as *;
+
+// Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
+// Usage example :
+// ```scss
+// a,
+// button {
+//   @extends %button;
+//   @extends %button--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%button {
+  @extend %interactive;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: px-to-em(font.$size-button);
+  padding: px-to-em(padding.$button-vertical, font.$size-button)
+    px-to-em(padding.$button-horizontal, font.$size-button);
+  border: 0;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background: none;
+  border-radius: 0;
+  user-select: none;
+  appearance: none;
+
+  @at-root %button--no-interactive-outline {
+    @extend %interactive--no-outline;
+  }
+
+  @at-root %button--hovered {
+    // Add custom button element styles when it is hovered
+  }
+
+  @at-root %button--focused {
+    // Add custom button element styles when it is focused
+  }
+
+  @at-root %button--activated {
+    // Add custom button element styles when it is activated
+  }
+
+  @at-root %button--disabled {
+    // @extend %interactive--disabled;
+  }
+
+  &:hover {
+    @extend %button--hovered;
+  }
+
+  &:focus {
+    @extend %button--focused;
+  }
+
+  &:active {
+    @extend %button--activated;
+  }
+
+  &:disabled,
+  &[disabled] {
+    @extend %button--disabled;
+  }
+}

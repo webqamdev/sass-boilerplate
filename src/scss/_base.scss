@@ -1,14 +1,27 @@
-// # Base styles : opinionated defaults
-//
+// # Base styles : opinionated defaults
+
+@use "lib/variables/color";
+@use "lib/variables/font";
+@use "lib/variables/theme";
+@use "lib/placeholders/link" as *;
+@use "lib/placeholders/button" as *;
+
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
-  color: $color-default;
-  font-family: $font-default;
-  font-size: 1em;
-  line-height: $base-line-height;
+  color: color.$default;
+  font-family: font.$family-default;
+  font-size: font.$size-base;
+  line-height: 1.5;
   box-sizing: border-box;
-  @if ($default-scroll-behavior != auto) {
-    scroll-behavior: $default-scroll-behavior;
+
+  @if (font.$size-device-pixel-ratio) {
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      font-size: font.$size-device-pixel-ratio;
+    }
+  }
+
+  @if (theme.$default-scroll-behavior != auto) {
+    scroll-behavior: theme.$default-scroll-behavior;
 
     // See https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior#Accessibilit%C3%A9
     @media (prefers-reduced-motion: reduce) {
@@ -18,8 +31,8 @@ html {
 }
 
 ::selection {
-  @if ($color-default-selection) {
-    background-color: $color-default-selection;
+  @if (color.$default-selection) {
+    background-color: color.$default-selection;
     text-shadow: none;
   }
 }
@@ -35,7 +48,7 @@ html {
 }
 
 body {
-  background-color: $color-default-background;
+  background-color: color.$default-background;
 }
 
 // Vertical rhythm: Remove top margin of common elements
@@ -66,7 +79,7 @@ a {
   // Stylize default links (those who have no CSS class)
   // Avoids to override default styles every time you need to customize a specific link
   &:not([class]) {
-    @extend %default-link;
+    @extend %link;
   }
 }
 
@@ -136,37 +149,15 @@ button {
   // Stylize default buttons (those who don't have any CSS class)
   // Avoids to override default styles every time you need to customize a specific button
   &:not([class]) {
-    @extend %base-btn;
-    @extend %base-btn--default;
-  }
-
-  &:disabled,
-  &[disabled],
-  &.base-btn--disabled {
-    &:not([class]) {
-      @extend %base-btn--disabled;
-    }
-  }
-
-  &[type="submit"] {
-    &:not([class]) {
-      @extend %base-btn--primary;
-    }
+    @extend %button;
   }
 }
 
 input {
-  &[type="submit"] {
-    &:not([class]) {
-      @extend %base-btn;
-      @extend %base-btn--primary;
-    }
-  }
-
-  &[type="reset"] {
-    &:not([class]) {
-      @extend %base-btn;
-      @extend %base-btn--default;
+  &:not([class]) {
+    &[type="submit"],
+    &[type="reset"] {
+      @extend %button;
     }
   }
 }

@@ -1,0 +1,44 @@
+// # Container horizontal padding mixin
+
+@use "../../variables/font";
+@use "../../variables/padding";
+@use "../../functions/px-to-em" as *;
+@use "container-padding" as *;
+
+// Update the horizontal padding of the element along with the context breakpoints like a container.
+// Usage example :
+// ```scss
+// @use "mixins/container/container-horizontal-padding" as *;
+//
+// .container {
+//   @include container-horizontal-padding();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin container-horizontal-padding(
+  $multiplier: 1,
+  $base-font-size: font.$size-base
+) {
+  @include container-padding(
+    "padding-left",
+    padding.$container-left-mobile,
+    padding.$container-left-tablet,
+    padding.$container-left-laptop,
+    padding.$container-left-desktop,
+    padding.$container-left-large-desktop,
+    $multiplier,
+    $base-font-size
+  );
+  @include container-padding(
+    "padding-right",
+    padding.$container-right-mobile,
+    padding.$container-right-tablet,
+    padding.$container-right-laptop,
+    padding.$container-right-desktop,
+    padding.$container-right-large-desktop,
+    $multiplier,
+    $base-font-size
+  );
+}

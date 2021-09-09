@@ -1,0 +1,30 @@
+// # Custom property - get function
+
+@use "../variables/cp";
+
+// Return the custom property by name with the theme prefix
+// Usage example :
+// ```scss
+// @use "functions/cp-get" as *;
+// @use "mixins/cp-set" as *;
+// @use "mixins/cp-root" as *;
+//
+// @include cp-root((
+//   text-font-size: 16px,
+//   text-margin-top: 32px,
+// ));
+//
+// .text {
+//   @include cp-set(text-margin-bottom, 20px, "custom-prefix");
+//
+//   font-size: cp-get(text-font-size); // Output : `var(--cp-text-font-size)`
+//   margin-top: cp-get("text-margin-top"); // Output : `var(--cp-text-margin-top)`
+//   margin-bottom: cp-get("text-margin-bottom", "custom-prefix"); // Output : `var(--custom-prefix-text-margin-bottom)`
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function cp-get($custom-property-name, $prefix: cp.$primary-theme-prefix) {
+  @return var(--#{$prefix}-#{$custom-property-name});
+}

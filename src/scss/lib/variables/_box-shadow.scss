@@ -1,0 +1,24 @@
+// ## Box shadow variables
+
+@use "color";
+@use "misc";
+
+// Set all generic or custom box-shadows here.
+
+// Usage example :
+// ````scss
+// @use "variables/box-shadow";
+//
+// .a {
+//   &:focus {
+//     box-shadow: box-shadow.$interactive-focus;
+//   }
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+$interactive-focus: 0 0 0 misc.$interactive-box-shadow-size-focus
+  color.$default-interactive-outline;
+$interactive-active: 0 0 0 misc.$interactive-box-shadow-size-active
+  color.$default-interactive-outline;

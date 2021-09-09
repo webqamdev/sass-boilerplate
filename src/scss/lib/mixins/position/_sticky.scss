@@ -1,0 +1,19 @@
+// # Position sticky mixin
+
+@use "position" as *;
+
+// Setting the position of the element as sticky, taking edge properties as argument
+// Usage example :
+// ```scss
+// @use "mixins/position/sticky" as *;
+//
+// .element {
+//   @include sticky(top 0 left auto);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin sticky($args: "") {
+  @include position(sticky, $args);
+}

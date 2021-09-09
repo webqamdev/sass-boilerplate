@@ -1,0 +1,37 @@
+// # Clearfix mixin
+
+// Small hack to clear the flot behavior of multiple elements
+// Usage example :
+// ```html
+// <section class="clearfix">
+//   <div class="float-element float-element--left"></div>
+//   <div class="float-element float-element--right"></div>
+// </section>
+// ```
+// ```scss
+// @use "mixins/clearfix" as *;
+//
+// .float-element {
+//   &--left {
+//     float: left;
+//   }
+//
+//   &--right {
+//     float: right;
+//   }
+// }
+//
+// .clearfix {
+//   @extends %clearfix;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

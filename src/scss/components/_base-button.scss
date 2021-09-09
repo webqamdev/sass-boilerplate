@@ -1,0 +1,29 @@
+// # Base button styles
+
+@use "../lib/placeholders/button" as *;
+@use "../lib/functions/px-to-em" as *;
+
+// Usage example :
+// ```html
+// <button class="base-button">
+//   Button content
+// </button>
+//
+// <a class="base-button base-button--disabled">
+//   Disabled button content
+// </a>
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+.base-button {
+  @extend %button;
+
+  // &--no-outline {
+  //   @extend %button--no-outline;
+  // }
+
+  // &--disabled {
+  //   @extend %button--disabled;
+  // }
+}

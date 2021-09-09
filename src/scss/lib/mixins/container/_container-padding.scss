@@ -1,0 +1,46 @@
+// # Container padding mixin
+
+@use "../../variables/font";
+@use "../../variables/padding";
+@use "../../functions/px-to-em" as *;
+@use "../responsive-property" as *;
+
+// Update a padding property along with the context breakpoints.
+// Usage example :
+// ```scss
+// @use "mixins/container/container-padding" as *;
+// @use "functions/px-to-em as *;
+//
+// .container {
+//   @include container-padding(
+//     "padding-left",
+//     px-to-em(20px),
+//     px-to-em(30px),
+//     px-to-em(40px),
+//     px-to-em(50px),
+//     px-to-em(60px)
+//   );
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin container-padding(
+  $padding-property,
+  $mobile-value: padding.$container-left-mobile,
+  $tablet-value: padding.$container-left-tablet,
+  $laptop-value: padding.$container-left-laptop,
+  $desktop-value: padding.$container-left-desktop,
+  $large-desktop-value: padding.$container-left-large-desktop,
+  $multiplier: 1,
+  $base-font-size: font.$size-base
+) {
+  @include responsive-property(
+    $padding-property,
+    px-to-em($mobile-value * $multiplier, $base-font-size),
+    px-to-em($tablet-value * $multiplier, $base-font-size),
+    px-to-em($laptop-value * $multiplier, $base-font-size),
+    px-to-em($desktop-value * $multiplier, $base-font-size),
+    px-to-em($large-desktop-value * $multiplier, $base-font-size)
+  );
+}

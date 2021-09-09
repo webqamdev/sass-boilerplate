@@ -1,0 +1,19 @@
+// # Position absolute mixin
+
+@use "position" as *;
+
+// Setting the position of the element as absolute, taking edge properties as argument
+// Usage example :
+// ```scss
+// @use "mixins/position/absolute" as *;
+//
+// .element {
+//   @include absolute(top 15px right 60%);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin absolute($args: "") {
+  @include position(absolute, $args);
+}

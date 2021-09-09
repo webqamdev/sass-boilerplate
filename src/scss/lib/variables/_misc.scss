@@ -1,15 +1,33 @@
 // # Miscellaneous & Computed global variables
-//
-// Colors, breakpoints, fonts, base variables and functions are available at
-// this point and can be used to create "computed" variables.
-//
-// Related variables
-// - SHOULD be grouped
-// - SHOULD be prefixed
-$default-scroll-behavior: smooth; // initial value is 'auto'
-$default-transition-duration: 150ms;
 
-// Buttons
-$base-btn-block-selector: ".base-btn";
-$base-btn-vertical-padding: 0.25em;
-$base-btn-horizontal-padding: 1em;
+// Uncomment or add needed variables or function modules
+// @use "gap";
+
+// Colors, breakpoints, fonts, base variables and functions should be available at
+// this point and can be used to create "computed" variables.
+
+// Usage example :
+// ````scss
+// @use "variables/misc";
+// @use "functions/px-to-em" as *;
+//
+// .container {
+//   max-width: px-to-em(misc.$container-content-max-width-s);
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Container content max-width
+$container-content-max-width-s: 880px;
+$container-content-max-width-m: 1080px;
+$container-content-max-width-l: 1280px;
+
+$container-content-max-width-default: $container-content-max-width-m;
+
+// ## Interactive element
+$interactive-box-shadow-size-focus: 2px;
+$interactive-box-shadow-size-active: 4px;
+
+// ## Aspect ratio
+$default-aspect-ratio-inner-element-selector: ".default-inner-selector";

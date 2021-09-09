@@ -1,0 +1,19 @@
+// # Cell styles mixin
+
+// @use "../../variables/gap";
+
+// Add the styles properties to behave like a cell in a grid context.
+// Usage example :
+// ```scss
+// @use "mixins/cell/cell-styles" as *;
+//
+// .cell {
+//   @include cell-styles();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin cell-styles() {
+  //
+}

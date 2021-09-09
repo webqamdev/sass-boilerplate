@@ -1,0 +1,18 @@
+// # Variables
+
+// Import all placeholder files.
+// Update this list when a new file is created or deleted.
+
+@forward "variables/color" as color-*;
+@forward "variables/duration" as duration-*;
+@forward "variables/font" as font-*;
+@forward "variables/breakpoint" as breakpoint-*;
+@forward "variables/padding" as padding-*;
+@forward "variables/margin" as margin-*;
+@forward "variables/gap" as gap-*;
+@forward "variables/box-shadow" as box-shadow-*;
+@forward "variables/outline" as outline-*;
+@forward "variables/z-index" as z-index-*;
+@forward "variables/theme" as theme-*;
+@forward "variables/misc" as misc-*;
+@forward "variables/cp" as cp-*;

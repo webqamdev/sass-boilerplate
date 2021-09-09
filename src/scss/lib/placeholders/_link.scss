@@ -1,0 +1,66 @@
+// # Link placeholders
+
+@use "../variables/color";
+@use "interactive" as *;
+
+// Should be used as a base to selector that looks or behave like links (even buttons or submit buttons, etc.).
+// Usage example :
+// ```scss
+// a,
+// button {
+//   @extends %link;
+//   @extends %link--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%link {
+  @extend %interactive;
+
+  color: color.$default-link;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+
+  @at-root %link--no-interactive-outline {
+    @extend %interactive--no-outline;
+  }
+
+  @at-root %link--hovered {
+    // Add custom link element styles when it is hovered
+  }
+
+  @at-root %link--focused {
+    // Add custom link element styles when it is focused
+  }
+
+  @at-root %link--activated {
+    // Add custom link element styles when it is activated
+  }
+
+  @at-root %link--disabled {
+    // @extend %interactive--disabled;
+  }
+
+  &:hover {
+    @extend %link--hovered;
+  }
+
+  &:focus {
+    @extend %link--focused;
+  }
+
+  &:active {
+    @extend %link--activated;
+  }
+
+  &:disabled,
+  &[disabled] {
+    @extend %link--disabled;
+  }
+}

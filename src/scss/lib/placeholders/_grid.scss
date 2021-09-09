@@ -1,0 +1,24 @@
+// # Grid placeholders
+
+@use "../mixins/grid/grid-styles" as *;
+
+// Should be used as a base to selector that looks or behave like cells in a grid context.
+// Usage example :
+// ```scss
+// @use "placeholders/grid" as *;
+// @use "placeholders/cell" as *;
+//
+// .grid {
+//   @extends %grid;
+//
+//   .cell {
+//     @extends %cell;
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%grid {
+  @include grid-styles();
+}
