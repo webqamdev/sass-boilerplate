@@ -26,13 +26,13 @@
 // - Make the animation look cool. If some animation seems good but it does not respect the previous comments,
 //   then keep it.
 
+// ## Custom duration variables
+// For example :
+// $card-hover: $long;
+
 $short: 150ms;
 $medium: 300ms;
 $long: 500ms;
 
 // ## Default variables
 $default-transition: $short;
-
-// ## Custom duration variables
-// For example :
-// $card-hover: $long;

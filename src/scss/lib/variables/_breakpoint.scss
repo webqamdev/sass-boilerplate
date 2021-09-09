@@ -23,6 +23,10 @@
 
 // Please update, add or remove the variables below to match the project needs.
 
+// ## Custom breakpoints
+// For example :
+// $footer-second-state: $l;
+
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool
 $xxxs: px-to-em(320px);
@@ -46,7 +50,3 @@ $tablet: $s;
 $laptop: $l;
 $desktop: $xxxl;
 $large-desktop: $full-hd;
-
-// ## Custom breakpoints
-// For example :
-// $footer-second-state: $l;

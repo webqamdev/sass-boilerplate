@@ -3,38 +3,8 @@
 // Import all mixin files.
 // Update this list when a new file is created or deleted.
 
-@forward "mixins/position/position";
-@forward "mixins/position/absolute";
-@forward "mixins/position/fixed";
-@forward "mixins/position/relative";
-@forward "mixins/position/sticky";
-@forward "mixins/cp-set";
-@forward "mixins/cp-root";
-@forward "mixins/aspect-ratio";
-@forward "mixins/clearfix";
+// @forward "mixins/your-mixin"
+
 @forward "mixins/hardware-acceleration";
-@forward "mixins/heading";
-@forward "mixins/prefixed-property";
-@forward "mixins/hover-focus-within";
 @forward "mixins/breakpoint";
-@forward "mixins/map-breakpoint";
 @forward "mixins/sr-only";
-@forward "mixins/responsive-property";
-@forward "mixins/responsive-content";
-@forward "mixins/multiline-text-overflow";
-@forward "mixins/row-column-margin-top";
-@forward "mixins/row-column-margin-left";
-@forward "mixins/container/container-padding";
-@forward "mixins/container/container-horizontal-padding";
-@forward "mixins/container/container-vertical-padding";
-@forward "mixins/container/container-max-width";
-@forward "mixins/container/container-styles";
-@forward "mixins/column/column-width";
-@forward "mixins/column/column-responsive-width";
-@forward "mixins/column/column-responsive-styles";
-@forward "mixins/column/column-styles";
-@forward "mixins/row/row-width";
-@forward "mixins/row/row-responsive-styles";
-@forward "mixins/row/row-styles";
-@forward "mixins/cell/cell-styles";
-@forward "mixins/grid/grid-styles";

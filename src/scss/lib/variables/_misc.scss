@@ -18,16 +18,10 @@
 
 // Please update, add or remove the variables below to match the project needs.
 
-// ## Container content max-width
-$container-content-max-width-s: 880px;
-$container-content-max-width-m: 1080px;
-$container-content-max-width-l: 1280px;
-
-$container-content-max-width-default: $container-content-max-width-m;
+// ## Custom miscellaneous & computed global variables
+// For example :
+// $global-section-border: 2px solid red;
 
 // ## Interactive element
 $interactive-box-shadow-size-focus: 2px;
 $interactive-box-shadow-size-active: 4px;
-
-// ## Aspect ratio
-$default-aspect-ratio-inner-element-selector: ".default-inner-selector";
