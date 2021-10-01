@@ -1,7 +1,7 @@
 // # Link placeholders
 
 @use "../variables/color";
-@use "interactive" as *;
+@use "../variables/duration";
 
 // Should be used as a base to selector that looks or behave like links (even buttons or submit buttons, etc.).
 // Usage example :
@@ -19,8 +19,12 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %link {
-  @extend %interactive;
-
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition-property: color, background, background-color, background-image,
+    background-size, background-position, border-color, text-shadow, box-shadow,
+    opacity, transform, text-indent, filter;
+  transition-duration: duration.$default-transition;
   color: color.$default-link;
   text-decoration: underline;
   font-size: inherit;
@@ -28,7 +32,10 @@
   line-height: inherit;
 
   @at-root %link--no-interactive-outline {
-    @extend %interactive--no-outline;
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 
   @at-root %link--hovered {
@@ -44,7 +51,7 @@
   }
 
   @at-root %link--disabled {
-    // @extend %interactive--disabled;
+    // Add custom link element styles when it is disabled
   }
 
   &:hover {

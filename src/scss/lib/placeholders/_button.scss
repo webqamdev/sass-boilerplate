@@ -1,9 +1,9 @@
 // # Button placeholders
 
 @use "../variables/padding";
+@use "../variables/duration";
 @use "../variables/font";
 @use "../functions/px-to-em" as *;
-@use "interactive" as *;
 
 // Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
 // Usage example :
@@ -21,8 +21,12 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %button {
-  @extend %interactive;
-
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition-property: color, background, background-color, background-image,
+    background-size, background-position, border-color, text-shadow, box-shadow,
+    opacity, transform, text-indent, filter;
+  transition-duration: duration.$default-transition;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +44,10 @@
   appearance: none;
 
   @at-root %button--no-interactive-outline {
-    @extend %interactive--no-outline;
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 
   @at-root %button--hovered {
@@ -56,7 +63,7 @@
   }
 
   @at-root %button--disabled {
-    // @extend %interactive--disabled;
+    // Add custom button element styles when it is disabled
   }
 
   &:hover {
