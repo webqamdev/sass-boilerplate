@@ -4,18 +4,18 @@
 
 // Usage example :
 // ```html
-// <button class="base-button">
+// <button class="base-btn">
 //   Button content
 // </button>
 //
-// <a class="base-button base-button--disabled">
+// <a class="base-btn base-btn--disabled">
 //   Disabled button content
 // </a>
 // ```
 
 // Please update, add or remove the styles below to match the project needs.
 
-.base-button {
+.base-btn {
   @extend %button;
 
   // &--no-outline {
