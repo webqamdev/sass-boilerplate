@@ -6,13 +6,13 @@
 // Only SCSS variables, functions, placeholders or mixins are allowed.
 
 // ## Functions
-@use "lib/functions";
+@forward "lib/functions";
 
 // ## Variables
-@use "lib/variables";
+@forward "lib/variables" as var-*;
 
 // ## Mixins
-@use "lib/mixins";
+@forward "lib/mixins";
 
 // ## Placeholders
-@use "lib/placeholders";
+@forward "lib/placeholders";

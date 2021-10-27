@@ -1,7 +1,6 @@
 // ## Box shadow variables
 
 @use "color";
-@use "misc";
 
 // Set all generic or custom box-shadows here.
 
@@ -22,7 +21,10 @@
 // For example :
 // $card: 0 0 3px rgba(0, 0, 0, 0.5);
 
-$interactive-focus: 0 0 0 misc.$interactive-box-shadow-size-focus
+$interactive-size-focus: 2px;
+$interactive-size-active: 4px;
+
+$interactive-focus: 0 0 0 $interactive-size-focus
   color.$default-interactive-outline;
-$interactive-active: 0 0 0 misc.$interactive-box-shadow-size-active
+$interactive-active: 0 0 0 $interactive-size-active
   color.$default-interactive-outline;

@@ -1,15 +1,13 @@
 // ## Padding variables
 
 // Set all generic or custom paddings here.
-// Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
 // Usage example :
 // ```scss
 // @use "variables/padding";
-// @use "functions/px-to-em" as *;
 //
 // .container {
-//   padding-left: px-to-em(padding.$container-horizontal);
-//   padding-right: px-to-em(padding.$container-horizontal);
+//   padding-left: padding.$container-horizontal;
+//   padding-right: padding.$container-horizontal;
 // }
 // ```
 
@@ -20,5 +18,5 @@
 // $container-horizontal: 40px;
 
 // ## Buttons
-$button-vertical: 4px;
-$button-horizontal: 16px;
+$button-vertical: 0.25em;
+$button-horizontal: 1em;

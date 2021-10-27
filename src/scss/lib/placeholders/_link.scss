@@ -1,7 +1,7 @@
 // # Link placeholders
 
 @use "../variables/color";
-@use "../variables/duration";
+@use "../variables/transition";
 
 // Should be used as a base to selector that looks or behave like links (even buttons or submit buttons, etc.).
 // Usage example :
@@ -24,7 +24,7 @@
   transition-property: color, background, background-color, background-image,
     background-size, background-position, border-color, text-shadow, box-shadow,
     opacity, transform, text-indent, filter;
-  transition-duration: duration.$default-transition;
+  transition-duration: transition.$duration-default;
   color: color.$default-link;
   text-decoration: underline;
   font-size: inherit;

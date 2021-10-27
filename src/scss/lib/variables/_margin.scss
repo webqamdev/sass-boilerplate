@@ -1,18 +1,16 @@
 // ## Margin variables
 
 // Set all generic or custom margins here.
-// Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
 // Usage example:
 // ```scss
 // @use "variables/margin";
-// @use "functions/px-to-em" as *;
 //
 // body {
 //   display: flex;
 //   flex-direction: column;
 //
 //   & > footer {
-//     margin-top: px-to-em(margin.$footer-top);
+//     margin-top: margin.$footer-top;
 //   }
 // }
 // ```
@@ -24,6 +22,6 @@
 // Fix the footer at the end of the document with the flex context on body element
 // $footer-top: auto;
 
-$s: 20px;
-$m: 30px;
-$l: 40px;
+$s: 1.25em; // 20px
+$m: 1.875em; // 30px
+$l: 2.5em; // 40px

@@ -1,9 +1,8 @@
 // # Button placeholders
 
 @use "../variables/padding";
-@use "../variables/duration";
+@use "../variables/transition";
 @use "../variables/font";
-@use "../functions/px-to-em" as *;
 
 // Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
 // Usage example :
@@ -26,13 +25,12 @@
   transition-property: color, background, background-color, background-image,
     background-size, background-position, border-color, text-shadow, box-shadow,
     opacity, transform, text-indent, filter;
-  transition-duration: duration.$default-transition;
+  transition-duration: transition.$duration-default;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: px-to-em(font.$size-button);
-  padding: px-to-em(padding.$button-vertical, font.$size-button)
-    px-to-em(padding.$button-horizontal, font.$size-button);
+  font-size: font.$size-button;
+  padding: padding.$button-vertical padding.$button-horizontal;
   border: 0;
   color: inherit;
   text-align: center;
