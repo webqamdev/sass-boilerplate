@@ -4,10 +4,9 @@
 // Usage example :
 // ````scss
 // @use "variables/font";
-// @use "functions/px-to-em" as *;
 //
 // .text {
-//   font-size: px-to-em(font.$size-s);
+//   font-size: font.$size-s;
 // }
 // ```
 
@@ -30,26 +29,24 @@ $family-icons: null;
 $family-default: $family-system;
 
 // ## Font sizes
-// Should stay as pixels values to be able to use px-to-em or px-to-rem functions properly.
 // Should be prefixed by `$size-`
 // Like so, the font is called as `font-size: font.$size-{name};`
-$size-xxs: 10px;
-$size-xs: 12px;
-$size-s: 14px;
-$size-m: 16px;
-$size-l: 18px;
-$size-xl: 20px;
-$size-xxl: 25px;
-$size-xxxl: 30px;
+$size-xxs: 0.625em; // 10px
+$size-xs: 0.75em; // 12px
+$size-s: 0.875em; // 14px
+$size-m: 1em; // 16px
+$size-l: 1.125em; // 18px
+$size-xl: 1.25em; // 20px
+$size-xxl: 1.5625em; // 25px
+$size-xxxl: 1.875em; // 30px
 
 // Used for functions font-size based and html root element
+// /!\ Must stay as px, it is not a relative font-size and it is used as reference in functions
 $size-base: 16px;
 
 // Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
 // If you don't want to support this feature, set the value to null
 $size-device-pixel-ratio: null; // or "$size-base * 0.75;" to invert 125% zoom
-
-$size-button: 16px;
 
 // ## Font weights
 // Should be named as in the mockups (Adobe XD for example)
@@ -73,17 +70,17 @@ $weights: (
   lighter: lighter,
   normal: normal,
   bolder: bolder,
-  thin: $weight-thin,
-  extra-light: $weight-extra-light,
-  light: $weight-light,
-  regular: $weight-regular,
-  book: $weight-book,
-  medium: $weight-medium,
-  middle: $weight-middle,
-  semi-bold: $weight-semi-bold,
-  demi: $weight-demi,
-  bold: $weight-bold,
-  heavy: $weight-heavy,
-  extra-bold: $weight-extra-bold,
-  black: $weight-black,
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  book: 400,
+  medium: 500,
+  middle: 500,
+  semi-bold: 600,
+  demi: 600,
+  bold: 700,
+  heavy: 700,
+  extra-bold: 800,
+  black: 800,
 );

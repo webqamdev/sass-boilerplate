@@ -1,10 +1,7 @@
 // # Breakpoint variables
 
-@use "../functions/px-to-em" as *;
-
 // Set all generic or custom breakpoints here.
 // All values should be calculated as `em` not `px`.
-// Prefer using the px-to-em() function for a better readability.
 // Usage example :
 // ````scss
 // @use "variables/breakpoint";
@@ -29,21 +26,21 @@
 
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool
-$xxxs: px-to-em(320px);
-$xxs: px-to-em(360px);
-$xs: px-to-em(416px);
-$s: px-to-em(768px);
-$m: px-to-em(864px);
-$l: px-to-em(1024px);
-$xl: px-to-em(1200px);
-$xxl: px-to-em(1330px);
-$xxxl: px-to-em(1440px);
+$xxxs: 20em; // 320px
+$xxs: 262.5em; // 360px
+$xs: 26em; // 416px
+$s: 48em; // 768px
+$m: 54em; // 864px
+$l: 64em; // 1024px
+$xl: 75em; // 1200px
+$xxl: 83.125em; // 1330px
+$xxxl: 90em; // 1440px
 
 // ## Screen resolutions
-$full-hd: px-to-em(1920px);
-$full-hd-height: px-to-em(1080px);
-$four-k: px-to-em(3840px);
-$four-k-height: px-to-em(2160px);
+$full-hd: 120em; // 1920px
+$full-hd-height: 67.5em; // 1080px
+$four-k: 240em; // 3840px
+$four-k-height: 135em; // 2160px
 
 // ## Context breakpoints
 $tablet: $s;

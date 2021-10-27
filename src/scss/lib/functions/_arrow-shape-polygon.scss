@@ -15,16 +15,9 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @function arrow-shape-polygon($arrow-width, $arrow-height, $useEm: false) {
-  $arrow-width: strip-unit($arrow-width);
-  $arrow-height: strip-unit($arrow-height);
-
-  @if ($useEm) {
-    $arrow-width: $arrow-width * 1em;
-    $arrow-height: $arrow-height * 1em;
-  } @else {
-    $arrow-width: $arrow-width * 1px;
-    $arrow-height: $arrow-height * 1px;
-  }
+  $unit: if($useEm, 1em, 1px);
+  $arrow-width: strip-unit($arrow-width) * $unit;
+  $arrow-height: strip-unit($arrow-height) * $unit;
 
   // Add `1px` to fix rendering issues in several browsers
   $bottom-offset-y: unquote("calc(100% - #{$arrow-height} + 1px)");
