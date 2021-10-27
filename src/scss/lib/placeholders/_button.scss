@@ -29,7 +29,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: font.$size-button;
+  font-size: inherit;
   padding: padding.$button-vertical padding.$button-horizontal;
   border: 0;
   color: inherit;
