@@ -16,6 +16,6 @@
 
 // Please update, add or remove the styles below to match the project needs.
 
-@function em-to-px($emValue, $context: font.$size-base) {
+@function em-to-px($emValue, $context: font.$base-size) {
   @return strip-unit($emValue) * strip-unit($context) * 1px;
 }
