@@ -1,0 +1,22 @@
+// # selector variables
+
+// Set all needed html and css selector as variable here
+// Usage example :
+// ````scss
+// @use "variables/selector";
+//
+// header {
+//   #{selector.header-link} {
+//     color: white;
+//   }
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom selector
+// For example :
+// header-link: ".header-link";
+
+// ## Buttons
+$default-button: ".base-btn";
