@@ -1,0 +1,83 @@
+// # Button placeholders
+
+@use "../variables/padding";
+@use "../variables/transition";
+@use "../variables/font";
+
+// Should be used as a base to selector that looks or behave like buttons (even links or submit inputs, etc.)
+// Usage example :
+// ```scss
+// a,
+// button {
+//   @extends %button;
+//   @extends %button--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition-property: color, background, background-color, background-image,
+    background-size, background-position, border-color, text-shadow, box-shadow,
+    opacity, transform, text-indent, filter;
+  transition-duration: transition.$duration-default;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  padding: padding.$button-vertical padding.$button-horizontal;
+  border: 0;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background: none;
+  border-radius: 0;
+  user-select: none;
+  appearance: none;
+
+  @at-root %button--no-interactive-outline {
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  @at-root %button--hovered {
+    // Add custom button element styles when it is hovered
+  }
+
+  @at-root %button--focused {
+    // Add custom button element styles when it is focused
+  }
+
+  @at-root %button--activated {
+    // Add custom button element styles when it is activated
+  }
+
+  @at-root %button--disabled {
+    // Add custom button element styles when it is disabled
+  }
+
+  &:hover {
+    @extend %button--hovered;
+  }
+
+  &:focus {
+    @extend %button--focused;
+  }
+
+  &:active {
+    @extend %button--activated;
+  }
+
+  &:disabled,
+  &[disabled] {
+    @extend %button--disabled;
+  }
+}

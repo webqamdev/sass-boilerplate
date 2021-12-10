@@ -1,10 +1,22 @@
-$base-font-size: 16px !default;
+// # Em to rem function
 
-//  Converts em value to rem
+@use "../variables/font";
+@use "em-to-px" as *;
+@use "px-to-rem" as *;
+
+// Converts em value to rem.
+// Usage example :
+// ```scss
+// @use "functions/em-to-rem" as *;
 //
-//  @param $emValue
-//  @param $context
-//
-@function em-to-rem($emValue, $context: $base-font-size) {
-  @return px-to-rem(em-to-px($emValue, $context), $base-font-size);
+// .text {
+//   font-size: em-to-rem(1.5em); // Output `1.5rem`
+//   margin-bottom: em-to-rem(1.5em, 24px); // Output `2.25rem`
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function em-to-rem($emValue, $context: font.$base-size) {
+  @return px-to-rem(em-to-px($emValue, $context), font.$base-size);
 }

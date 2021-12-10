@@ -1,6 +1,24 @@
-@use "sass:math";
+// # Arrow shape polygon function
 
-@function arrow-shape-polygon($arrow-width, $arrow-height) {
+@use "strip-unit" as *;
+
+// Create arrow shape with the polygon function.
+// Usage example :
+// ```scss
+// @use "functions/arrow-shape-polygon" as *;
+//
+// .element {
+//   clip-path: arrow-shape-polygon(10px, 10px);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function arrow-shape-polygon($arrow-width, $arrow-height, $useEm: false) {
+  $unit: if($useEm, 1em, 1px);
+  $arrow-width: strip-unit($arrow-width) * $unit;
+  $arrow-height: strip-unit($arrow-height) * $unit;
+
   // Add `1px` to fix rendering issues in several browsers
   $bottom-offset-y: unquote("calc(100% - #{$arrow-height} + 1px)");
 
@@ -8,9 +26,9 @@
     0 0,
     100% 0,
     100% $bottom-offset-y,
-    unquote("calc(50% - #{math.div($arrow-width,2)})") $bottom-offset-y,
+    unquote("calc(50% - #{$arrow-width * 0.5})") $bottom-offset-y,
     50% 100%,
-    unquote("calc(50% + #{math.div($arrow-width,2)})") $bottom-offset-y,
+    unquote("calc(50% + #{$arrow-width * 0.5})") $bottom-offset-y,
     0 $bottom-offset-y
   );
 }

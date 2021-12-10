@@ -1,55 +1,28 @@
-/// Base btn component
-///
-/// Usage:
-///
-/// ```html
-/// <button class="base-btn base-btn--default" type="button">
-///   Lorem ipsum
-/// </button>
-///
-/// <a href="#" class="base-btn base-btn--default base-btn--block">
-///   Lorem ipsum
-/// </a>
-///
-/// <a href="#" class="base-btn base-btn--primary">
-///   Lorem ipsum
-/// </a>
-/// ```
-#{$base-btn-block-selector} {
-  $block-selector: &;
+// # Base button styles
 
-  @extend %base-btn;
+@use "../lib/placeholders/button" as *;
 
-  &--default {
-    @extend %base-btn--default;
-  }
+// Usage example :
+// ```html
+// <button class="base-btn">
+//   Button content
+// </button>
+//
+// <a class="base-btn base-btn--disabled">
+//   Disabled button content
+// </a>
+// ```
 
-  &--primary {
-    @extend %base-btn--primary;
-  }
+// Please update, add or remove the styles below to match the project needs.
 
-  &--secondary {
-    @extend %base-btn--secondary;
-  }
+.base-btn {
+  @extend %button;
 
-  &--block {
-    @extend %base-btn--block;
-  }
+  // &--no-outline {
+  //   @extend %button--no-interactive-outline;
+  // }
 
-  &--link {
-    @extend %base-btn--link;
-  }
-
-  &[disabled],
-  &#{$block-selector + "--disabled"} {
-    @extend %base-btn--disabled;
-  }
-
-  &--icon {
-    @extend %base-btn--icon;
-  }
-
-  &--discreet {
-    @extend %base-btn--discreet;
-  }
+  // &--disabled {
+  //   @extend %button--disabled;
+  // }
 }

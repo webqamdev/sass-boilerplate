@@ -1,0 +1,22 @@
+// ## Line height variables
+
+// Set all generic or custom line-heights here.
+
+// Usage example :
+// ````scss
+// @use "variables/line-height";
+//
+// body {
+//   line-height: line-height.$default;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom line-heights
+// For example :
+// $button: 1.2;
+// $title: 20px;
+
+$default: 1.5;
+$icon: 1;

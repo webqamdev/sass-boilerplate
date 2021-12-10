@@ -1,0 +1,86 @@
+// # Font variables
+
+// Set all generic or custom font type variables here.
+// Usage example :
+// ````scss
+// @use "variables/font";
+//
+// .text {
+//   font-size: font.$size-s;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Font names
+// Should be prefixed by `$name-`
+// Like so, the font is called as `font-family: font.$name-{name};`
+
+// $name-example: "example";
+
+// ## Font families
+// Should be prefixed by `$family-`
+// Like so, the font is called as `font-family: font.$family-{name};`
+$family-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
+  Arial, sans-serif;
+$family-icons: null;
+// $family-example: $name-example, Arial, sans-serif;
+
+$family-default: $family-system;
+
+// ## Font sizes
+// Should be prefixed by `$size-`
+// Like so, the font is called as `font-size: font.$size-{name};`
+$size-xxs: 0.625em; // 10px
+$size-xs: 0.75em; // 12px
+$size-s: 0.875em; // 14px
+$size-m: 1em; // 16px
+$size-l: 1.125em; // 18px
+$size-xl: 1.25em; // 20px
+$size-xxl: 1.5625em; // 25px
+$size-xxxl: 1.875em; // 30px
+
+// Used for functions font-size based and html root element
+// /!\ Must stay as px, it is not a relative font-size and it is used as reference in functions
+$base-size: 16px;
+
+// Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
+// If you don't want to support this feature, set the value to null
+$size-device-pixel-ratio: null; // or "$base-size * 0.75;" to invert 125% zoom
+
+// ## Font weights
+// Should be named as in the mockups (Adobe XD for example)
+// Should be prefixed by `$weight-`
+// Like so, the font is called as `font-weight: font.$weight-{name};`
+$weight-thin: 100;
+$weight-extra-light: 200;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-book: 400;
+$weight-medium: 500;
+$weight-middle: 500;
+$weight-semi-bold: 600;
+$weight-demi: 600;
+$weight-bold: 700;
+$weight-heavy: 700;
+$weight-extra-bold: 800;
+$weight-black: 900;
+
+$weights: (
+  lighter: lighter,
+  normal: normal,
+  bolder: bolder,
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  book: 400,
+  medium: 500,
+  middle: 500,
+  semi-bold: 600,
+  demi: 600,
+  bold: 700,
+  heavy: 700,
+  extra-bold: 800,
+  black: 800,
+);

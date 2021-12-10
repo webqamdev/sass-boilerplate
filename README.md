@@ -20,8 +20,7 @@ automatically install this boilerplate and configure your project.
 
 1. Install required dependencies
    ```sh
-   npm install normalize.css --save-dev
-   npm install breakpoint-sass --save-dev
+   npm install normalize.css breakpoint-sass --save-dev
    ```
 2. Copy the [`src/scss`](src/scss) directory in your project.
 3. Import Normalize.css to your bundle (optional)
@@ -54,7 +53,7 @@ automatically install this boilerplate and configure your project.
                  // See sass-loader's documentation and CHANGELOG for details
                  // (https://github.com/webpack-contrib/sass-loader)
                  // Update path to fit your needs
-                 additionalData: '@import "@/scss/lib/_lib.scss";',
+                 additionalData: '@use "@/scss/_lib.scss";',
                },
              },
            ],

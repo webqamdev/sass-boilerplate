@@ -56,7 +56,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              additionalData: '@import "@/scss/lib/_lib.scss";',
+              additionalData: '@use "@/scss/_lib.scss";',
             },
           },
         ],
@@ -64,6 +64,7 @@ module.exports = {
     ],
   },
   optimization: {
+    minimize: true,
     minimizer: [
       `...`, // Extend existing minimizers
       new CssMinimizerPlugin(),

@@ -1,0 +1,27 @@
+// ## Margin variables
+
+// Set all generic or custom margins here.
+// Usage example:
+// ```scss
+// @use "variables/margin";
+//
+// body {
+//   display: flex;
+//   flex-direction: column;
+//
+//   & > footer {
+//     margin-top: margin.$footer-top;
+//   }
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom margin variables
+// For example :
+// Fix the footer at the end of the document with the flex context on body element
+// $footer-top: auto;
+
+$s: 1.25em; // 20px
+$m: 1.875em; // 30px
+$l: 2.5em; // 40px

@@ -1,12 +1,22 @@
+// # Px to rem function
+
+@use "../variables/font";
+@use "strip-unit" as *;
 @use "sass:math";
 
-$base-font-size: 16px !default;
+// Converts px value to rem.
+// Usage example :
+// ```scss
+// @use "functions/px-to-rem" as *;
+//
+// .text {
+//   font-size: px-to-rem(24px); // Output `1.5rem`
+//   margin-bottom: px-to-rem(24px, 24px); // Output `1rem`
+// }
+// ```
 
-//  Converts px value to rem
-//
-//  @param $pxValue
-//  @param $context
-//
-@function px-to-rem($pxValue, $context: $base-font-size) {
-  @return math.div((parse-int($pxValue) * 1px), $context) * 1rem;
+// Please update, add or remove the styles below to match the project needs.
+
+@function px-to-rem($pxValue, $context: font.$base-size) {
+  @return math.div(strip-unit($pxValue), strip-unit($context)) * 1rem;
 }

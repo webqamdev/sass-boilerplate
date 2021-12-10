@@ -1,0 +1,19 @@
+// # Outline variables
+
+// Set all generic or custom outlines here.
+// Usage example :
+// ````scss
+// @use "variables/outline";
+//
+// button {
+//   outline: outline.$interactive;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom outlines
+// For example :
+// $button-on-hover: 0 0 3px solid red;
+
+$interactive: none;

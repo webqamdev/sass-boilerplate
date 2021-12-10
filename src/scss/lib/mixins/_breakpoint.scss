@@ -1,0 +1,28 @@
+// # Breakpoint mixin
+
+// Breakpoint is a vendor lib of Sass mixins to write media queries.
+// (https://github.com/at-import/breakpoint, http://breakpoint-sass.com/)
+@use "~breakpoint-sass/stylesheets/breakpoint" as breakpoint-sass;
+
+// Create media queries properly.
+// Usage example :
+// ```scss
+// @use "mixins/breakpoint" as *;
+// @use "variables/breakpoint";
+//
+// .responsive-element {
+//   margin-bottom: 20px;
+//
+//   @include breakpoint(breakpoint.$desktop) {
+//     margin-bottom: 40px;
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin breakpoint($query, $no-query: false) {
+  @include breakpoint-sass.breakpoint($query, $no-query) {
+    @content;
+  }
+}

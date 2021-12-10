@@ -1,0 +1,36 @@
+// # Gap variables
+
+// Set all generic or custom gaps here.
+// Can be used as margin, padding, or list/grid gap.
+// You can/should use those variables in `_padding.scss` or `_margin.scss`
+
+// Usage example :
+// ````scss
+// @use "variables/gap";
+//
+// .row {
+//   margin-top: -gap.$s;
+//   margin-left: -gap.$s;
+// }
+//
+// .column {
+//   margin-top: gap.$s;
+//   margin-left: gap.$s;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom gap variables
+// For example :
+// $section-vertical-space: $xl;
+
+$xxxs: 0.3125em; // 5px
+$xxs: 0.625em; // 10px
+$xs: 0.9375em; // 15px
+$s: 1.25em; // 20px
+$m: 1.875em; // 30px
+$l: 2.5em; // 40px
+$xl: 3.125em; // 50px
+$xxl: 3.75em; // 60px
+$xxxl: 6.25em; // 100px

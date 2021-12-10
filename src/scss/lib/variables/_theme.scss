@@ -1,0 +1,43 @@
+// # Theme variables
+
+@use "color";
+@use "../functions/text-contrast" as *;
+
+// If you have multiple themes (like dark and light theme for example the create specific variables here.
+// You should prefix theme by the theme name like below.
+
+// If you see that this document os too long, maybe you have to create a variable theme folder and split your code.
+// For example :
+// scss/lib/variables/themes/primary/color
+
+// ````scss
+// @use "variables/themes/primary/color" as primary-color;
+//
+// body {
+//   color: primary-color.$default-text;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Primary theme
+// ### Primary colors
+$color-primary: null;
+$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
+
+// ## Secondary theme
+// ### Secondary colors
+$color-secondary: null;
+$color-secondary-invert: if(
+  $color-secondary,
+  text-contrast($color-secondary),
+  null
+);
+
+// ## Common theme
+// ## Common colors
+$color-common-body-text: inherit;
+$color-common-body-background: color.$default;
+$color-warning: color.$yellow;
+
+$default-scroll-behavior: smooth; // initial value is 'auto'

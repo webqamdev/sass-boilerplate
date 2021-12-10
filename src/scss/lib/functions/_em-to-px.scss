@@ -1,10 +1,21 @@
-$base-font-size: 16px !default;
+// # Em to px function
 
-//  Converts em values to px
+@use "../variables/font";
+@use "strip-unit" as *;
+
+// Converts em values to px.
+// Usage example :
+// ```scss
+// @use "functions/em-to-px" as *;
 //
-//  @param $emValue
-//  @param $context
-//
-@function em-to-px($emValue, $context: $base-font-size) {
-  @return $emValue * $context * 1px;
+// .text {
+//   font-size: em-to-px(1.5em); // Output `24px`
+//   margin-bottom: em-to-px(1.5em, 24px); // Output `36px`
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function em-to-px($emValue, $context: font.$base-size) {
+  @return strip-unit($emValue) * strip-unit($context) * 1px;
 }

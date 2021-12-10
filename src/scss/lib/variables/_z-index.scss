@@ -1,0 +1,18 @@
+// # Z-index variables
+
+// Set all generic or custom z-indexes here.
+// Usage example :
+// ````scss
+// @use "variables/z-index";
+//
+// header {
+//   position: fixed;
+//   z-index: z-index.$header-fixed-position;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom z-index
+// For example :
+// $header-fixed-position: 100;

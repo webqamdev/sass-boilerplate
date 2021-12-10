@@ -1,0 +1,43 @@
+// # Breakpoint variables
+
+// Set all generic or custom breakpoints here.
+// All values should be calculated as `em` not `px`.
+// Usage example :
+// ````scss
+// @use "variables/breakpoint";
+// @use "mixins/breakpoint" as *;
+//
+// .text {
+//   @include bs.breakpoint(breakpoint.$xl) {
+//     line-height: 1.2;
+//   }
+//
+//   @include bs.breakpoint(breakpoint.$desktop) {
+//     line-height: 1;
+//   }
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Custom breakpoints
+// For example :
+// $footer-second-state: $l;
+
+// Inspired from https://fr.screenresolution.org/
+// And from the Chrome Inspection Tool
+$xxxs: 20em; // 320px
+$xxs: 262.5em; // 360px
+$xs: 26em; // 416px
+$s: 48em; // 768px
+$m: 54em; // 864px
+$l: 64em; // 1024px
+$xl: 75em; // 1200px
+$xxl: 83.125em; // 1330px
+$xxxl: 90em; // 1440px
+
+// ## Screen resolutions
+$full-hd: 120em; // 1920px
+$full-hd-height: 67.5em; // 1080px
+$four-k: 240em; // 3840px
+$four-k-height: 135em; // 2160px

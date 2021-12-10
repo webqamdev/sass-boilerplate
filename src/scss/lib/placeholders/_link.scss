@@ -1,0 +1,73 @@
+// # Link placeholders
+
+@use "../variables/color";
+@use "../variables/transition";
+
+// Should be used as a base to selector that looks or behave like links (even buttons or submit buttons, etc.).
+// Usage example :
+// ```scss
+// a,
+// button {
+//   @extends %link;
+//   @extends %link--no-outline;
+//
+//   // Custom styles goes after :
+//   margin: 0 auto;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%link {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition-property: color, background, background-color, background-image,
+    background-size, background-position, border-color, text-shadow, box-shadow,
+    opacity, transform, text-indent, filter;
+  transition-duration: transition.$duration-default;
+  color: color.$default-link;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+
+  @at-root %link--no-interactive-outline {
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  @at-root %link--hovered {
+    // Add custom link element styles when it is hovered
+  }
+
+  @at-root %link--focused {
+    // Add custom link element styles when it is focused
+  }
+
+  @at-root %link--activated {
+    // Add custom link element styles when it is activated
+  }
+
+  @at-root %link--disabled {
+    // Add custom link element styles when it is disabled
+  }
+
+  &:hover {
+    @extend %link--hovered;
+  }
+
+  &:focus {
+    @extend %link--focused;
+  }
+
+  &:active {
+    @extend %link--activated;
+  }
+
+  &:disabled,
+  &[disabled] {
+    @extend %link--disabled;
+  }
+}
