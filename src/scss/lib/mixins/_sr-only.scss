@@ -7,6 +7,8 @@
 // causes content to wrap 1 word per line:
 // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 
+// Inspired from https://github.com/twbs/bootstrap/blob/main/scss/mixins/_visually-hidden.scss
+
 // Usage example :
 // ```scss
 // @use "mixins/sr-only" as *;
@@ -19,30 +21,29 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @mixin sr-only($focusable: false) {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  // 1
-
   @if ($focusable) {
-    // Extends the .sr-only class to allow the element
-    // to be focusable when navigated to via the keyboard:
-    // https://www.drupal.org/node/897638
-    &:active,
-    &:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      white-space: inherit;
-      width: auto;
+    &:not(:focus),
+    &:not(:focus-within),
+    &:not(:active) {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
+  } @else {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
   }
 }
