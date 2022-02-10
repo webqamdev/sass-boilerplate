@@ -37,19 +37,19 @@ We therefore took the opportunity to carry out larger-scale work in order to pla
 ### Changed
 
 - Updated examples component file content (in `scss/components/`).
-- Split variables type in various files to take great advantage of the module namespaces (in `scss/lib/variables/`).
-- All variables file ar now in singular (for better namespace logic).
+- Split variable types in dedicated files to take great advantage of the module namespaces (in `scss/lib/variables/`).
+- All variable files are now in singular (for better namespace logic).
 - Moved the file `scss/lib/_lib.scss` to `scss/_lib.scss`. This file is only here to @use `scss/lib/_functions.scss`, `scss/lib/_mixins.scss`, `scss/lib/_placeholders.scss` and `scss/lib/_variables.scss`.
 - Renamed function `parse-int()` to `strip-unit()` (in `scss/lib/functions/_strip-unit.scss`).
 - Renamed placeholder `%base-btn` to `%button` (in `scss/lib/placeholders/_button.scss`).
 - Renamed placeholder `%default-link` to `%link` (in `scss/lib/placeholders/_link.scss`).
-- The file `scss/main.scss` is now only here to import components files and selector styles. It is no longer required to import `scsss/_lib.scss`, components files already @use the required lib files.
+- The file `scss/main.scss` is now only here to import component files and selector styles. It is no longer required to import `scsss/_lib.scss`, component files already @use the required lib files.
 
 ### Removed
 
 - Removed the function `headings()`.
 - Removed the function `sqrt()`.
-- Removed `scss/lib/variables/_base.scss` (base variables are now split in other variable file).
-- Removed `scss/lib/variables/_misc.scss` (misc variables are now split in other variable file).
+- Removed `scss/lib/variables/_base.scss` (base variables are now split into other variable file).
+- Removed `scss/lib/variables/_misc.scss` (misc variables are now split into other variable file).
 - Temporarily removed the mixin `hover-focus-within-workaround()` (It will be updated).
 - Temporarily removed the mixin `map-breakpoint()` (It will be updated).

@@ -17,6 +17,7 @@
 
 .base-btn {
   @extend %button;
+  @extend %button--hovered;
 
   // &--no-outline {
   //   @extend %button--no-interactive-outline;
