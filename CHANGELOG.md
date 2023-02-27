@@ -9,12 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- // Add here unreleased additions
 - Add `scss/components/_sr-only.scss` file.
 
 ### Changed
 
+- // Add here unreleased changes
 - Update `sr-only()` @mixin content to avoid rewriting styles if $focusable is true and support :focus-within state
 - `scss/main.scss` now @use `scss/components/_sr-only.scss`
+
+### Fixed
+
+- // Add here unreleased fixes
 
 ## [1.0.0] - 2021-12-10
 
