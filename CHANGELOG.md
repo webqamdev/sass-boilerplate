@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - // Add here unreleased additions
+- Add `scss/lib/mixins/_text-overflow.scss` including `text-overflow()` and `text-overflow-multiline()`
 
 ### Changed
 
 - // Add here unreleased changes
+- `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_text-overflow.scss`
 
 ### Fixed
 
