@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - // Add here unreleased additions
 
+### Changed
+
+- // Add here unreleased changes
+
 ### Fixed
 
 - // Add here unreleased fixes
