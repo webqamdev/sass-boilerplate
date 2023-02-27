@@ -27,7 +27,7 @@
 // Inspired from https://fr.screenresolution.org/
 // And from the Chrome Inspection Tool
 $xxxs: 20em; // 320px
-$xxs: 262.5em; // 360px
+$xxs: 22.5em; // 360px
 $xs: 26em; // 416px
 $s: 48em; // 768px
 $m: 54em; // 864px
@@ -41,9 +41,3 @@ $full-hd: 120em; // 1920px
 $full-hd-height: 67.5em; // 1080px
 $four-k: 240em; // 3840px
 $four-k-height: 135em; // 2160px
-
-// ## Context breakpoints
-$tablet: $s;
-$laptop: $l;
-$desktop: $xxxl;
-$large-desktop: $full-hd;

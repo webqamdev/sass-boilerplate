@@ -36,8 +36,8 @@ $color-secondary-invert: if(
 
 // ## Common theme
 // ## Common colors
-$color-common-body-text: inherit;
-$color-common-body-background: color.$default;
+$color-common-body-text: color.$black;
+$color-common-body-background: color.$white;
 $color-warning: color.$yellow;
 
 $default-scroll-behavior: smooth; // initial value is 'auto'

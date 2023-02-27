@@ -42,11 +42,11 @@ $size-xxxl: 1.875em; // 30px
 
 // Used for functions font-size based and html root element
 // /!\ Must stay as px, it is not a relative font-size and it is used as reference in functions
-$size-base: 16px;
+$base-size: 16px;
 
 // Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
 // If you don't want to support this feature, set the value to null
-$size-device-pixel-ratio: null; // or "$size-base * 0.75;" to invert 125% zoom
+$size-device-pixel-ratio: null; // or "$base-size * 0.75;" to invert 125% zoom
 
 // ## Font weights
 // Should be named as in the mockups (Adobe XD for example)
