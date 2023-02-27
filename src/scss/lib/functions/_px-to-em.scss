@@ -17,6 +17,6 @@
 
 // Please update, add or remove the styles below to match the project needs.
 
-@function px-to-em($pxValue, $context: font.$size-base) {
+@function px-to-em($pxValue, $context: font.$base-size) {
   @return math.div(strip-unit($pxValue), strip-unit($context)) * 1em;
 }

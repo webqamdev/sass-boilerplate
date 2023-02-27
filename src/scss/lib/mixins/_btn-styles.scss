@@ -1,0 +1,44 @@
+// # Btn style mixin
+
+@use "../variables/selector";
+
+// Used to create generic button styles
+// Usage example :
+// ```scss
+// @use "mixins/btn-styles" as *;
+//
+// .base-btn {
+//   @include btn-styles(white, black);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin btn-styles(
+  $color,
+  $background-color,
+  $block-selector: selector.$default-button
+) {
+  // Add your custom styles here
+  background-color: $background-color;
+  color: $color;
+
+  &:hover,
+  &#{$block-selector}--hovered {
+    // Add your custom styles here
+  }
+  &:focus,
+  &#{$block-selector}--focused {
+    // Add your custom styles here
+  }
+
+  &:active,
+  &#{$block-selector}--activated {
+    // Add your custom styles here
+  }
+
+  &[disabled],
+  &#{$block-selector}--disabled {
+    // Add your custom styles here
+  }
+}
