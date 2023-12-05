@@ -1,0 +1,30 @@
+// # Text overflow mixins
+
+// Usage example :
+// ```scss
+// @use "mixins/text-overflow" as *;
+//
+// .hide-extra-text {
+//   @include text-overflow();
+// }
+//
+// .hide-extra-line {
+//   @include text-overflow-multiline(4);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin text-overflow($text-overflow: ellipsis, $white-space: nowrap) {
+  overflow: hidden;
+  text-overflow: #{$text-overflow};
+  white-space: #{$white-space};
+}
+
+@mixin text-overflow-multiline($line-clamp: 2, $box-orient: vertical) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: #{$box-orient};
+  padding-bottom: 0; // If there is a padding-bottom value > 0, it will show additional lines
+}
