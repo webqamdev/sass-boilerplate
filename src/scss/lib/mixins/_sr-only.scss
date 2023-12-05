@@ -7,6 +7,8 @@
 // causes content to wrap 1 word per line:
 // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 
+// Inspired from https://github.com/twbs/bootstrap/blob/main/scss/mixins/_visually-hidden.scss
+
 // Usage example :
 // ```scss
 // @use "mixins/sr-only" as *;
@@ -19,30 +21,29 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @mixin sr-only($focusable: false) {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  // 1
+  $properties: (
+    position: absolute,
+    width: 1px,
+    height: 1px,
+    padding: 0,
+    margin: -1px,
+    overflow: hidden,
+    clip: rect(0, 0, 0, 0),
+    white-space: nowrap,
+    border: 0,
+  );
 
   @if ($focusable) {
-    // Extends the .sr-only class to allow the element
-    // to be focusable when navigated to via the keyboard:
-    // https://www.drupal.org/node/897638
-    &:active,
-    &:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      white-space: inherit;
-      width: auto;
+    &:not(:focus),
+    &:not(:focus-within),
+    &:not(:active) {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+    }
+  } @else {
+    @each $property, $value in $properties {
+      #{$property}: $value;
     }
   }
 }
