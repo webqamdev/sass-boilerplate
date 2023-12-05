@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - // Add here unreleased additions
 - Add `scss/lib/mixins/_text-overflow.scss` including `text-overflow()` and `text-overflow-multiline()`
 - Add `scss/components/_sr-only.scss` file.
+- Add `scss/lib/mixins/_text-gradient.scss`
 
 ### Changed
 
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_text-overflow.scss`
 - Update `sr-only()` @mixin content to avoid rewriting styles if $focusable is true and support :focus-within state
 - `scss/main.scss` now @use `scss/components/_sr-only.scss`
+- `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_text-gradient.scss`
 
 ### Fixed
 
