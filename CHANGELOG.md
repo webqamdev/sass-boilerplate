@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - // Add here unreleased fixes
+- Update `scss/components/_icon.scss` replace regex comment.
 
 ## [1.0.0] - 2021-12-10
 
