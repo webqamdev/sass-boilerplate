@@ -10,19 +10,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - // Add here unreleased additions
-- Add `scss/lib/mixins/_text-overflow.scss` including `text-overflow()` and `text-overflow-multiline()`
 - Add `scss/components/_sr-only.scss` file.
+- Add `scss/lib/mixins/_text-overflow.scss` including `text-overflow()` and `text-overflow-multiline()`
 - Add `scss/lib/mixins/_text-gradient.scss`
 - Add `scss/lib/mixins/_hardware-acceleration.scss`
+- Add `scss/custom-property/_gui-color.scss` file.
+- Add `scss/custom-property/_gui-font.scss` file.
+- Add `scss/custom-property/_theme-common.scss` file.
 
 ### Changed
 
 - // Add here unreleased changes
-- `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_text-overflow.scss`
 - Update `sr-only()` @mixin content to avoid rewriting styles if $focusable is true and support :focus-within state
 - `scss/main.scss` now @use `scss/components/_sr-only.scss`
-- `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_text-gradient.scss`
-- `scss/lib/_mixins.scss` now @forward `scss/lib/mixins/_hardware-acceleration.scss`
+- Update `scss/lib/_mixins.scss` with new mixins files @forward
+- Update `scss/lib/_placeholders.scss` with new placeholders files @forward
+- Update `scss/lib/placeholders/_icon.scss` with CSS variables.
+- Delete unused `scss/lib/variables/` files (`_box-shadow.scss`, `_custom-property.scss`, `_gap.scss`, `_line-height.scss`, `_margin.scss`, `_outline.scss`, `_padding.scss`, `_selector.scss`).
+- Moved `scss/lib/placeholders/_button.scss` into `scss/lib/placeholders/buttons/_button-config.scss` and update properties with CSS variables.
+- Moved `scss/lib/placeholders/_link.scss` into `scss/lib/placeholders/links/_link-config.scss` and update properties with CSS variables.
 
 ### Fixed
 

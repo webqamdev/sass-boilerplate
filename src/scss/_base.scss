@@ -2,40 +2,35 @@
 
 @use "lib/variables/color";
 @use "lib/variables/font";
-@use "lib/variables/line-height";
 @use "lib/variables/theme";
-@use "lib/placeholders/link" as *;
-@use "lib/placeholders/button" as *;
+@use "lib/placeholders/animated";
 
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
-  color: color.$default;
-  font-family: font.$family-default;
+  color: var(--html-color, #{color.$black});
+  background-color: var(--html-background-color, #{color.$white});
   font-size: font.$base-size;
-  line-height: line-height.$default;
+  font-family: font.$family-default;
+  font-weight: font.$weight-regular;
+  line-height: font.$line-height-default;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
 
-  @if (font.$size-device-pixel-ratio) {
-    @media (-webkit-device-pixel-ratio: 1.25) {
-      font-size: font.$size-device-pixel-ratio;
-    }
+  @media (-webkit-device-pixel-ratio: 1.25) {
+    font-size: font.$size-device-pixel-ratio;
   }
 
-  @if (theme.$default-scroll-behavior != auto) {
-    scroll-behavior: theme.$default-scroll-behavior;
-
-    // See https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior#Accessibilit%C3%A9
-    @media (prefers-reduced-motion: reduce) {
-      scroll-behavior: auto;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
   }
 }
 
 ::selection {
-  @if (color.$default-selection) {
-    background-color: color.$default-selection;
-    text-shadow: none;
-  }
+  color: var(--selection-color, initial);
+  background-color: var(--selection-background-color, initial);
+  text-shadow: none;
 }
 
 * {
@@ -49,8 +44,15 @@ html {
 }
 
 body {
-  color: theme.$color-common-body-text;
-  background-color: theme.$color-common-body-background;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  font-size: var(--body-font-size, 1rem);
+  font-family: var(--body-font-family, inherit);
+  font-weight: var(--body-font-weight, inherit);
+  line-height: var(--body-line-height, #{font.$line-height-default});
+  color: var(--body-color, inherit);
+  background-color: var(--body-background-color, inherit);
 }
 
 // Vertical rhythm: Remove top margin of common elements
@@ -72,94 +74,73 @@ table,
 fieldset,
 hr {
   margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+a,
+button,
+select,
+textarea,
+input,
+details > summary {
+  @extend %animated;
+  @extend %interactive;
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  @extend %link-config;
+}
 
-  // Stylize default links (those who have no CSS class)
-  // Avoids to override default styles every time you need to customize a specific link
-  &:not([class]) {
-    @extend %link;
+button,
+input[type="submit"],
+input[type="reset"],
+details > summary {
+  @extend %button-config;
+}
+
+select {
+  @extend %select-input;
+}
+
+textarea,
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @extend %text-input;
+}
+
+input[type="range"] {
+  @extend %range-input;
+}
+
+input[type="file"] {
+  @extend %file-input;
+}
+
+input[type="search"] {
+  &::-ms-clear,
+  &::-ms-reveal,
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    appearance: none;
   }
 }
 
-// Remove the gap between audio, canvas, iframes,
-// images, videos and the bottom of their containers:
-// https://github.com/h5bp/html5-boilerplate/issues/440
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-// Add offset to anchors when header is sticky
-// See https://stackoverflow.com/a/56467997/1224564
-// See https://caniuse.com/?search=scroll-padding-top (not working with IE11)
-//@include breakpoint($breakpoint-l) {
-//  html {
-//    $header-height: null !default;
-//    scroll-padding-top: $header-height;
-//  }
-//}
-//
-// OR
-//
-// If you need to support IE11
-// See https://stackoverflow.com/a/28824157/1224564
-// Caveat: It assumes the header has a fixed height
-//@include breakpoint($breakpoint-l) {
-//  :target {
-//    $header-height: null;
-//
-//    &::before {
-//      content: "";
-//      display: block;
-//      height: $header-height;
-//      margin-top: -$header-height;
-//    }
-//  }
-//}
-
-option,
-optgroup {
-  color: initial;
-}
-
-// Allow only vertical resizing of textareas.
 textarea {
   resize: vertical;
-}
-
-// Prevent using line breaks and blank paragraphs for spacing
-// See https://twitter.com/csswizardry/status/1170835532584235008?s=20
-//br + br,
-//p:empty {
-//  display: none;
-//}
-
-button {
-  // Stylize default buttons (those who don't have any CSS class)
-  // Avoids to override default styles every time you need to customize a specific button
-  &:not([class]) {
-    @extend %button;
-  }
-}
-
-input {
-  &:not([class]) {
-    &[type="submit"],
-    &[type="reset"] {
-      @extend %button;
-    }
-  }
+  min-height: calc(
+          var(--wbq-field-padding-top, var(--wbq-field-padding-vertical)) +
+          var(--wbq-field-padding-bottom, var(--wbq-field-padding-vertical))
+  );
 }
