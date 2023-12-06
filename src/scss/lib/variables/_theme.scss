@@ -1,8 +1,5 @@
 // # Theme variables
 
-@use "color";
-@use "../functions/text-contrast" as *;
-
 // If you have multiple themes (like dark and light theme for example the create specific variables here.
 // You should prefix theme by the theme name like below.
 
@@ -19,25 +16,5 @@
 // ```
 
 // Please update, add or remove the variables below to match the project needs.
-
-// ## Primary theme
-// ### Primary colors
-$color-primary: null;
-$color-primary-invert: if($color-primary, text-contrast($color-primary), null);
-
-// ## Secondary theme
-// ### Secondary colors
-$color-secondary: null;
-$color-secondary-invert: if(
-  $color-secondary,
-  text-contrast($color-secondary),
-  null
-);
-
-// ## Common theme
-// ## Common colors
-$color-common-body-text: color.$black;
-$color-common-body-background: color.$white;
-$color-warning: color.$yellow;
 
 $default-scroll-behavior: smooth; // initial value is 'auto'
