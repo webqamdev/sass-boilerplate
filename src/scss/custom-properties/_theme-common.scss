@@ -1,0 +1,9 @@
+@use "../lib/variables/transition";
+
+:root {
+  // ## Animated
+  --animated-default-transition-property: color, background-color, background-image, background-size, background-position, border-radius, border-color, box-shadow, opacity, transform, filter, outline-width, outline-color;
+  --animated-default-transition-duration: #{transition.$duration-default};
+  --animated-default-transition-delay: 0;
+  --animated-default-transition-timing-function: #{transition.$timing-function-ease-in-out};
+}
