@@ -1,0 +1,7 @@
+@use "../animated" as *;
+@use "../interactive" as *;
+
+%select-input {
+  @extend %animated;
+  @extend %interactive;
+}

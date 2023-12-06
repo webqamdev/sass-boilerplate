@@ -1,0 +1,7 @@
+@use "../animated" as *;
+@use "../interactive" as *;
+
+%file-input {
+  @extend %animated;
+  @extend %interactive;
+}

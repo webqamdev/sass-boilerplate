@@ -1,0 +1,7 @@
+@use "../animated" as *;
+@use "../interactive" as *;
+
+%link-config {
+  @extend %animated;
+  @extend %interactive;
+}

@@ -1,7 +1,6 @@
 // # Icon placeholders
 
 @use "../variables/font";
-@use "../variables/line-height";
 
 // Icon placeholder benefits:
 // - No extra markup nor CSS classes required.
@@ -30,13 +29,13 @@
 // `%icon--$1 {`
 
 %icon {
-  font-family: font.$family-icons;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   speak: never; // See https://css-tricks.com/almanac/properties/s/speak/
-  line-height: line-height.$icon;
+  font-family: var(--icon-font-family, #{font.$family-icons});
+  font-style: var(--icon-font-style, normal);
+  font-weight: var(--icon-font-weight, normal);
+  font-variant: var(--icon-font-variant, normal);
+  text-transform: var(--icon-text-transform, none);
+  line-height: var(--icon-line-height, #{font.$line-height-icon});
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
