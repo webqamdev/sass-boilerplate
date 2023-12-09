@@ -1,7 +1,16 @@
-dist
-node_modules
-.idea
+# Compilation configuraation
 webpack.config.js
+vite.config.js
+
+# Linters
 .stylelintrc
 .prettierrc
+
+# CI/CD
 .gitlab-ci.yml
+
+# Generated files
+dist
+
+# NPM
+node_modules

@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - // Add here unreleased changes
+- Move the compilation from Webpack to Vite and support TypeScript.
+- Update node support ton ^20.0.0.
 - Update `sr-only()` @mixin content to avoid rewriting styles if $focusable is true and support :focus-within state
 - `scss/main.scss` now @use `scss/components/_sr-only.scss`
 - Update `scss/lib/_mixins.scss` with new mixins files @forward
@@ -29,6 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Delete unused `scss/lib/variables/` files (`_box-shadow.scss`, `_custom-property.scss`, `_gap.scss`, `_line-height.scss`, `_margin.scss`, `_outline.scss`, `_padding.scss`, `_selector.scss`).
 - Moved `scss/lib/placeholders/_button.scss` into `scss/lib/placeholders/buttons/_button-config.scss` and update properties with CSS variables.
 - Moved `scss/lib/placeholders/_link.scss` into `scss/lib/placeholders/links/_link-config.scss` and update properties with CSS variables.
+- Update `.npmignore`
+- Update `.nvmrc` to support node's `20.10.0` version.
 
 ### Fixed
 

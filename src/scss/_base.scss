@@ -1,9 +1,15 @@
 // # Base styles : opinionated defaults
 
+@use "lib/placeholders/animated" as *;
+@use "lib/placeholders/interactive" as *;
+@use "lib/placeholders/links/link-config" as *;
+@use "lib/placeholders/buttons/button-config" as *;
+@use "lib/placeholders/inputs/select-input" as *;
+@use "lib/placeholders/inputs/text-input" as *;
+@use "lib/placeholders/inputs/file-input" as *;
 @use "lib/variables/color";
 @use "lib/variables/font";
 @use "lib/variables/theme";
-@use "lib/placeholders/animated";
 
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
@@ -116,10 +122,6 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
   @extend %text-input;
-}
-
-input[type="range"] {
-  @extend %range-input;
 }
 
 input[type="file"] {
