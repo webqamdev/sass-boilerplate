@@ -1,7 +1,35 @@
-@use "../animated" as *;
-@use "../interactive" as *;
+@use "../configs/input-config" as *;
+@use "../configs/input-group-config" as *;
 
 %text-input {
-  @extend %animated;
-  @extend %interactive;
+  @extend %input-config;
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%text-input-group {
+  @extend %input-group-config;
+}
+
+%text-input-label {
+  @extend %input-group-config-label;
 }

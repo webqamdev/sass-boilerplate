@@ -1,7 +1,90 @@
-@use "../animated" as *;
-@use "../interactive" as *;
+@use "../configs/input-config" as *;
+@use "../configs/input-group-config" as *;
+
+
+@mixin file-input-button() {
+  // Add custom styles if necessary
+}
+
+@mixin file-input-button-hover() {
+  // Add custom styles if necessary
+}
+
+@mixin file-input-button-focus-visible() {
+  // Add custom styles if necessary
+}
 
 %file-input {
-  @extend %animated;
-  @extend %interactive;
+  @extend %input-config;
+
+  // --------------------------------------------------
+  // Specific pseudo selector styles
+  // --------------------------------------------------
+
+  &::file-selector-button {
+    @include file-input-button;
+  }
+
+  &::-ms-browse {
+    @include file-input-button;
+  }
+
+  &::-webkit-file-upload-button {
+    @include file-input-button;
+  }
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    &::file-selector-button {
+      @include file-input-button-focus-visible;
+    }
+
+    &::-ms-browse {
+      @include file-input-button-focus-visible;
+    }
+
+    &::-webkit-file-upload-button {
+      @include file-input-button-focus-visible;
+    }
+  }
+
+  &:hover {
+    //
+
+    // --------------------------------------------------
+    // Specific pseudo selector styles on hover
+    // --------------------------------------------------
+
+    &::file-selector-button {
+      @include file-input-button-hover;
+    }
+
+    &::-ms-browse {
+      @include file-input-button-hover;
+    }
+
+    &::-webkit-file-upload-button {
+      @include file-input-button-hover;
+    }
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%file-input-group {
+  @extend %input-group-config;
+}
+
+%file-input-label {
+  @extend %input-group-config-label;
 }

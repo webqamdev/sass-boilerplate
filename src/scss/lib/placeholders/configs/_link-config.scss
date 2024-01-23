@@ -1,0 +1,97 @@
+@use "../animated" as *;
+@use "../interactive" as *;
+@use "../../variables/color";
+@use "../../variables/font";
+
+%link-config {
+  @extend %animated;
+  @extend %interactive;
+
+  // Color styles
+  color: var(--link-color, #{color.$blue});
+  background-color: var(--link-background-color, transparent);
+  border-color: var(--link-border-color, transparent);
+
+  // Border styles
+  border-style: var(--link-border-style, unset);
+  border-radius:
+    var(--link-border-top-left-radius, var(--link-border-radius, 0px))
+    var(--link-border-top-right-radius, var(--link-border-radius, 0px))
+    var(--link-border-bottom-right-radius, var(--link-border-radius, 0px))
+    var(--link-border-bottom-left-radius, var(--link-border-radius, 0px));
+  border-width:
+    var(--link-border-top-width, var(--link-border-width, 0px))
+    var(--link-border-right-width, var(--link-border-width, 0px))
+    var(--link-border-bottom-width, var(--link-border-width, 0px))
+    var(--link-border-left-width, var(--link-border-width, 0px));
+
+  // Display styles
+  display: var(--link-display, inline-flex);
+  align-items: var(--link-align-items, center);
+  justify-content: var(--link-justify-content, center);
+
+  // Font styles
+  text-align: var(--link-text-align, center);
+  font-size: var(--link-font-size, inherit);
+  font-weight: var(--link-font-weight, normal);
+  line-height: var(--link-line-height, inherit);
+
+  // Text styles
+  text-transform: var(--link-text-transform, none);
+  text-decoration: var(--link-text-decoration, underline);
+  text-decoration-thickness: from-font;
+
+  // Spacing styles
+  padding:
+    var(--link-padding-top, var(--link-padding-block, 0px))
+    var(--link-padding-right, var(--link-padding-inline, 0px))
+    var(--link-padding-bottom, var(--link-padding-block, 0px))
+    var(--link-padding-left, var(--link-padding-inline, 0px));
+  margin:
+    var(--link-margin-top, var(--link-margin-block, 0px))
+    var(--link-margin-right, var(--link-margin-inline, 0px))
+    var(--link-margin-bottom, var(--link-margin-block, 0px))
+    var(--link-margin-left, var(--link-margin-inline, 0px));
+
+  // Size styles
+  min-width: var(--link-min-width, 0px);
+  min-height: var(--link-min-height, 0px);
+  width: var(--link-width, auto);
+  height: var(--link-height, auto);
+  max-width: var(--link-max-width, unset);
+  max-height: var(--link-max-height, unset);
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    --link-color: var(--link-color-focus-visible, #{color.$blue});
+    --link-background-color: var(--link-background-color-focus-visible, transparent);
+    --link-border-color: var(--link-border-color-focus-visible, transparent);
+    --link-text-decoration: var(--link-text-decoration-focus-visible, underline);
+  }
+
+  &:hover {
+    --link-color: var(--link-color-hover, #{color.$black});
+    --link-background-color: var(--link-background-color-hover, transparent);
+    --link-border-color: var(--link-border-color-hover, transparent);
+    --link-text-decoration: var(--link-text-decoration-focus-hover, underline);
+  }
+
+  &:active {
+    --link-color: var(--link-color-active, #{color.$black});
+    --link-background-color: var(--link-background-color-active, transparent);
+    --link-border-color: var(--link-border-color-active, transparent);
+    --link-text-decoration: var(--link-text-decoration-focus-active, none);
+  }
+
+  &:visited {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}

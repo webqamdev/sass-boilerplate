@@ -1,0 +1,38 @@
+@use "../configs/input-config" as *;
+@use "../configs/input-group-config" as *;
+
+%textarea-input {
+  @extend %input-config;
+
+  // Specific textarea styles reset
+  resize: var(--input-resize, vertical);
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%textarea-input-group {
+  @extend %input-group-config;
+}
+
+%textarea-input-label {
+  @extend %input-group-config-label;
+}

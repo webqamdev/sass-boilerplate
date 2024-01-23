@@ -38,7 +38,6 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "breakpoint-sass": "^3.0.0",
     "normalize.css": "^8.0.1"
   },
   "volta": {

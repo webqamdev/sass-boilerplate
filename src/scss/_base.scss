@@ -1,11 +1,15 @@
 // # Base styles : opinionated defaults
 
 @use "lib/placeholders/animated" as *;
+@use "lib/placeholders/paragraph" as *;
+@use "lib/placeholders/heading" as *;
 @use "lib/placeholders/interactive" as *;
-@use "lib/placeholders/links/link-config" as *;
-@use "lib/placeholders/buttons/button-config" as *;
+@use "lib/placeholders/configs/button-config" as *;
+@use "lib/placeholders/configs/input-config" as *;
+@use "lib/placeholders/configs/link-config" as *;
 @use "lib/placeholders/inputs/select-input" as *;
 @use "lib/placeholders/inputs/text-input" as *;
+@use "lib/placeholders/inputs/textarea-input" as *;
 @use "lib/placeholders/inputs/file-input" as *;
 @use "lib/variables/color";
 @use "lib/variables/font";
@@ -13,16 +17,17 @@
 
 // Inspired from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css)
 html {
-  color: var(--html-color, #{color.$black});
-  background-color: var(--html-background-color, #{color.$white});
-  font-size: font.$base-size;
-  font-family: font.$family-default;
-  font-weight: font.$weight-regular;
-  line-height: font.$line-height-default;
   box-sizing: border-box;
   scroll-behavior: smooth;
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
+  font-size: var(--html-font-size, #{font.$base-size});
+  font-family: var(--html-font-family, #{font.$family-system});
+  font-weight: var(--html-font-weight, #{font.$weight-regular});
+  line-height: var(--html-line-height, #{font.$line-height-default});
+  color: var(--html-color, #{color.$black});
+  background-color: var(--html-background-color, #{color.$white});
+  scroll-padding-top: var(--html-scroll-padding-top, 0px);
 
   @media (-webkit-device-pixel-ratio: 1.25) {
     font-size: font.$size-device-pixel-ratio;
@@ -34,8 +39,8 @@ html {
 }
 
 ::selection {
-  color: var(--selection-color, initial);
-  background-color: var(--selection-background-color, initial);
+  color: var(--selection-color, #{color.$white});
+  background-color: var(--selection-background-color, #{color.$blue});
   text-shadow: none;
 }
 
@@ -46,6 +51,7 @@ html {
     // Inherit from parent (set to `border-box` in `html`, see below)
     // This allow easy override and may avoid conflicts with external content
     box-sizing: inherit;
+    color-scheme: inherit;
   }
 }
 
@@ -70,9 +76,9 @@ h4,
 h5,
 h6,
 hgroup,
+dd,
 ul,
 ol,
-dd,
 p,
 figure,
 pre,
@@ -83,12 +89,71 @@ hr {
   margin-bottom: 0.5em;
 }
 
+hgroup,
+dd,
+ul,
+ol,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr {
+  @extend %paragraph;
+}
+
+
+h1 {
+  @extend %heading--1;
+}
+
+h2 {
+  @extend %heading--2;
+}
+
+h3 {
+  @extend %heading--3;
+}
+
+h4 {
+  @extend %heading--4;
+}
+
+h5 {
+  @extend %heading--5;
+}
+
+h6 {
+  @extend %heading--6;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  // Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  // Image alt attribute style if the image can not be loaded
+  font-style: italic;
+
+  // Image optimization : https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 a,
 button,
 select,
 textarea,
 input,
-details > summary {
+summary {
   @extend %animated;
   @extend %interactive;
 }
@@ -97,10 +162,16 @@ a {
   @extend %link-config;
 }
 
+summary {
+  &::-webkit-details-marker {
+    display: none
+  }
+}
+
 button,
 input[type="submit"],
 input[type="reset"],
-details > summary {
+summary {
   @extend %button-config;
 }
 
@@ -108,7 +179,10 @@ select {
   @extend %select-input;
 }
 
-textarea,
+textarea {
+  @extend %textarea-input;
+}
+
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
@@ -128,21 +202,6 @@ input[type="file"] {
   @extend %file-input;
 }
 
-input[type="search"] {
-  &::-ms-clear,
-  &::-ms-reveal,
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    appearance: none;
-  }
-}
-
 textarea {
   resize: vertical;
-  min-height: calc(
-          var(--wbq-field-padding-top, var(--wbq-field-padding-vertical)) +
-          var(--wbq-field-padding-bottom, var(--wbq-field-padding-vertical))
-  );
 }

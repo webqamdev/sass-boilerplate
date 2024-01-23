@@ -1,5 +1,7 @@
 // # Breakpoint variables
 
+@use "../functions/px-to-rem" as *;
+
 // Set all generic or custom breakpoints here.
 // All values should be calculated as `em` not `px`.
 // Usage example :
@@ -20,24 +22,63 @@
 
 // Please update, add or remove the variables below to match the project needs.
 
+// ## Default breakpoints
+// Inspired from https://fr.screenresolution.org/ and from the Chrome Inspection Tool
+$xxxs-px: 320px;
+$xxs-px: 360px;
+$xs-px: 416px;
+$s-px: 768px;
+$m-px: 864px;
+$l-px: 1024px;
+$xl-px: 1200px;
+$xxl-px: 1330px;
+$xxxl-px: 1440px;
+
+// rem values
+$xxxs: px-to-rem($xxxs-px); // 20rem
+$xxs: px-to-rem($xxs-px); // 22.5rem
+$xs: px-to-rem($xs-px); // 26rem
+$s: px-to-rem($s-px); // 48rem
+$m: px-to-rem($m-px); // 54rem
+$l: px-to-rem($l-px); // 64rem
+$xl: px-to-rem($xl-px); // 75rem
+$xxl: px-to-rem($xxl-px); // 83.125rem
+$xxxl: px-to-rem($xxxl-px); // 90rem
+
+// ## Screen resolutions in pixels
+$full-hd-px: 1920px;
+$full-hd-height-px: 1080px;
+$large-full-hd-px: 2200px;
+$four-k-px: 3840px;
+$four-k-height-px: 2160px;
+
+// rem values
+$full-hd: px-to-rem($full-hd-px); // 120rem
+$full-hd-height: px-to-rem($full-hd-height-px); // 67.5rem
+$large-full-hd: px-to-rem($large-full-hd-px); // 137.5rem
+$four-k: px-to-rem($four-k-px); // 240rem
+$four-k-height: px-to-rem($four-k-height-px); // 135rem
+
+// ## Contextual breakpoints
+$small-mobile-px: 320px;
+$mobile-px: 360px;
+$large-mobile-px: 512px;
+$tablet-px: 768px;
+$laptop-px: 1024px;
+$desktop-px: 1200px;
+$medium-desktop-px: 1330px;
+$large-desktop-px: 1440px;
+
+// rem values
+$small-mobile: px-to-rem($small-mobile-px); // 20rem
+$mobile: px-to-rem($mobile-px); // 22.5rem
+$large-mobile: px-to-rem($large-mobile-px); // 32rem
+$tablet: px-to-rem($tablet-px); // 48rem
+$laptop: px-to-rem($laptop-px); // 64rem
+$desktop: px-to-rem($desktop-px); // 75rem
+$medium-desktop: px-to-rem($medium-desktop-px); // 83.125rem
+$large-desktop: px-to-rem($large-desktop-px); // 90rem
+
 // ## Custom breakpoints
 // For example :
 // $footer-second-state: $l;
-
-// Inspired from https://fr.screenresolution.org/
-// And from the Chrome Inspection Tool
-$xxxs: 20em; // 320px
-$xxs: 22.5em; // 360px
-$xs: 26em; // 416px
-$s: 48em; // 768px
-$m: 54em; // 864px
-$l: 64em; // 1024px
-$xl: 75em; // 1200px
-$xxl: 83.125em; // 1330px
-$xxxl: 90em; // 1440px
-
-// ## Screen resolutions
-$full-hd: 120em; // 1920px
-$full-hd-height: 67.5em; // 1080px
-$four-k: 240em; // 3840px
-$four-k-height: 135em; // 2160px

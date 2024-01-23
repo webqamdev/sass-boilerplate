@@ -1,5 +1,7 @@
 // # Theme variables
 
+@use "../functions/px-to-rem" as *;
+
 // If you have multiple themes (like dark and light theme for example the create specific variables here.
 // You should prefix theme by the theme name like below.
 
@@ -18,3 +20,13 @@
 // Please update, add or remove the variables below to match the project needs.
 
 $default-scroll-behavior: smooth; // initial value is 'auto'
+
+// ## Wrapper
+$wrapper-max-width-s-px: 768px;
+$wrapper-max-width-m-px: 1024px;
+$wrapper-max-width-l-px: 1440px;
+
+// rem values
+$wrapper-max-width-s: px-to-rem($wrapper-max-width-s-px); // 7.68rem
+$wrapper-max-width-m: px-to-rem($wrapper-max-width-m-px); // 10.24rem
+$wrapper-max-width-l: px-to-rem($wrapper-max-width-l-px); // 14.4rem

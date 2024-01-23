@@ -1,3 +1,49 @@
+@use "../lib/functions/px-to-rem" as *;
+@use "../lib/mixins/breakpoint" as *;
+@use "../lib/variables/breakpoint";
+@use "../lib/variables/font";
+
 :root {
-  //
+  // %paragraph
+  --paragraph-line-height: 1.5;
+  --paragraph-font-weight: #{font.$weight-regular};
+  --paragraph-font-size: inherit;
+  --paragraph-font-family: inherit;
+
+  // %heading
+  // ## Heading 1
+  --heading-1-line-height: 1.5;
+  --heading-1-font-weight: #{font.$weight-bold};
+  --heading-1-font-size: #{px-to-rem(26px)};
+  --heading-1-font-family: inherit;
+
+  // ## Heading 2
+  --heading-2-line-height: 1.5;
+  --heading-2-font-weight: #{font.$weight-bold};
+  --heading-2-font-size: #{px-to-rem(24px)};
+  --heading-2-font-family: inherit;
+
+  // ## Heading 3
+  --heading-3-line-height: 1.5;
+  --heading-3-font-weight: #{font.$weight-bold};
+  --heading-3-font-size: #{px-to-rem(22px)};
+  --heading-3-font-family: inherit;
+
+  // ## Heading 4
+  --heading-4-line-height: 1.5;
+  --heading-4-font-weight: #{font.$weight-bold};
+  --heading-4-font-size: #{px-to-rem(20px)};
+  --heading-4-font-family: inherit;
+
+  // ## Heading 5
+  --heading-5-line-height: 1.5;
+  --heading-5-font-weight: #{font.$weight-bold};
+  --heading-5-font-size: #{px-to-rem(18px)};
+  --heading-5-font-family: inherit;
+
+  // ## Heading 6
+  --heading-6-line-height: 1.5;
+  --heading-6-font-weight: #{font.$weight-bold};
+  --heading-6-font-size: #{px-to-rem(16px)};
+  --heading-6-font-family: inherit;
 }

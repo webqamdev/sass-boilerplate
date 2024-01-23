@@ -1,0 +1,59 @@
+// # Paragraph placeholder
+
+// Usage example :
+// ```scss
+// @use "placeholders/paragraph" as *;
+//
+// h1,
+// span {
+//   @extends %heading--1;
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%heading {
+  &--1 {
+    line-height: var(--heading-1-line-height, inherit);
+    font-weight: var(--heading-1-font-weight, inherit);
+    font-size: var(--heading-1-font-size, inherit);
+    font-family: var(--heading-1-font-family, inherit);
+  }
+
+  &--2 {
+    line-height: var(--heading-2-line-height, inherit);
+    font-weight: var(--heading-2-font-weight, inherit);
+    font-size: var(--heading-2-font-size, inherit);
+    font-family: var(--heading-2-font-family, inherit);
+  }
+
+  &--3 {
+    line-height: var(--heading-3-line-height, inherit);
+    font-weight: var(--heading-3-font-weight, inherit);
+    font-size: var(--heading-3-font-size, inherit);
+    font-family: var(--heading-3-font-family, inherit);
+  }
+
+  &--4 {
+    line-height: var(--heading-4-line-height, inherit);
+    font-weight: var(--heading-4-font-weight, inherit);
+    font-size: var(--heading-4-font-size, inherit);
+    font-family: var(--heading-4-font-family, inherit);
+  }
+
+  &--5 {
+    line-height: var(--heading-5-line-height, inherit);
+    font-weight: var(--heading-5-font-weight, inherit);
+    font-size: var(--heading-5-font-size, inherit);
+    font-family: var(--heading-5-font-family, inherit);
+  }
+
+  &--6 {
+    line-height: var(--heading-6-line-height, inherit);
+    font-weight: var(--heading-6-font-weight, inherit);
+    font-size: var(--heading-6-font-size, inherit);
+    font-family: var(--heading-6-font-family, inherit);
+  }
+}

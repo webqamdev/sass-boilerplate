@@ -1,9 +1,58 @@
+@use "../lib/functions/px-to-rem" as *;
+@use "../lib/mixins/breakpoint" as *;
+@use "../lib/variables/breakpoint";
+@use "../lib/variables/color";
+@use "../lib/variables/font";
+@use "../lib/variables/theme";
 @use "../lib/variables/transition";
+@use "../lib/variables/z-index";
 
 :root {
+  // <html>
+  --html-font-size: #{font.$base-size};
+  --html-font-family: #{font.$family-system};
+  --html-font-weight: #{font.$weight-regular};
+  --html-line-height: #{font.$line-height-default};
+  --html-color: #{color.$black};
+  --html-background-color: #{color.$white};
+  --html-scroll-padding-top: 0px;
+
+  // <body>
+  --body-font-size: 1rem;
+  --body-font-family: inherit;
+  --body-font-weight: inherit;
+  --body-line-height: #{font.$line-height-default};
+  --body-color: inherit;
+  --body-background-color: inherit;
+
   // %animated
   --animated-default-transition-property: color, background-color, background-image, background-size, background-position, border-radius, border-color, box-shadow, opacity, transform, filter, outline-width, outline-color;
   --animated-default-transition-duration: #{transition.$duration-default};
   --animated-default-transition-delay: 0;
   --animated-default-transition-timing-function: #{transition.$timing-function-ease-in-out};
+
+  // %wrapper
+  --wrapper-margin-left: auto;
+  --wrapper-margin-right: auto;
+  --wrapper-padding-inline: #{px-to-rem(15px)};
+  --wrapper-padding-left: var(--wrapper-padding-inline);
+  --wrapper-padding-right: var(--wrapper-padding-inline);
+
+  // # --------------------------------------------------------------------------------------- #
+  // # TABLET VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$tablet) {
+    // %wrapper
+    --wrapper-padding-inline: #{px-to-rem(30px)};
+  }
+
+  // # --------------------------------------------------------------------------------------- #
+  // # LAPTOP VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$tablet) {
+    // %wrapper
+    --wrapper-padding-inline: #{px-to-rem(50px)};
+  }
 }

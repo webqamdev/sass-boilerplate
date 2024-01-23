@@ -16,11 +16,11 @@
 @use "custom-properties/gui-font";
 @use "custom-properties/theme-common";
 
-// Base styles
-@use "base";
-
 // Normalize.css is a proper alternative to css style reset https://necolas.github.io/normalize.css/
 @use "normalize.css/normalize";
+
+// Base styles
+@use "base";
 
 // ## Vendors
 // @use "vendors/example-vendor-styles";

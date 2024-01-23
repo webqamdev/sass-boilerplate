@@ -1,7 +1,50 @@
-@use "../animated" as *;
-@use "../interactive" as *;
+@use "../configs/input-config" as *;
+@use "../configs/input-group-config" as *;
 
 %select-input {
-  @extend %animated;
-  @extend %interactive;
+  @extend %input-config;
+
+  // Specific select styles reset
+  appearance: var(--input-appearance, auto);
+
+  // --------------------------------------------------
+  // Specific child node styles
+  // --------------------------------------------------
+
+  option {
+    //
+  }
+
+  optgroup {
+    //
+  }
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%select-input-group {
+  @extend %input-group-config;
+}
+
+%select-input-label {
+  @extend %input-group-config-label;
 }
