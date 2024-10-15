@@ -1,5 +1,6 @@
 // # Arrow shape polygon function
 
+@use "sass:string";
 @use "strip-unit" as *;
 
 // Create arrow shape with the polygon function.
@@ -20,15 +21,15 @@
   $arrow-height: strip-unit($arrow-height) * $unit;
 
   // Add `1px` to fix rendering issues in several browsers
-  $bottom-offset-y: unquote("calc(100% - #{$arrow-height} + 1px)");
+  $bottom-offset-y: string.unquote("calc(100% - #{$arrow-height} + 1px)");
 
   @return polygon(
     0 0,
     100% 0,
     100% $bottom-offset-y,
-    unquote("calc(50% - #{$arrow-width * 0.5})") $bottom-offset-y,
+    string.unquote("calc(50% - #{$arrow-width * 0.5})") $bottom-offset-y,
     50% 100%,
-    unquote("calc(50% + #{$arrow-width * 0.5})") $bottom-offset-y,
+    string.unquote("calc(50% + #{$arrow-width * 0.5})") $bottom-offset-y,
     0 $bottom-offset-y
   );
 }

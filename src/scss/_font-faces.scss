@@ -10,14 +10,17 @@
 // ```
 // @font-face {
 //   font-family: font.$name-example;
-//   src: url("../fonts/example-font.eot");
-//   src: url("../fonts/example-font.eot?#iefix") format("embedded-opentype"),
-//     url("../fonts/example-font.woff2") format("woff2"),
-//     url("../fonts/example-font.woff") format("woff"),
-//     url("../fonts/example-font.ttf") format("truetype"),
-//     url("../fonts/example-font.svg#example-font") format("svg");
+//   src: local(font.$name-example),
+//     url("../fonts/example-font.woff2") format("woff2");
 //   font-weight: map-get(font.$weights, medium);
 //   font-style: normal;
 //   font-display: swap;
+//   unicode-range: $font-face-unicode-range;
 // }
 // ```
+
+$font-face-unicode-range: "U+000-5FF"; // Latin glyphs
+
+// Add custom fonts below :
+
+// ...

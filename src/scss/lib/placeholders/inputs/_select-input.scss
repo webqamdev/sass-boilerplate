@@ -1,8 +1,34 @@
-@use "../configs/input-config" as *;
-@use "../configs/input-group-config" as *;
+// # Select input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="select-input-group">
+//   <span>My label</span>
+//   <select></select>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/select-input" as *;
+//
+// .select-input-group {
+//   @extend %select-input-group;
+//
+//   & > span {
+//     @extend %select-input-label;
+//   }
+//
+//   & > select {
+//     @extend %select-input;
+//   }
+// }
+// ```
 
 %select-input {
-  @extend %input-config;
+  @extend %input;
 
   // Specific select styles reset
   appearance: var(--input-appearance, auto);
@@ -42,9 +68,9 @@
 }
 
 %select-input-group {
-  @extend %input-group-config;
+  @extend %input-group;
 }
 
 %select-input-label {
-  @extend %input-group-config-label;
+  @extend %input-group-label;
 }

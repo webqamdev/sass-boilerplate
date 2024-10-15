@@ -1,4 +1,6 @@
-// # Interactive placeholders
+// # Animated config placeholders
+
+@use "../../lib/variables/transition";
 
 // Should be applied on every animated component, and updated with CSS variables on specific cases.
 
@@ -18,14 +20,31 @@
 //   @extends %animated;
 //
 //   --animated-transition-duration: #{transition.$duration-long};
+//
+//   transition-property: opacity, color;
 // }
 // ```
 
 // Please update, add or remove the styles below to match the project needs.
 
 %animated {
-  transition-property: var(--animated-transition-property, var(--animated-default-transition-property));
-  transition-duration: var(--animated-transition-duration, var(--animated-default-transition-duration));
-  transition-delay: var(--animated-transition-delay, var(--animated-default-transition-delay));
-  transition-timing-function: var(--animated-transition-timing-function, var(--animated-default-transition-timing-function));
+  transition-property: var(
+    --animated-transition-property,
+    var(--animated-transition-property-default, all)
+  );
+  transition-duration: var(
+    --animated-transition-duration,
+    var(--animated-transition-duration-default, #{transition.$duration-default})
+  );
+  transition-timing-function: var(
+    --animated-transition-timing-function,
+    var(
+      --animated-transition-timing-function-default,
+      #{transition.$timing-function-default}
+    )
+  );
+  transition-delay: var(
+    --animated-transition-delay,
+    var(--animated-transition-delay-default, #{transition.$delay-default})
+  );
 }

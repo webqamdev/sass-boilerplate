@@ -1,0 +1,69 @@
+// # Grid wrapper config placeholders
+
+@use "../variables/theme";
+
+// This is an alternative to the %wrapper placeholder.
+// You can found more info and usage example in this video : https://www.youtube.com/watch?v=c13gpBrnGEw
+// Usage example :
+// ```scss
+// @use "placeholders/grid-wrapper" as *;
+//
+// .grid-wrapper {
+//   @extend %grid-wrapper;
+// }
+//
+// .grid-wrapper-full-width {
+//   @extend %grid-wrapper;
+//   @extend %grid-wrapper--fullwidth;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%grid-wrapper {
+  // calculate the size of the medium columns based on the content max-width
+  --grid-wrapper-medium-size: calc(
+    (
+      var(--grid-wrapper-medium-max-width, #{theme.$grid-wrapper-medium-max-width}) -
+      var(--grid-wrapper-small-max-width, #{theme.$grid-wrapper-small-max-width})
+    )
+    / 2
+  );
+  --grid-wrapper-large-size: calc(
+    (
+      var(--grid-wrapper-large-max-width, #{theme.$grid-wrapper-large-max-width}) -
+      var(--grid-wrapper-medium-max-width, #{theme.$grid-wrapper-medium-max-width})
+    )
+    / 2
+  );
+
+  // you can use this model to add as much intermediate variants as you want, as long as you follow the hierarchy
+  // --very-large-size: calc((var(--very-large-max-width) - var(--large-max-width)) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [fullwidth-start] minmax(var(--grid-wrapper-padding-inline, 0px), 1fr)
+    [large-start] minmax(0, var(--grid-wrapper-large-size))
+    [medium-start] minmax(0, var(--grid-wrapper-medium-size))
+    [small-start] min(100% - (var(--grid-wrapper-padding-inline, 0px) * 2), var(--grid-wrapper-small-max-width, #{theme.$grid-wrapper-small-max-width})) [small-end]
+    minmax(0, var(--grid-wrapper-medium-size)) [medium-end]
+    minmax(0, var(--grid-wrapper-large-size)) [large-end]
+    minmax(var(--grid-wrapper-padding-inline, 0px), 1fr) [fullwidth-end];
+
+
+  &--small {
+    grid-column: small;
+  }
+
+  &--medium {
+    grid-column: medium;
+  }
+
+  &--large {
+    grid-column: large;
+  }
+
+  &--fullwidth {
+    grid-column: fullwidth;
+  }
+}

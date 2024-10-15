@@ -15,16 +15,15 @@
 // ## Font names
 // Should be prefixed by `$name-`
 // Like so, the font is called as `font-family: font.$name-{name};`
-
-// $name-example: "example";
+// $name-example: "Example";
+$name-system: system-ui;
 
 // ## Font families
 // Should be prefixed by `$family-`
 // Like so, the font is called as `font-family: font.$family-{name};`
 // $family-example: $name-example, Arial, sans-serif;
+$family-system: $name-system, sans-serif;
 $family-icons: null;
-$family-system: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
-  Arial, sans-serif;
 
 // Example of custom font-family
 // $family-example: $name-example, Arial, sans-serif;

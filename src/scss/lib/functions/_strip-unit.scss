@@ -1,6 +1,7 @@
 // # Strip unit function
 
 @use "sass:math";
+@use "sass:meta";
 
 // Remove the unit from the number passed as argument
 // Usage example :
@@ -14,7 +15,7 @@
 // Please update, add or remove the styles below to match the project needs.
 
 @function strip-unit($number) {
-  @if type-of($number) == "number" and not unitless($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
     @return math.div($number, $number * 0 + 1);
   }
 

@@ -1,4 +1,6 @@
-// # Paragraph placeholder
+// # Paragraph config placeholder
+
+@use "../../lib/variables/font";
 
 // Usage example :
 // ```scss
@@ -17,5 +19,8 @@
   line-height: var(--paragraph-line-height, inherit);
   font-weight: var(--paragraph-font-weight, inherit);
   font-size: var(--paragraph-font-size, inherit);
-  font-family: var(--paragraph-font-family, inherit);
+  font-family: var(--paragraph-font-family, inherit), font.$family-system;
+  letter-spacing: var(--paragraph-letter-spacing, 0);
+  text-transform: var(--paragraph-text-transform, none);
+  text-wrap: var(--paragraph-text-wrap, pretty);
 }

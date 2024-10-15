@@ -12,35 +12,23 @@
   "bugs": {
     "url": "https://github.com/webqamdev/sass-boilerplate/issues"
   },
-  "main": "src/main.js",
+  "main": "src/main.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/webqamdev/sass-boilerplate"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "npm run lint",
-    "lint": "npm run eslint && npm run prettier && npm run stylelint",
-    "lint:fix": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
-    "prettier": "npm run prettier:config -- --check",
-    "prettier:config": "prettier --ignore-path .gitignore '{**/*,*}.{md,scss,sass,css,js,ts}'",
-    "prettier:fix": "npm run prettier:config -- --write",
-    "eslint": "eslint --ignore-path .gitignore '{**/*,*}.{js,ts}'",
-    "eslint:fix": "npm run eslint -- --fix",
-    "stylelint": "stylelint --ignore-path .gitignore '{**/*,*}.{scss,sass,css}'",
-    "stylelint:fix": "npm run stylelint -- --fix"
+    "build": "vite build"
   },
   "devDependencies": {
-    "sass": "^1.69.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0"
+    "sass-embedded": "^1.79.5",
+    "vite": "^5.4.9"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "modern-normalize": "^3.0.1"
   },
   "volta": {
-    "node": "20.10.0"
+    "node": "20.18.0"
   }
 }

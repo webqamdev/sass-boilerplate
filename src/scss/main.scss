@@ -8,19 +8,25 @@
 // - If you can't import it automatically in every file, uncomment the following line
 // @use "lib";
 
+// ## Modern Normalize
+// https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css
+@use "modern-normalize";
+
 // ## Font-faces
 @use "font-faces";
 
 // ## Custom Properties
 @use "custom-properties/gui-color";
 @use "custom-properties/gui-font";
+@use "custom-properties/gui-icon";
 @use "custom-properties/theme-common";
 
-// Normalize.css is a proper alternative to css style reset https://necolas.github.io/normalize.css/
-@use "normalize.css/normalize";
-
-// Base styles
-@use "base";
+// Reset styles
+@use "resets/base-reset";
+@use "resets/text-reset";
+@use "resets/media-reset";
+@use "resets/interactive-reset";
+@use "resets/input-reset";
 
 // ## Vendors
 // @use "vendors/example-vendor-styles";

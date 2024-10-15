@@ -33,6 +33,7 @@
 $duration-short: 150ms;
 $duration-medium: 300ms;
 $duration-long: 500ms;
+$duration-very-long: 750ms;
 
 // ## Transition delays
 // Should be prefixed by `$delay-`
@@ -41,6 +42,7 @@ $duration-long: 500ms;
 $delay-short: 150ms;
 $delay-medium: 300ms;
 $delay-long: 500ms;
+$delay-very-long: 750ms;
 
 // ## Transition timing functions
 // Should be prefixed by `$timing-function-`
@@ -54,7 +56,7 @@ $timing-function-step-start: step-start;
 $timing-function-step-end: step-end;
 
 // ## Default variables
-$delay-default: 0;
+$delay-default: 0ms;
 $duration-default: $duration-short;
 $timing-function-default: $timing-function-ease-in-out;
 

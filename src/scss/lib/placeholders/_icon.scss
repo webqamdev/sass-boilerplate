@@ -2,11 +2,6 @@
 
 @use "../variables/font";
 
-// Icon placeholder benefits:
-// - No extra markup nor CSS classes required.
-// - Better separation of concerns: HTML for content, CSS for styles.
-// - The computed CSS only contains icon selectors that you really use.
-
 // When to use icon placeholders over icon classes ?
 // Icon placeholders are the default way to go. Icon classes should only
 // be used for dynamic use cases (ie. when the used icon is defined
@@ -18,19 +13,39 @@
 //   &::before {
 //     @extend %icon;
 //     @extend %icon--example;
-//     // Do not take line-height into account (optionnal)
-//     // display: block;
 //   }
 // }
 // ```
 
-// Replacement RegEx when importing from regular CSS (works with PhpStorm):
+// ## Replacement RegEx when importing from regular CSS (works with PhpStorm):
+// ### To change only the selector to a placeholder:
+//
+// %icon--example {
+//   content: "\73";
+// }
+//
+// - Search :
 // `\.icon-([\w-]+):before\s?\{`
+// - Replace :
 // `%icon--$1 {`
+//
+// ### To change the whole block to a placeholder and use the css icon variable:
+//
+// %icon--example {
+//   content: var(--icon-example);
+// }
+//
+// - Search :
+// `\.icon-(.*):{1,2}before\s*\{\s*content:\s*"\\(.*)";\s*\}`
+// - Replace :
+// `%icon--$1 { content: var(--icon-$1); }`
+
+// Please update, add or remove the styles below to match the project needs.
 
 %icon {
   speak: never; // See https://css-tricks.com/almanac/properties/s/speak/
   font-family: var(--icon-font-family, #{font.$family-icons});
+  font-size: var(--icon-font-size, inherit);
   font-style: var(--icon-font-style, normal);
   font-weight: var(--icon-font-weight, normal);
   font-variant: var(--icon-font-variant, normal);
@@ -42,4 +57,10 @@
 
 // %icon--example {
 //   content: "\73";
+// }
+//
+// Or, the better solution (when using the scss/custom-properties/_gui-icon.scss) :
+//
+// %icon--example {
+//   content: var(--icon-example);
 // }

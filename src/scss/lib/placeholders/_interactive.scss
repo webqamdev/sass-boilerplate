@@ -1,4 +1,4 @@
-// # Interactive placeholders
+// # Interactive config placeholders
 
 @use "../functions/px-to-rem" as *;
 @use "../variables/color";
@@ -26,19 +26,28 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %interactive {
-  -webkit-tap-highlight-color: var(--interactive-tap-highlight-color, transparent);
+  -webkit-tap-highlight-color: var(
+    --interactive-tap-highlight-color,
+    transparent
+  );
   cursor: var(--interactive-cursor, pointer);
-  outline-width: var(--interactive-outline-width, 0px);
-  outline-color: var(--interactive-outline-color, #{color.$blue});
-  outline-style: var(--interactive-outline-style, solid);
+  outline: var(--interactive-outline-color, #{color.$blue})
+    var(--interactive-outline-style, solid)
+    var(--interactive-outline-width, 0px);
   outline-offset: var(--interactive-outline-offset, 0px);
 
   &:focus-within {
-    --interactive-outline-width: var(--interactive-outline-width-focus-within, #{px-to-rem(3px)});
+    --interactive-outline-width: var(
+      --interactive-outline-width-focus-within,
+      auto
+    );
   }
 
   &:focus-visible {
-    --interactive-outline-width: var(--interactive-outline-width-focus-visible, auto);
+    --interactive-outline-width: var(
+      --interactive-outline-width-focus-visible,
+      #{px-to-rem(3px)}
+    );
   }
 
   &:focus:not(:focus-visible) {

@@ -27,13 +27,15 @@
   $perspective: 1000,
   $backface-visibility: hidden
 ) {
-  @if ($transform) {
+  @if $transform {
     transform: $transform;
   }
-  @if ($perspective) {
+
+  @if $perspective {
     perspective: $perspective;
   }
-  @if ($backface-visibility) {
+
+  @if $backface-visibility {
     backface-visibility: $backface-visibility;
   }
 }

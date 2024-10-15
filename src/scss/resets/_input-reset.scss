@@ -1,0 +1,44 @@
+// # Input style reset
+
+@use "../lib/placeholders/button" as *;
+@use "../lib/placeholders/inputs/select-input" as *;
+@use "../lib/placeholders/inputs/select-input" as *;
+@use "../lib/placeholders/inputs/text-input" as *;
+@use "../lib/placeholders/inputs/textarea-input" as *;
+@use "../lib/placeholders/inputs/file-input" as *;
+
+// This file should contain all input related element reset styles.
+
+// Please update, add or remove the styles below to match the project needs.
+
+select {
+  @extend %select-input;
+}
+
+textarea {
+  @extend %textarea-input;
+}
+
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @extend %text-input;
+}
+
+input[type="file"] {
+  @extend %file-input;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  @extend %button;
+}

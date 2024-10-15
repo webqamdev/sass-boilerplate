@@ -1,110 +1,128 @@
-@use "../../functions/px-to-rem" as *;
-@use "../../variables/color";
+// # Radio input placeholders
 
-%option-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  outline: none;
+@use "../input-option" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="radio-input-group">
+//   <input type="radio" />
+//   <span>My label</span>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/radio-input" as *;
+//
+// .radio-input-group {
+//   @extend %radio-input-group;
+//
+//   &:hover {
+//     & > span {
+//       &::before {
+//         @extend %radio-input-box--hover;
+//       }
+//
+//       &::after {
+//         @extend %radio-input-checkmark--hover;
+//       }
+//     }
+//   }
+//
+//   & > input {
+//     @extend %radio-input;
+//
+//     &:checked {
+//       & + span {
+//         &::before {
+//           @extend %radio-input-box--checked;
+//         }
+//
+//         &::after {
+//           @extend %radio-input-checkmark--checked;
+//         }
+//       }
+//     }
+//
+//     &:focus-visible {
+//       & + span {
+//         &::before {
+//           @extend %radio-input-box--focus-visible;
+//         }
+//
+//         &::after {
+//           @extend %radio-input-checkmark--focus-visible;
+//         }
+//       }
+//     }
+//   }
+//
+//   & > span {
+//     @extend %radio-input-label;
+//
+//     &::before {
+//       @extend %radio-input-box;
+//     }
+//
+//     &::after {
+//       @extend %radio-input-checkmark;
+//     }
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%radio-input {
+  @extend %input-option;
 }
 
-%option-input-group {
-  position: relative;
+%radio-input-group {
+  @extend %input-option-group;
+
+  --input-box-border-radius: 50%;
+  --input-checkmark-border-radius: 50%;
 }
 
-%option-input-label {
-  // Color styles
-  color: var(--option-input-label-color, #{color.$black});
-
-  // Font styles
-  text-align: var(--option-input-label-text-align, inherit);
-  font-size: var(--option-input-label-font-size, inherit);
-  font-weight: var(--option-input-label-font-weight, bold);
-  line-height: var(--option-input-label-line-height, inherit);
-
-  // Text styles
-  text-transform: var(--option-input-label-text-transform, inherit);
+%radio-input-label {
+  @extend %input-option-label;
 }
 
-%option-input-box {
-  // Color styles
-  color: var(--input-box-color, #{color.$black});
-  background-color: var(--input-box-background-color, #{color.$light-grey});
-  border-color: var(--input-box-border-color, #{color.$grey});
-
-  // Border styles
-  border-style: var(--input-box-border-style, solid);
-  border-radius:
-    var(--input-box-border-top-left-radius, var(--input-box-border-radius, 0px))
-    var(--input-box-border-top-right-radius, var(--input-box-border-radius, 0px))
-    var(--input-box-border-bottom-right-radius, var(--input-box-border-radius, 0px))
-    var(--input-box-border-bottom-left-radius, var(--input-box-border-radius, 0px));
-  border-width:
-    var(--input-box-border-top-width, var(--input-box-border-width, #{px-to-rem(2px)}))
-    var(--input-box-border-right-width, var(--input-box-border-width, #{px-to-rem(2px)}))
-    var(--input-box-border-bottom-width, var(--input-box-border-width, #{px-to-rem(2px)}))
-    var(--input-box-border-left-width, var(--input-box-border-width, #{px-to-rem(2px)}));
-
-  // Size styles
-  width: var(--input-box-width, #{px-to-rem(20px)});
-  height: var(--input-box-height, #{px-to-rem(20px)});
+%radio-input-box {
+  @extend %input-option-box;
 
   &--checked {
-    //
+    @extend %input-option-box--checked;
   }
 
   &--hover {
-    //
+    @extend %input-option-box--hover;
   }
 
   &--focus-visible {
-    //
+    @extend %input-option-box--focus-visible;
   }
 
   &--disabled {
-      //
+    @extend %input-option-box--disabled;
   }
 }
 
-%option-input-checkmark {
-  // Color styles
-  color: var(--input-checkmark-color, #{color.$black});
-  background-color: var(--input-checkmark-background-color, #{color.$light-grey});
-  border-color: var(--input-checkmark-border-color, #{color.$grey});
-
-  // Border styles
-  border-style: var(--input-checkmark-border-style, solid);
-  border-radius:
-    var(--input-checkmark-border-top-left-radius, var(--input-checkmark-border-radius, 0px))
-    var(--input-checkmark-border-top-right-radius, var(--input-checkmark-border-radius, 0px))
-    var(--input-checkmark-border-bottom-right-radius, var(--input-checkmark-border-radius, 0px))
-    var(--input-checkmark-border-bottom-left-radius, var(--input-checkmark-border-radius, 0px));
-  border-width:
-    var(--input-checkmark-border-top-width, var(--input-checkmark-border-width, #{px-to-rem(2px)}))
-    var(--input-checkmark-border-right-width, var(--input-checkmark-border-width, #{px-to-rem(2px)}))
-    var(--input-checkmark-border-bottom-width, var(--input-checkmark-border-width, #{px-to-rem(2px)}))
-    var(--input-checkmark-border-left-width, var(--input-checkmark-border-width, #{px-to-rem(2px)}));
-
-  // Size styles
-  width: var(--input-checkmark-width, #{px-to-rem(20px)});
-  height: var(--input-checkmark-height, #{px-to-rem(20px)});
+%radio-input-checkmark {
+  @extend %input-option-checkmark;
 
   &--checked {
-    //
+    @extend %input-option-checkmark--checked;
   }
 
   &--hover {
-    //
+    @extend %input-option-checkmark--hover;
   }
 
   &--focus-visible {
-    //
+    @extend %input-option-checkmark--focus-visible;
   }
 
   &--disabled {
-    //
+    @extend %input-option-checkmark--disabled;
   }
 }

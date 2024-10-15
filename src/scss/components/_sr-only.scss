@@ -14,7 +14,7 @@
 // Please update, add or remove the styles below to match the project needs.
 
 .sr-only {
-  @include sr-only();
+  @include sr-only;
 
   &--focusable {
     @include sr-only(true);

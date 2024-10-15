@@ -33,7 +33,7 @@
     border: 0,
   );
 
-  @if ($focusable) {
+  @if $focusable {
     &:not(:focus),
     &:not(:focus-within),
     &:not(:active) {

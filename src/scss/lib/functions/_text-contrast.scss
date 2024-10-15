@@ -1,5 +1,8 @@
 // # Text contrast function
 
+@use "sass:math";
+@use "sass:meta";
+@use "sass:color" as c;
 @use "../variables/color";
 
 // Calculates if text needs to be light or dark depending on the background color passed.
@@ -26,20 +29,21 @@
   $color-light: color.$white,
   $color-dark: color.$black
 ) {
-  @if (type-of($color) != "color") {
+  @if meta.type-of($color) != "color" {
     @warn "The provided color is invalid.";
-
     @return null;
   }
 
-  $brightness: round(
-    (red($color) * 299) + (green($color) * 587) + (blue($color) * 114) * 0.001
+  $brightness: math.round(
+    (c.red($color) * 299) + (c.green($color) * 587) + (c.blue($color) * 114) *
+      0.001
   );
-  $light: round(
-    (red(white) * 299) + (green(white) * 587) + (blue(white) * 114) * 0.001
+  $light-calc: math.round(
+    (c.red(white) * 299) + (c.green(white) * 587) + (c.blue(white) * 114) *
+      0.001
   );
 
-  @if abs($brightness) < ($light * 0.5) {
+  @if math.abs($brightness) < ($light-calc * 0.5) {
     @return $color-light;
   } @else {
     @return $color-dark;

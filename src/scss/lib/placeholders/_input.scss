@@ -1,36 +1,38 @@
-@use "../../functions/px-to-rem" as *;
-@use "../animated" as *;
-@use "../interactive" as *;
-@use "../../variables/color";
-@use "../../variables/font";
+// # Input fields config placeholders.
 
-//  # Input fields config placeholders.
-//
-//  These placeholders can be used in your project considering the markup below
-//  <label class="parent-node“>
-//    <span class="option-label">Label text</span>
-//    <input class="option-field" />
-//  </label>
-//
-//  The parent node can be a <label> or any other tag.
-//  For the option types of inputs (radio, checkbox), you have to follow this structure :
-//  <label class="parent-node“>
-//    <input class="option-field" />
-//    <option-indicator-node></option-indicator-node>
-//    <span class="option-label">Label text</span>
-//  </label>
-//
-//  The option indicator will be the custom checkbox or radio button.
-//  You can see this configuration used in the sass-boilerplate-nuxt-demo project, in the page/inputs file.
-//
-//  Configurations for specific input types can be found in the placeholders/inputs folder.
-//  They override the custom properties below.
+@use "../functions/px-to-rem" as *;
+@use "animated" as *;
+@use "interactive" as *;
+@use "../variables/color";
+@use "../variables/font";
 
-%input-config {
+// Should be applied on every input base visual component, and updated with CSS variables on specific cases.
+
+// The idea here is to have a consistent and a more interactive/dynamic UI/UX.
+// Usage example :
+// ```scss
+// @use "functions/px-to-rem" as *;
+// @use "placeholders/input" as *;
+// @use "variables/color";
+//
+// input[type="text"] {
+//   @extends %input;
+//
+//   --input-padding-left: #{px-to-rem(20px)};
+//   --input-padding-right: #{px-to-rem(20px)};
+//   --input-color: #{color.$blue};
+//   --input-color-hover: #{color.$dark-blue};
+//   --input-color-hover-focus-visible: #{color.$dark-blue};
+//   --input-color-focus-visible: #{color.$light-blue};
+//   --input-color-active: #{color.$blue};
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%input {
   @extend %animated;
   @extend %interactive;
-
-  --interactive-cursor: text;
 
   // Color styles
   color: var(--input-color, #{color.$black});
@@ -39,15 +41,25 @@
 
   // Border styles
   border-style: var(--input-border-style, solid);
-  border-radius:
-    var(--input-border-top-left-radius, var(--input-border-radius, 0px))
+  border-radius: var(
+      --input-border-top-left-radius,
+      var(--input-border-radius, 0px)
+    )
     var(--input-border-top-right-radius, var(--input-border-radius, 0px))
     var(--input-border-bottom-right-radius, var(--input-border-radius, 0px))
     var(--input-border-bottom-left-radius, var(--input-border-radius, 0px));
-  border-width:
-    var(--input-border-top-width, var(--input-border-width, #{px-to-rem(2px)}))
-    var(--input-border-right-width, var(--input-border-width, #{px-to-rem(2px)}))
-    var(--input-border-bottom-width, var(--input-border-width, #{px-to-rem(2px)}))
+  border-width: var(
+      --input-border-top-width,
+      var(--input-border-width, #{px-to-rem(2px)})
+    )
+    var(
+      --input-border-right-width,
+      var(--input-border-width, #{px-to-rem(2px)})
+    )
+    var(
+      --input-border-bottom-width,
+      var(--input-border-width, #{px-to-rem(2px)})
+    )
     var(--input-border-left-width, var(--input-border-width, #{px-to-rem(2px)}));
 
   // Font styles
@@ -60,13 +72,14 @@
   text-transform: var(--input-text-transform, none);
 
   // Spacing styles
-  padding:
-    var(--input-padding-top, var(--input-padding-block, #{px-to-rem(10px)}))
+  padding: var(
+      --input-padding-top,
+      var(--input-padding-block, #{px-to-rem(10px)})
+    )
     var(--input-padding-right, var(--input-padding-inline, #{px-to-rem(20px)}))
     var(--input-padding-bottom, var(--input-padding-block, #{px-to-rem(10px)}))
     var(--input-padding-left, var(--input-padding-inline, #{px-to-rem(20px)}));
-  margin:
-    var(--input-margin-top, var(--input-margin-block, 0px))
+  margin: var(--input-margin-top, var(--input-margin-block, 0px))
     var(--input-margin-right, var(--input-margin-inline, 0px))
     var(--input-margin-bottom, var(--input-margin-block, 0px))
     var(--input-margin-left, var(--input-margin-inline, 0px));
@@ -98,21 +111,24 @@
   }
 
   &:focus-visible {
-    --input-color: var(--input-color-focus-visible, #{color.$black});
-    --input-background-color: var(--input-background-color-focus-visible, #{color.$white});
-    --input-border-color: var(--input-border-color-focus-visible, #{color.$grey});
+    color: var(--input-color-focus-visible, #{color.$black});
+    background-color: var(
+      --input-background-color-focus-visible,
+      #{color.$white}
+    );
+    border-color: var(--input-border-color-focus-visible, #{color.$grey});
   }
 
   &:hover {
-    --input-color: var(--input-color-hover, #{color.$black});
-    --input-background-color: var(--input-background-color-hover, #{color.$white});
-    --input-border-color: var(--input-border-color-hover, #{color.$black});
+    color: var(--input-color-hover, #{color.$black});
+    background-color: var(--input-background-color-hover, #{color.$white});
+    border-color: var(--input-border-color-hover, #{color.$black});
   }
 
   &:active {
-    --input-color: var(--input-color-active, #{color.$black});
-    --input-background-color: var(--input-background-color-active, #{color.$white});
-    --input-border-color: var(--input-border-color-active, #{color.$black});
+    color: var(--input-color-active, #{color.$black});
+    background-color: var(--input-background-color-active, #{color.$white});
+    border-color: var(--input-border-color-active, #{color.$black});
   }
 
   &:disabled,

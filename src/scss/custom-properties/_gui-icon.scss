@@ -1,0 +1,22 @@
+// # GUI icon variables setup
+
+// Usage example :
+// ```css
+// .selector::before {
+//   content: var(--icon-example);
+// }
+// ```
+
+// ## Replacement RegEx when importing from regular CSS (works with PhpStorm):
+//
+// - Search :
+// `\.icon-(.*):{1,2}before\s*\{\s*content:\s*"\\(.*)";\s*\}`
+// - Replace :
+// `--icon-$1: "\\$2";`
+
+// Please update, add or remove the styles below to match the project needs.
+
+:root {
+  // Example :
+  // --icon-example: "\6c";
+}

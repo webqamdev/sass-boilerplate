@@ -1,15 +1,18 @@
-// # Wrapper placeholders
+// # Wrapper config placeholders
 
 @use "../variables/theme";
 
 // Should be used as a base to selector that looks or behave like content wrappers.
 // Usage example :
 // ```scss
+// @use "placeholders/wrapper" as *;
+//
 // .wrapper {
 //   @extends %wrapper;
 // }
 //
 // .small-wrapper {
+//   @extends %wrapper;
 //   @extends %wrapper--s;
 // }
 // ```
@@ -18,9 +21,9 @@
 
 %wrapper {
   --wrapper-computed-max-width: calc(
-      var(--wrapper-max-width, #{theme.$wrapper-max-width-m})
-      + var(--wrapper-padding-left, var(--wrapper-padding-inline, 0px))
-      + var(--wrapper-padding-right, var(--wrapper-padding-inline, 0px))
+    var(--wrapper-max-width, #{theme.$wrapper-max-width-m}) +
+      var(--wrapper-padding-left, var(--wrapper-padding-inline, 0px)) +
+      var(--wrapper-padding-right, var(--wrapper-padding-inline, 0px))
   );
 
   max-width: var(--wrapper-computed-max-width);
@@ -29,7 +32,10 @@
   margin-left: var(--wrapper-margin-left, auto);
   margin-right: var(--wrapper-margin-right, auto);
   padding-left: var(--wrapper-padding-left, var(--wrapper-padding-inline, 0px));
-  padding-right: var(--wrapper-padding-right, var(--wrapper-padding-inline, 0px));
+  padding-right: var(
+    --wrapper-padding-right,
+    var(--wrapper-padding-inline, 0px)
+  );
 
   &--s {
     --wrapper-max-width: #{theme.$wrapper-max-width-s};

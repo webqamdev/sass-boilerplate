@@ -1,8 +1,34 @@
-@use "../configs/input-config" as *;
-@use "../configs/input-group-config" as *;
+// # Text input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="text-input-group">
+//   <span>My label</span>
+//   <input type="text" />
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/text-input" as *;
+//
+// .text-input-group {
+//   @extend %text-input-group;
+//
+//   & > span {
+//     @extend %text-input-label;
+//   }
+//
+//   & > text {
+//     @extend %text-input;
+//   }
+// }
+// ```
 
 %text-input {
-  @extend %input-config;
+  @extend %input;
 
   // --------------------------------------------------
   // Pseudo selector styles
@@ -27,9 +53,9 @@
 }
 
 %text-input-group {
-  @extend %input-group-config;
+  @extend %input-group;
 }
 
 %text-input-label {
-  @extend %input-group-config-label;
+  @extend %input-group-label;
 }

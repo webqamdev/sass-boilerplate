@@ -26,7 +26,17 @@ $wrapper-max-width-s-px: 768px;
 $wrapper-max-width-m-px: 1024px;
 $wrapper-max-width-l-px: 1440px;
 
-// rem values
-$wrapper-max-width-s: px-to-rem($wrapper-max-width-s-px); // 7.68rem
-$wrapper-max-width-m: px-to-rem($wrapper-max-width-m-px); // 10.24rem
-$wrapper-max-width-l: px-to-rem($wrapper-max-width-l-px); // 14.4rem
+// ### Wrapper rem values
+$wrapper-max-width-s: px-to-rem($wrapper-max-width-s-px); // 48rem
+$wrapper-max-width-m: px-to-rem($wrapper-max-width-m-px); // 64rem
+$wrapper-max-width-l: px-to-rem($wrapper-max-width-l-px); // 90rem
+
+// ## Grid wrapper
+$grid-wrapper-small-max-width-px: 1180px;
+$grid-wrapper-medium-max-width-px: 1330px;
+$grid-wrapper-large-max-width-px: 1556px;
+
+// ### Grid wrapper rem values
+$grid-wrapper-small-max-width: px-to-rem($grid-wrapper-small-max-width-px); // 73.75rem
+$grid-wrapper-medium-max-width: px-to-rem($grid-wrapper-medium-max-width-px); // 83.125rem
+$grid-wrapper-large-max-width: px-to-rem($grid-wrapper-large-max-width-px); // 97.25rem

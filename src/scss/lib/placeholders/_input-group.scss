@@ -1,0 +1,96 @@
+// # Input field group config placeholders.
+
+@use "../functions/px-to-rem" as *;
+@use "../variables/color";
+
+// Usage example base on this html structure :
+// ```html
+// <label class="input-group">
+//   <span>Input label</span>
+//   <input />
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/input-group" as *;
+//
+// .input-group {
+//   @extends %input-group;
+//
+//   span {
+//     @extends %input-label;
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%input-group {
+  // Position styles
+  position: var(--input-group-position, static);
+  inset: var(--input-group-top, unset) var(--input-group-right, unset)
+    var(--input-group-bottom, unset) var(--input-group-left, unset);
+
+  // Display styles
+  display: var(--input-group-display, flex);
+  flex-direction: var(--input-group-flex-direction, column);
+  align-items: var(--input-group-align-items, stretch);
+  justify-content: var(--input-group-justify-content, flex-start);
+
+  // Spacing styles
+  gap: var(--input-group-gap, 0px);
+  padding: var(--input-group-padding-top, var(--input-group-padding-block, 0px))
+    var(--input-group-padding-right, var(--input-group-padding-inline, 0px))
+    var(--input-group-padding-bottom, var(--input-group-padding-block, 0px))
+    var(--input-group-padding-left, var(--input-group-padding-inline, 0px));
+  margin: var(--input-group-margin-top, var(--input-group-margin-block, 0px))
+    var(--input-group-margin-right, var(--input-group-margin-inline, 0px))
+    var(--input-group-margin-bottom, var(--input-group-margin-block, 0px))
+    var(--input-group-margin-left, var(--input-group-margin-inline, 0px));
+
+  // Size styles
+  min-width: var(--input-group-min-width, 0px);
+  min-height: var(--input-group-min-height, 0px);
+  width: var(--input-group-width, 100%);
+  height: var(--input-group-height, auto);
+  max-width: var(--input-group-max-width, unset);
+  max-height: var(--input-group-max-height, unset);
+}
+
+%input-group-label {
+  // Interactive styles
+  cursor: var(--input-group-label-cursor, pointer);
+
+  // Color styles
+  color: var(--input-group-label-color, #{color.$black});
+
+  // Font styles
+  text-align: var(--input-group-label-text-align, inherit);
+  font-size: var(--input-group-label-font-size, inherit);
+  font-weight: var(--input-group-label-font-weight, bold);
+  line-height: var(--input-group-label-line-height, inherit);
+
+  // Text styles
+  text-transform: var(--input-group-label-text-transform, inherit);
+
+  // Display styles
+  display: var(--input-group-label-display, block);
+
+  // Spacing styles
+  padding: var(
+      --input-group-label-padding-top,
+      var(--input-group-label-padding-block, 0px)
+    )
+    var(
+      --input-group-label-padding-right,
+      var(--input-group-label-padding-inline, 0px)
+    )
+    var(
+      --input-group-label-padding-bottom,
+      var(--input-group-label-padding-block, #{px-to-rem(5px)})
+    )
+    var(
+      --input-group-label-padding-left,
+      var(--input-group-label-padding-inline, 0px)
+    );
+}

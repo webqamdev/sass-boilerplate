@@ -1,3 +1,100 @@
+// # Theme button placeholders
+
+@use "../../functions/px-to-rem" as *;
+@use "../../functions/px-to-em" as *;
+@use "../button" as *;
+@use "../../placeholders/icon" as *;
+@use "../../variables/color";
+@use "../../variables/font";
+
+// Usage example :
+// ```scss
+// @use "placeholders/buttons/theme-button" as *;
+//
+// a {
+//   @extends %theme-button;
+//   @extends %theme-button--primary;
+//   @extends %theme-button--icon-before;
+//
+//   --button-icon-before: var(--icon-example);
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
 %theme-button {
-  //
+  @extend %button;
+
+  // Interactive overrides
+  --interactive-outline-offset: 0px;
+  --interactive-outline-width-focus-within: #{px-to-rem(3px)};
+  --interactive-outline-width-focus-visible: #{px-to-rem(3px)};
+
+  // Customize all theme button variables applying the following example.
+  --button-font-weight: #{font.$weight-bold};
+  --button-min-height: #{px-to-rem(50px)};
+  --button-border-radius: calc(var(--button-min-height) * 0.5);
+
+  // --------------------------------------------------
+  // Primary
+  // --------------------------------------------------
+
+  &--primary {
+    // Default visual
+    --button-color: #{color.$white};
+    --button-background-color: #{color.$dark-blue};
+    --button-border-color: #{color.$dark-blue};
+
+    // Hovered visual
+    --button-color-hover: #{color.$white};
+    --button-background-color-hover: #{color.$blue};
+    --button-border-color-hover: #{color.$blue};
+
+    // Focused visual
+    --button-color-focus-visible: #{color.$blue};
+    --button-background-color-focus-visible: #{color.$white};
+    --button-border-color-focus-visible: #{color.$white};
+
+    // Focused and hovered visual
+    --button-color-hover-focus-visible: #{color.$dark-blue};
+    --button-background-color-hover-focus-visible: #{color.$light-blue};
+    --button-border-color-hover-focus-visible: #{color.$white};
+
+    // Active visual
+    --button-color-active: #{color.$blue};
+    --button-background-color-active: #{color.$white};
+    --button-border-color-active: #{color.$blue};
+  }
+
+  // --------------------------------------------------
+  // Icons
+  // --------------------------------------------------
+
+  &--icon-before,
+  &--icon-after {
+    --button-gap: 0.5em;
+
+    &::before,
+    &::after {
+      font-size: var(--button-icon-font-size, var(--icon-font-size, 1em));
+    }
+  }
+
+  &--icon-before {
+    &::before {
+      @extend %icon;
+
+      content: var(--button-icon-before, var(--button-icon, none));
+    }
+  }
+
+  &--icon-after {
+    &::after {
+      @extend %icon;
+
+      content: var(--button-icon-after, var(--button-icon, none));
+    }
+  }
 }

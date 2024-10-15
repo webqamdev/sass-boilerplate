@@ -1,7 +1,0 @@
-@use "../animated" as *;
-@use "../interactive" as *;
-
-%button-config {
-  @extend %animated;
-  @extend %interactive;
-}
