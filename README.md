@@ -5,7 +5,12 @@
 This project is meant to add a default and common SCSS structure to all projects.
 The most basic usage is to copy the `src/scss/` content into your own project's `scss/` folder and start styling.
 
-For better understanding of the folder and file structure, you can read the [documentations](documentations/getting-started.md).
+For better understanding of the folder and file structure, you can read the [documentations](docs/getting-started.md) :
+
+- [Directory structure](docs/directory-structure.md)
+- [Development conventions](docs/development-conventions.md)
+- [Placeholders](docs/placeholders.md)
+- [Custom properties](docs/custom-properties.md)
 
 ## Development
 
