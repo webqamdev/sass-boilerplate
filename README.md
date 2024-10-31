@@ -7,10 +7,14 @@ The most basic usage is to copy the `src/scss/` content into your own project's 
 
 For better understanding of the folder and file structure, you can read the [documentations](docs/getting-started.md) :
 
-- [Directory structure](docs/directory-structure.md)
+- [Getting started](docs/getting-started.md)
 - [Development conventions](docs/development-conventions.md)
-- [Placeholders](docs/placeholders.md)
-- [Custom properties](docs/custom-properties.md)
+- [Directory structure](docs/directory-structure.md)
+  - [Custom properties](docs/custom-properties.md)
+  - [Functions](docs/functions.md)
+  - [Placeholders](docs/placeholders.md)
+  - [Mixins](docs/mixins.md)
+  - [Variables](docs/variables.md)
 
 ## Development
 

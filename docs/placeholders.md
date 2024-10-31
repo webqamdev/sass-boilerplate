@@ -1,1 +1,1 @@
-# Available scss placeholders and their usages
+# Available SCSS placeholders and their usages
