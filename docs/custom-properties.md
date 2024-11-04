@@ -7,7 +7,7 @@ bl { color: #3d3dff;font-weight: normal; }
 
 # Available custom properties and their usages
 
-"[Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)" is the name of **CSS variables**.
+"[Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)" is the name For **CSS variables**.
 
 **Summary** :
 
@@ -28,7 +28,7 @@ bl { color: #3d3dff;font-weight: normal; }
 
 Custom properties with **very large scope** can be found in the `scss/custom-property/` folder.
 
-Custom properties with a **smaller scope** can be found anywhere in the boilerplate. The goal is to set and use custom properties.
+Custom properties with a **smaller scope** can be found anywhere in the boilerplate. The goal is to set and use custom properties in components, placeholders and mixins depending on the need.
 
 ## Naming convention
 
@@ -37,6 +37,8 @@ To better understand the custom properties, we have defined a naming convention 
 It should always be in [kebab-case](https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case) format.
 
 > **--<bl>{prefix}</bl>-<or>{context}</or>-<gr>{property}</gr>-<re>{state}</re>: value;**
+
+The goal of this naming convention is to have a better understanding the role of the variable and to avoid conflicts.
 
 ### Definitions
 
@@ -63,21 +65,24 @@ It can also be combined like `hover-focus` or `hover-active`, etc. And it can al
 
 ```scss
 selector {
-  // `gui` as the [context]
-  // `color` as the [property]
-  // `primary` as the [state]
+  // `gui` as the {context}
+  // `color` as the {property}
+  // `primary` as the {state}
   --gui-color-primary: #000;
   
   color: var(--gui-color-primary);
 }
 
 selector {
-  // `wq` as the [prefix]
-  // `button` as the [context]
-  // `color` as the [property]
-  // `hover` as the [state]
+  // `wq` as the {prefix}
+  // `button` as the {context}
+  // `color` as the {property}
   --wq-button-color: #fff;
+  
+  // `hover` as the {state}
   --wq-button-color-hover: #000;
+  
+  // `hover-focus-visible` as the {state}
   --wq-button-color-hover-focus-visible: #555;
   
   color: var(--wbl-button-color);
@@ -92,8 +97,8 @@ selector {
 }
 
 selector {
-  // `site-header` as the [context]
-  // `font-weight` as the [property]
+  // `site-header` as the {context}
+  // `font-weight` as the {property}
   --site-header-font-weight: bold;
   
   font-weight: var(--site-header-font-weight);
