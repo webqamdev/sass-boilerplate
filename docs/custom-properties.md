@@ -1,12 +1,6 @@
-<style>
-re { color: red }
-or { color: orange }
-gr { color: green }
-bl { color: #3d3dff;font-weight: normal; }
-</style>
+⬅️ [Back (Directory Structure)](./directory-structure.md)
 
 # CSS Variables (custom properties) in the boilerplate
-
 
 > Large Scope variables can be located in the [📁 scss/custom-properties/](../src/scss/custom-properties/) directory
 > Other variable can be found and created anywhere in the boilerplate. 
@@ -19,27 +13,27 @@ To better understand the custom properties, we have defined a naming convention 
 
 It should always be in [kebab-case](https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case) format.
 
-> **--<bl>{prefix}</bl>-<or>{context}</or>-<gr>{property}</gr>-<re>{state}</re>: value;**
+> **--<b style="color:#3d3dff;">{prefix}</b>-<b style="color:orange;">{context}</b>-<b style="color:green;">{property}</b>-<b style="color:red;">{state}</b>: value;**
 
 The goal of this naming convention is to have a better understanding the role of the variable and to avoid conflicts.
 
 ### Definitions
 
-#### <bl>{prefix}</bl>
+#### <b style="color:#3d3dff;">{prefix}</b>
 
 The prefix is used to split the "scope" or the variable. For example, it should be used when you are developing a library.
 
 The css of the main project should not have a prefix.
 
-#### <or>{content}</or>
+#### <b style="color:orange;">{content}</b>
 
 The context is used to indicate the "use case" of the variable. For example, it can be a component name.
 
-#### <gr>{property}</gr>
+#### <b style="color:green;">{property}</b>
 
 The property should match the CSS property name that you want to define.
 
-#### <re>{state}</re>
+#### <b style="color:red;">{state}</b>
 
 Used to differentiate the different states of the property. For example, it can be `hover`, `focus`, `active`, `disabled`, etc.
 It can also be combined like `hover-focus` or `hover-active`, etc. And it can also translate
