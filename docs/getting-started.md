@@ -8,10 +8,10 @@ All file contains their own documentation with use cases and examples.
 
 You can read more about the boilerplate and its usage in the following documentations:
 
-- [Development conventions](docs/development-conventions.md)
-- [Directory structure](docs/directory-structure.md)
-    - [Custom properties](docs/custom-properties.md)
-    - [Functions](docs/functions.md)
-    - [Placeholders](docs/placeholders.md)
-    - [Mixins](docs/mixins.md)
-    - [Variables](docs/variables.md)
+- [Development conventions](./development-conventions.md)
+- [Directory structure](./directory-structure.md)
+    - [Custom properties](./custom-properties.md)
+    - [Functions](./functions.md)
+    - [Placeholders](./placeholders.md)
+    - [Mixins](./mixins.md)
+    - [Variables](./variables.md)
