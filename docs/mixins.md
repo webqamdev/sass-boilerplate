@@ -1,11 +1,10 @@
-# Available SCSS mixins and their usages
+⬅️ [Back (Directory Structure)](./directory-structure.md)
 
-- 📄 [_breakpoint.scss](../src/scss/lib/mixins/_breakpoint.scss)
-- 📄 [_container.scss](../src/scss/lib/mixins/_container.scss)
-- 📄 [_hardware-acceleration.scss](../src/scss/lib/mixins/_hardware-acceleration.scss)
-- 📄 [_sr-only.scss](../src/scss/lib/mixins/_sr-only.scss)
-- 📄 [_text-gradient.scss](../src/scss/lib/mixins/_text-gradient.scss)
-- 📄 [_text-overflow.scss](../src/scss/lib/mixins/_text-overflow.scss)
+# SCSS Mixins
+
+> Located in the [📁 scss/lib/mixins/](../src/scss/lib/mixins/) directory.
+> 
+> You can refer to the official [Sass documentation](https://sass-lang.com/documentation/at-rules/mixin) for more information.
 
 Mixins in files should be imported **without** namespace :
 
@@ -19,5 +18,43 @@ Mixins in files should be imported **without** namespace :
   @include breakpoint(breakpoint.$tablet) {
     color: red;
   }
+}
+```
+
+## 📄 [_breakpoint.scss](../src/scss/lib/mixins/_breakpoint.scss)
+
+Used to create uniformized media queries.
+
+## 📄 [_container.scss](../src/scss/lib/mixins/_container.scss)
+
+Use to create uniformized container queries.
+
+## 📄 [_hardware-acceleration.scss](../src/scss/lib/mixins/_hardware-acceleration.scss)
+
+Simple mixin to optimize rendering performance when possible.
+
+## 📄 [_sr-only.scss](../src/scss/lib/mixins/_sr-only.scss)
+
+Mixin to hide content visually but keep it accessible to screen readers.
+
+## 📄 [_text-gradient.scss](../src/scss/lib/mixins/_text-gradient.scss)
+
+Mixin to create a gradient on text.
+
+## 📄 [_text-overflow.scss](../src/scss/lib/mixins/_text-overflow.scss)
+
+Multiple mixins to handle text overflow.
+
+**For example :**
+
+```scss
+@use "scss/lib/mixins/text-overflow" as *;
+
+.ellipsis-in-one-line {
+  @include text-overflow;
+}
+
+.ellipsis-in-two-lines {
+  @include text-overflow-multiline(3);
 }
 ```

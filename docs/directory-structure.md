@@ -1,12 +1,39 @@
+⬅️ [Back (Getting Started)](./getting-started.md)
+
 # Boilerplate Directory structure
 
-This is the directory structure of the project. The project is divided into several directories, each with a specific purpose.
+This is the directory structure of the project. 
 
-Each file contains its own documentation.
+In addition, each file of the boilerplate contains its own documentation with use cases and examples.
 
 ## 📁 scss/
 
 The root directory contains all the entry files (like `main.scss`) and the most basic files like `_font-faces.scss`, `_lib.scss` and `_print.scss`.
+
+## 📁 scss/resets/
+
+Used to split reset styles in addition to the [modern-normalize](https://www.npmjs.com/package/modern-normalize) library.
+
+- [_base-reset.scss](../src/scss/resets/_base-reset.scss)
+- [_input-reset.scss](../src/scss/resets/_input-reset.scss)
+- [_interactive-reset.scss](../src/scss/resets/_interactive-reset.scss)
+- [_media-reset.scss](../src/scss/resets/_media-reset.scss)
+- [_text-reset.scss](../src/scss/resets/_text-reset.scss)
+
+## 📁 scss/components/
+
+- [_icon.scss](../src/scss/components/_icon.scss)
+- [_sr-only.scss](../src/scss/components/_sr-only.scss)
+
+Component styling, functional selector, etc.
+
+This is where most of the style should be written in a project.
+
+## 📁 scss/vendors/
+
+Vendor style import and/or override, like [swiper](https://swiperjs.com/) default library styles.
+
+By default there is no vendor style imported in the boilerplate.
 
 ## 📁 scss/lib/
 
@@ -53,22 +80,4 @@ In this example, the variable `$font-base-size` is defined in the file `lib/vari
 
 ## 📁 [scss/lib/placeholders/](./placeholders.md)
 
-#### scss/lib/placeholders/buttons/
-
-#### scss/lib/placeholders/links/
-
-#### scss/lib/placeholders/inputs/
-
 ## 📁 [scss/custom-properties/](./custom-properties.md)
-
-## 📁 scss/resets/
-
-## 📁 scss/vendors/
-
-Vendor style import and/or override, like [swiper](https://swiperjs.com/) default library styles.
-
-## 📁 scss/components/
-
-Component styling, like header, forms, card list, etc.
-
-This is where most of the style should be written in a project.

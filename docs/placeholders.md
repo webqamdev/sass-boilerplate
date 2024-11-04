@@ -1,4 +1,46 @@
-# Available SCSS placeholders and their usages
+⬅️ [Back (Directory Structure)](./directory-structure.md)
+
+# SCSS Placeholders
+
+> Located in the [📁 scss/lib/placeholders/](../src/scss/lib/placeholders/) directory.
+> 
+> You can refer to the official [Sass documentation](https://sass-lang.com/documentation/style-rules/placeholder-selectors/) for more information.
+
+Available placeholders are separated in two categories : **Config (⚙️)** and **Theme (📄)**.
+
+The first category is meant to instantiate style properties with dedicated value and CSS variables.
+
+The second category is meant to customize CSS variables and define new properties if needed.
+
+**For example :**
+
+The lib/placeholders/_button.scss file is a **Config (⚙️)** file. And the lib/placeholders/buttons/_theme-button.scss file is a "Theme" file.
+
+The **Config (⚙️)** file defines the style properties with dedicated CSS variables :
+
+```scss
+%button {
+  color: var(--button-color-primary, inherit);
+  background-color: var(--button-background-color, transparent);
+}
+```
+
+And the **Theme (📄)** file customizes the style properties by adding new ones or by using CSS variables :
+
+```scss
+@use "lib/placeholders/button" as *;
+
+%theme-button {
+  @extend %button;
+  
+  &--primary {
+    --button-color-primary: black;
+    --button-background-color: white;
+  }
+}
+```
+
+Each file has its own documentation and usage examples :
 
 - ⚙️ [_animated.scss](../src/scss/lib/placeholders/_animated.scss)
 - ⚙️ [_button.scss](../src/scss/lib/placeholders/_button.scss)
@@ -23,37 +65,3 @@
   - 📄 [_select-input.scss](../src/scss/lib/placeholders/inputs/_select-input.scss)
   - 📄 [_text-input.scss](../src/scss/lib/placeholders/inputs/_text-input.scss)
   - 📄 [_textarea-input.scss](../src/scss/lib/placeholders/inputs/_textarea-input.scss)
-
-Available placeholders are separated in two categories : **Config** (⚙️) and **Theme** (📄).
-
-The first category is meant to instantiate style properties with dedicated value and CSS variables.
-
-The second category is meant to customize CSS variables and define new properties if needed.
-
-**For example :**
-
-The lib/placeholders/_button.scss file is a **Config** (⚙️) file. And the lib/placeholders/buttons/_theme-button.scss file is a "Theme" file.
-
-The **Config** (⚙️) file defines the style properties with dedicated CSS variables :
-
-```scss
-%button {
-  color: var(--button-color-primary, inherit);
-  background-color: var(--button-background-color, transparent);
-}
-```
-
-And the **Theme** (📄) file customizes the style properties by adding new ones or by using CSS variables :
-
-```scss
-@use "lib/placeholders/button" as *;
-
-%theme-button {
-  @extend %button;
-  
-  &--primary {
-    --button-color-primary: black;
-    --button-background-color: white;
-  }
-}
-```

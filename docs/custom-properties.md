@@ -5,30 +5,13 @@ gr { color: green }
 bl { color: #3d3dff;font-weight: normal; }
 </style>
 
-# Available custom properties and their usages
+# CSS Variables (custom properties) in the boilerplate
 
-"[Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)" is the name For **CSS variables**.
 
-**Summary** :
-
-- [Location](#location)
-- [Naming convention](#naming-convention)
-    - [Definitions](#definitions)
-        - [{prefix}](#prefix)
-        - [{content}](#content)
-        - [{property}](#property)
-        - [{state}](#state)
-    - [Examples](#examples)
-- [Usage](#usage)
-    - [Responsive properties](#responsive-properties)
-        - [Theme properties](#theme-properties)
-        - [Cascading component development](#cascading-component-development)
-
-## Location
-
-Custom properties with **very large scope** can be found in the `scss/custom-property/` folder.
-
-Custom properties with a **smaller scope** can be found anywhere in the boilerplate. The goal is to set and use custom properties in components, placeholders and mixins depending on the need.
+> Large Scope variables can be located in the [📁 scss/custom-properties/](../src/scss/custom-properties/) directory
+> Other variable can be found and created anywhere in the boilerplate. 
+> 
+> You can refer to the official [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for more information.
 
 ## Naming convention
 
