@@ -23,7 +23,7 @@ $name-system: system-ui;
 // Like so, the font is called as `font-family: font.$family-{name};`
 // $family-example: $name-example, Arial, sans-serif;
 $family-system: $name-system, sans-serif;
-$family-icons: null;
+$family-icons: sans-serif; // Replace with the font-family of your icon font
 
 // Example of custom font-family
 // $family-example: $name-example, Arial, sans-serif;
