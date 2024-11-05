@@ -9,35 +9,75 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- // Add here unreleased additions
-- Add `scss/components/_sr-only.scss` file.
-- Add `scss/lib/mixins/_text-overflow.scss` including `text-overflow()` and `text-overflow-multiline()`
-- Add `scss/lib/mixins/_text-gradient.scss`
-- Add `scss/lib/mixins/_hardware-acceleration.scss`
-- Add `scss/custom-property/_gui-color.scss` file.
-- Add `scss/custom-property/_gui-font.scss` file.
-- Add `scss/custom-property/_theme-common.scss` file.
+- Add new documentation in the [docs/](./docs) folder.
+- `scss/components/_sr-only.scss` component file.
+- New [Reset](scss/resets) files to replace the `scss/_base.scss` file :
+  - `scss/resets/_base-reset.scss`
+  - `scss/resets/_input-reset.scss`
+  - `scss/resets/_interactive-reset.scss`
+  - `scss/resets/_media-reset.scss`
+  - `scss/resets/_text-reset.scss`
+- New [Custom Property](scss/custom-properties) files :
+  - `scss/custom-properties/_gui-color.scss`
+  - `scss/custom-properties/_gui-font.scss`
+  - `scss/custom-properties/_gui-icon.scss`
+  - `scss/custom-properties/_theme-common.scss`
+- New [Mixin](scss/lib/mixins) files :
+  - `scss/lib/mixins/_container.scss`
+  - `scss/lib/mixins/_hardware-acceleration.scss`
+  - `scss/lib/mixins/_text-gradient.scss`
+  - `scss/lib/mixins/_text-overflow.scss`
+- New [Placeholder](scss/lib/placeholders) **Config** files :
+  - `scss/lib/placeholders/_animated.scss`
+  - `scss/lib/placeholders/_button.scss`
+  - `scss/lib/placeholders/_grid-wrapper.scss`
+  - `scss/lib/placeholders/_heading.scss`
+  - `scss/lib/placeholders/_icon.scss`
+  - `scss/lib/placeholders/_input.scss`
+  - `scss/lib/placeholders/_input-group.scss`
+  - `scss/lib/placeholders/_input-option.scss`
+  - `scss/lib/placeholders/_interactive.scss`
+  - `scss/lib/placeholders/_link.scss`
+  - `scss/lib/placeholders/_paragraph.scss`
+  - `scss/lib/placeholders/_wrapper.scss`
+- New Placeholder **Theme** files :
+  - `scss/lib/placeholders/buttons/_theme-button.scss`
+  - `scss/lib/placeholders/links/_theme-link.scss`
+  - `scss/lib/placeholders/inputs/_checkbox-input.scss`
+  - `scss/lib/placeholders/inputs/_file-input.scss`
+  - `scss/lib/placeholders/inputs/_radio-input.scss`
+  - `scss/lib/placeholders/inputs/_select-input.scss`
+  - `scss/lib/placeholders/inputs/_text-input.scss`
+  - `scss/lib/placeholders/inputs/_textarea-input.scss`
+
+### Removed
+
+- `scss/components/_base-btn.scss` component file.
+- `scss/components/_browser-upgrade.scss` component file.
+- `scss/lib/mixins/_btn-styles.scss` mixin file (replaced byt the [_button.scss](scss/lib/placeholders/_button.scss).
+- Remove unused [Variables](scss/lib/variables) files :
+  - `scss/lib/variables/_box-shadow.scss`
+  - `scss/lib/variables/_custom-property.scss`
+  - `scss/lib/variables/_gap.scss`
+  - `scss/lib/variables/_line-height.scss`
+  - `scss/lib/variables/_margin.scss`
+  - `scss/lib/variables/_outline.scss`
+  - `scss/lib/variables/_padding.scss`
+  - `scss/lib/variables/_selector.scss`
 
 ### Changed
 
-- // Add here unreleased changes
-- Move the compilation from Webpack to Vite and support TypeScript.
-- Update node support ton ^20.0.0.
-- Update `sr-only()` @mixin content to avoid rewriting styles if $focusable is true and support :focus-within state
-- `scss/main.scss` now @use `scss/components/_sr-only.scss`
-- Update `scss/lib/_mixins.scss` with new mixins files @forward
-- Update `scss/lib/_placeholders.scss` with new placeholders files @forward
-- Update `scss/lib/placeholders/_icon.scss` with CSS variables.
-- Delete unused `scss/lib/variables/` files (`_box-shadow.scss`, `_custom-property.scss`, `_gap.scss`, `_line-height.scss`, `_margin.scss`, `_outline.scss`, `_padding.scss`, `_selector.scss`).
-- Moved `scss/lib/placeholders/_button.scss` into `scss/lib/placeholders/buttons/_button-config.scss` and update properties with CSS variables.
-- Moved `scss/lib/placeholders/_link.scss` into `scss/lib/placeholders/links/_link-config.scss` and update properties with CSS variables.
-- Update `.npmignore`
-- Update `.nvmrc` to support node's `20.10.0` version.
+- Change the branch `master` to `main`.
+- Move the `./src/scss/` folder to the `./scss/` folder.
+- Change the compilation from Webpack to Vite and support TypeScript.
+- Update node version to `^22.0` (updating the `.nvmrc`, `package.json` `volta` key and the `.gitlab-ci` files).
+- Update the [README.md](./README.md) file with new documentation reference and installation process.
+- Replace the [normalize.css](https://www.npmjs.com/package/normalize.css) package by the [modern-normalize](https://www.npmjs.com/package/modern-normalize) package.
+- Replace the [breakpoint-sass](https://www.npmjs.com/package/breakpoint-sass) package to use custom media queries in the [_breakpoint.scss](scss/lib/mixins/_breakpoint.scss) mixin file.
 
 ### Fixed
 
-- // Add here unreleased fixes
-- Update `scss/components/_icon.scss` replace regex comment.
+- Update icon IDE quick search and replace style to match [placeholder](scss/lib/placeholders/_icon.scss), [custom-properties](scss/custom-properties/_gui-icon.scss) and [component](scss/components/_icon.scss) files.
 
 ## [1.0.0] - 2021-12-10
 

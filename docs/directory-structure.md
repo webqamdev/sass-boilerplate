@@ -14,16 +14,16 @@ The root directory contains all the entry files (like `main.scss`) and the most 
 
 Used to split reset styles in addition to the [modern-normalize](https://www.npmjs.com/package/modern-normalize) library.
 
-- [_base-reset.scss](../src/scss/resets/_base-reset.scss)
-- [_input-reset.scss](../src/scss/resets/_input-reset.scss)
-- [_interactive-reset.scss](../src/scss/resets/_interactive-reset.scss)
-- [_media-reset.scss](../src/scss/resets/_media-reset.scss)
-- [_text-reset.scss](../src/scss/resets/_text-reset.scss)
+- [_base-reset.scss](../scss/resets/_base-reset.scss)
+- [_input-reset.scss](../scss/resets/_input-reset.scss)
+- [_interactive-reset.scss](../scss/resets/_interactive-reset.scss)
+- [_media-reset.scss](../scss/resets/_media-reset.scss)
+- [_text-reset.scss](../scss/resets/_text-reset.scss)
 
 ## 📁 scss/components/
 
-- [_icon.scss](../src/scss/components/_icon.scss)
-- [_sr-only.scss](../src/scss/components/_sr-only.scss)
+- [_icon.scss](../scss/components/_icon.scss)
+- [_sr-only.scss](../scss/components/_sr-only.scss)
 
 Component styling, functional selector, etc.
 
@@ -43,10 +43,10 @@ The lib folder is build to be imported anywhere in the project (as shared styles
 
 The `lib/` folder contains all the import files for subdirectories :
 
-- [_functions.scss](../src/scss/lib/_functions.scss)
-- [_variables.scss](../src/scss/lib/_variables.scss)
-- [_mixins.scss](../src/scss/lib/_mixins.scss)
-- [_placeholders.scss](../src/scss/lib/_placeholders.scss)
+- [_functions.scss](../scss/lib/_functions.scss)
+- [_variables.scss](../scss/lib/_variables.scss)
+- [_mixins.scss](../scss/lib/_mixins.scss)
+- [_placeholders.scss](../scss/lib/_placeholders.scss)
 
 They import all sub files with the [@forward at-rule](https://sass-lang.com/documentation/at-rules/forward/) to allow lib folder global import :
 

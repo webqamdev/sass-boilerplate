@@ -1,11 +1,6 @@
 # Webqam SCSS Boilerplate
 
-## Usage
-
-This project is meant to add a default and common SCSS structure to all projects.
-The most basic usage is to copy the `src/scss/` content into your own project's `scss/` folder and start styling.
-
-For better understanding of the folder and file structure, you can read the [documentations](docs/getting-started.md) :
+> For better understanding of the folder and file structure, use cases, rules and installation process of the boilerplate, you should the [documentation](docs/getting-started.md).
 
 - [Getting started](docs/getting-started.md)
 - [Development conventions](docs/development-conventions.md)
@@ -31,17 +26,11 @@ npm ci
 
 # 4. Build the project with ViteJs
 npm run build
+# Or with the --watch flag
+npm run watch
 ```
 
 ### Available commands
 
 - `npm run dev` Watch the project and start a local server
 - `npm run build` Build the project for production
-
-## Contributing
-
-Please read the [contributing guide](CONTRIBUTING.md).
-
-## License
-
-[MIT](LICENSE)

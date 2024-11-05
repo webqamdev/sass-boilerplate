@@ -2,7 +2,7 @@
 
 # CSS Variables (custom properties) in the boilerplate
 
-> Large Scope variables can be located in the [📁 scss/custom-properties/](../src/scss/custom-properties/) directory
+> Large Scope variables can be located in the [📁 scss/custom-properties/](../scss/custom-properties/) directory
 > Other variable can be found and created anywhere in the boilerplate. 
 > 
 > You can refer to the official [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) for more information.

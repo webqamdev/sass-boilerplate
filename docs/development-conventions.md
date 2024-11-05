@@ -14,7 +14,7 @@ This boilerplate follow some simple principals to structure component styling :
 * One function = One file
 * One placeholder = One file
 * One mixin = One file
-* If you don't like the previous rules, then do as you want but be **consistent** (the [_text-overflow.scss](../src/scss/lib/mixins/_text-overflow.scss) mixin is an example).
+* If you don't like the previous rules, then do as you want but be **consistent** (the [_text-overflow.scss](../scss/lib/mixins/_text-overflow.scss) mixin is an example).
 
 > If a BEM selector start with .my-custom-component, then there should be a dedicated file in the `scss/components/` directory with the same Block name. Like so `scss/components/_my-custom-component.scss`.
 

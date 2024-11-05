@@ -2,7 +2,7 @@
 
 # SCSS Functions
 
-> Located in the [📁 scss/lib/functions/](../src/scss/lib/functions/) directory.
+> Located in the [📁 scss/lib/functions/](../scss/lib/functions/) directory.
 > 
 > You can refer to the official [Sass documentation](https://sass-lang.com/documentation/at-rules/function/) for more information.
 
@@ -28,7 +28,7 @@ Or you will be required to use the namespace, which is not recommended for visib
 }
 ```
 
-## 📄 [_px-to-rem.scss](../src/scss/lib/functions/_px-to-rem.scss)
+## 📄 [_px-to-rem.scss](../scss/lib/functions/_px-to-rem.scss)
 
 Cast a `px` value to a `rem` value.
 
@@ -40,7 +40,7 @@ Cast a `px` value to a `rem` value.
 }
 ```
 
-## 📄 [_px-to-em.scss](../src/scss/lib/functions/_px-to-em.scss)
+## 📄 [_px-to-em.scss](../scss/lib/functions/_px-to-em.scss)
 
 Cast a `px` value to an `em` value.
 
@@ -52,7 +52,7 @@ Cast a `px` value to an `em` value.
 }
 ```
 
-## 📄 [_em-to-px.scss](../src/scss/lib/functions/_em-to-px.scss)
+## 📄 [_em-to-px.scss](../scss/lib/functions/_em-to-px.scss)
 
 Cast an `em` value to a `px` value.
 
@@ -64,7 +64,7 @@ Cast an `em` value to a `px` value.
 }
 ```
 
-## 📄 [_em-to-rem.scss](../src/scss/lib/functions/_em-to-rem.scss)
+## 📄 [_em-to-rem.scss](../scss/lib/functions/_em-to-rem.scss)
 
 Cast an `em` value to a `rem` value.
 
@@ -76,7 +76,7 @@ Cast an `em` value to a `rem` value.
 }
 ```
 
-## 📄 [_strip-unit.scss](../src/scss/lib/functions/_strip-unit.scss)
+## 📄 [_strip-unit.scss](../scss/lib/functions/_strip-unit.scss)
 
 Strip the unit from a value.
 
@@ -88,7 +88,7 @@ Strip the unit from a value.
 }
 ```
 
-## 📄 [_text-contrast.scss](../src/scss/lib/functions/_text-contrast.scss)
+## 📄 [_text-contrast.scss](../scss/lib/functions/_text-contrast.scss)
 
 Calculate the contrast ratio between two colors.
 
@@ -107,7 +107,7 @@ Calculate the contrast ratio between two colors.
 }
 ```
 
-## 📄 [_arrow-shape-polygon.scss](../src/scss/lib/functions/_arrow-shape-polygon.scss)
+## 📄 [_arrow-shape-polygon.scss](../scss/lib/functions/_arrow-shape-polygon.scss)
 
 Generate a polygon shape for an arrow.
 
