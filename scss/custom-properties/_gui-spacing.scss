@@ -1,0 +1,46 @@
+// # GUI color variables setup
+
+@use "../lib/functions/px-to-rem" as *;
+@use "../lib/mixins/breakpoint" as *;
+@use "../lib/variables/breakpoint";
+
+// Usage example :
+// ```css
+// .selector {
+//   padding: var(--spacing-10) var(--spacing-50);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+:root {
+  --spacing-10: #{px-to-rem(5px)};
+  --spacing-20: #{px-to-rem(10px)};
+  --spacing-30: #{px-to-rem(15px)};
+  --spacing-40: #{px-to-rem(20px)};
+  --spacing-50: #{px-to-rem(25px)};
+  --spacing-60: #{px-to-rem(30px)};
+  --spacing-70: #{px-to-rem(35px)};
+  --spacing-80: #{px-to-rem(40px)};
+
+  // # --------------------------------------------------------------------------------------- #
+  // # TABLET VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$tablet) {
+    --spacing-50: #{px-to-rem(30px)};
+    --spacing-60: #{px-to-rem(40px)};
+    --spacing-70: #{px-to-rem(50px)};
+    --spacing-80: #{px-to-rem(60px)};
+  }
+
+  // # --------------------------------------------------------------------------------------- #
+  // # LAPTOP VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$laptop) {
+    --spacing-60: #{px-to-rem(50px)};
+    --spacing-70: #{px-to-rem(70px)};
+    --spacing-80: #{px-to-rem(100px)};
+  }
+}
