@@ -11,6 +11,12 @@
   - [Mixins](docs/mixins.md)
   - [Variables](docs/variables.md)
 
+> You must install the [modern-normalize](https://www.npmjs.com/package/modern-normalize) npm package in order to have full style resets. Please read the dedicated section in the [Dependencies](docs/getting-started.md#dependencies) documentation.
+>
+> ```shell
+> npm install modern-normalize
+> ```
+
 ## Development
 
 ### Installation

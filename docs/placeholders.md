@@ -2,7 +2,7 @@
 
 # SCSS Placeholders
 
-> Located in the [📁 scss/lib/placeholders/](../scss/lib/placeholders/) directory.
+> Located in the [📁 scss/lib/placeholders/](../scss/lib/placeholders) directory.
 > 
 > You can refer to the official [Sass documentation](https://sass-lang.com/documentation/style-rules/placeholder-selectors/) for more information.
 

@@ -2,7 +2,7 @@
 
 # SCSS Functions
 
-> Located in the [📁 scss/lib/functions/](../scss/lib/functions/) directory.
+> Located in the [📁 scss/lib/functions/](../scss/lib/functions) directory.
 > 
 > You can refer to the official [Sass documentation](https://sass-lang.com/documentation/at-rules/function/) for more information.
 

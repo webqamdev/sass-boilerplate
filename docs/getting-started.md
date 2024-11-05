@@ -4,7 +4,7 @@
 
 This project is meant to add a default and common SCSS structure to all projects.
 
-The most basic usage is to copy the `📁 scss/` content into your own project's `📁 scss/` folder and start styling.
+The most basic usage is to copy the `📁 ./scss/` content into your own project's `📁 path/to/assets/scss/` folder and start styling.
 
 > You don't need to clone the project to use the boilerplate. You can just copy the files and folders you need.
 
@@ -24,7 +24,7 @@ You can read more about the boilerplate and its usage in the following documenta
 
 ## Dependencies
 
-The only dependency is [modern-normalize](https://www.npmjs.com/package/modern-normalize) and the package imported in the 📄 [scss/main.scss](./scss/main.scss) entry file.
+The only dependency is [modern-normalize](https://www.npmjs.com/package/modern-normalize) and the package imported in the 📄 [scss/main.scss](../scss/main.scss) entry file.
 
 ```shell
 npm install modern-normalize
@@ -50,13 +50,13 @@ But you may have to set a alias or relative path :
 
 And this is true for every package you may import in your project.
 
-For exemple, we want to include the [swiper](https://swiperjs.com/) library in the project :
+For example, we want to include the [swiper](https://swiperjs.com/) library in the project :
 
 ```shell
 npm install swiper
 ```
 
-And then import it in the 📄 [scss/vendors/_swiper.scss](./scss/vendors/_swiper.scss) file :
+And then import it in the 📄 `scss/vendors/_swiper.scss` file :
 
 ```scss
 // For Vite compilation :

@@ -2,7 +2,7 @@
 
 # SCSS Mixins
 
-> Located in the [📁 scss/lib/mixins/](../scss/lib/mixins/) directory.
+> Located in the [📁 scss/lib/mixins/](../scss/lib/mixins) directory.
 > 
 > You can refer to the official [Sass documentation](https://sass-lang.com/documentation/at-rules/mixin) for more information.
 

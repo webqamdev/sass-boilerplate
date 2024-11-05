@@ -2,7 +2,7 @@
 
 # SCSS Variables
 
-> Located in the [📁 scss/lib/variables/](../scss/lib/variables/) directory.
+> Located in the [📁 scss/lib/variables/](../scss/lib/variables) directory.
 > 
 > You can refer to the official [Sass documentation](https://sass-lang.com/documentation/variables/) for more information.
 
