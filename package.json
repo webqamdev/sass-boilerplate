@@ -12,14 +12,14 @@
   "bugs": {
     "url": "https://github.com/webqamdev/sass-boilerplate/issues"
   },
-  "main": "src/main.ts",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/webqamdev/sass-boilerplate"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "watch": "vite build --watch"
   },
   "devDependencies": {
     "sass-embedded": "^1.79.5",
@@ -29,6 +29,6 @@
     "modern-normalize": "latest"
   },
   "volta": {
-    "node": "20.18.0"
+    "node": "22.11.0"
   }
 }
