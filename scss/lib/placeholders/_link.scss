@@ -62,7 +62,7 @@
   justify-content: var(--link-justify-content, center);
 
   // Font styles
-  text-align: var(--link-text-align, center);
+  text-align: var(--link-text-align, inherit);
   font-size: var(--link-font-size, inherit);
   font-weight: var(--link-font-weight, normal);
   line-height: var(--link-line-height, inherit);
