@@ -88,6 +88,31 @@ Strip the unit from a value.
 }
 ```
 
+## 📄 [_decimal-round.scss](../scss/lib/functions/_decimal-round.scss)
+
+Round values to a specified number of decimal places.
+
+```scss
+@use "scss/lib/functions/decimal-round" as *;
+
+.selector {
+  // Round
+  property: decimal-round(0.333); // => 0
+  property: decimal-round(0.333, 2); // => 0.33
+  property: decimal-round(0.666, 2); // => 0.67
+  
+  // Ceil
+  property: decimal-ceil(0.333); // => 1
+  property: decimal-ceil(0.333, 2); // => 0.34
+  property: decimal-ceil(0.666, 2); // => 0.67
+  
+  // Floor
+  property: decimal-floor(0.333); // => 0
+  property: decimal-floor(0.333, 2); // => 0.33
+  property: decimal-floor(0.666, 2); // => 0.66
+}
+```
+
 ## 📄 [_text-contrast.scss](../scss/lib/functions/_text-contrast.scss)
 
 Calculate the contrast ratio between two colors.

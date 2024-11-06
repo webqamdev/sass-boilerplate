@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `scss/custom-properties/_gui-font.scss`
   - `scss/custom-properties/_gui-icon.scss`
   - `scss/custom-properties/_theme-common.scss`
+- New [Funxtion](scss/lib/functions) file :
+  - `scss/lib/functions/_decimal-round.scss`
 - New [Mixin](scss/lib/mixins) files :
   - `scss/lib/mixins/_container.scss`
   - `scss/lib/mixins/_hardware-acceleration.scss`
@@ -41,14 +43,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `scss/lib/placeholders/_paragraph.scss`
   - `scss/lib/placeholders/_wrapper.scss`
 - New Placeholder **Theme** files :
-  - `scss/lib/placeholders/buttons/_theme-button.scss`
-  - `scss/lib/placeholders/links/_theme-link.scss`
-  - `scss/lib/placeholders/inputs/_checkbox-input.scss`
-  - `scss/lib/placeholders/inputs/_file-input.scss`
-  - `scss/lib/placeholders/inputs/_radio-input.scss`
-  - `scss/lib/placeholders/inputs/_select-input.scss`
-  - `scss/lib/placeholders/inputs/_text-input.scss`
-  - `scss/lib/placeholders/inputs/_textarea-input.scss`
+  - [Buttons](scss/lib/placeholders/buttons)
+    - `scss/lib/placeholders/buttons/_theme-button.scss`
+  - [Links](scss/lib/placeholders/links)
+    - `scss/lib/placeholders/links/_theme-link.scss`
+  - [Inputs](scss/lib/placeholders/inputs)
+    - `scss/lib/placeholders/inputs/_checkbox-input.scss`
+    - `scss/lib/placeholders/inputs/_file-input.scss`
+    - `scss/lib/placeholders/inputs/_radio-input.scss`
+    - `scss/lib/placeholders/inputs/_select-input.scss`
+    - `scss/lib/placeholders/inputs/_text-input.scss`
+    - `scss/lib/placeholders/inputs/_textarea-input.scss`
 
 ### Removed
 
