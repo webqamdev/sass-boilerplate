@@ -30,6 +30,8 @@
 %text-input {
   @extend %input;
 
+  --interactive-cursor: text;
+
   // --------------------------------------------------
   // Pseudo selector styles
   // --------------------------------------------------
