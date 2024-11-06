@@ -1,0 +1,13 @@
+// # WP Group Block Styles
+
+// Please update, add or remove the styles below to match the project needs.
+
+html {
+  .wp-block-group {
+    &.is-style-wrapper {
+      box-sizing: border-box;
+      padding-left: var(--wrapper-padding-left, var(--wrapper-padding-inline, 0px));
+      padding-right: var(--wrapper-padding-right, var(--wrapper-padding-inline, 0px));
+    }
+  }
+}

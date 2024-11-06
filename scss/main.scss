@@ -26,6 +26,7 @@
 
 // Reset styles
 @use "resets/base-reset";
+@use "resets/wordpress-reset";
 @use "resets/text-reset";
 @use "resets/media-reset";
 @use "resets/interactive-reset";
@@ -40,6 +41,13 @@
 // @use "components/component-name";
 @use "components/icon";
 @use "components/sr-only";
+
+// ### WP Blocks
+@use "components/wp-blocks/wp-block-button";
+@use "components/wp-blocks/wp-block-heading";
+@use "components/wp-blocks/wp-block-group";
+@use "components/wp-blocks/wp-block-list";
+@use "components/wp-blocks/wp-block-paragraph";
 
 // ## Print
 @use "print";

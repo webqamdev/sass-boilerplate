@@ -68,6 +68,33 @@
     --button-border-color-active: #{color.$blue};
   }
 
+  &--primary-outline {
+    // Default visual
+    --button-color: #{color.$dark-blue};
+    --button-background-color: #{color.$white};
+    --button-border-color: #{color.$dark-blue};
+
+    // Hovered visual
+    --button-color-hover: #{color.$white};
+    --button-background-color-hover: #{color.$blue};
+    --button-border-color-hover: #{color.$blue};
+
+    // Focused visual
+    --button-color-focus-visible: #{color.$blue};
+    --button-background-color-focus-visible: #{color.$white};
+    --button-border-color-focus-visible: #{color.$white};
+
+    // Focused and hovered visual
+    --button-color-hover-focus-visible: #{color.$dark-blue};
+    --button-background-color-hover-focus-visible: #{color.$light-blue};
+    --button-border-color-hover-focus-visible: #{color.$white};
+
+    // Active visual
+    --button-color-active: #{color.$blue};
+    --button-background-color-active: #{color.$white};
+    --button-border-color-active: #{color.$blue};
+  }
+
   // --------------------------------------------------
   // Icons
   // --------------------------------------------------

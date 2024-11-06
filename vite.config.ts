@@ -9,7 +9,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 // https://rollupjs.org/guide/en/#input
-                main: 'index.js',
+                main: 'scss/main.scss',
+                admin: 'scss/admin.scss',
+                editor: 'scss/editor.scss',
             },
             output: {
                 entryFileNames: '[name].js',

@@ -1,0 +1,59 @@
+// # Wordpress style reset
+
+@use "../lib/variables/z-index";
+
+// This file should contain all basic wordpress element reset styles.
+
+// Please update, add or remove the styles below to match the project needs.
+
+html {
+  @supports selector(:has(body.admin-bar)) {
+    &:has(body.admin-bar) {
+      // Duplicate the admin bar height in the body selector
+      --wordpress-admin-bar-height: var(--wp-admin--admin-bar--height, 0px);
+    }
+  }
+
+  &[lang] {
+    // Avoid wordpress putting a margin for the admin-bar.
+    // It can impact fixed elements in the page and overlap them with the admin bar.
+    margin: 0 !important;
+  }
+}
+
+body {
+  // Spacing variables
+  --wp--preset--spacing--10: var(--spacing-10);
+  --wp--preset--spacing--20: var(--spacing-20);
+  --wp--preset--spacing--30: var(--spacing-30);
+  --wp--preset--spacing--40: var(--spacing-40);
+  --wp--preset--spacing--50: var(--spacing-50);
+  --wp--preset--spacing--60: var(--spacing-60);
+  --wp--preset--spacing--70: var(--spacing-70);
+  --wp--preset--spacing--80: var(--spacing-80);
+
+  // Font variables
+  --wp--preset--font-size--heading-1: var(--heading-1-font-size);
+  --wp--preset--font-size--heading-2: var(--heading-2-font-size);
+  --wp--preset--font-size--heading-3: var(--heading-3-font-size);
+  --wp--preset--font-size--heading-4: var(--heading-4-font-size);
+  --wp--preset--font-size--heading-5: var(--heading-5-font-size);
+  --wp--preset--font-size--heading-6: var(--heading-6-font-size);
+  --wp--preset--font-size--paragraph: var(--paragraph-font-size);
+
+  &.admin-bar {
+    --wordpress-admin-bar-height: var(--wp-admin--admin-bar--height, 0px);
+
+    // Set the padding-top to the height of the admin bar
+    padding-top: var(--wordpress-admin-bar-height);
+  }
+
+  // Override the admin bar to be fixed on top of the page
+  #wpadminbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: z-index.$wordpress-admin-bar;
+  }
+}

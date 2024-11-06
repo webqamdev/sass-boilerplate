@@ -1,0 +1,62 @@
+// # WP Heading Block Styles
+
+@use "../../lib/placeholders/heading" as *;
+@use "../../lib/placeholders/paragraph" as *;
+
+// Please update, add or remove the styles below to match the project needs.
+
+html {
+  .wp-block-heading {
+    &.has-heading-1-font-size {
+      @extend %heading--1;
+    }
+
+    &.has-heading-2-font-size {
+      @extend %heading--2;
+    }
+
+    &.has-heading-3-font-size {
+      @extend %heading--3;
+    }
+
+    &.has-heading-4-font-size {
+      @extend %heading--4;
+    }
+
+    &.has-heading-5-font-size {
+      @extend %heading--5;
+    }
+
+    &.has-heading-6-font-size {
+      @extend %heading--6;
+    }
+
+    &.has-paragraph-font-size {
+      @extend %paragraph;
+    }
+  }
+
+  h1.wp-block-heading {
+    @extend %heading--1;
+  }
+
+  h2.wp-block-heading {
+    @extend %heading--2;
+  }
+
+  h3.wp-block-heading {
+    @extend %heading--3;
+  }
+
+  h4.wp-block-heading {
+    @extend %heading--4;
+  }
+
+  h5.wp-block-heading {
+    @extend %heading--5;
+  }
+
+  h6.wp-block-heading {
+    @extend %heading--6;
+  }
+}

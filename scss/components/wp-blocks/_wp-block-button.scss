@@ -1,0 +1,29 @@
+// # WP Button Block Styles
+
+@use "../../lib/placeholders/button" as *;
+@use "../../lib/placeholders/buttons/theme-button" as *;
+
+// Please update, add or remove the styles below to match the project needs.
+
+html {
+  $this: ".wp-block-button";
+
+  .wp-block-button {
+    > #{$this}__link {
+      @extend %button;
+      @extend %theme-button;
+    }
+
+    &.is-style-fill {
+      & > #{$this}__link {
+        @extend %theme-button--primary;
+      }
+    }
+
+    &.is-style-outline {
+      & > #{$this}__link {
+        @extend %theme-button--primary-outline;
+      }
+    }
+  }
+}
