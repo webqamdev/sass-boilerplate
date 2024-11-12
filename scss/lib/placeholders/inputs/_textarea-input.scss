@@ -30,6 +30,8 @@
 %textarea-input {
   @extend %input;
 
+  --interactive-cursor: text;
+
   // Specific textarea styles reset
   resize: var(--input-resize, vertical);
 
