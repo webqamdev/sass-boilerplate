@@ -1,0 +1,63 @@
+// # Text input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="text-input-group">
+//   <span>My label</span>
+//   <input type="text" />
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/text-input" as *;
+//
+// .text-input-group {
+//   @extend %text-input-group;
+//
+//   & > span {
+//     @extend %text-input-label;
+//   }
+//
+//   & > text {
+//     @extend %text-input;
+//   }
+// }
+// ```
+
+%text-input {
+  @extend %input;
+
+  --interactive-cursor: text;
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%text-input-group {
+  @extend %input-group;
+}
+
+%text-input-label {
+  @extend %input-group-label;
+}

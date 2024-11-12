@@ -1,0 +1,21 @@
+// # Text gradient mixin
+
+// Used to create linear gradient for text element only.
+// The mixin can take multiple arguments like the function linear-gradient().
+// Usage example :
+// ```scss
+// @use "mixins/text-gradient" as *;
+//
+// .text-gradient-element {
+//   @include text-gradient(225deg, #ff5ea7 36.04%, #010fcb 88.83%, #ff6530 220.3%);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin text-gradient($gradient...) {
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient($gradient);
+}

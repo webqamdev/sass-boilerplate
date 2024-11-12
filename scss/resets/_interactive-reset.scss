@@ -1,0 +1,23 @@
+// # Interactive style reset
+
+@use "../lib/placeholders/button" as *;
+@use "../lib/placeholders/link" as *;
+
+// This file should contain all interactive related element reset styles.
+
+// Please update, add or remove the styles below to match the project needs.
+
+a {
+  @extend %link;
+}
+
+button,
+summary {
+  @extend %button;
+}
+
+summary {
+  &::-webkit-details-marker {
+    display: none;
+  }
+}

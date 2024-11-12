@@ -1,0 +1,75 @@
+// # Transition variables
+
+// Set all generic or custom transition variables type here.
+// Usage example :
+// ````scss
+// @use "variables/transition";
+//
+// button {
+//   transition-property: color, transform;
+//   transition-duration: transition.$duration-short;
+//   transition-delay: transition.$delay-medium;
+//   transition-timing-function: transition.$timing-function-default;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// Some tips:
+// - The smaller the element is, the shorter the duration should be.
+//   This way, buttons and simple elements seems more fluid and reactive.
+//   For bigger elements like cards or forms, they should reflects a greater interaction meaningful for the user.
+// - The more important interaction, the longer the duration should be.
+//   The form submit, loading a page should be accompanied by slower animation.
+// - Before production, you have to identify with the designers the user journey, the different
+//   interactive elements, etc.
+// - Keep values as milliseconds (ms) and not seconds (s) to match Javascript timing unit.
+// - Make the animation look cool. If some animation seems good but it does not respect the previous comments,
+//   then keep it.
+
+// ## Transition durations
+// Should be prefixed by `$duration-`
+// Like so, the font is called as `transition-duration: transition.$duration-{name};`
+$duration-short: 150ms;
+$duration-medium: 300ms;
+$duration-long: 500ms;
+$duration-very-long: 750ms;
+
+// ## Transition delays
+// Should be prefixed by `$delay-`
+// Like so, the font is called as `transition-delay: transition.$delay-{name};`
+
+$delay-short: 150ms;
+$delay-medium: 300ms;
+$delay-long: 500ms;
+$delay-very-long: 750ms;
+
+// ## Transition timing functions
+// Should be prefixed by `$timing-function-`
+// Like so, the font is called as `transition-timing-function: transition.$timing-function-{name};`
+$timing-function-ease: ease;
+$timing-function-ease-in: ease-in;
+$timing-function-ease-out: ease-out;
+$timing-function-ease-in-out: ease-in-out;
+$timing-function-linear: linear;
+$timing-function-step-start: step-start;
+$timing-function-step-end: step-end;
+
+// ## Default variables
+$delay-default: 0ms;
+$duration-default: $duration-short;
+$timing-function-default: $timing-function-ease-in-out;
+
+// The variable $default should be used like this :
+// ````scss
+// @use "variables/transition";
+//
+// .single-transition-element {
+//   transition: color transition.$default;
+// }
+//
+// .multiple-transition-element {
+//   transition: transform transition.$default, background-color transition.$default;
+// }
+// ```
+$default: $duration-default $timing-function-default $delay-default;

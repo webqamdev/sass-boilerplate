@@ -1,0 +1,76 @@
+// # Select input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="select-input-group">
+//   <span>My label</span>
+//   <select></select>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/select-input" as *;
+//
+// .select-input-group {
+//   @extend %select-input-group;
+//
+//   & > span {
+//     @extend %select-input-label;
+//   }
+//
+//   & > select {
+//     @extend %select-input;
+//   }
+// }
+// ```
+
+%select-input {
+  @extend %input;
+
+  // Specific select styles reset
+  appearance: var(--input-appearance, auto);
+
+  // --------------------------------------------------
+  // Specific child node styles
+  // --------------------------------------------------
+
+  option {
+    //
+  }
+
+  optgroup {
+    //
+  }
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%select-input-group {
+  @extend %input-group;
+}
+
+%select-input-label {
+  @extend %input-group-label;
+}

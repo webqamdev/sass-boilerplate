@@ -1,0 +1,41 @@
+// # Hardware acceleration mixin
+
+// Used to have a great performance boost when transitioning or animating elements.
+// Usage example :
+// ```scss
+// @use "mixins/hardware-acceleration" as *;
+//
+// .animated-element {
+//   @include hardware-acceleration();
+// }
+//
+// .animated-element-with-custom-transform {
+//   @include hardware-acceleration($transform: null);
+//
+//   transform: translateZ(0) translateX(10px) translateY(-50%);
+//
+//   &:hover {
+//     transform: translateZ(0) translateX(50px) translateY(-60%);
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin hardware-acceleration(
+  $transform: translateZ(0) translate3d(0, 0, 0),
+  $perspective: 1000,
+  $backface-visibility: hidden
+) {
+  @if $transform {
+    transform: $transform;
+  }
+
+  @if $perspective {
+    perspective: $perspective;
+  }
+
+  @if $backface-visibility {
+    backface-visibility: $backface-visibility;
+  }
+}

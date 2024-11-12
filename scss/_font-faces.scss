@@ -1,0 +1,24 @@
+// # Font-faces
+
+@use "lib/variables/font";
+
+// This file only contains font faces and is included once at the beginning
+// of the main entry file.
+//
+// ```
+// @font-face {
+//   font-family: font.$name-example;
+//   src: local(font.$name-example),
+//     url("../fonts/example-font.woff2") format("woff2");
+//   font-weight: map-get(font.$weights, medium);
+//   font-style: normal;
+//   font-display: swap;
+//   unicode-range: $font-face-unicode-range;
+// }
+// ```
+
+$font-face-unicode-range: "U+000-5FF"; // Latin glyphs
+
+// Add custom fonts below :
+
+// ...

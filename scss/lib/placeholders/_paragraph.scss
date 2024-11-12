@@ -1,0 +1,26 @@
+// # Paragraph config placeholder
+
+@use "../../lib/variables/font";
+
+// Usage example :
+// ```scss
+// @use "placeholders/paragraph" as *;
+//
+// p {
+//   @extends %paragraph;
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%paragraph {
+  line-height: var(--paragraph-line-height, inherit);
+  font-weight: var(--paragraph-font-weight, inherit);
+  font-size: var(--paragraph-font-size, inherit);
+  font-family: var(--paragraph-font-family, inherit), font.$family-system;
+  letter-spacing: var(--paragraph-letter-spacing, 0);
+  text-transform: var(--paragraph-text-transform, none);
+  text-wrap: var(--paragraph-text-wrap, pretty);
+}

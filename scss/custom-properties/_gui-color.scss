@@ -1,0 +1,26 @@
+// # GUI color variables setup
+
+@use "../lib/variables/color";
+
+// Usage example :
+// ```css
+// .selector {
+//   color: var(--body-color);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+:root {
+  // <html>
+  --html-color: #{color.$black};
+  --html-background-color: #{color.$white};
+
+  // <body>
+  --body-color: var(--html-color);
+  --body-background-color: var(--html-background-color);
+
+  // ::selection
+  --selection-color: #{color.$white};
+  --selection-background-color: #{color.$blue};
+}

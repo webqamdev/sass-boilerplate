@@ -1,0 +1,128 @@
+// # Radio input placeholders
+
+@use "../input-option" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="radio-input-group">
+//   <input type="radio" />
+//   <span>My label</span>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/radio-input" as *;
+//
+// .radio-input-group {
+//   @extend %radio-input-group;
+//
+//   &:hover {
+//     & > span {
+//       &::before {
+//         @extend %radio-input-box--hover;
+//       }
+//
+//       &::after {
+//         @extend %radio-input-checkmark--hover;
+//       }
+//     }
+//   }
+//
+//   & > input {
+//     @extend %radio-input;
+//
+//     &:checked {
+//       & + span {
+//         &::before {
+//           @extend %radio-input-box--checked;
+//         }
+//
+//         &::after {
+//           @extend %radio-input-checkmark--checked;
+//         }
+//       }
+//     }
+//
+//     &:focus-visible {
+//       & + span {
+//         &::before {
+//           @extend %radio-input-box--focus-visible;
+//         }
+//
+//         &::after {
+//           @extend %radio-input-checkmark--focus-visible;
+//         }
+//       }
+//     }
+//   }
+//
+//   & > span {
+//     @extend %radio-input-label;
+//
+//     &::before {
+//       @extend %radio-input-box;
+//     }
+//
+//     &::after {
+//       @extend %radio-input-checkmark;
+//     }
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%radio-input {
+  @extend %input-option;
+}
+
+%radio-input-group {
+  @extend %input-option-group;
+
+  --input-box-border-radius: 50%;
+  --input-checkmark-border-radius: 50%;
+}
+
+%radio-input-label {
+  @extend %input-option-label;
+}
+
+%radio-input-box {
+  @extend %input-option-box;
+
+  &--checked {
+    @extend %input-option-box--checked;
+  }
+
+  &--hover {
+    @extend %input-option-box--hover;
+  }
+
+  &--focus-visible {
+    @extend %input-option-box--focus-visible;
+  }
+
+  &--disabled {
+    @extend %input-option-box--disabled;
+  }
+}
+
+%radio-input-checkmark {
+  @extend %input-option-checkmark;
+
+  &--checked {
+    @extend %input-option-checkmark--checked;
+  }
+
+  &--hover {
+    @extend %input-option-checkmark--hover;
+  }
+
+  &--focus-visible {
+    @extend %input-option-checkmark--focus-visible;
+  }
+
+  &--disabled {
+    @extend %input-option-checkmark--disabled;
+  }
+}

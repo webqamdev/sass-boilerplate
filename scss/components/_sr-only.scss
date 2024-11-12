@@ -1,0 +1,22 @@
+// # SR Only styles (for Screen Reader)
+
+@use "../lib/mixins/sr-only" as *;
+
+// Usage example :
+// ```html
+// <label class="sr-only" for="example-input">Hidden but required label</label>
+// <input type="text" id="example-input" name="example-input" />
+//
+// <!-- Skip link reference : https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1 -->
+// <a class="sr-only--focusable" href=#main-content">Skip to main content</a>
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+.sr-only {
+  @include sr-only;
+
+  &--focusable {
+    @include sr-only(true);
+  }
+}

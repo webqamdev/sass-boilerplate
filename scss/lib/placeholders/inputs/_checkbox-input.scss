@@ -1,0 +1,125 @@
+// # Checkbox input placeholders
+
+@use "../input-option" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="checkbox-input-group">
+//   <input type="checkbox" />
+//   <span>My label</span>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/checkbox-input" as *;
+//
+// .checkbox-input-group {
+//   @extend %checkbox-input-group;
+//
+//   &:hover {
+//     & > span {
+//       &::before {
+//         @extend %checkbox-input-box--hover;
+//       }
+//
+//       &::after {
+//         @extend %checkbox-input-checkmark--hover;
+//       }
+//     }
+//   }
+//
+//   & > input {
+//     @extend %checkbox-input;
+//
+//     &:checked {
+//       & + span {
+//         &::before {
+//           @extend %checkbox-input-box--checked;
+//         }
+//
+//         &::after {
+//           @extend %checkbox-input-checkmark--checked;
+//         }
+//       }
+//     }
+//
+//     &:focus-visible {
+//       & + span {
+//         &::before {
+//           @extend %checkbox-input-box--focus-visible;
+//         }
+//
+//         &::after {
+//           @extend %checkbox-input-checkmark--focus-visible;
+//         }
+//       }
+//     }
+//   }
+//
+//   & > span {
+//     @extend %checkbox-input-label;
+//
+//     &::before {
+//       @extend %checkbox-input-box;
+//     }
+//
+//     &::after {
+//       @extend %checkbox-input-checkmark;
+//     }
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%checkbox-input {
+  @extend %input-option;
+}
+
+%checkbox-input-group {
+  @extend %input-option-group;
+}
+
+%checkbox-input-label {
+  @extend %input-option-label;
+}
+
+%checkbox-input-box {
+  @extend %input-option-box;
+
+  &--checked {
+    @extend %input-option-box--checked;
+  }
+
+  &--hover {
+    @extend %input-option-box--hover;
+  }
+
+  &--focus-visible {
+    @extend %input-option-box--focus-visible;
+  }
+
+  &--disabled {
+    @extend %input-option-box--disabled;
+  }
+}
+
+%checkbox-input-checkmark {
+  @extend %input-option-checkmark;
+
+  &--checked {
+    @extend %input-option-checkmark--checked;
+  }
+
+  &--hover {
+    @extend %input-option-checkmark--hover;
+  }
+
+  &--focus-visible {
+    @extend %input-option-checkmark--focus-visible;
+  }
+
+  &--disabled {
+    @extend %input-option-checkmark--disabled;
+  }
+}

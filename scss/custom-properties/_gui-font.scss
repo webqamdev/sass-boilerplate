@@ -1,0 +1,113 @@
+// # GUI font variables setup
+
+@use "../lib/functions/px-to-rem" as *;
+@use "../lib/mixins/breakpoint" as *;
+@use "../lib/variables/breakpoint";
+@use "../lib/variables/font";
+
+// Usage example :
+// ```css
+// .selector {
+//   font-size: var(--paragraph-font-size);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+:root {
+  // <html>
+  --html-font-size: #{font.$base-size};
+  --html-font-family: #{font.$family-system};
+  --html-font-weight: #{font.$weight-regular};
+  --html-line-height: #{font.$line-height-default};
+  --html-letter-spacing: 0;
+  --html-text-transform: none;
+
+  // <body>
+  --body-font-size: var(--html-font-size);
+  --body-font-family: var(--html-font-family);
+  --body-font-weight: var(--html-font-weight);
+  --body-line-height: var(--html-line-height);
+  --body-letter-spacing: var(--html-letter-spacing);
+  --body-text-transform: var(--html-text-transform);
+
+  // %paragraph
+  --paragraph-line-height: 1.5;
+  --paragraph-font-weight: #{font.$weight-regular};
+  --paragraph-font-size: inherit;
+  --paragraph-font-family: inherit;
+  --paragraph-letter-spacing: 0;
+  --paragraph-text-transform: none;
+  --paragraph-text-wrap: pretty;
+
+  // %heading
+  // %heading--6
+  --heading-6-line-height: 1.5;
+  --heading-6-font-weight: #{font.$weight-bold};
+  --heading-6-font-size: #{px-to-rem(16px)};
+  --heading-6-font-family: inherit;
+  --heading-6-letter-spacing: 0;
+  --heading-6-text-transform: none;
+  --heading-6-text-wrap: pretty;
+
+  // %heading--5
+  --heading-5-line-height: 1.5;
+  --heading-5-font-weight: #{font.$weight-bold};
+  --heading-5-font-size: #{px-to-rem(18px)};
+  --heading-5-font-family: inherit;
+  --heading-5-letter-spacing: 0;
+  --heading-5-text-transform: none;
+  --heading-5-text-wrap: pretty;
+
+  // %heading--4
+  --heading-4-line-height: 1.5;
+  --heading-4-font-weight: #{font.$weight-bold};
+  --heading-4-font-size: #{px-to-rem(20px)};
+  --heading-4-font-family: inherit;
+  --heading-4-letter-spacing: 0;
+  --heading-4-text-transform: none;
+  --heading-4-text-wrap: pretty;
+
+  // %heading--3
+  --heading-3-line-height: 1.5;
+  --heading-3-font-weight: #{font.$weight-bold};
+  --heading-3-font-size: #{px-to-rem(22px)};
+  --heading-3-font-family: inherit;
+  --heading-3-letter-spacing: 0;
+  --heading-3-text-transform: none;
+  --heading-3-text-wrap: pretty;
+
+  // %heading--2
+  --heading-2-line-height: 1.5;
+  --heading-2-font-weight: #{font.$weight-bold};
+  --heading-2-font-size: #{px-to-rem(24px)};
+  --heading-2-font-family: inherit;
+  --heading-2-letter-spacing: 0;
+  --heading-2-text-transform: none;
+  --heading-2-text-wrap: pretty;
+
+  // %heading--1
+  --heading-1-line-height: 1.5;
+  --heading-1-font-weight: #{font.$weight-bold};
+  --heading-1-font-size: #{px-to-rem(26px)};
+  --heading-1-font-family: inherit;
+  --heading-1-letter-spacing: 0;
+  --heading-1-text-transform: none;
+  --heading-1-text-wrap: pretty;
+
+  // # --------------------------------------------------------------------------------------- #
+  // # TABLET VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$tablet) {
+    // ...
+  }
+
+  // # --------------------------------------------------------------------------------------- #
+  // # LAPTOP VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$laptop) {
+    // ...
+  }
+}

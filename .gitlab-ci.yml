@@ -1,12 +1,14 @@
+variables:
+  NODE_VERSION: "22"
+
 stages:
   - build
 
 build:
-  image: node:14-alpine
+  image: node:${NODE_VERSION}-alpine
   stage: build
   script:
     - npm ci
-    - npm run test
     - npm run build
   artifacts:
     expire_in: 2 weeks

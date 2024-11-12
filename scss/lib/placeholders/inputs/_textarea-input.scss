@@ -1,0 +1,66 @@
+// # Textarea input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="textarea-input-group">
+//   <span>My label</span>
+//   <textarea></textarea>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/textarea-input" as *;
+//
+// .textarea-input-group {
+//   @extend %textarea-input-group;
+//
+//   & > span {
+//     @extend %textarea-input-label;
+//   }
+//
+//   & > textarea {
+//     @extend %textarea-input;
+//   }
+// }
+// ```
+
+%textarea-input {
+  @extend %input;
+
+  --interactive-cursor: text;
+
+  // Specific textarea styles reset
+  resize: var(--input-resize, vertical);
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%textarea-input-group {
+  @extend %input-group;
+}
+
+%textarea-input-label {
+  @extend %input-group-label;
+}

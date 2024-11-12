@@ -1,0 +1,59 @@
+// # Font variables
+
+// Set all generic or custom font type variables here.
+// Usage example :
+// ````scss
+// @use "variables/font";
+//
+// .text {
+//   font-size: font.$size-s;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// ## Font names
+// Should be prefixed by `$name-`
+// Like so, the font is called as `font-family: font.$name-{name};`
+// $name-example: "Example";
+$name-system: system-ui;
+
+// ## Font families
+// Should be prefixed by `$family-`
+// Like so, the font is called as `font-family: font.$family-{name};`
+// $family-example: $name-example, Arial, sans-serif;
+$family-system: $name-system, sans-serif;
+$family-icons: sans-serif; // Replace with the font-family of your icon font
+
+// Example of custom font-family
+// $family-example: $name-example, Arial, sans-serif;
+
+// Used for functions font-size based and html root element
+// /!\ Must stay as px, it is not a relative font-size and it is used as reference in functions
+$base-size: 16px;
+
+// Used for base html element in case the user (like many Windows Laptop users) has an OS default zoom.
+// If you don't want to support this feature, set the value to null
+$size-device-pixel-ratio: $base-size * 1; // or "$base-size * 0.75;" to invert 125% zoom
+
+// ## Font weights
+// Should be named as in the mockups (Figma or Adobe XD for example)
+// Should be prefixed by `$weight-`
+// Like so, the font is called as `font-weight: font.$weight-{name};`
+$weight-thin: 100;
+$weight-extra-light: 200;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-book: 400;
+$weight-medium: 500;
+$weight-middle: 500;
+$weight-semi-bold: 600;
+$weight-demi: 600;
+$weight-bold: 700;
+$weight-heavy: 700;
+$weight-extra-bold: 800;
+$weight-black: 900;
+
+// ## Font weights
+$line-height-icon: 1;
+$line-height-default: 1.5;

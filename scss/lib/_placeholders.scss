@@ -1,0 +1,33 @@
+// # Placeholders
+
+// Import all placeholder files.
+// Update this list when a new file is created or deleted.
+
+// @forward "placeholders/your-placeholder";
+
+@forward "placeholders/interactive";
+@forward "placeholders/animated";
+@forward "placeholders/button";
+@forward "placeholders/heading";
+@forward "placeholders/icon";
+@forward "placeholders/input";
+@forward "placeholders/input-group";
+@forward "placeholders/input-option";
+@forward "placeholders/link";
+@forward "placeholders/paragraph";
+@forward "placeholders/wrapper";
+@forward "placeholders/grid-wrapper";
+
+// ## Button placeholders
+@forward "placeholders/buttons/theme-button";
+
+// ## Link placeholders
+@forward "placeholders/links/theme-link";
+
+// ## Input placeholders
+@forward "placeholders/inputs/text-input";
+@forward "placeholders/inputs/textarea-input";
+@forward "placeholders/inputs/select-input";
+@forward "placeholders/inputs/checkbox-input";
+@forward "placeholders/inputs/radio-input";
+@forward "placeholders/inputs/file-input";

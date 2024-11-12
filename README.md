@@ -1,110 +1,42 @@
-# Sass boilerplate
+# Webqam SCSS Boilerplate
 
-> An opinionated Sass boilerplate.
+> For better understanding of the folder and file structure, use cases, rules and installation process of the boilerplate, you should the [documentation](docs/getting-started.md).
 
-[![build status](https://gitlab.com/bgondy/sass-boilerplate/badges/master/pipeline.svg)](https://gitlab.com/bgondy/sass-boilerplate/pipelines)
+- [Getting started](docs/getting-started.md)
+- [Development conventions](docs/development-conventions.md)
+- [Directory structure](docs/directory-structure.md)
+  - [Custom properties](docs/custom-properties.md)
+  - [Functions](docs/functions.md)
+  - [Placeholders](docs/placeholders.md)
+  - [Mixins](docs/mixins.md)
+  - [Variables](docs/variables.md)
 
-## Usage
-
-Using [Normalize.css](https://necolas.github.io/normalize.css/) is strongly recommended. Normalize.css must be included
-before your own styles.
-
-This boilerplate uses [Breakpoint Sass](http://breakpoint-sass.com/) for Media queries.
-
-### Vue projects (using Vue CLI)
-
-You can use the dedicated [Vue CLI 3 plugin](https://github.com/webqamdev/vue-cli-plugin-sass-boilerplate) to
-automatically install this boilerplate and configure your project.
-
-### Manual install
-
-1. Install required dependencies
-   ```sh
-   npm install normalize.css breakpoint-sass --save-dev
-   ```
-2. Copy the [`src/scss`](src/scss) directory in your project.
-3. Import Normalize.css to your bundle (optional)
-4. Configure your bundler to import [`_lib.scss`](src/scss/lib/_lib.scss) in every file (optional)
-
-   For Webpack:
-
-   ```js
-   // webpack.config.js
-   module.exports = {
-     // ...
-     resolve: {
-       alias: {
-         '@': path.resolve(__dirname, 'src'),
-       },
-     },
-     module: {
-       rules: [
-         {
-           test: /\.scss$/,
-           use: [
-             // ...
-             {
-               loader: 'sass-loader',
-               options: {
-                 // Enabling sourcemaps is strongly advised
-                 sourceMap: true,
-                 // Depending on the version of sass-loader, the option property may vary
-                 // (data <8.0.0, prependData >8.0.0, additionalData >9.0.0)
-                 // See sass-loader's documentation and CHANGELOG for details
-                 // (https://github.com/webpack-contrib/sass-loader)
-                 // Update path to fit your needs
-                 additionalData: '@use "@/scss/_lib.scss";',
-               },
-             },
-           ],
-         },
-       ],
-     },
-   };
-   ```
-
-5. Include the main entry point to your HTML ([`src/scss/main.scss`](src/scss/main.scss))
-
-You can take a look at [`src/main.js`](src/main.js) and [`webpack.config.js`](webpack.config.js) for a light implementation example.
-
-## Documentation
-
-In order to keep documentation up to date and to have it to hand once in your project, most of the documentation is
-directly written in the code (don't worry, Sass comments are skipped during compilation).
-
-Once installation is complete, feel free to browse files and toggle commented sections or tweak code to fit your needs,
-especially in the following files:
-
-1. [`scss/lib/_lib.scss`](src/scss/lib/_lib.scss): please keep in mind this file (and its dependencies) is loaded in
-   every Scss file/Vue Component. Therefore, it **MUST NOT** generate any CSS once compiled. Doing so would lead to a
-   massive code duplication.
-2. [`scss/lib/variables/`](src/scss/lib/variables)
-3. [`scss/main.scss`](src/scss/main.scss)
-4. [`scss/_base.scss`](src/scss/_base.scss)
+> You must install the [modern-normalize](https://www.npmjs.com/package/modern-normalize) npm package in order to have full style resets. Please read the dedicated section in the [Dependencies](docs/getting-started.md#dependencies) documentation.
+>
+> ```shell
+> npm install modern-normalize
+> ```
 
 ## Development
 
-Clone the project locally and install node dependencies:
+### Installation
 
-```bash
-npm install
+```shell
+# 1. Clone the repo
+
+# 2. Install correct node version with nvm (no need for volta users)
+nvm use
+
+# 3. install node dependencies
+npm ci
+
+# 4. Build the project with ViteJs
+npm run build
+# Or with the --watch flag
+npm run watch
 ```
 
-Available commands:
+### Available commands
 
-- `npm run build` Build the CSS using Webpack to ensure there is no error
-- `npm run watch` Same as `build` but with change detection
-- `npm run prettier:check` Check files are properly formatted with Prettier
-- `npm run prettier:fix` Reformat files with Prettier
-- `npm run stylelint` Lint SCSS files
-
-Please note that [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/) run automatically on
-pre-commit. Please check [`package.json`](package.json) for implementation details.
-
-## Contributing
-
-Please see [contributing guide](CONTRIBUTING.md).
-
-## License
-
-[MIT](LICENSE)
+- `npm run dev` Watch the project and start a local server
+- `npm run build` Build the project for production

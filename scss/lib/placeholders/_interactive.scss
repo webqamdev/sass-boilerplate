@@ -1,0 +1,69 @@
+// # Interactive config placeholders
+
+@use "../functions/px-to-rem" as *;
+@use "../variables/color";
+
+// Should be used on every element which the user can interact with :
+// button, a, input, select, textarea, etc.
+// For inputs, maybe you have to override the cursor property.
+
+// :focus           -> When the element itself is pointed AND focused with the keyboard navigation
+// :focus-visible   -> When the element is focused ONLY with the keyboard navigation
+// :focus-within    -> When a child element is focused
+
+// The idea here is to have a consistent and a more interactive/dynamic UI/UX.
+// Usage example :
+// ```scss
+// @use "placeholders/interactive" as *;
+//
+// a {
+//   @extends %interactive;
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%interactive {
+  -webkit-tap-highlight-color: var(
+    --interactive-tap-highlight-color,
+    transparent
+  );
+  cursor: var(--interactive-cursor, pointer);
+  outline: var(--interactive-outline-color, #{color.$blue})
+    var(--interactive-outline-style, solid)
+    var(--interactive-outline-width, 0px);
+  outline-offset: var(--interactive-outline-offset, 0px);
+
+  &:focus-within {
+    --interactive-outline-width: var(
+      --interactive-outline-width-focus-within,
+      auto
+    );
+  }
+
+  &:focus-visible {
+    --interactive-outline-width: var(
+      --interactive-outline-width-focus-visible,
+      #{px-to-rem(3px)}
+    );
+  }
+
+  &:focus:not(:focus-visible) {
+    --interactive-outline-width: var(--interactive-outline-width-focus, 0px);
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
+  }
+}

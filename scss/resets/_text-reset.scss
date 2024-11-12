@@ -1,0 +1,61 @@
+// # Text style reset
+
+@use "../lib/placeholders/paragraph" as *;
+@use "../lib/placeholders/heading" as *;
+
+// This file should contain all textual content related element reset styles.
+
+// Please update, add or remove the styles below to match the project needs.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+p,
+pre,
+table,
+fieldset {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+hgroup,
+ul,
+ol,
+li,
+p,
+figure,
+pre,
+table,
+fieldset {
+  @extend %paragraph;
+}
+
+h1 {
+  @extend %heading--1;
+}
+
+h2 {
+  @extend %heading--2;
+}
+
+h3 {
+  @extend %heading--3;
+}
+
+h4 {
+  @extend %heading--4;
+}
+
+h5 {
+  @extend %heading--5;
+}
+
+h6 {
+  @extend %heading--6;
+}

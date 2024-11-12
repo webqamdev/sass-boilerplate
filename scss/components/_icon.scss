@@ -1,0 +1,44 @@
+// # Icon component
+
+@use "../lib/placeholders/icon" as *;
+
+// Usage example :
+// ```html
+// <!-- A link prefixed with an icon -->
+// <a href="http://example.com" class="icon icon--example">Go to example.com</a>
+//
+// <!-- A standalone icon -->
+// <span class="icon icon--example" aria-hidden="true"></span>
+// ```
+
+// ## Replacement RegEx when importing from regular CSS (works with PhpStorm):
+//
+// - Search :
+// `\.icon-(.*):{1,2}before\s*\{\s*content:\s*"\\(.*)";\s*\}`
+// - Replace :
+// `&--$1::before { @extend %icon--$1; }`
+
+// Pro tip: Please keep unused icon classes commented to keep the
+// CSS output as light as possible.
+
+// Please update, add or remove the styles below to match the project needs.
+
+.icon {
+  &::before {
+    @extend %icon;
+  }
+
+  // &--example::before {
+  //   @extend %icon--example;
+  // }
+}
+
+.icon-after {
+  &::after {
+    @extend %icon;
+  }
+
+  // &--example::after {
+  //   @extend %icon--example;
+  // }
+}

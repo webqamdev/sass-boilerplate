@@ -1,0 +1,31 @@
+// # Media style reset
+
+// This file should contain all media related element reset styles.
+
+// Please update, add or remove the styles below to match the project needs.
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  // Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  // Image alt attribute style if the image can not be loaded
+  font-style: italic;
+
+  // Image optimization : https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/
+  background-repeat: no-repeat;
+  background-size: cover;
+}

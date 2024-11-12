@@ -1,0 +1,45 @@
+// # Theme button placeholders
+
+@use "../../functions/px-to-rem" as *;
+@use "../link" as *;
+@use "../../variables/color";
+
+// Usage example :
+// ```scss
+// @use "placeholders/links/theme-link" as *;
+//
+// a {
+//   @extends %theme-link;
+//   @extends %theme-link--primary;
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%theme-link {
+  @extend %link;
+
+  // Interactive overrides
+  --interactive-outline-offset: #{px-to-rem(3px)};
+  --interactive-outline-width-focus-within: 1px;
+  --interactive-outline-width-focus-visible: 1px;
+
+  // Customize all theme button variables applying the following example.
+  --link-border-radius: #{px-to-rem(3px)};
+
+  // --------------------------------------------------
+  // Primary
+  // --------------------------------------------------
+
+  &--primary {
+    // Default visual
+    --link-color: #{color.$orange};
+    --link-text-decoration: none;
+
+    // Hovered visual
+    --link-color-hover: #{color.$orange};
+    --link-text-decoration-hover: underline;
+  }
+}

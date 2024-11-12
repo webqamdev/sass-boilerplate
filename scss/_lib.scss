@@ -1,0 +1,18 @@
+// # Lib entry point
+
+// This file (and its dependencies) is loaded in every Scss file/Vue Component.
+// Therefore, it MUST not generate any CSS. Doing so would lead to a massive
+// code duplication.
+// Only SCSS variables, functions, placeholders or mixins are allowed.
+
+// ## Functions
+@forward "lib/functions";
+
+// ## Variables
+@forward "lib/variables";
+
+// ## Mixins
+@forward "lib/mixins";
+
+// ## Placeholders
+@forward "lib/placeholders";

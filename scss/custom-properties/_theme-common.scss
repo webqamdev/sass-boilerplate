@@ -1,0 +1,65 @@
+// # Common theme variables setup
+
+@use "../lib/functions/px-to-rem" as *;
+@use "../lib/mixins/breakpoint" as *;
+@use "../lib/variables/breakpoint";
+@use "../lib/variables/color";
+@use "../lib/variables/font";
+@use "../lib/variables/theme";
+@use "../lib/variables/transition";
+@use "../lib/variables/z-index";
+
+// Usage example :
+// ```css
+// .wrapper {
+//   padding-left: var(--wrapper-padding-inline);
+//   padding-right: var(--wrapper-padding-inline);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+:root {
+  // %animated
+  --animated-transition-property-default: color, background-color,
+    background-image, background-size, background-position, border-radius,
+    border-color, box-shadow, opacity, transform, filter, outline-color;
+  --animated-transition-duration-default: #{transition.$duration-default};
+  --animated-transition-delay-default: #{transition.$delay-default};
+  --animated-transition-timing-function-default: #{transition.$timing-function-default};
+
+  // %wrapper
+  --wrapper-margin-left: auto;
+  --wrapper-margin-right: auto;
+  --wrapper-padding-inline: #{px-to-rem(15px)};
+  --wrapper-padding-left: var(--wrapper-padding-inline);
+  --wrapper-padding-right: var(--wrapper-padding-inline);
+
+  // %wrapper-grid
+  --grid-wrapper-padding-inline: #{px-to-rem(16px)};
+  --grid-wrapper-small-max-width: #{theme.$grid-wrapper-small-max-width};
+  --grid-wrapper-medium-max-width: #{theme.$grid-wrapper-medium-max-width};
+  --grid-wrapper-large-max-width: #{theme.$grid-wrapper-large-max-width};
+
+  // html
+  // This property can be set with the header height if it follows the user scroll.
+  --html-scroll-padding-top: 0px;
+
+  // # --------------------------------------------------------------------------------------- #
+  // # TABLET VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$tablet) {
+    // %wrapper
+    --wrapper-padding-inline: #{px-to-rem(30px)};
+  }
+
+  // # --------------------------------------------------------------------------------------- #
+  // # LAPTOP VALUES
+  // # --------------------------------------------------------------------------------------- #
+
+  @include breakpoint(breakpoint.$laptop) {
+    // %wrapper
+    --wrapper-padding-inline: #{px-to-rem(50px)};
+  }
+}

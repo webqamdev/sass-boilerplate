@@ -1,0 +1,109 @@
+// # File input placeholders
+
+@use "../input" as *;
+@use "../input-group" as *;
+
+// Usage example base on this html structure :
+// ```html
+// <label class="file-input-group">
+//   <span>My label</span>
+//   <input type="file" />
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/file-input" as *;
+//
+// .file-input-group {
+//   @extend %file-input-group;
+//
+//   & > span {
+//     @extend %file-input-label;
+//   }
+//
+//   & > input {
+//     @extend %file-input;
+//   }
+// }
+// ```
+
+@mixin file-input-button() {
+  // Add custom styles if necessary
+}
+
+@mixin file-input-button-hover() {
+  // Add custom styles if necessary
+}
+
+@mixin file-input-button-focus-visible() {
+  // Add custom styles if necessary
+}
+
+%file-input {
+  @extend %input;
+
+  // --------------------------------------------------
+  // Specific pseudo selector styles
+  // --------------------------------------------------
+
+  &::file-selector-button {
+    @include file-input-button;
+  }
+
+  &::-ms-browse {
+    @include file-input-button;
+  }
+
+  &::-webkit-file-upload-button {
+    @include file-input-button;
+  }
+
+  // --------------------------------------------------
+  // Pseudo selector styles
+  // --------------------------------------------------
+
+  &:focus-visible {
+    &::file-selector-button {
+      @include file-input-button-focus-visible;
+    }
+
+    &::-ms-browse {
+      @include file-input-button-focus-visible;
+    }
+
+    &::-webkit-file-upload-button {
+      @include file-input-button-focus-visible;
+    }
+  }
+
+  &:hover {
+    &::file-selector-button {
+      @include file-input-button-hover;
+    }
+
+    &::-ms-browse {
+      @include file-input-button-hover;
+    }
+
+    &::-webkit-file-upload-button {
+      @include file-input-button-hover;
+    }
+  }
+
+  &:active {
+    //
+  }
+
+  &:disabled,
+  &[disabled] {
+    //
+  }
+}
+
+%file-input-group {
+  @extend %input-group;
+}
+
+%file-input-label {
+  @extend %input-group-label;
+}

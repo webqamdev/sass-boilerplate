@@ -1,0 +1,49 @@
+// # Sr only mixin
+
+// Hide only visually, but have it available for screen readers :
+// https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+// For long content, line feeds are not interpreted as spaces and small width
+// causes content to wrap 1 word per line:
+// https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+
+// Inspired from https://github.com/twbs/bootstrap/blob/main/scss/mixins/_visually-hidden.scss
+
+// Usage example :
+// ```scss
+// @use "mixins/sr-only" as *;
+//
+// .sr-only-text {
+//   @include sr-only();
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin sr-only($focusable: false) {
+  $properties: (
+    position: absolute,
+    width: 1px,
+    height: 1px,
+    padding: 0,
+    margin: -1px,
+    overflow: hidden,
+    clip: rect(0, 0, 0, 0),
+    white-space: nowrap,
+    border: 0,
+  );
+
+  @if $focusable {
+    &:not(:focus),
+    &:not(:focus-within),
+    &:not(:active) {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+    }
+  } @else {
+    @each $property, $value in $properties {
+      #{$property}: $value;
+    }
+  }
+}

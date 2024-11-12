@@ -1,0 +1,35 @@
+// # Container mixin
+
+// Create container queries properly.
+// MDN Documentation : https://developer.mozilla.org/en-US/docs/Web/CSS/@container
+// Usage example :
+// ```scss
+// @use "mixins/container" as *;
+//
+// .layout-element {
+//   container-type: inline-size;
+//   container-name: sidebar;
+//
+//   .responsive-element {
+//     margin-bottom: 20px;
+//
+//     @include container(1024px, sidebar) {
+//       margin-bottom: 40px;
+//     }
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin container($value, $property: min-width, $name: "") {
+  @container #{$name} (#{$property}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin container-between($min, $max, $name: "") {
+  @container #{$name} (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}

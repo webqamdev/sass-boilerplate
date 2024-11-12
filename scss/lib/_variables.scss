@@ -1,0 +1,15 @@
+// # Variables
+
+// Import all placeholder files.
+// Update this list when a new file is created or deleted.
+// Use @forward prefixes to avoid namespace variable names conflicts :
+// https://sass-lang.com/documentation/at-rules/forward#adding-a-prefix
+
+// @forward "variables/your-variable-file" as your-prefix-*;
+
+@forward "variables/breakpoint" as breakpoint-*;
+@forward "variables/color" as color-*;
+@forward "variables/font" as font-*;
+@forward "variables/theme" as theme-*;
+@forward "variables/transition" as transition-*;
+@forward "variables/z-index" as z-index-*;

@@ -1,0 +1,60 @@
+// # Color variables
+
+// Set all generic or custom colors here.
+// Usage example :
+// ````scss
+// @use "variables/color";
+//
+// .text {
+//   color: color.$black;
+//   background-color: rgba(color.$white, 0.5);
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+// You can use tools like [Name that color](http://chir.ag/projects/name-that-color) to create
+// color names.
+// When doing so, you can add a prefix to group colors and order them from lightest to darkest:
+
+// ```scss
+// $red: #f00;
+// $red-monza: #D20434;
+//
+// $gray-gallery: #efefef;
+// $gray: #808080;
+// $gray-mine-shaft: #333;
+// ```
+
+// ## Color list
+// ### Contrasts
+$white: white;
+$black: black;
+
+// ### Grey variants
+$grey-tundora: #424242;
+$grey: grey;
+$light-grey: lightgrey;
+
+// ### Green variants
+$red: red;
+
+// ### Orange variants
+$orange: orange;
+
+// ### Yellow variants
+$yellow: yellow;
+
+// ### Green variants
+$green: green;
+
+// ### Blue variants
+$blue: blue;
+$dark-blue: darkblue;
+$light-blue: lightblue;
+
+// ### Purple variants
+$purple: purple;
+
+// ### Purple variants
+$pink: pink;

@@ -1,0 +1,50 @@
+// # Animated config placeholders
+
+@use "../../lib/variables/transition";
+
+// Should be applied on every animated component, and updated with CSS variables on specific cases.
+
+// The idea here is to have a consistent and a more interactive/dynamic UI/UX.
+// Usage example :
+// ```scss
+// @use "placeholders/animated" as *;
+// @use "variables/transition";
+//
+// a {
+//   @extends %animated;
+//
+//   // Other styles
+// }
+//
+// dialog {
+//   @extends %animated;
+//
+//   --animated-transition-duration: #{transition.$duration-long};
+//
+//   transition-property: opacity, color;
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%animated {
+  transition-property: var(
+    --animated-transition-property,
+    var(--animated-transition-property-default, all)
+  );
+  transition-duration: var(
+    --animated-transition-duration,
+    var(--animated-transition-duration-default, #{transition.$duration-default})
+  );
+  transition-timing-function: var(
+    --animated-transition-timing-function,
+    var(
+      --animated-transition-timing-function-default,
+      #{transition.$timing-function-default}
+    )
+  );
+  transition-delay: var(
+    --animated-transition-delay,
+    var(--animated-transition-delay-default, #{transition.$delay-default})
+  );
+}

@@ -1,0 +1,297 @@
+// # Option input placeholders (radio, checkbox and switch)
+
+@use "../functions/px-to-rem" as *;
+@use "input" as *;
+@use "input-group" as *;
+@use "interactive" as *;
+@use "animated" as *;
+@use "../variables/color";
+
+// Usage example base on this html structure :
+// ```html
+// <label class="option-input-group">
+//   <input type="checkbox" />
+//   <span>My label</span>
+// </label>
+// ```
+//
+// ```scss
+// @use "placeholders/inputs/checkbox-input" as *;
+//
+// .option-input-group {
+//   @extend %input-option-group;
+//
+//   &:hover {
+//     & > span {
+//       &::before {
+//         @extend %input-option-box--hover;
+//       }
+//
+//       &::after {
+//         @extend %input-option-checkmark--hover;
+//       }
+//     }
+//   }
+//
+//   & > input {
+//     @extend %checkbox-input;
+//
+//     &:checked {
+//       & + span {
+//         &::before {
+//           @extend %checkbox-input-box--checked;
+//         }
+//
+//         &::after {
+//           @extend %checkbox-input-checkmark--checked;
+//         }
+//       }
+//     }
+//
+//     &:focus-visible {
+//       & + span {
+//         &::before {
+//           @extend %checkbox-input-box--focus-visible;
+//         }
+//
+//         &::after {
+//           @extend %checkbox-input-checkmark--focus-visible;
+//         }
+//       }
+//     }
+//   }
+//
+//   & > span {
+//     @extend %checkbox-input-label;
+//
+//     &::before {
+//       @extend %checkbox-input-box;
+//     }
+//
+//     &::after {
+//       @extend %checkbox-input-checkmark;
+//     }
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%input-option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  outline: none;
+}
+
+%input-option-group {
+  @extend %interactive;
+  @extend %animated;
+  @extend %input-group;
+
+  --interactive-cursor: pointer;
+  --input-group-flex-direction: row;
+  --input-group-position: relative;
+  --input-group-padding-top: #{px-to-rem(5px)};
+  --input-group-padding-right: #{px-to-rem(10px)};
+  --input-group-padding-bottom: #{px-to-rem(5px)};
+  --input-group-padding-left: #{px-to-rem(10px)};
+
+  &--focus-visible {
+    outline-width: var(
+      --interactive-outline-width-focus-within,
+      #{px-to-rem(3px)}
+    );
+  }
+}
+
+%input-option-label {
+  @extend %input-group-label;
+
+  --input-group-label-padding-bottom: 0px;
+  --input-group-label-padding-left: #{px-to-rem(10px)};
+}
+
+%input-option-box {
+  @extend %animated;
+
+  content: "";
+
+  // Display styles
+  display: var(--input-box-display, flex);
+  flex-direction: var(--input-box-flex-direction, row);
+  align-items: var(--input-box-align-items, center);
+  justify-content: var(--input-box-justify-content, center);
+
+  // Color styles
+  color: var(--input-box-color, transparent);
+  background-color: var(--input-box-background-color, #{color.$white});
+  border-color: var(--input-box-border-color, #{color.$grey});
+
+  // Border styles
+  border-style: var(--input-box-border-style, solid);
+  border-radius: var(
+      --input-box-border-top-left-radius,
+      var(--input-box-border-radius, 0px)
+    )
+    var(
+      --input-box-border-top-right-radius,
+      var(--input-box-border-radius, 0px)
+    )
+    var(
+      --input-box-border-bottom-right-radius,
+      var(--input-box-border-radius, 0px)
+    )
+    var(
+      --input-box-border-bottom-left-radius,
+      var(--input-box-border-radius, 0px)
+    );
+  border-width: var(
+      --input-box-border-top-width,
+      var(--input-box-border-width, #{px-to-rem(2px)})
+    )
+    var(
+      --input-box-border-right-width,
+      var(--input-box-border-width, #{px-to-rem(2px)})
+    )
+    var(
+      --input-box-border-bottom-width,
+      var(--input-box-border-width, #{px-to-rem(2px)})
+    )
+    var(
+      --input-box-border-left-width,
+      var(--input-box-border-width, #{px-to-rem(2px)})
+    );
+
+  // Size styles
+  width: var(--input-box-width, #{px-to-rem(24px)});
+  height: var(--input-box-height, #{px-to-rem(24px)});
+
+  &--checked {
+    color: var(--input-box-color-checked, #{color.$white});
+    background-color: var(
+      --input-box-background-color-checked,
+      #{color.$black}
+    );
+    border-color: var(--input-box-border-color-checked, #{color.$black});
+  }
+
+  &--hover {
+    color: var(--input-box-color-hover, #{color.$black});
+    background-color: var(
+      --input-box-background-color-hover,
+      #{color.$light-grey}
+    );
+    border-color: var(--input-box-border-color-hover, #{color.$grey});
+  }
+
+  &--focus-visible {
+    color: var(--input-box-color-focus-visible, #{color.$black});
+    background-color: var(
+      --input-box-background-color-focus-visible,
+      #{color.$light-grey}
+    );
+    border-color: var(--input-box-border-color-focus-visible, #{color.$grey});
+  }
+
+  &--disabled {
+    //
+  }
+}
+
+%input-option-checkmark {
+  @extend %animated;
+
+  content: "✓";
+
+  // Display styles
+  display: var(--input-checkmark-display, flex);
+  flex-direction: var(--input-checkmark-flex-direction, row);
+  align-items: var(--input-checkmark-align-items, center);
+  justify-content: var(--input-checkmark-justify-content, center);
+
+  // Filter styles
+  opacity: var(--input-checkmark-opacity, 0);
+
+  // Color styles
+  color: var(--input-checkmark-color, #{color.$black});
+  background-color: var(--input-checkmark-background-color, transparent);
+  border-color: var(--input-checkmark-border-color, transparent);
+
+  // Border styles
+  border-style: var(--input-checkmark-border-style, solid);
+  border-radius: var(
+      --input-checkmark-border-top-left-radius,
+      var(--input-checkmark-border-radius, 0px)
+    )
+    var(
+      --input-checkmark-border-top-right-radius,
+      var(--input-checkmark-border-radius, 0px)
+    )
+    var(
+      --input-checkmark-border-bottom-right-radius,
+      var(--input-checkmark-border-radius, 0px)
+    )
+    var(
+      --input-checkmark-border-bottom-left-radius,
+      var(--input-checkmark-border-radius, 0px)
+    );
+  border-width: var(
+      --input-checkmark-border-top-width,
+      var(--input-checkmark-border-width, 0px)
+    )
+    var(
+      --input-checkmark-border-right-width,
+      var(--input-checkmark-border-width, 0px)
+    )
+    var(
+      --input-checkmark-border-bottom-width,
+      var(--input-checkmark-border-width, 0px)
+    )
+    var(
+      --input-checkmark-border-left-width,
+      var(--input-checkmark-border-width, 0px)
+    );
+
+  // Size styles
+  width: var(--input-checkmark-width, #{px-to-rem(24px)});
+  height: var(--input-checkmark-height, #{px-to-rem(24px)});
+
+  &--checked {
+    opacity: var(--input-checkmark-opacity-checked, 1);
+    color: var(--input-checkmark-color-checked, #{color.$white});
+    background-color: var(
+      --input-checkmark-background-color-checked,
+      transparent
+    );
+    border-color: var(--input-checkmark-border-color-checked, transparent);
+  }
+
+  &--hover {
+    color: var(--input-checkmark-color-hover, #{color.$black});
+    background-color: var(
+      --input-checkmark-background-color-hover,
+      transparent
+    );
+    border-color: var(--input-checkmark-border-color-hover, transparent);
+  }
+
+  &--focus-visible {
+    color: var(--input-checkmark-color-focus-visible, #{color.$black});
+    background-color: var(
+      --input-checkmark-background-color-focus-visible,
+      transparent
+    );
+    border-color: var(
+      --input-checkmark-border-color-focus-visible,
+      transparent
+    );
+  }
+
+  &--disabled {
+    //
+  }
+}

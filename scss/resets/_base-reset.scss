@@ -1,0 +1,65 @@
+// # Base style reset
+
+@use "../lib/variables/color";
+@use "../lib/variables/font";
+
+// This file should contain all main element reset styles and is included once at the beginning of the main entry file.
+
+// Please update, add or remove the styles below to match the project needs.
+
+::selection {
+  color: var(--selection-color, #{color.$white});
+  background-color: var(--selection-background-color, #{color.$blue});
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--html-font-size, #{font.$base-size});
+  font-family: var(--html-font-family, #{font.$family-system});
+  font-weight: var(--html-font-weight, #{font.$weight-regular});
+  line-height: var(--html-line-height, #{font.$line-height-default});
+  color: var(--html-color, #{color.$black});
+  background-color: var(--html-background-color, #{color.$white});
+  scroll-padding-top: var(--html-scroll-padding-top, 0px);
+
+  /* stylelint-disable-next-line media-feature-name-no-unknown */
+  @media (device-pixel-ratio: 1.25) {
+    font-size: font.$size-device-pixel-ratio;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    // Remove default transition duration.
+    // And this should be applied to every components that uses animations.
+    --animated-transition-duration-default: 0ms;
+    --animated-transition-delay-default: 0ms;
+
+    // Remove scroll smooth default behavior
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  font-size: var(--body-font-size, 1rem);
+  font-family:
+    var(--body-font-family, inherit),
+    #{font.$family-system};
+  font-weight: var(--body-font-weight, inherit);
+  line-height: var(--body-line-height, #{font.$line-height-default});
+  color: var(--body-color, inherit);
+  background-color: var(--body-background-color, inherit);
+}
+
+// Main layout element can hav a container-type property to create a fallback for container queries.
+section,
+article,
+aside,
+form {
+  container-type: inline-size;
+}

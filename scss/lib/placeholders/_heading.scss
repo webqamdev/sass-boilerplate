@@ -1,0 +1,79 @@
+// # Paragraph placeholder
+
+@use "../../lib/variables/font";
+
+// Usage example :
+// ```scss
+// @use "placeholders/paragraph" as *;
+//
+// h1,
+// span {
+//   @extends %heading--1;
+//
+//   // Other styles
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+%heading {
+  &--1 {
+    line-height: var(--heading-1-line-height, inherit);
+    font-weight: var(--heading-1-font-weight, inherit);
+    font-size: var(--heading-1-font-size, inherit);
+    font-family: var(--heading-1-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-1-letter-spacing, 0);
+    text-transform: var(--heading-1-text-transform, none);
+    text-wrap: var(--heading-1-text-wrap, pretty);
+  }
+
+  &--2 {
+    line-height: var(--heading-2-line-height, inherit);
+    font-weight: var(--heading-2-font-weight, inherit);
+    font-size: var(--heading-2-font-size, inherit);
+    font-family: var(--heading-2-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-2-letter-spacing, 0);
+    text-transform: var(--heading-2-text-transform, none);
+    text-wrap: var(--heading-2-text-wrap, pretty);
+  }
+
+  &--3 {
+    line-height: var(--heading-3-line-height, inherit);
+    font-weight: var(--heading-3-font-weight, inherit);
+    font-size: var(--heading-3-font-size, inherit);
+    font-family: var(--heading-3-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-3-letter-spacing, 0);
+    text-transform: var(--heading-3-text-transform, none);
+    text-wrap: var(--heading-3-text-wrap, pretty);
+  }
+
+  &--4 {
+    line-height: var(--heading-4-line-height, inherit);
+    font-weight: var(--heading-4-font-weight, inherit);
+    font-size: var(--heading-4-font-size, inherit);
+    font-family: var(--heading-4-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-4-letter-spacing, 0);
+    text-transform: var(--heading-4-text-transform, none);
+    text-wrap: var(--heading-4-text-wrap, pretty);
+  }
+
+  &--5 {
+    line-height: var(--heading-5-line-height, inherit);
+    font-weight: var(--heading-5-font-weight, inherit);
+    font-size: var(--heading-5-font-size, inherit);
+    font-family: var(--heading-5-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-5-letter-spacing, 0);
+    text-transform: var(--heading-5-text-transform, none);
+    text-wrap: var(--heading-5-text-wrap, pretty);
+  }
+
+  &--6 {
+    line-height: var(--heading-6-line-height, inherit);
+    font-weight: var(--heading-6-font-weight, inherit);
+    font-size: var(--heading-6-font-size, inherit);
+    font-family: var(--heading-6-font-family, inherit), font.$family-system;
+    letter-spacing: var(--heading-6-letter-spacing, 0);
+    text-transform: var(--heading-6-text-transform, none);
+    text-wrap: var(--heading-6-text-wrap, pretty);
+  }
+}

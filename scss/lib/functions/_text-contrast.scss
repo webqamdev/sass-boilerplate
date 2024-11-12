@@ -1,0 +1,51 @@
+// # Text contrast function
+
+@use "sass:math";
+@use "sass:meta";
+@use "sass:color" as c;
+@use "../variables/color";
+
+// Calculates if text needs to be light or dark depending on the background color passed.
+// Inspired from this W3C document: http://www.w3.org/TR/AERT#color-contrast
+// Color brightness is determined by the following formula :
+// ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+// Adapted to a function from https://codepen.io/davidhalford/pen/wlDxL
+
+// Usage example :
+// ```scss
+// @use "functions/text-contrast" as *;
+// @use "variables/color";
+//
+// .text {
+//   background-color: color.$black;
+//   color: text-contrast(color.$black, #999); // Output `#999`
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function text-contrast(
+  $color,
+  $color-light: color.$white,
+  $color-dark: color.$black
+) {
+  @if meta.type-of($color) != "color" {
+    @warn "The provided color is invalid.";
+    @return null;
+  }
+
+  $brightness: math.round(
+    (c.red($color) * 299) + (c.green($color) * 587) + (c.blue($color) * 114) *
+      0.001
+  );
+  $light-calc: math.round(
+    (c.red(white) * 299) + (c.green(white) * 587) + (c.blue(white) * 114) *
+      0.001
+  );
+
+  @if math.abs($brightness) < ($light-calc * 0.5) {
+    @return $color-light;
+  } @else {
+    @return $color-dark;
+  }
+}

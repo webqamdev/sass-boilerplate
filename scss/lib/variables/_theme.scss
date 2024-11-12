@@ -1,0 +1,42 @@
+// # Theme variables
+
+@use "../functions/px-to-rem" as *;
+
+// If you have multiple themes (like dark and light theme for example the create specific variables here.
+// You should prefix theme by the theme name like below.
+
+// If you see that this document os too long, maybe you have to create a variable theme folder and split your code.
+// For example :
+// scss/lib/variables/themes/primary/color
+
+// ````scss
+// @use "variables/themes/primary/color" as primary-color;
+//
+// body {
+//   color: primary-color.$default-text;
+// }
+// ```
+
+// Please update, add or remove the variables below to match the project needs.
+
+$default-scroll-behavior: smooth; // initial value is 'auto'
+
+// ## Wrapper
+$wrapper-max-width-s-px: 768px;
+$wrapper-max-width-m-px: 1024px;
+$wrapper-max-width-l-px: 1440px;
+
+// ### Wrapper rem values
+$wrapper-max-width-s: px-to-rem($wrapper-max-width-s-px); // 48rem
+$wrapper-max-width-m: px-to-rem($wrapper-max-width-m-px); // 64rem
+$wrapper-max-width-l: px-to-rem($wrapper-max-width-l-px); // 90rem
+
+// ## Grid wrapper
+$grid-wrapper-small-max-width-px: 1180px;
+$grid-wrapper-medium-max-width-px: 1330px;
+$grid-wrapper-large-max-width-px: 1556px;
+
+// ### Grid wrapper rem values
+$grid-wrapper-small-max-width: px-to-rem($grid-wrapper-small-max-width-px); // 73.75rem
+$grid-wrapper-medium-max-width: px-to-rem($grid-wrapper-medium-max-width-px); // 83.125rem
+$grid-wrapper-large-max-width: px-to-rem($grid-wrapper-large-max-width-px); // 97.25rem

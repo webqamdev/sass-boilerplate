@@ -1,0 +1,30 @@
+// # Breakpoint mixin
+
+// Create media queries properly.
+// MDN Documentation : https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+// Usage example :
+// ```scss
+// @use "mixins/breakpoint" as *;
+//
+// .responsive-element {
+//   margin-bottom: 20px;
+//
+//   @include breakpoint(1024px) {
+//     margin-bottom: 40px;
+//   }
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin breakpoint($value, $property: min-width, $context: screen) {
+  @media #{$context} and (#{$property}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min, $max, $context: screen) {
+  @media #{$context} and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
