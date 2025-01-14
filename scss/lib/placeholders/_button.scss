@@ -21,9 +21,9 @@
 //   --button-padding-left: #{px-to-rem(20px)};
 //   --button-padding-right: #{px-to-rem(20px)};
 //   --button-color: #{color.$blue};
-//   --button-color-hover: #{color.$dark-blue};
-//   --button-color-hover-focus-visible: #{color.$dark-blue};
-//   --button-color-focus-visible: #{color.$light-blue};
+//   --button-color-hover: #{color.$blue-dark};
+//   --button-color-hover-focus-visible: #{color.$blue-dark};
+//   --button-color-focus-visible: #{color.$blue-light};
 //   --button-color-active: #{color.$blue};
 // }
 // ```
@@ -148,11 +148,11 @@
     color: var(--button-color-hover, var(--button-color, #{color.$black}));
     background-color: var(
       --button-background-color-hover,
-      var(--button-background-color, #{color.$light-grey})
+      var(--button-background-color, #{color.$grey-light})
     );
     border-color: var(
       --button-border-color-hover,
-      var(--button-border-color, #{color.$light-grey})
+      var(--button-border-color, #{color.$grey-light})
     );
     text-decoration: var(
       --button-text-decoration-hover,
@@ -168,7 +168,7 @@
         --button-background-color-hover-focus-visible,
         var(
           --button-background-color-focus-visible,
-          var(--button-background-color, #{color.$light-grey})
+          var(--button-background-color, #{color.$grey-light})
         )
       );
       border-color: var(
