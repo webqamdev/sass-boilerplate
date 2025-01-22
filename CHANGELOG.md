@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change [scss color variables](scss/lib/variables/_color.scss) with unified prefix. (ex: `$variant-grey` and `$variant-blue` respectively became `$grey-variant` and `$blue-variant`).
+
 ## [2.0.0] - 2023-12-11
 
 ### Added
