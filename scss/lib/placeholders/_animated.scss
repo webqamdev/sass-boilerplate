@@ -28,6 +28,7 @@
 // Please update, add or remove the styles below to match the project needs.
 
 %animated {
+  /* stylelint-disable declaration-block-no-redundant-longhand-properties */
   transition-property: var(
     --animated-transition-property,
     var(--animated-transition-property-default, all)
@@ -47,4 +48,5 @@
     --animated-transition-delay,
     var(--animated-transition-delay-default, #{transition.$delay-default})
   );
+  /* stylelint-enable declaration-block-no-redundant-longhand-properties */
 }
