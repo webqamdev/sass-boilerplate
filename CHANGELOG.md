@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Changed [%link](scss/lib/placeholders/_link.scss) placeholder `text-decoration-thickness` property value from `from-font` to `var(--link-text-decoration-thickness, auto)`.
+
 ### Changed
 
 - Change [scss color variables](scss/lib/variables/_color.scss) with unified prefix. (ex: `$variant-grey` and `$variant-blue` respectively became `$grey-variant` and `$blue-variant`).
