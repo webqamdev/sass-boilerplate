@@ -183,7 +183,7 @@
     color: var(--input-box-color-hover, #{color.$black});
     background-color: var(
       --input-box-background-color-hover,
-      #{color.$light-grey}
+      #{color.$grey-light}
     );
     border-color: var(--input-box-border-color-hover, #{color.$grey});
   }
@@ -192,7 +192,7 @@
     color: var(--input-box-color-focus-visible, #{color.$black});
     background-color: var(
       --input-box-background-color-focus-visible,
-      #{color.$light-grey}
+      #{color.$grey-light}
     );
     border-color: var(--input-box-border-color-focus-visible, #{color.$grey});
   }
