@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Changed [%link](scss/lib/placeholders/_link.scss) placeholder `text-decoration-thickness` property value from `from-font` to `var(--link-text-decoration-thickness, auto)`.
+
 ## [2.0.0] - 2023-12-11
 
 ### Added
