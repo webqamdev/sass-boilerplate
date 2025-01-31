@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix [sr-only](scss/lib/mixins/_sr-only.scss) mixin `$focusable` state where the `:not` selector was not working properly.
+
 ## [2.0.0] - 2023-12-11
 
 ### Added
