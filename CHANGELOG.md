@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Fixed
+### Fixed
 
+- Fix [sr-only](scss/lib/mixins/_sr-only.scss) mixin `$focusable` state where the `:not` selector was not working properly.
 - Disable Stylelint [declaration-block-no-redundant-longhand-properties](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/) rule in the `%animated` placeholder to avoid single transition property declaration.
 - Changed [%link](scss/lib/placeholders/_link.scss) placeholder `text-decoration-thickness` property value from `from-font` to `var(--link-text-decoration-thickness, auto)`.
 
