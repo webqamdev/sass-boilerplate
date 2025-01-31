@@ -34,9 +34,7 @@
   );
 
   @if $focusable {
-    &:not(:focus),
-    &:not(:focus-within),
-    &:not(:active) {
+    &:not(:focus, :focus-within, :active) {
       @each $property, $value in $properties {
         #{$property}: $value;
       }
