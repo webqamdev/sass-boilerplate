@@ -44,8 +44,8 @@
   &--primary {
     // Default visual
     --button-color: #{color.$white};
-    --button-background-color: #{color.$dark-blue};
-    --button-border-color: #{color.$dark-blue};
+    --button-background-color: #{color.$blue-dark};
+    --button-border-color: #{color.$blue-dark};
 
     // Hovered visual
     --button-color-hover: #{color.$white};
@@ -58,8 +58,8 @@
     --button-border-color-focus-visible: #{color.$white};
 
     // Focused and hovered visual
-    --button-color-hover-focus-visible: #{color.$dark-blue};
-    --button-background-color-hover-focus-visible: #{color.$light-blue};
+    --button-color-hover-focus-visible: #{color.$blue-dark};
+    --button-background-color-hover-focus-visible: #{color.$blue-light};
     --button-border-color-hover-focus-visible: #{color.$white};
 
     // Active visual
