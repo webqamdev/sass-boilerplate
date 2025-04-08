@@ -63,3 +63,8 @@ aside,
 form {
   container-type: inline-size;
 }
+
+[id] {
+  // Prevent the fixed header from overlapping the content when the user scrolls.
+  scroll-margin-top: var(--html-scroll-padding-top, 0px);
+}
