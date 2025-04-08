@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add the `[id]` attribute selector in the [_base-reset.scss](scss/resets/_base-reset.scss) file to add the `scroll-margin-top` property. 
+
 ## [2.0.1] - 2025-01-31
 
 ### Fixed
